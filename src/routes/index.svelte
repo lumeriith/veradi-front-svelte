@@ -1,8 +1,6 @@
 <script>
     const patternVue = "/img/pattern_svelte.png";
-    import { Button, Modal } from 'sveltestrap/src';
-    let isOpen = false;
-    const toggle = () => (isOpen = !isOpen);
+    import { Button } from 'sveltestrap/src';
 </script>
 
 <section class="header relative pt-16 items-center flex h-screen max-h-860-px">
@@ -30,20 +28,19 @@
             학생 자신의 궁극의 시간가치와 결과가치를 구현합니다.
           </p>
           <div class="mt-12">
-            <a
+            <Button
               href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus?ref=ns-index"
-              target="_blank"
-              class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-red-400 active:bg-red-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+              class="go-to-veradi text-white font-bold px-6 py-3 mb-1 uppercase shadow"
             >
-              Get started
-            </a>
-            <a
+              베라디 지원하기
+            </Button>
+            <Button
+              color="danger"
               href="https://github.com/creativetimofficial/notus-svelte?ref=ns-index"
-              class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
-              target="_blank"
+              class="ml-1 px-6 py-3 mb-1 bg-blueGray-700 uppercase shadow"
             >
               Github Star
-            </a>
+            </Button>
           </div>
         </div>
       </div>
@@ -55,12 +52,14 @@
         alt="..."
     />
   </section>
-    <Button color="primary" on:click={toggle}>Hello World!</Button>
-    <Modal body {isOpen} {toggle} header="Hello World!">
-      <p>There's a song that we're singing. Come on</p>
-      <img
-        src="https://i.ytimg.com/vi/NUJIRujygvY/hqdefault.jpg"
-        alt="Come on Get Happy"
-        class="img-fluid"
-      />
-    </Modal>
+
+
+
+  
+
+  <style>
+    :global(.go-to-veradi) {
+    background-color:rgba(248, 113, 113, 0.7);
+    }
+
+  </style>
