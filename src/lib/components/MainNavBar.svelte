@@ -26,20 +26,20 @@
           <DropdownToggle nav caret>About</DropdownToggle>
           <DropdownMenu>
             <DropdownItem header>베라디 소개</DropdownItem>
-            <DropdownItem>Vision</DropdownItem>
-            <DropdownItem>철학</DropdownItem>
-            <DropdownItem>연혁</DropdownItem>
+            <DropdownItem href="/about/veradi/vision">Vision</DropdownItem>
+            <DropdownItem href="/about/veradi/philosophy">철학</DropdownItem>
+            <DropdownItem href="/about/veradi/origin">연혁</DropdownItem>
             <DropdownItem divider />
             <DropdownItem header>구성원 소개</DropdownItem>
-            <DropdownItem>경영지원부</DropdownItem>
-            <DropdownItem>기술개발부</DropdownItem>
-            <DropdownItem>디자인팀</DropdownItem>
-            <DropdownItem>수학팀</DropdownItem>
-            <DropdownItem>과학탐구</DropdownItem>
+            <DropdownItem href="/about/team/management">경영지원부</DropdownItem>
+            <DropdownItem href="/about/team/technology">기술개발부</DropdownItem>
+            <DropdownItem href="/about/team/design">디자인팀</DropdownItem>
+            <DropdownItem href="/about/team/math">수학팀</DropdownItem>
+            <DropdownItem href="/about/team/science">과학탐구</DropdownItem>
             <DropdownItem divider />
             <DropdownItem header>Abiltiy & Strength</DropdownItem>
-            <DropdownItem>컨텐츠</DropdownItem>
-            <DropdownItem>서비스</DropdownItem>
+            <DropdownItem href="/about/as/contents">컨텐츠</DropdownItem>
+            <DropdownItem href="/about/as/service">서비스</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Dropdown nav inNavbar>
