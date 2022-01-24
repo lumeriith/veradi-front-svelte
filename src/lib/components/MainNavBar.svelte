@@ -44,38 +44,46 @@
         </Dropdown>
         <Dropdown nav inNavbar>
           <DropdownToggle nav caret>Contents</DropdownToggle>
-          <DropdownMenu end>
-            <DropdownItem>Option 1</DropdownItem>
-            <DropdownItem>Option 2</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem>
+          <DropdownMenu>
+            <DropdownItem header>[2022] 랠리 모의고사</DropdownItem>
+            <DropdownItem href="/contents/title">컨텐츠 소개 대문</DropdownItem>
+            <DropdownItem href="/contents/guide">컨텐츠 활용 guide</DropdownItem>
+            <DropdownItem href="/contents/answer">정오 안내</DropdownItem>
+            <DropdownItem href="/contents/qna">Q&A 게시판</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Dropdown nav inNavbar>
           <DropdownToggle nav caret>Community</DropdownToggle>
-          <DropdownMenu end>
-            <DropdownItem>Option 1</DropdownItem>
-            <DropdownItem>Option 2</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem>
+          <DropdownMenu>
+            <DropdownItem header>최상위권 선배들의 비법 노트</DropdownItem>
+            <DropdownItem href="/community/knowhow/method">의대생 공부법</DropdownItem>
+            <DropdownItem href="/community/knowhow/history">합격 수기 모음</DropdownItem>
+            <DropdownItem href="/community/knowhow/contents">공부자극 컨텐츠</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Dropdown nav inNavbar>
           <DropdownToggle nav caret>Program</DropdownToggle>
-          <DropdownMenu end>
-            <DropdownItem>Option 1</DropdownItem>
-            <DropdownItem>Option 2</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem>
+          <DropdownMenu>
+            <DropdownItem header>Re-Challenge with VERADI</DropdownItem>
+            <DropdownItem href="/program/rechallenge/introduction">사업 소개</DropdownItem>
+            <DropdownItem href="/program/rechallenge/recruitment">모집 요강</DropdownItem>
+            <DropdownItem href="/program/rechallenge/application">신청 페이지</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Dropdown nav inNavbar>
           <DropdownToggle nav caret>Contact</DropdownToggle>
-          <DropdownMenu end>
-            <DropdownItem>Option 1</DropdownItem>
-            <DropdownItem>Option 2</DropdownItem>
+          <DropdownMenu>
+            <DropdownItem header>Contents Director 지원</DropdownItem>
+            <DropdownItem href="/contact/director/recruitment">모집 요강</DropdownItem>
+            <DropdownItem href="/contact/director/application">입사 신청 페이지</DropdownItem>
             <DropdownItem divider />
-            <DropdownItem>Reset</DropdownItem>
+            <DropdownItem header>Contents Contest</DropdownItem>
+            <DropdownItem href="/contact/contest/introduction">대회 소개</DropdownItem>
+            <DropdownItem href="/contact/contest/join">참가 페이지</DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem header>Contents 제보</DropdownItem>
+            <DropdownItem href="/contact/tip/error">오류/오타 제보</DropdownItem>
+            <DropdownItem href="/contact/tip/duplicate">표절/복제 제보</DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <NavItem>
