@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1524.314" height="1635.143" viewBox="0 0 1524.314 1635.143">
+    <defs>
+        <linearGradient id="lvprgbll2a" x1=".5" x2=".796" y2=".958" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#b4f1fe"/>
+            <stop offset=".469" stop-color="#b5f1e6" stop-opacity=".78"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+    <path data-name="패스 1" d="M779.862-2240.349s310.393 140.415 318.063 489.518-78.008 608.054-175.306 634.125l1054.237-282.482c33.893-9.082-1.5-10.882-7.727-34.13-6.376-23.8-7.3-23.933-16.439-58.037-20.906-78.021-50.894-187.961-75.05-278.113l-47.572-177.54-144.132-537.909c-5.536.094-906.074 244.568-906.074 244.568z" transform="rotate(14.98 -8863.59 -2860.818)" style="fill:url(#lvprgbll2a)"/>
+</svg>
