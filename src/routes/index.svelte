@@ -9,12 +9,20 @@
 		'/svg/landing/man.svg'
 	];
 	import { Container, Col, Row, Image } from 'sveltestrap/src';
+
+	let scrollAxis = 1;
+	function updateManOpacity() {
+	  scrollAxis = Math.max(Math.min((600-document.documentElement.scrollTop)/400, 1), 0.3)
+	}
+	
 </script>
+
+<svelte:window on:scroll={updateManOpacity} />
 
 <Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%; margin-top: -64.5px" />
 
 <Container>
-	<Row style="position:relative">
+	<Row style="position:relative; white-space:nowrap;">
 		<p class="py-3 d-none d-sm-block" />
 		<Col sm="6" md="6" lg="6" xl="5">
 			<p class="py-2 d-none d-xs-block" />
@@ -22,11 +30,11 @@
 			<p class="py-1 d-none d-md-block" />
 			<p class="py-1 d-none d-lg-block" />
 			<p class="py-1 d-none d-xl-block" />
-			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70% " />
+			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70%;" />
 			<p />
-			<Image alt=".." src={svgVue[4]} draggable="false" style="width:70% " />
+			<Image alt=".." src={svgVue[4]} draggable="false" style="width:70%;" />
 			<p class="py-2" />
-			<Image alt=".." src={svgVue[5]} draggable="false" style="width:100% " />
+			<Image alt=".." src={svgVue[5]} draggable="false" style="width:100%;" />
 		</Col>
 		<Col sm="6" md="6" lg="6" xl="7">
 			<div class="d-sm-none">
@@ -34,7 +42,7 @@
 					alt=".."
 					src={svgVue[6]}
 					draggable="false"
-					style="position:absolute; float:center; width:95%;"
+					style="position:absolute; float:center; width:95%; opacity:{scrollAxis};"
 				/>
 			</div>
 			<div class="d-none d-sm-block">
@@ -42,7 +50,7 @@
 					alt=".."
 					src={svgVue[6]}
 					draggable="false"
-					style="position:absolute; float:center; width:50%;"
+					style="position:absolute; float:center; width:50%; opacity:{scrollAxis};"
 				/>
 			</div>
 		</Col>
