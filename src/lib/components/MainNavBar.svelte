@@ -10,7 +10,8 @@
 		Dropdown,
 		DropdownToggle,
 		DropdownMenu,
-		DropdownItem
+		DropdownItem,
+		Image
 	} from 'sveltestrap/src';
 	let isOpen = false;
 
@@ -30,6 +31,10 @@
 			updateOpacity();
 		}
 	}
+
+	const svgVue = [
+		'/svg/logo/VERADI.svg'
+	]
 </script>
 
 <svelte:window on:scroll={updateOpacity} on:resize={handleResize} />
@@ -41,14 +46,12 @@
 	class="top-0 z-50 w-full flex flex-wrap items-center justify-between px-2 py-2 navbar-expand-lg"
 	style="transition: background 0.2s, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity * 0.2});"
 >
-	<NavbarBrand
-		href="/"
-		class="text-blueGray-700 text-sm font-bold leading-relaxed mr-4 py-2 whitespace-nowrap uppercase"
-		>Veradi
+	<NavbarBrand>
+		<Image alt=".." src={svgVue[0]}/>
 	</NavbarBrand>
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
-		<Nav class="ms-auto" navbar>
+		<Nav class="" navbar>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav caret>About</DropdownToggle>
 				<DropdownMenu>
@@ -113,7 +116,7 @@
 					<DropdownItem href="/contact/tip/duplicate">표절/복제 제보</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
-			<NavItem>
+			<NavItem style="float:right">
 				<NavLink href="/login">Login</NavLink>
 			</NavItem>
 			<NavItem>
