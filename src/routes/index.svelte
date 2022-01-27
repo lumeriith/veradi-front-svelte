@@ -11,17 +11,17 @@
 	import { Container, Col, Row, Image } from 'sveltestrap/src';
 </script>
 
-<Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%;" />
+<Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%; margin-top: -64.5px" />
 
 <Container>
 	<Row style="position:relative">
 		<p class="py-3 d-none d-sm-block" />
 		<Col sm="6" md="6" lg="6" xl="5">
-      <p class="py-2 d-none d-xs-block" />
+			<p class="py-2 d-none d-xs-block" />
 			<p class="py-1 d-none d-sm-block" />
-      <p class="py-1 d-none d-md-block" />
-      <p class="py-1 d-none d-lg-block" />
-      <p class="py-1 d-none d-xl-block" />
+			<p class="py-1 d-none d-md-block" />
+			<p class="py-1 d-none d-lg-block" />
+			<p class="py-1 d-none d-xl-block" />
 			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70% " />
 			<p />
 			<Image alt=".." src={svgVue[4]} draggable="false" style="width:70% " />
@@ -47,6 +47,73 @@
 			</div>
 		</Col>
 	</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row><Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
+	<Row>Hello!</Row>
 </Container>
 
 <style>
