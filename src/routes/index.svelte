@@ -19,7 +19,7 @@
 
 <svelte:window on:scroll={updateManOpacity} />
 
-<Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%; margin-top: -64.5px" />
+<Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%; margin-top: -64.5px; transition:1.0s;" data-aos="zoom-out" />
 
 <Container>
 	<Row style="position:relative; white-space:nowrap;">
