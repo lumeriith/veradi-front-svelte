@@ -30,11 +30,11 @@
 			<p class="py-1 d-none d-md-block" />
 			<p class="py-1 d-none d-lg-block" />
 			<p class="py-1 d-none d-xl-block" />
-			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70%;" />
+			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70%; transition:1.5s;" data-aos="zoom-in" />
 			<p />
-			<Image alt=".." src={svgVue[4]} draggable="false" style="width:70%;" />
+			<Image alt=".." src={svgVue[4]} draggable="false" style="width:70%; transition:1.5s;" data-aos="zoom-in"/>
 			<p class="py-2" />
-			<Image alt=".." src={svgVue[5]} draggable="false" style="width:100%;" />
+			<Image alt=".." src={svgVue[5]} draggable="false" style="width:100%; transition:1.5s;" data-aos="zoom-in"/>
 		</Col>
 		<Col sm="6" md="6" lg="6" xl="7">
 			<div class="d-sm-none">
@@ -42,7 +42,8 @@
 					alt=".."
 					src={svgVue[6]}
 					draggable="false"
-					style="position:absolute; float:center; width:95%; opacity:{scrollAxis};"
+					style="position:absolute; float:center; width:95%; transition:1.5s;"
+					data-aos="fade-up"
 				/>
 			</div>
 			<div class="d-none d-sm-block">
@@ -50,7 +51,8 @@
 					alt=".."
 					src={svgVue[6]}
 					draggable="false"
-					style="position:absolute; float:center; width:50%; opacity:{scrollAxis};"
+					style="position:absolute; float:center; width:50%; transition:1.5s;"
+					data-aos="fade-up"
 				/>
 			</div>
 		</Col>
