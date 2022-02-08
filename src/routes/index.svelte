@@ -19,7 +19,8 @@
 
 <svelte:window on:scroll={updateManOpacity} />
 
-<Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%; margin-top: -64.5px; transition:1.0s;" data-aos="zoom-out" />
+<Image alt=".." src={svgVue[0]} draggable="false" style="position:absolute; width:100%; 
+margin-top: -64.5px; transition:6.0s;" data-aos="zoom-out" />
 
 <Container>
 	<Row style="position:relative; white-space:nowrap;">
@@ -30,7 +31,7 @@
 			<p class="py-1 d-none d-md-block" />
 			<p class="py-1 d-none d-lg-block" />
 			<p class="py-1 d-none d-xl-block" />
-			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70%; transition:1.5s;" data-aos="zoom-in" />
+			<Image alt=".." src={svgVue[3]} draggable="false" style="width:70%; transition:4.0s;" data-aos="zoom-in" />
 			<p />
 			<Image alt=".." src={svgVue[4]} draggable="false" style="width:70%; transition:1.5s;" data-aos="zoom-in"/>
 			<p class="py-2" />
