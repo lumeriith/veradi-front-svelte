@@ -1,5 +1,5 @@
 <script>
-	import SocialLoginButton from '$lib/components/SocialLoginButton.svelte';
+	import SocialRegisterButton from '$lib/components/SocialRegisterButton.svelte';
 	import {
 		Button,
 		Container,
@@ -26,7 +26,7 @@
 	];
 </script>
 
-<Container class="py-4">
+<Container class="py-4" style="transition:0.5s;" data-aos="zoom-out">
 	<Row>
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
@@ -100,8 +100,7 @@
 		  							background-position: 12px;
 		  							background-repeat: no-repeat;
 		  							text-align: left;
-		  							text-indent: 40px;
-	 	  					"
+		  							text-indent: 40px;"
 									/>
 								</Row>
 								<Row class="pb-3">
@@ -133,21 +132,21 @@
 									<hr />
 								</Row>
 								<Row style="gap:7px;">
-									<SocialLoginButton
+									<SocialRegisterButton
 										href="http://www.google.com"
 										imgUrl={img[5]}
-										text="Google로 로그인"
+										text="Google로 회원가입하기"
 									/>
-									<SocialLoginButton
+									<SocialRegisterButton
 										href="http://www.kakao.com"
 										imgUrl={img[6]}
-										text="Kakao로 로그인"
+										text="Kakao로 회원가입하기"
 									/>
 								</Row>
 							</Form>
 						</Col>
 						<Row class="pt-3">
-							<Form style="text-align:right; letter-spacing:-1px; color:gray;">
+							<Form style="text-align:right; font-size:14px; letter-spacing:-1px; color:gray;">
 								<span>이미 회원이신가요?</span>
 								<a href="/login">로그인 하기</a>
 							</Form>

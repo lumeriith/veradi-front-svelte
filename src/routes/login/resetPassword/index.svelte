@@ -1,5 +1,5 @@
 <script>
-	import SocialLoginButton from '$lib/components/SocialLoginButton.svelte';
+	import SocialRegisterButton from '$lib/components/SocialLoginButton.svelte';
 	import {
 		Button,
 		Container,
@@ -26,7 +26,7 @@
 	];
 </script>
 
-<Container class="py-4">
+<Container class="py-4" style="transition:0.5s;" data-aos="zoom-out">
 	<Row>
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
@@ -87,33 +87,12 @@
 		  							"
 									/>
 								</Row>
-								<Row>Password</Row>
 								<Row class="pb-2">
-									<Input
-										type="password"
-										name="password"
-										id="examplePassword"
-										placeholder="비밀번호"
-										style="
-		  							background-image: url({img[4]}) ;
-		  							background-size: 25px;
-		  							background-position: 12px;
-		  							background-repeat: no-repeat;
-		  							text-align: left;
-		  							text-indent: 40px;
-	 	  					"
-									/>
-								</Row>
-								<Row class="pb-3">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
 										<Input id="c1" type="checkbox" />
 										<Form style="font-size:14px; letter-spacing:-1px;">
-											<span>베라디 </span>
-											<a href="http://www.naver.com">이용 약관</a>
-											<span> 및 </span>
-											<a href="http://www.naver.com">개인정보 취급방침</a><span
-												>에 대한 내용을 모두 확인하였으며, 이에 동의합니다.</span
-											>
+											<span>아. </span>
+											<a href="http://www.naver.com">개 귀찮게 하네.</a>
 										</Form>
 									</FormGroup>
 								</Row>
@@ -122,8 +101,8 @@
 									<Col>
 										<Row>
 											<Button
-												style="align:center; background-color:#42B9FF; border:none; border-radius:21px;"
-												>회원가입
+												style="align:center; background-color:#71D7D1; border:none; border-radius:21px;"
+												>비밀번호 정정
 											</Button>
 										</Row>
 									</Col>
@@ -132,24 +111,12 @@
 								<Row class="py-1 pt-3">
 									<hr />
 								</Row>
-								<Row style="gap:7px;">
-									<SocialLoginButton
-										href="http://www.google.com"
-										imgUrl={img[5]}
-										text="Google로 로그인"
-									/>
-									<SocialLoginButton
-										href="http://www.kakao.com"
-										imgUrl={img[6]}
-										text="Kakao로 로그인"
-									/>
-								</Row>
 							</Form>
 						</Col>
-						<Row class="pt-3">
-							<Form style="text-align:right; letter-spacing:-1px; color:gray;">
-								<span>이미 회원이신가요?</span>
-								<a href="/login">로그인 하기</a>
+						<Row class="pt-1">
+							<Form style="text-align:right; font-size:14px; letter-spacing:-1.1px; color:gray;">
+								<span>회원이 아니신가요?</span>
+								<a href="/login/register">회원가입 하기</a>
 							</Form>
 						</Row>
 						<Col xs="1" sm="1" md="1" lg="1" xl="1" />

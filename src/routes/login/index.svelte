@@ -26,7 +26,7 @@
 	];
 </script>
 
-<Container class="py-4">
+<Container class="py-4" style="transition:0.5s;" data-aos="zoom-out">
 	<Row>
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
