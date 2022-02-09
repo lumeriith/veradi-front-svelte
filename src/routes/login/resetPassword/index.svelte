@@ -32,7 +32,7 @@
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
 			<Card style="align:center; box-shadow: 2px 2px 7px;">
 				<CardHeader>
-					<CardTitle style="text-align:center; margin-top:5pt;">로그인</CardTitle>
+					<CardTitle style="text-align:center; margin-top:5pt;">비밀번호 찾기/정정</CardTitle>
 				</CardHeader>
 				<CardBody>
 					<Row>
@@ -49,6 +49,24 @@
 										alt="veardiLogo"
 										src={img[2]}
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
+									/>
+								</Row>
+								<Row class="color:lightgray;">Name</Row>
+								<Row class="pb-3">
+									<Input
+										type="name"
+										name="name"
+										id="exampleName"
+										placeholder="이름"
+										style="
+		  								background-image: url({img[3]}) ;
+		  								background-size: 30px;
+		  								background-position: 10px;
+		  								background-repeat: no-repeat;
+		  								text-align: left;
+		  								text-indent: 40px;
+											
+		  							"
 									/>
 								</Row>
 								<Row class="color:lightgray;">Email Address</Row>
@@ -87,34 +105,17 @@
 									/>
 								</Row>
 								<Row class="pb-3">
-									<Col
-										xs="12"
-										sm="6"
-										md="5"
-										style="padding-right:0px; margin-bottom:-15px; padding-bottom:-15px;"
-									>
-										<FormGroup style="margin-left:-12px; font-size:16px;">
-											<Input id="c1" type="checkbox" label="로그인 상태 유지" />
-										</FormGroup>
-									</Col>
-									<Col xs="12" sm="6" md="7" align="right" style="margin-right:-13px;">
-										<Row>
-											<Col xs="12" sm="12" md="6">
-												<a
-													href="/login/register"
-													style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; text-align:right;"
-													>회원가입</a
-												>
-											</Col>
-											<Col xs="12" sm="12" md="6">
-												<a
-													href="/login/resetPassword"
-													style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; padding-left:-5px"
-													>ID/PW 찾기</a
-												>
-											</Col>
-										</Row>
-									</Col>
+									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
+										<Input id="c1" type="checkbox" />
+										<Form style="font-size:14px; letter-spacing:-1px;">
+											<span>베라디 </span>
+											<a href="http://www.naver.com">이용 약관</a>
+											<span> 및 </span>
+											<a href="http://www.naver.com">개인정보 취급방침</a><span
+												>에 대한 내용을 모두 확인하였으며, 이에 동의합니다.</span
+											>
+										</Form>
+									</FormGroup>
 								</Row>
 								<Row class="py-1">
 									<Col xs="1" sm="1" md="1" lg="1" xl="1" />
@@ -122,8 +123,8 @@
 										<Row>
 											<Button
 												style="align:center; background-color:#42B9FF; border:none; border-radius:21px;"
-												>로그인</Button
-											>
+												>회원가입
+											</Button>
 										</Row>
 									</Col>
 									<Col xs="1" sm="1" md="1" lg="1" xl="1" />
@@ -132,15 +133,29 @@
 									<hr />
 								</Row>
 								<Row style="gap:7px;">
-										<SocialLoginButton href="http://www.google.com" imgUrl={img[5]} text="Google로 로그인" />
-										<SocialLoginButton href="http://www.kakao.com" imgUrl={img[6]} text="Kakao로 로그인" />
+									<SocialLoginButton
+										href="http://www.google.com"
+										imgUrl={img[5]}
+										text="Google로 로그인"
+									/>
+									<SocialLoginButton
+										href="http://www.kakao.com"
+										imgUrl={img[6]}
+										text="Kakao로 로그인"
+									/>
 								</Row>
 							</Form>
 						</Col>
+						<Row class="pt-3">
+							<Form style="text-align:right; letter-spacing:-1px; color:gray;">
+								<span>이미 회원이신가요?</span>
+								<a href="/login">로그인 하기</a>
+							</Form>
+						</Row>
 						<Col xs="1" sm="1" md="1" lg="1" xl="1" />
 					</Row>
 				</CardBody>
-				<Row class="pb-2"/>
+				<Row />
 			</Card>
 		</Col>
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
