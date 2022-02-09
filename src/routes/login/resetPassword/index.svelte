@@ -26,7 +26,7 @@
 	];
 </script>
 
-<Container class="py-4" style="transition:0.5s;" data-aos="zoom-out">
+<Container class="py-4" style="transition:0.6s;" data-aos="zoom-out">
 	<Row>
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
@@ -113,7 +113,7 @@
 								</Row>
 							</Form>
 						</Col>
-						<Row class="pt-1">
+						<Row data-aos="fade-right" style="transition:2s" class="pt-1">
 							<Form style="text-align:right; font-size:14px; letter-spacing:-1.1px; color:gray;">
 								<span>회원이 아니신가요?</span>
 								<a href="/login/register">회원가입 하기</a>
