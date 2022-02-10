@@ -1,8 +1,10 @@
 <script>
 	import SocialRegisterButton from '$lib/components/social/SocialRegisterButton.svelte';
-	import SocialInput from '$lib/components/social/Input.svelte';
-  import SocialButton from '$lib/components/social/Button.svelte';
+	import IconInput from '$lib/components/social/IconInput.svelte';
+	import PillButton from '$lib/components/social/PillButton.svelte';
+	import MainError from '$lib/components/social/mainError.svelte';
 	import {
+		Alert,
 		Button,
 		Container,
 		Col,
@@ -27,6 +29,31 @@
 		'/img/login/kakao.png'
 	];
 
+	let inputName, inputEmail, inputPassword;
+	let registerError = false;
+	let registerErrorText = [
+		'이름을 입력해주세요.',
+    '이름은 한글만 포함될 수 있습니다.',
+		'잘못된 이메일입니다.',
+		'비밀번호 길이는 8~16자, 특수문자 1개이상 포함되어야 합니다.'
+	];
+
+	function onRegisterClick() {
+		registerError = false;
+
+		if (!registerError) {}
+	}
+
+	function checkEmailStandard(str) {
+		let reg_email =
+			/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		return reg_email.test(str);
+	}
+
+	function checkKorStandard(str) {
+		let regExp = /[가-힣]/g;
+		return regExp.test(str);
+	}
 </script>
 
 <Container class="py-4" style="transition:0.6s;" data-aos="zoom-out">
@@ -41,7 +68,7 @@
 					<Row>
 						<Col xs="1" sm="1" md="1" lg="1" xl="1" />
 						<Col xs="10" sm="10" md="10" lg="10" xl="10">
-							<Form>
+							<Form on:submit={(e) => e.preventDefault()}>
 								<Row class="pb-3" style="text-align:center">
 									<Image
 										alt="veardiLogo"
@@ -54,31 +81,34 @@
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
-								<SocialInput
+								<IconInput
 									title="Name"
 									type="name"
 									name="name"
 									inputId="exampleName"
 									placeholder="이름"
-									url={img[3]}
+									iconUrl={img[3]}
+                  bind:value={inputName}
 								/>
-								<SocialInput
+								<IconInput
 									title="Email Address"
 									type="email"
 									name="email"
 									inputId="exampleEmail"
 									placeholder="이메일"
-									url={img[3]}
+									iconUrl={img[3]}
+                  bind:value={inputEmail}
 								/>
-								<SocialInput
+								<IconInput
 									title="Password"
 									type="password"
 									name="password"
 									inputId="examplePassword"
 									placeholder="비밀번호"
-									url={img[4]}
+									iconUrl={img[4]}
 									size="25"
 									position="12"
+                  bind:value={inputPassword}
 								/>
 								<Row class="pb-3">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
@@ -93,7 +123,18 @@
 										</Form>
 									</FormGroup>
 								</Row>
-                <SocialButton title="회원가입" color="#42B9FF"/>
+								<MainError
+									isState={registerError}
+									title="회원가입 오류"
+									text={registerErrorText[2]}
+								/>
+								<PillButton
+									on:click={onRegisterClick}
+									title="회원가입"
+									color="#42B9FF"
+									buttonId="awesome"
+								/>
+								<!--------------------------------------------------------------------->
 								<Row class="py-1 pt-3">
 									<hr />
 								</Row>
@@ -111,7 +152,7 @@
 								</Row>
 							</Form>
 						</Col>
-						<Row data-aos="fade-right" style="transition:2s" class="pt-3">
+						<Row data-aos="fade-right" style="transition:1s" class="pt-3">
 							<Form style="text-align:right; font-size:14px; letter-spacing:-1px; color:gray;">
 								<span>이미 회원이신가요?</span>
 								<a href="/login">로그인 하기</a>

@@ -1,7 +1,8 @@
 <script>
 	import SocialRegisterButton from '$lib/components/social/SocialLoginButton.svelte';
-  import SocialInput from '$lib/components/social/Input.svelte';
-  import SocialButton from '$lib/components/social/Button.svelte';
+	import IconInput from '$lib/components/social/IconInput.svelte';
+	import PillButton from '$lib/components/social/PillButton.svelte';
+  import MainError from '$lib/components/social/mainError.svelte';
 	import {
 		Button,
 		Container,
@@ -34,7 +35,7 @@
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
 			<Card style="align:center; box-shadow: 2px 2px 7px;">
 				<CardHeader>
-					<CardTitle style="text-align:center; margin-top:5pt;">비밀번호 찾기/정정</CardTitle>
+					<CardTitle style="text-align:center; margin-top:5pt;">아이디찾기 / 비밀번호찾기</CardTitle>
 				</CardHeader>
 				<CardBody>
 					<Row>
@@ -53,21 +54,21 @@
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
-								<SocialInput
+								<IconInput
 									title="Name"
 									type="name"
 									name="name"
 									inputId="exampleName"
 									placeholder="이름"
-									url={img[3]}
+									iconUrl={img[3]}
 								/>
-								<SocialInput
+								<IconInput
 									title="Email Address"
 									type="email"
 									name="email"
 									inputId="exampleEmail"
 									placeholder="이메일"
-									url={img[3]}
+									iconUrl={img[3]}
 								/>
 								<Row class="pb-2">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
@@ -78,13 +79,14 @@
 										</Form>
 									</FormGroup>
 								</Row>
-                <SocialButton title="비밀번호 정정" color="#71D7D1"/>
+								<PillButton title="비밀번호 정정" color="#71D7D1" />
+								<!--------------------------------------------------------------------->
 								<Row class="py-1 pt-3">
 									<hr />
 								</Row>
 							</Form>
 						</Col>
-						<Row data-aos="fade-right" style="transition:2s" class="pt-1">
+						<Row data-aos="fade-right" style="transition:1s" class="pt-1">
 							<Form style="text-align:right; font-size:14px; letter-spacing:-1.1px; color:gray;">
 								<span>회원이 아니신가요?</span>
 								<a href="/login/register">회원가입 하기</a>

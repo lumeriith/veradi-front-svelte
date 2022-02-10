@@ -19,7 +19,8 @@
 	export let name;
 	export let inputId;
 	export let placeholder;
-  export let url;
+  export let iconUrl;
+  export let value;
   export let size = 30;
   export let position = 10;
   export let indent = 40;
@@ -32,8 +33,9 @@
 		name={name}
 		id={inputId}
 		placeholder={placeholder}
+    bind:value={value}
 		style="
-		  background-image: url({url}) ;
+		  background-image: url({iconUrl}) ;
 		  background-size: {size}px;
 		  background-position: {position}px;
 		  background-repeat: no-repeat;
