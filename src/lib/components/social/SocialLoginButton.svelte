@@ -14,9 +14,9 @@
 		Image
 	} from 'sveltestrap/src';
 
-	export let imgUrl;
+	export let url;
 	export let text;
-    export let href;
+  export let href;
 </script>
 
 <Button
@@ -24,7 +24,7 @@
 	style="background-color:white; align:center; border-color:silver;"
 >
 	<div style="display: flex; justify-content:center; align-items: center; gap: 10px">
-		<Image src={imgUrl} style="height:28px;" />
+		<Image src={url} style="height:28px;" />
 		<span style="color:gray;">{text}</span>
 	</div>
 </Button>

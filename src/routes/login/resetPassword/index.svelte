@@ -1,5 +1,7 @@
 <script>
-	import SocialRegisterButton from '$lib/components/SocialLoginButton.svelte';
+	import SocialRegisterButton from '$lib/components/social/SocialLoginButton.svelte';
+  import SocialInput from '$lib/components/social/Input.svelte';
+  import SocialButton from '$lib/components/social/Button.svelte';
 	import {
 		Button,
 		Container,
@@ -51,42 +53,22 @@
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
-								<Row class="color:lightgray;">Name</Row>
-								<Row class="pb-3">
-									<Input
-										type="name"
-										name="name"
-										id="exampleName"
-										placeholder="이름"
-										style="
-		  								background-image: url({img[3]}) ;
-		  								background-size: 30px;
-		  								background-position: 10px;
-		  								background-repeat: no-repeat;
-		  								text-align: left;
-		  								text-indent: 40px;
-											
-		  							"
-									/>
-								</Row>
-								<Row class="color:lightgray;">Email Address</Row>
-								<Row class="pb-3">
-									<Input
-										type="email"
-										name="email"
-										id="exampleEmail"
-										placeholder="이메일"
-										style="
-		  								background-image: url({img[3]}) ;
-		  								background-size: 30px;
-		  								background-position: 10px;
-		  								background-repeat: no-repeat;
-		  								text-align: left;
-		  								text-indent: 40px;
-											
-		  							"
-									/>
-								</Row>
+								<SocialInput
+									title="Name"
+									type="name"
+									name="name"
+									inputId="exampleName"
+									placeholder="이름"
+									url={img[3]}
+								/>
+								<SocialInput
+									title="Email Address"
+									type="email"
+									name="email"
+									inputId="exampleEmail"
+									placeholder="이메일"
+									url={img[3]}
+								/>
 								<Row class="pb-2">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
 										<Input id="c1" type="checkbox" />
@@ -96,18 +78,7 @@
 										</Form>
 									</FormGroup>
 								</Row>
-								<Row class="py-1">
-									<Col xs="1" sm="1" md="1" lg="1" xl="1" />
-									<Col>
-										<Row>
-											<Button
-												style="align:center; background-color:#71D7D1; border:none; border-radius:21px;"
-												>비밀번호 정정
-											</Button>
-										</Row>
-									</Col>
-									<Col xs="1" sm="1" md="1" lg="1" xl="1" />
-								</Row>
+                <SocialButton title="비밀번호 정정" color="#71D7D1"/>
 								<Row class="py-1 pt-3">
 									<hr />
 								</Row>

@@ -1,5 +1,7 @@
 <script>
-	import SocialRegisterButton from '$lib/components/SocialRegisterButton.svelte';
+	import SocialRegisterButton from '$lib/components/social/SocialRegisterButton.svelte';
+	import SocialInput from '$lib/components/social/Input.svelte';
+  import SocialButton from '$lib/components/social/Button.svelte';
 	import {
 		Button,
 		Container,
@@ -24,6 +26,7 @@
 		'/img/login/google.png',
 		'/img/login/kakao.png'
 	];
+
 </script>
 
 <Container class="py-4" style="transition:0.6s;" data-aos="zoom-out">
@@ -51,58 +54,32 @@
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
-								<Row class="color:lightgray;">Name</Row>
-								<Row class="pb-3">
-									<Input
-										type="name"
-										name="name"
-										id="exampleName"
-										placeholder="이름"
-										style="
-		  								background-image: url({img[3]}) ;
-		  								background-size: 30px;
-		  								background-position: 10px;
-		  								background-repeat: no-repeat;
-		  								text-align: left;
-		  								text-indent: 40px;
-											
-		  							"
-									/>
-								</Row>
-								<Row class="color:lightgray;">Email Address</Row>
-								<Row class="pb-3">
-									<Input
-										type="email"
-										name="email"
-										id="exampleEmail"
-										placeholder="이메일"
-										style="
-		  								background-image: url({img[3]}) ;
-		  								background-size: 30px;
-		  								background-position: 10px;
-		  								background-repeat: no-repeat;
-		  								text-align: left;
-		  								text-indent: 40px;
-											
-		  							"
-									/>
-								</Row>
-								<Row>Password</Row>
-								<Row class="pb-2">
-									<Input
-										type="password"
-										name="password"
-										id="examplePassword"
-										placeholder="비밀번호"
-										style="
-		  							background-image: url({img[4]}) ;
-		  							background-size: 25px;
-		  							background-position: 12px;
-		  							background-repeat: no-repeat;
-		  							text-align: left;
-		  							text-indent: 40px;"
-									/>
-								</Row>
+								<SocialInput
+									title="Name"
+									type="name"
+									name="name"
+									inputId="exampleName"
+									placeholder="이름"
+									url={img[3]}
+								/>
+								<SocialInput
+									title="Email Address"
+									type="email"
+									name="email"
+									inputId="exampleEmail"
+									placeholder="이메일"
+									url={img[3]}
+								/>
+								<SocialInput
+									title="Password"
+									type="password"
+									name="password"
+									inputId="examplePassword"
+									placeholder="비밀번호"
+									url={img[4]}
+									size="25"
+									position="12"
+								/>
 								<Row class="pb-3">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
 										<Input id="c1" type="checkbox" />
@@ -116,30 +93,19 @@
 										</Form>
 									</FormGroup>
 								</Row>
-								<Row class="py-1">
-									<Col xs="1" sm="1" md="1" lg="1" xl="1" />
-									<Col>
-										<Row>
-											<Button
-												style="align:center; background-color:#42B9FF; border:none; border-radius:21px;"
-												>회원가입
-											</Button>
-										</Row>
-									</Col>
-									<Col xs="1" sm="1" md="1" lg="1" xl="1" />
-								</Row>
+                <SocialButton title="회원가입" color="#42B9FF"/>
 								<Row class="py-1 pt-3">
 									<hr />
 								</Row>
 								<Row style="gap:7px;">
 									<SocialRegisterButton
 										href="http://www.google.com"
-										imgUrl={img[5]}
+										url={img[5]}
 										text="Google로 회원가입하기"
 									/>
 									<SocialRegisterButton
 										href="http://www.kakao.com"
-										imgUrl={img[6]}
+										url={img[6]}
 										text="Kakao로 회원가입하기"
 									/>
 								</Row>
