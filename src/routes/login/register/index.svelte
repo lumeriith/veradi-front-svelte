@@ -31,17 +31,41 @@
 
 	let inputName, inputEmail, inputPassword;
 	let registerError = false;
-	let registerErrorText = [
-		'이름을 입력해주세요.',
-    '이름은 한글만 포함될 수 있습니다.',
-		'잘못된 이메일입니다.',
-		'비밀번호 길이는 8~16자, 특수문자 1개이상 포함되어야 합니다.'
+
+	const REGISTER_VALIDATION_CHECKS = [
+    {
+			message: '이름을 입력해주세요.',
+			isWrong: () => inputName == ''
+		},
+    {
+			message: '이름은 한글로 입력되어야 합니다.',
+			isWrong: () => !checkNameStandard(inputName)
+		},
+    {
+			message: '이메일을 입력해주세요.',
+			isWrong: () => inputEmail == ''
+		},
+		{
+			message: '이메일 형식이 맞지 않습니다.',
+			isWrong: () => !checkEmailStandard(inputEmail)
+		},
+		{
+			message: '비밀번호를 입력해주세요.',
+			isWrong: () => inputPassword == ''
+		}
 	];
+
+	let registerErrorText = '';
 
 	function onRegisterClick() {
 		registerError = false;
-
-		if (!registerError) {}
+		for (let i = 0; i < REGISTER_VALIDATION_CHECKS.length; i++) {
+			const val = REGISTER_VALIDATION_CHECKS[i];
+			if (!val.isWrong()) continue;
+			registerErrorText = val.message;
+			registerError = true;
+			break;
+		}
 	}
 
 	function checkEmailStandard(str) {
@@ -50,7 +74,7 @@
 		return reg_email.test(str);
 	}
 
-	function checkKorStandard(str) {
+	function checkNameStandard(str) {
 		let regExp = /[가-힣]/g;
 		return regExp.test(str);
 	}
@@ -110,7 +134,7 @@
 									position="12"
                   bind:value={inputPassword}
 								/>
-								<Row class="pb-3">
+								<Row class="pb-3" style="margin-top:-10px">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
 										<Input id="c1" type="checkbox" />
 										<Form style="font-size:14px; letter-spacing:-1px;">
@@ -126,7 +150,7 @@
 								<MainError
 									isState={registerError}
 									title="회원가입 오류"
-									text={registerErrorText[2]}
+									text={registerErrorText}
 								/>
 								<PillButton
 									on:click={onRegisterClick}

@@ -31,45 +31,53 @@
 
 	let inputEmail, inputPassword;
 	let loginError = false;
-	let loginErrorText = [
-    '이메일을 입력해주세요.',
-    '잘못된 이메일 주소입니다.',
-    '해당 계정이 존재하지 않습니다.',
-    '비밀번호를 입력해주세요.',
-    '잘못된 비밀번호입니다.'
-  ];
-  let errorTextNum;
+
+	const LOGIN_VALIDATION_CHECKS = [
+		{
+			message: '이메일을 입력해주세요.',
+			isWrong: () => inputEmail == ''
+		},
+		{
+			message: '이메일 형식이 맞지 않습니다.',
+			isWrong: () => !checkEmailStandard(inputEmail)
+		},
+		{
+			message: '비밀번호를 입력해주세요.',
+			isWrong: () => inputPassword == ''
+		}
+	];
+
+	let loginErrorText = '';
 
 	function onLoginClick() {
-    loginError = false;
-    if (inputEmail == "" & !loginError) {loginError=true; errorTextNum=0;}
-		if (!checkEmailStandard(inputEmail) & !loginError) {loginError=true; errorTextNum=1;}
-    if (false & !loginError) {loginError=true; errorTextNum=2;}
-    if (inputPassword == "" & !loginError) {loginError=true; errorTextNum=3;}
-    if (!checkPassword(inputPassword) & !loginError) {loginError=true; errorTextNum=4;}
-
-    if (!loginError) {loginError=false; console.log("성공");}
+		loginError = false;
+		for (let i = 0; i < LOGIN_VALIDATION_CHECKS.length; i++) {
+			const val = LOGIN_VALIDATION_CHECKS[i];
+			if (!val.isWrong()) continue;
+			loginErrorText = val.message;
+			loginError = true;
+			break;
+		}
 	}
-
 
 	function checkEmailStandard(str) {
-		let reg_email = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-    return reg_email.test(str);
+		let reg_email =
+			/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		return reg_email.test(str);
 	}
 
-  function CheckEmail(str) {
-    return false;
-  }
+	function checkEmail(str) {
+		return false;
+	}
 
-  function checkKorStandard(str) {
+	function checkKorStandard(str) {
 		let regExp = /[가-힣]/g;
-    return regExp.test(str);
+		return regExp.test(str);
 	}
 
-  function checkPassword(str) {
-    return false;
+	function checkPassword(str) {
+		return false;
 	}
-
 </script>
 
 <Container class="py-4" style="transition:0.6s;" data-aos="zoom-out">
@@ -117,7 +125,7 @@
 									position="12"
 									bind:value={inputPassword}
 								/>
-								<Row class="pb-3">
+								<Row class="pb-3" style="margin-top:-10px">
 									<Col
 										xs="12"
 										sm="6"
@@ -141,13 +149,13 @@
 												<a
 													href="/login/resetPassword"
 													style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; padding-left:-5px"
-													>ID/PW 찾기</a
+													>PW 찾기</a
 												>
 											</Col>
 										</Row>
 									</Col>
 								</Row>
-								<MainError isState={loginError} title="로그인 오류" bind:text={loginErrorText[errorTextNum]} />
+								<MainError isState={loginError} title="로그인 오류" text={loginErrorText} />
 								<PillButton
 									on:click={onLoginClick}
 									title="로그인"

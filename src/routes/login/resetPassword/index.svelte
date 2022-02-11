@@ -2,7 +2,7 @@
 	import SocialRegisterButton from '$lib/components/social/SocialLoginButton.svelte';
 	import IconInput from '$lib/components/social/IconInput.svelte';
 	import PillButton from '$lib/components/social/PillButton.svelte';
-  import MainError from '$lib/components/social/mainError.svelte';
+	import MainError from '$lib/components/social/mainError.svelte';
 	import {
 		Button,
 		Container,
@@ -27,6 +27,50 @@
 		'/img/login/google.png',
 		'/img/login/kakao.png'
 	];
+
+	const SEARCH_VALIDATION_CHECKS = [
+		{
+			message: '이름을 입력해주세요.',
+			isWrong: () => inputName == ''
+		},
+		{
+			message: '이름은 한글로 입력되어야 합니다.',
+			isWrong: () => !checkNameStandard(inputName)
+		},
+		{
+			message: '이메일을 입력해주세요.',
+			isWrong: () => inputEmail == ''
+		},
+		{
+			message: '이메일 형식이 맞지 않습니다.',
+			isWrong: () => !checkEmailStandard(inputEmail)
+		}
+	];
+
+	let searchError = false;
+	let searchErrorText = '';
+
+	function onSearchClick() {
+		searchError = false;
+		for (let i = 0; i < SEARCH_VALIDATION_CHECKS.length; i++) {
+			const val = SEARCH_VALIDATION_CHECKS[i];
+			if (!val.isWrong()) continue;
+			searchErrorText = val.message;
+			searchError = true;
+			break;
+		}
+	}
+
+	function checkEmailStandard(str) {
+		let reg_email =
+			/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+		return reg_email.test(str);
+	}
+
+	function checkNameStandard(str) {
+		let regExp = /[가-힣]/g;
+		return regExp.test(str);
+	}
 </script>
 
 <Container class="py-4" style="transition:0.6s;" data-aos="zoom-out">
@@ -35,13 +79,13 @@
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
 			<Card style="align:center; box-shadow: 2px 2px 7px;">
 				<CardHeader>
-					<CardTitle style="text-align:center; margin-top:5pt;">아이디찾기 / 비밀번호찾기</CardTitle>
+					<CardTitle style="text-align:center; margin-top:5pt;">비밀번호찾기</CardTitle>
 				</CardHeader>
 				<CardBody>
 					<Row>
 						<Col xs="1" sm="1" md="1" lg="1" xl="1" />
 						<Col xs="10" sm="10" md="10" lg="10" xl="10">
-							<Form>
+							<Form on:submit={(e) => e.preventDefault()}>
 								<Row class="pb-3" style="text-align:center">
 									<Image
 										alt="veardiLogo"
@@ -70,7 +114,7 @@
 									placeholder="이메일"
 									iconUrl={img[3]}
 								/>
-								<Row class="pb-2">
+								<Row class="pb-1" style="margin-top:-10px">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
 										<Input id="c1" type="checkbox" />
 										<Form style="font-size:14px; letter-spacing:-1px;">
@@ -79,7 +123,13 @@
 										</Form>
 									</FormGroup>
 								</Row>
-								<PillButton title="비밀번호 정정" color="#71D7D1" />
+								<MainError isState={searchError} title="회원가입 오류" text={searchErrorText} />
+								<PillButton
+									on:click={onSearchClick}
+									title="비밀번호 찾기/정정"
+									color="#77ee5d"
+									buttonId="awesome"
+								/>
 								<!--------------------------------------------------------------------->
 								<Row class="py-1 pt-3">
 									<hr />
