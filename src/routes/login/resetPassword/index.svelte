@@ -107,7 +107,8 @@
 									inputId="exampleName"
 									placeholder="이름"
 									iconUrl={img[3]}
-								/>
+                  bind:value={inputName}
+                  />
 								<IconInput
 									title="Email Address"
 									type="email"
@@ -115,6 +116,7 @@
 									inputId="exampleEmail"
 									placeholder="이메일"
 									iconUrl={img[3]}
+                  bind:value={inputEmail}
 								/>
 								<Row class="pb-1" style="margin-top:-10px">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
