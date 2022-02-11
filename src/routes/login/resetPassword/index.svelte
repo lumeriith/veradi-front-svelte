@@ -28,6 +28,8 @@
 		'/img/login/kakao.png'
 	];
 
+  let inputName, inputEmail;
+
 	const SEARCH_VALIDATION_CHECKS = [
 		{
 			message: '이름을 입력해주세요.',
@@ -123,10 +125,10 @@
 										</Form>
 									</FormGroup>
 								</Row>
-								<MainError isState={searchError} title="회원가입 오류" text={searchErrorText} />
+								<MainError isState={searchError} title="찾기 오류" text={searchErrorText} />
 								<PillButton
 									on:click={onSearchClick}
-									title="비밀번호 찾기/정정"
+									title="비밀번호 찾기"
 									color="#77ee5d"
 									buttonId="awesome"
 								/>
