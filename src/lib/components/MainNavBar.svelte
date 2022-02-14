@@ -88,6 +88,7 @@
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>채용</DropdownToggle>
 				<DropdownMenu>
+          <DropdownItem href="/hire/intro">인재채용</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 			<Dropdown nav inNavbar>

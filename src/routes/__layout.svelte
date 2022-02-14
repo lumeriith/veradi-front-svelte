@@ -12,6 +12,3 @@
 
 <MainNavBar />
 <slot />
-
-<div>Hello World!</div>
-

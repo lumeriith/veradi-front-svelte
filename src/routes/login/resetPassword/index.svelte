@@ -18,15 +18,15 @@
 		Image
 	} from 'sveltestrap/src';
 
-	const img = [
-		'/svg/login/login.svg',
-		'/img/logo/veradi.png',
-		'/svg/login/veradi.svg',
-		'/img/login/email.png',
-		'/img/login/password.png',
-		'/img/login/google.png',
-		'/img/login/kakao.png'
-	];
+	const img = {
+		'login' : '/svg/login/login.svg',
+		'veradiLogo' : '/img/logo/veradi.png',
+		'veradiTitle' : '/svg/login/veradi.svg',
+		'email' : '/img/login/email.png',
+		'password' : '/img/login/password.png',
+		'google' : '/img/login/google.png',
+		'kakao' : '/img/login/kakao.png'
+  };
 
   let inputName, inputEmail;
 
@@ -91,12 +91,12 @@
 								<Row class="pb-3" style="text-align:center">
 									<Image
 										alt="veardiLogo"
-										src={img[1]}
+										src={img.veradiLogo}
 										style="height:45px; width:auto; margin-left:-15px;"
 									/>
 									<Image
 										alt="veardiLogo"
-										src={img[2]}
+										src={img.veradiTitle}
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
