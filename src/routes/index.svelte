@@ -59,72 +59,7 @@ margin-top: -64.5px; transition:6.0s;" data-aos="zoom-out" />
 		</Col>
 	</Row>
 	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row><Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
-	<Row>Hello!</Row>
+
 </Container>
 
 <style>
