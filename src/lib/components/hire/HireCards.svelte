@@ -19,7 +19,7 @@
 </script>
 
 {#each CardContents as content}
-	<Col xs="6" sm="4" style="text-align:center;" class="py-2">
+	<Col xs="6" sm="4" style="text-align:center;" class="py-4">
 		<div class="py-3 align:center;"
     data-aos="zoom-in-up" data-aos-easing="linear" style="transition:1.0s;">
 			<Image src={content.img} style="display:inline-block; height:120px; width:120px;" />

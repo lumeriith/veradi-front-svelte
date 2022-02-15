@@ -27,33 +27,32 @@
 </script>
 
 <!----------------------------------------------------------------------------->
-<Form
-	data-aos="zoom-out-up"
-	class="py-5"
-	style="transition:1.0s; background-color:#e1f5ff;"
-	on:submit={(e) => e.preventDefault()}
->
-	<Row class="py-5">
-		<Col sm="1" md="1" lg="1" xl="1" />
-		<Col sm="10" md="10" lg="10" xl="10">
-			<Container>
-				<span style="font-size:30px; font-weight:bold; word-break:keep-all;">
-					<div>교육의 내일을</div>
-					<div>함께 만들어갈 인재</div>
-				</span>
-				<Row class="py-2" />
-				<span style="font-size:17px; letter-spacing: -1px; word-break:keep-all;">
-					<div>열린 태도와 신뢰를 바탕으로 서로를 존중하고</div>
-					<div>협력하는 인재, 새로운 생각과 도전으로 함께 성장할 인재상을 기다립니다.</div>
-				</span>
-				<Row class="py-3" />
-				<Button primary href="/hire/detail/" data-aos="fade-right" style="transition:1.5s;"
-					>베라디 1기 지원하기</Button
-				>
-			</Container>
-		</Col>
-		<Col sm="1" md="1" lg="1" xl="1" />
-	</Row>
+<Form style=" background-color:#e1f5ff;" on:submit={(e) => e.preventDefault()}>
+  <Container>
+	<div data-aos="zoom-out-up" class="py-5" style="transition:1.0s;">
+		<Row>
+			<Col sm="1" md="1" lg="1" xl="1" />
+			<Col sm="10" md="10" lg="10" xl="10">
+				
+					<span style="font-size:30px; font-weight:bold; word-break:keep-all;">
+						<div>교육의 내일을</div>
+						<div>함께 만들어갈 인재</div>
+					</span>
+					<Row class="py-2" />
+					<span style="font-size:17px; letter-spacing: -1px; word-break:keep-all;">
+						<div>열린 태도와 신뢰를 바탕으로 서로를 존중하고</div>
+						<div>협력하는 인재, 새로운 생각과 도전으로 함께 성장할 인재상을 기다립니다.</div>
+					</span>
+					<Row class="py-3" />
+					<Button primary href="/hire/detail/" data-aos="fade-right" style="transition:1.5s;"
+						>베라디 1기 지원하기</Button
+					>
+				
+			</Col>
+			<Col sm="1" md="1" lg="1" xl="1" />
+		</Row>
+	</div>
+</Container>
 </Form>
 <!----------------------------------------------------------------------------->
 <Container class="py-5">
@@ -176,7 +175,7 @@
 </Container>
 <!---------------------------------------------------------------->
 <Form class="py-5" style="background-color:whitesmoke">
-	<Container>
+	<Container class="py-1">
 		<div style="margin-left:10px;">
 			<h1>채용문의</h1>
 			<h5>채용 관련 문의는 Q&A 게시판 또는 @gmail.com을 통해서 가능합니다.</h5>

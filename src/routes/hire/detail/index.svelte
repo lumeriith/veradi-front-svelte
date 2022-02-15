@@ -96,7 +96,7 @@
 	<Row>
 		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="2" />
 		<Col xs="10" sm="10" md="10" lg="10" xl="10" xxl="8">
-			<div data-aos="fade-left" data-aos-easing="linear" style="transition:1.0s;">
+			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
 				<h1 class="py-1">베라디 1기 지원안내</h1>
 				<h2 class="py-1" style="color:gray">지원절차</h2>
 			</div>
@@ -180,7 +180,7 @@
 </Container>
 <!---------------------------------------------------------------->
 <Form class="py-5" style="background-color:whitesmoke">
-	<Container>
+	<Container class="py-1">
 		<div style="margin-left:10px;">
 			<h1>채용문의</h1>
 			<h5>채용 관련 문의는 Q&A 게시판 또는 @gmail.com을 통해서 가능합니다.</h5>
