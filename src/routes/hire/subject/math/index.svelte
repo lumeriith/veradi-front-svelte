@@ -18,7 +18,9 @@
   import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 </script>
 
-
+{#each MathInfo as info}
 <HireSubjectAnnouncement 
-  subjectInfo=MathInfo
+  title={info.title}
+  recruitment={info.recruitment.join('\n')}
 />
+{/each}

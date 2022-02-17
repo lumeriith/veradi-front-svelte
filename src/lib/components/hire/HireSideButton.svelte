@@ -18,7 +18,7 @@
 	import { SubjectContents } from './constants/SubjectContents.svelte';
 </script>
 
-<Card style="flex; gap:15px; border:none; ">
+<Card style="flex; gap:15px; border:none;">
 	{#each SubjectContents as content}
 		<Button href={content.src}>{content.title}</Button>
 	{/each}

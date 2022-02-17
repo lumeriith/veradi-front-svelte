@@ -31,8 +31,8 @@
 
 <Container data-aos="fade-right" style="transition:2.0s" class="py-4">
 	<Row>
-		<Col xs="1" md="1" lg="1" xl="2" xxl="2" />
-		<Col xs="10" md="10" lg="10" xl="8" xxl="8">
+		<Col xs="1" md="1" lg="1" xl="1" xxl="1" />
+		<Col xs="10" md="10" lg="10" xl="10" xxl="10">
 			<span>
 				<h1>가슴 뛰는 미래</h1>
 				<h1>목표있는 삶</h1>
@@ -48,10 +48,11 @@
 	class="py-5"
 	style="transition:2.0s; background-color:#e1f5ff;"
 >
-	<Row style="margin-right:0px;">
-		<Col xs="1" sm="2" md="1" lg="1" xl="2" xxl="3" />
-		<Col xs="10" sm="8" md="5" lg="5" xl="4" xxl="4">
-			<span style="word-break:keep-all;">
+<Container>
+	<Row style="padding-left:0px;">
+		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="1" />
+		<Col xs="10" sm="10" md="5" lg="5" xl="4" xxl="4">
+			<span style="">
 				<h5 class="py-2">
 					서울시 강남구 역삼동, 우리나라에서 가장 바쁘게 돌아가는 동(洞) 중 하나인 이곳에 내노라하는
 					인재들이 오늘도 함께하고 있습니다.
@@ -72,15 +73,15 @@
 			</span>
 		</Col>
 		<Col xs="1" sm="2" md="1" lg="1" xl="1" xxl="1" />
-		<Col xs="2" sm="2" class="d-block d-md-none" />
+		<Col xs="1" sm="1" class="d-block d-md-none" style="text-align:center;" />
 		<Col
-			xs="8"
-			sm="8"
-			md="4"
-			lg="4"
-			xl="3"
-			xxl="3"
-			style="vertical-align:middle; text-align:center;"
+			xs="12"
+			sm="12"
+			md="5"
+			lg="5"
+			xl="4"
+			xxl="5"
+			style="vertical-align:middle; display:inline-block; text-align:center;"
 		>
 			<Image
 				src="/img/test2.png"
@@ -88,13 +89,14 @@
 				style="max-width:350px; width:100%; display:inline-block;"
 			/>
 		</Col>
-		<Col xs="2" sm="2" md="1" lg="1" xl="2" xxl="2" />
+		<Col xs="1" sm="1" md="0" lg="0" xl="1" xxl="1" class="d-none d-md-block"/>
 	</Row>
+</Container>
 </Form>
 <!---------------------------------------------------------------->
 <Container class="py-5">
 	<Row>
-		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="2" />
+		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="1" />
 		<Col xs="10" sm="10" md="10" lg="10" xl="10" xxl="8">
 			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
 				<h1 class="py-1">베라디 1기 지원안내</h1>
@@ -104,7 +106,7 @@
 		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="2" />
 	</Row>
 	<Row class="pt-3">
-		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="3" />
 		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
 			<Row style="text-align:center;">
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
@@ -138,10 +140,10 @@
 	<Container class="py-3" style="padding-left:20px;">
 		<div data-aos="flip-left" data-aos-easing="linear" style="transition:1.0s;">
 			<Row>
-				<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
-				<Col xs="12" sm="12" md="3" lg="3" xl="3" xxl="2">
-					<div class="pb-3" style="color:gray; ">
-						<h2>지원방식</h2>
+				<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+				<Col xs="12" sm="12" md="3" lg="3" xl="3" xxl="3" style="display:table;">
+          <div style="display:table-cell; height:100%; align-items:center; color:gray; vertical-align:middle;">
+						<h2 style="vertical-align:center;">지원방식</h2>
 					</div>
 				</Col>
 				<Col xs="12" sm="12" md="7" lg="7" xl="7" xxl="6">
@@ -166,12 +168,14 @@
 <!---------------------------------------------------------------->
 <Container class="py-5">
 	<Row>
-		<Col xs="12" sm="12" md="4">
-			<div data-aos="zoom-in-up" data-aos-easing="linear" style="transition:1.0s;">
-				<h1 style="margin-left:20px;" class="py-3">지원부서</h1>
+    <Col xs="1" sm="1" class="d-block d-sm-none d-md-block"/>
+		<Col xs="10" sm="10" md="3">
+			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
+				<h1 style="margin-left:0px;" class="py-3">지원부서</h1>
 			</div>
 		</Col>
-		<Col xs="12" sm="12" md="8">
+    <Col xs="1" sm="1" class="d-block d-sm-none d-md-block"/>
+		<Col xs="12" sm="12" md="7">
 			<Row>
 				<HireSubjects />
 			</Row>
