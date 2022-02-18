@@ -20,7 +20,12 @@
 
 {#each MathInfo as info}
 <HireSubjectAnnouncement 
-  title={info.title}
-  recruitment={info.recruitment.join('\n')}
+  subjectName={info.subjectName}
+  subjectIntroHref={info.subjectIntroHref}
+  applicationDate={info.applicationDate}
+  applicationIntake={info.applicationIntake}
+  requirement={info.requirement.join('\n')}
+  prefer={info.prefer.join('\n')}
+  etc={info.etc.join('\n')}
 />
 {/each}
