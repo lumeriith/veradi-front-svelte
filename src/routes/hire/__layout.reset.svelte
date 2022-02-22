@@ -1,7 +1,7 @@
 <script>
 	import '$lib/notusTemplate/styles/index.css';
 	import 'bootstrap/dist/css/bootstrap.min.css';
-	import MainNavBar from '$lib/components/nav/MainNavBar.svelte';
+	import HireNavBar from '$lib/components/nav/HireNavBar.svelte';
 
 	import { onMount } from 'svelte';
 	import 'aos/dist/aos.css';
@@ -10,5 +10,5 @@
 
 </script>
 
-<MainNavBar />
-<slot />
+<HireNavBar/>
+<slot/>

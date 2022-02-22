@@ -104,7 +104,7 @@
 		<Col xs="12" md="8" lg="8">
 			<Form>
 				<Container>
-					<div data-aos="fade-left" data-aos-easing="linear" style="transition:1.0s;">
+					<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
 						<span style="word-break:keep-all">
 							<div class="py-2">
 								베라디는 2019년 6월 (주)베라디 법인 설립 이후로 매년 200% 이상을 상회하는 놀라운
@@ -147,7 +147,7 @@
 			<Col xs="1" />
 		</Row>
 		<Row>
-			<div data-aos="fade-up-left" data-aos-easing="linear" style="transition:1.0s;">
+			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
 				<Image src="/img/test2.png" style="width:50%;" />
 			</div>
 		</Row>
