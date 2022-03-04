@@ -168,14 +168,15 @@
 <!---------------------------------------------------------------->
 <Container class="py-5">
 	<Row>
-    <Col xs="1" sm="1" class="d-block d-sm-none d-md-block"/>
+    <Col xs="1" sm="1" class="d-block d-sm-none d-lg-block"/>
 		<Col xs="10" sm="10" md="3">
 			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
-				<h1 style="margin-left:0px;" class="py-3">지원부서</h1>
+				<h2 style="margin-left:0px;" class="py-3">지원부서</h2>
 			</div>
 		</Col>
-    <Col xs="1" sm="1" class="d-block d-sm-none d-md-block"/>
-		<Col xs="12" sm="12" md="7">
+    <Col xs="1" sm="1" class="d-block d-sm-none d-xl-block"/>
+		<Col xs="1" class="d-block d-sm-none"/>
+		<Col xs="10" sm="12" md="8" lg="7">
 			<Row>
 				<HireSubjects />
 			</Row>
