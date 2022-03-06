@@ -93,4 +93,73 @@
       education: "숙명여자대학교 교육학부"
     },
   ]
+
+  export const PhysicsMemberCardInfo = [
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+  ]
+
+  export const ChemistryMemberCardInfo = [
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+  ]
+
+  export const EarthscienceMemberCardInfo = [
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+    {
+      name: "홍길동",
+      rank: "팀장",
+      education: "ㅇㅇ대학교 ㅇㅇ학과"
+    },
+  ]
 </script>

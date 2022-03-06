@@ -16,8 +16,8 @@
 		Image
 	} from 'sveltestrap/src';
 
-  import { MathMemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
-  import { MathHashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
+  import { MathMemberCardInfo as MemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
+  import { MathHashTagInfo as HashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
   import MemberCard from '$lib/components/introduction/MemberCard.svelte';
   import TeamHashTag from '$lib/components/introduction/TeamHashTag.svelte';
   import TeamButton from '$lib/components/introduction/TeamButton.svelte';
@@ -43,7 +43,7 @@
         팀원들이 본인의 일을 사랑하고 일을 통해 일의 의미를 더욱 크게 만들어갈 수 있도록 더불어 협동하는 조직문화를 매 순간 고민하며 만들어가고 있습니다."
       />
       <Row class="py-3">
-        {#each MathHashTagInfo as info}
+        {#each HashTagInfo as info}
           <TeamHashTag
             content = {info.content}
             fontColor = {info.fontColor}
@@ -61,7 +61,7 @@
       subject="수학팀"
     />
     <Row class="py-2">
-          {#each MathMemberCardInfo as info}
+          {#each MemberCardInfo as info}
             <MemberCard
               name={info.name}
               rank={info.rank}

@@ -16,8 +16,8 @@
 		Image
 	} from 'sveltestrap/src';
 
-  import { BiologyMemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
-  import { BiologyHashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
+  import { BiologyMemberCardInfo as MemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
+  import { BiologyHashTagInfo as HashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
   import MemberCard from '$lib/components/introduction/MemberCard.svelte';
   import TeamHashTag from '$lib/components/introduction/TeamHashTag.svelte';
   import TeamButton from '$lib/components/introduction/TeamButton.svelte';
@@ -43,7 +43,7 @@
         불필요한 업무는 프로그램에 맡기고, 회의 시간에는 서로의 능력을 존중하면서 이야기하며, 업무를 한 만큼 확실한 보상을 약속하는 팀, 그 팀이 바로 생명과학입니다."
       />
       <Row class="py-3">
-        {#each BiologyHashTagInfo as info}
+        {#each HashTagInfo as info}
           <TeamHashTag
             content = {info.content}
             fontColor = {info.fontColor}
@@ -61,7 +61,7 @@
       subject="생명과학팀"
     />
     <Row class="py-2">
-          {#each BiologyMemberCardInfo as info}
+          {#each MemberCardInfo as info}
             <MemberCard
               name={info.name}
               rank={info.rank}
