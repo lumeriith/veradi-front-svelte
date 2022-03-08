@@ -11,7 +11,7 @@
     {
       titleSpelling: "E",
       title: "ducational",
-      contentForward: "교육은 한 사람을 변화시키고, 더 나아가 세상을 변화시키는 힘입니다. 베라디는",
+      contentForward: "교육은 한 사람의 인생을, 더 나아가",
       contentBold: "더 나은 방향으로의 세상의 변화",
       contentBackward: "에 기여합니다.",
       transition: "0.8s",

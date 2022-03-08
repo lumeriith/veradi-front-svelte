@@ -11,7 +11,7 @@
 	<b style="text-shadow: 0.5px 1px 1px #303030; letter-spacing:2.0px;">
 		<span style="color:#3b86c8;">{titleSpelling}</span>{title}
 	</b>&nbsp;
-	<span style="color:#707070;"
+	<span style="color:#707070; letter-spacing:-1px;"
 		>{contentForward}
 		<span style="color:#2d81cb;">{contentBold}</span>{contentBackward}
 	</span>
