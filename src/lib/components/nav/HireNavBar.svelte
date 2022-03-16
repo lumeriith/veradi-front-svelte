@@ -90,7 +90,7 @@
 				<DropdownItem href="/introduction/math">모집요강</DropdownItem>
 			</Dropdown>
 			<Dropdown>
-				<DropdownItem href="/introduction/math">자주 묻는 질문</DropdownItem>
+				<DropdownItem href="/hire/qna">자주 묻는 질문</DropdownItem>
 			</Dropdown>
 
 			<NavItem
