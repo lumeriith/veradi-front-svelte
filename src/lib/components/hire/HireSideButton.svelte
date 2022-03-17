@@ -18,15 +18,18 @@
 	import { SubjectContents } from './constants/SubjectContents.svelte';
 </script>
 
-<h4 class="pt-5" style="color:gray">[다른 팀 공고 보기]</h4>
-<Card class="py-2" style="display:flex; gap:10px; border:none; background-color:#e1f5ff;">
+<Card class="py-3" style="display:flex; gap:10px; border:none;">
   <Row>
 	{#each SubjectContents as content}
   
-  <Col xs="6" sm="4" md="3" xl="2" class="py-1">
-      <Card>
-		<Button href={content.src}>{content.title}</Button>
-    </Card>
+  <Col xs="6" sm="4" md="3" xl="2" class="py-1" style="text-align:center;">
+    <Row>
+		<Button outline href={content.src} style="border:0; outline:0;">
+      <span style="color:#606060;">
+        <h5>{content.title}</h5>
+      </span>  
+    </Button>
+  </Row>
     </Col>
 	{/each}
 </Row>

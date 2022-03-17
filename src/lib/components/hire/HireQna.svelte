@@ -30,11 +30,9 @@
 <AccordionItem>
 	<Row slot="header">
 		<Col sm="2" md="1" lg="1" class="d-none d-sm-block">
-
-				<Image src={img.iconQ} style="width:100px; height:50px;" />
-
+			<Image src={img.iconQ} style="width:100px; height:50px;" />
 		</Col>
-		<Col sm="10">
+		<Col sm="10" md="11" lg="11">
 			<h5>
 				<b style="color:grey;">[{questionTitle}]</b>&nbsp
 				{questionContents}
@@ -43,11 +41,9 @@
 	</Row>
 	<Row>
 		<Col sm="2" md="1" lg="1" class="d-none d-sm-block">
-
-				<Image src={img.iconA} style="width:100px; height:50px;" />
-
+			<Image src={img.iconA} style="width:100px; height:50px;" />
 		</Col>
-		<Col sm="10">
+		<Col sm="10" md="11" lg="11">
 			<h5>
 				{answerContents}
 			</h5>

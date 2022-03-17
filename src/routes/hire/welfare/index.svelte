@@ -16,6 +16,7 @@
 		TabContent
 	} from 'sveltestrap/src';
 
+  import { VeradiUrl } from '$lib/components/url/veradiUrl.svelte';
 	import HireThumbnail from '$lib/components/hire/HireThumbnail.svelte';
 	import HireCards from '$lib/components/hire/HireCards.svelte';
 
@@ -44,7 +45,7 @@
 						<div>협력하는 인재, 새로운 생각과 도전으로 함께 성장할 인재상을 기다립니다.</div>
 					</span>
 					<Row class="py-3" />
-					<Button primary href="/hire/detail/" data-aos="fade-right" style="transition:1.5s;"
+					<Button primary href="{VeradiUrl.hireNotice}" data-aos="fade-right" style="transition:1.5s;"
 						>베라디 1기 지원하기</Button
 					>
 				

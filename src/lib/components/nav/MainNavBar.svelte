@@ -13,6 +13,10 @@
 		DropdownItem,
 		Image
 	} from 'sveltestrap/src';
+
+  import { VeradiUrl } from "$lib/components/url/VeradiUrl.svelte"
+import VeradiValueContent from '../landing/VeradiValueContent.svelte';
+
 	let isOpen = false;
 
 	const toggle = () => {
@@ -58,6 +62,8 @@
 		'/svg/nav/Contact.svg',
 		'/svg/nav/Login.svg'
 	]
+
+
 </script>
 
 <svelte:window on:scroll={updateOpacity} on:resize={handleResize} on:resize={updateNavWidth} bind:innerWidth />
@@ -78,17 +84,17 @@
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>구성원 소개</DropdownToggle>
 				<DropdownMenu>
-					<DropdownItem href="/introduction/math">수학팀</DropdownItem>
-					<DropdownItem href="/introduction/physics">물리학1팀</DropdownItem>
-					<DropdownItem href="/introduction/chemistry">화학1팀</DropdownItem>
-					<DropdownItem href="/introduction/biology">생명과학1팀</DropdownItem>
-					<DropdownItem href="/introduction/earthscience">지구과학1팀</DropdownItem>
+					<DropdownItem href="{VeradiUrl.introMath}">수학팀</DropdownItem>
+					<DropdownItem href="{VeradiUrl.introPhysics}">물리학1팀</DropdownItem>
+					<DropdownItem href="{VeradiUrl.introChemistry}">화학1팀</DropdownItem>
+					<DropdownItem href="{VeradiUrl.introBiology}">생명과학1팀</DropdownItem>
+					<DropdownItem href="{VeradiUrl.introEarthscience}">지구과학1팀</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>채용</DropdownToggle>
 				<DropdownMenu>
-          <DropdownItem href="/hire/intro">인재채용</DropdownItem>
+          <DropdownItem href="{VeradiUrl.hireWelfare}">인재채용</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 			<Dropdown nav inNavbar>
@@ -109,7 +115,7 @@
 			<NavItem style="transition-duration:{loginTransition}s; margin-left:{
 			!isOpen ? innerWidth-670 : 0
 			}px;">
-				<NavLink href="/login"><Image alt=".." src={svgVue[6]}/></NavLink>
+				<NavLink href="{VeradiUrl.login}"><Image alt=".." src={svgVue[6]}/></NavLink>
 			</NavItem>
 		</Nav>
 	</Collapse>

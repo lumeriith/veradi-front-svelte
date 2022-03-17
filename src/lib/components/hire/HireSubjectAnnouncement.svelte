@@ -21,8 +21,11 @@
 		team: '/svg/hire/team.svg',
 		procedure: '/img/hire/procedure.png',
 		procedure1: '/img/hire/procedure1.png',
-		procedure2: '/img/hire/procedure2.png'
+		procedure2: '/img/hire/procedure2.png',
+		hirePhoto: '/img/hire/hirePhoto.png',
+		hireProcess: '/img/hire/hireProcess.png'
 	};
+  import { VeradiUrl } from '../url/veradiUrl.svelte';
 
 	export let subjectName, subjectIntroHref;
 	export let applicationDate, applicationIntake;
@@ -30,183 +33,156 @@
 	export let etc;
 </script>
 
-<Form
-	data-aos="fade-up"
-	class="py-5"
-	style="background-color:#e1f5ff; font-weight:bold; transition:1.0s; "
->
-	<div style="position:absolute; text-align:center; margin-top:-20px; width:100%">
-		<Image
-			class="center"
-			src={img.team}
-			style="display:inline-block; text-align:center; opacity:0.22; max-height:260px;"
-		/>
-	</div>
-	<Container>
-		<Row style="padding-right:0px;">
-			<Col xs="1" />
-			<Col xs="10" style="position:relative; ">
-				<div class="py-3 d-none d-sm-block" />
-				<span style="text-align:center; letter-spacing:-1px;">
-					<h2>교육의 변화를 열망하는</h2>
-					<h1>사람들이 모였다</h1>
+<Container class="py-5">
+	<div data-aos="fade-right" data-aos-easing="linear" style="transition:2.0s;">
+		<Row>
+			<Col sm="1" />
+			<Col xs="10" sm="10">
+				<span style="letter-spacing:-1px; word-break:keep-all;">
+					<h1><b>베라디와 함께할,</b></h1>
+					<h1><b>열정적인 당신을 기다립니다</b></h1>
 				</span>
-				<div class="py-3" />
-				<Row>
-					<Col xs="1" sm="2" md="3" lg="4" />
-					<Col xs="10" sm="8" md="6" lg="4">
-						<Card style="flex; gap:10px; border:none; background-color:#e1f5ff;">
-							<Button href={subjectIntroHref}>{subjectName}팀 소개보기</Button>
-							<Button>지원서류 다운로드</Button>
-						</Card>
+			</Col>
+		</Row>
+	</div>
+	<HireSideButton />
+</Container>
+<Form style="background-image:url('{img.hirePhoto}'); background-size:cover;">
+	<Container class="py-4" style="position:relative;">
+		<Row class="py-3">
+			<Col sm="1" />
+			<Col sm="4" class="pt-1">
+				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+					<span style="color:#333333;">
+						<h2><b>베라디 물리학 1팀</b></h2>
+						<h2><b>모집 요강</b></h2>
+					</span>
+				</div>
+			</Col>
+			<Col sm="6">
+				<div data-aos="flip-left" data-aos-easing="linear" style="transition:2.0s;">
+					<h5 style="word-break:keep-all; line-height:160%;">
+						입시 교육 컨텐츠의 미래와 여러분의 찬란한 20대를 물리학 1팀에서 함께 합시다
+					</h5>
+				</div>
+				<Row class="pt-3">
+					<Col xs="12" sm="6" class="pb-3" style="text-align:center;">
+						<div data-aos="flip-down" data-aos-easing="linear" style="transition:2.0s;">
+							<Button href="{VeradiUrl.introPhysics}"
+								style="border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%; background-color:#17a2ff; border:0; word-break:keep-all;"
+								>물리학 1팀 소개보기</Button
+							>
+						</div>
 					</Col>
-					<Col xs="1" sm="2" md="3" lg="4" />
-					<div class="py-3 d-none d-sm-block" />
+					<Col xs="12" sm="6" class="pb-3" style="text-align:center;">
+						<div data-aos="flip-down" data-aos-easing="linear" style="transition:2.0s;">
+							<Button
+								style="border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%; background-color:#17a2ff; border:0; word-break:keep-all;"
+								>지원서류 다운로드</Button
+							>
+						</div>
+					</Col>
 				</Row>
 			</Col>
 		</Row>
 	</Container>
 </Form>
 <Container class="py-5">
-	<div data-aos="flip-down" style="transition:2.0s;">
-		<h1 style="text-align:center;">베라디 {subjectName}팀 모집 요강</h1>
-	</div>
-  <div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-	<Form class="py-5">
-
-			<h3 class="py-2" style="color:#0845ac;">· 모집개요</h3>
-			<Row class="py-1" style="margin-left:8px;">
-				<Col xs="12" sm="3" md="2" xxl="1">
-					<h5 style="color:grey; line-height:150%;">
-						<span>접수기간</span>
-					</h5>
-				</Col>
-				<Col>
-					<h5 style="color:black;">
-						<div style="white-space:pre-line;  line-height:150%;">{applicationDate}</div>
-					</h5>
-				</Col>
-			</Row>
-		
-		<Row class="py-1" style="margin-left:8px;">
-			<Col xs="12" sm="3" md="2" xxl="1">
-				<h5 style="color:grey; line-height:150%;">
-					<span>지원규모</span>
-				</h5>
-			</Col>
-			<Col>
-				<h5 style="color:black;">
-					<div style="white-space:pre-line;  line-height:150%;">{applicationIntake}</div>
-				</h5>
-			</Col>
-		</Row>
-	</Form>
-</div>
-<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-	<Form class="py-4">
-		<h3 class="py-2" style="color:#3284c3;">· 자격요건</h3>
-		<Row class="py-1" style="margin-left:8px;">
-			<Col xs="12" sm="3" md="2" xxl="1">
-				<h5 style="color:grey; line-height:150%;">
-					<span>자격사항</span>
-				</h5>
-			</Col>
-			<Col>
-				<h5 style="color:black;">
-					<div style="white-space:pre-line;  line-height:150%;">{requirement}</div>
-				</h5>
-			</Col>
-		</Row>
-		<Row class="py-1" style="margin-left:8px;">
-			<Col xs="12" sm="3" md="2" xxl="1">
-				<h5 style="color:grey; line-height:150%;">
-					<span>우대사항</span>
-				</h5>
-			</Col>
-			<Col>
-				<h5 style="color:black;">
-					<div style="white-space:pre-line;  line-height:150%;">{prefer}</div>
-				</h5>
-			</Col>
-		</Row>
-	</Form>
-</div>
-<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-	<Form class="py-4">
-		<h3 class="py-2" style="color:#3284c3;">· 채용 프로세스</h3>
-		<Row class="py-1">
-			<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="3" />
-			<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
-				<Row style="text-align:center;">
-					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-						<Image
-							src={img.procedure}
-							style="display:inline-block; width:100%;"
-							class="d-none d-sm-block"
-						/>
-					</div>
-					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-						<Image
-							src={img.procedure1}
-							style="display:inline-block; width:88%;"
-							class="d-block d-sm-none"
-						/>
-					</div>
-					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.8s;">
-						<Image
-							src={img.procedure2}
-							style="display:inline-block; width:100%;"
-							class="d-block d-sm-none"
-						/>
-					</div>
+	<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
+		<Row class="py-5">
+			<Col sm="1" />
+			<Col sm="10">
+				<h3 style="color:#3597e3; text-shadow: 1px 1px 1px gray;"><b>모집개요</b></h3>
+				<Row class="pt-3">
+					<Col sm="3" md="2">
+						<h5><b>접수기간</b></h5>
+					</Col>
+					<Col style="color:#707070;">
+						<h5>2022.03.16 ~ 30</h5>
+					</Col>
+				</Row>
+				<Row class="pt-3">
+					<Col sm="3" md="2">
+						<h5><b>지원규모</b></h5>
+					</Col>
+					<Col style="color:#707070;">
+						<h5>10명 (경력 및 내규에 따라 적용)</h5>
+					</Col>
 				</Row>
 			</Col>
 		</Row>
-		<Row class="py-1">
-			<Col xs="0" />
-			<Col>
-				<h5 style="color:grey;">
-					<div style="white-space:pre-line; letter-spacing:-1px; line-height:150%;">
-						* 인턴기간에 한해서 소정의 급여가 제공됩니다.
-            * 저도 주세요.
-					</div>
-				</h5>
-			</Col>
-		</Row>
-	</Form>
-</div>
-<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-	<Form class="py-4">
-		<h3 class="py-2" style="color:#3284c3;">· 기타사항</h3>
-		<Row class="py-1" style="margin-left:8px;">
-			<Col>
-				<h5 style="color:black;">
-					<div style="white-space:pre-line;  line-height:150%;">{etc}</div>
-				</h5>
-			</Col>
-		</Row>
-	</Form>
+	</div>
+  <div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
+	<Row class="py-5">
+		<Col sm="1" />
+		<Col sm="10">
+			<h3 class="pb-3" style="color:#3597e3; text-shadow: 1px 1px 1px gray;"><b>담당업무</b></h3>
+			<span style="color:#707070;">
+				<h5><b>- 과학 실전 모의고사 출제 및 검수</b></h5>
+			</span>
+		</Col>
+	</Row>
+  </div>
+  <div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
+	<Row class="py-5">
+		<Col sm="1" />
+		<Col sm="10">
+			<h3 style="color:#3597e3; text-shadow: 1px 1px 1px gray;"><b>자격요건</b></h3>
+			<Row class="pt-3">
+				<Col sm="3" md="2">
+					<h5><b>자격사항</b></h5>
+				</Col>
+				<Col style="color:#707070;">
+					<h5>1. 관련학과 전공자(과학계열)</h5>
+					<h5>2. 고졸 이상 학력 소지자</h5>
+					<h5>3. 수능 2등급 이상</h5>
+					<h5>4. 수능 물리학 1등급 성적표 제출</h5>
+				</Col>
+			</Row>
+			<Row class="pt-3">
+				<Col sm="3" md="2">
+					<h5><b>우대사항</b></h5>
+				</Col>
+				<Col style="color:#707070;">
+					<h5>1. 유관업무 경험자 (인턴, 알바)</h5>
+					<h5>2. 장기근무 가능한 자</h5>
+					<h5>3. 대학교 저학년</h5>
+					<h5>4. 교육 분야에 종사한 경험이 있는 사람</h5>
+				</Col>
+			</Row>
+		</Col>
+	</Row>
+  </div>
+  <div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
+	<Row class="py-5">
+		<Col sm="1" />
+		<Col sm="10">
+			<h3 class="pb-3" style="color:#3597e3; text-shadow: 1px 1px 1px gray;">
+				<b>급여 및 근무관련 조건</b>
+			</h3>
+			<span style="color:#707070;">
+				<h5>프리랜서 및 도급 계약 가능, 능력에 따라 건당 용역료 지급</h5>
+				<h5>인턴 기간 한해서 소정의 급여가 제공됩니다</h5>
+			</span>
+		</Col>
+	</Row>
+  </div>
+  <div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
+	<Row class="py-5">
+		<Col sm="1" />
+		<Col sm="10">
+			<h3 class="pb-3" style="color:#3597e3; text-shadow: 1px 1px 1px gray;">
+				<b>채용 프로세스</b>
+			</h3>
+			<Image class="pb-4" src={img.hireProcess} />
+			<span style="color:#707070; letter-spacing:-1px;">
+				<div>
+					* 빠른 성장을 하고 있는 입시 교육 컨텐츠 회사인 만큼 입사하시면 많은 기회와 성장을 할 수
+					있습니다.
+				</div>
+				<div>* 면접 일정은 추후 통보됩니다.</div>
+			</span>
+		</Col>
+	</Row>
   </div>
 </Container>
-<Form class="py-4" style="background-color:#e1f5ff;">
-	<Container class="py-3" style="text-align:center;">
-		<div data-aos="zoom-in-up" data-aos-easing="linear" style="transition:1.5s;">
-    <span style="color:#575757;">
-			<h1>지금도 새로운 역사를</h1>
-			<h1>만들고 있습니다</h1>
-		</span>
-  </div>
-	</Container>
-	<Container class="py-3" style="text-align:center;">
-    <div data-aos="zoom-in-up" data-aos-easing="linear" style="transition:2.5s;">
-		<span style="color:#6d6d6d; line-height:150%;">
-			<h5>베라디가 만드는 수많은 혁신의 순간들,</h5>
-			<h5>당신과 함께 만들고 싶습니다.</h5>
-			<h5>지금 당장 베라디에 합류하세요!</h5>
-		</span>
-  </div>
-	</Container>
-	<Container>
-		<HireSideButton />
-	</Container>
-</Form>

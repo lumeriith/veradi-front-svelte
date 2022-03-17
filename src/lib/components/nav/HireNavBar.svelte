@@ -13,6 +13,8 @@
 		DropdownItem,
 		Image
 	} from 'sveltestrap/src';
+
+import { VeradiUrl } from '../url/veradiUrl.svelte';
 	let isOpen = false;
 
 	const toggle = () => {
@@ -81,16 +83,16 @@
 	<Collapse {isOpen} navbar expand="md">
 		<Nav style="margin-left:50px;" navbar>
 			<Dropdown>
-				<DropdownItem href="/hire/intro">복지문화</DropdownItem>
+				<DropdownItem href="{VeradiUrl.hireWelfare}">복지문화</DropdownItem>
 			</Dropdown>
 			<Dropdown>
-				<DropdownItem href="/hire/detail">채용안내</DropdownItem>
+				<DropdownItem href="{VeradiUrl.hireNotice}">채용안내</DropdownItem>
 			</Dropdown>
 			<Dropdown>
-				<DropdownItem href="/introduction/math">모집요강</DropdownItem>
+				<DropdownItem href="{VeradiUrl.hireRecruitment}">모집요강</DropdownItem>
 			</Dropdown>
 			<Dropdown>
-				<DropdownItem href="/hire/qna">자주 묻는 질문</DropdownItem>
+				<DropdownItem href="{VeradiUrl.hireQna}">자주 묻는 질문</DropdownItem>
 			</Dropdown>
 
 			<NavItem
@@ -98,7 +100,7 @@
 					? innerWidth - 735
 					: 0}px;"
 			>
-				<NavLink href="/login"><Image alt=".." src={svgVue[6]} /></NavLink>
+				<NavLink href="{VeradiUrl.login}"><Image alt=".." src={svgVue[6]} /></NavLink>
 			</NavItem>
 		</Nav>
 	</Collapse>
