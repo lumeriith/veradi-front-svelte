@@ -22,15 +22,16 @@
 		procedure: '/img/hire/procedure.png',
 		procedure1: '/img/hire/procedure1.png',
 		procedure2: '/img/hire/procedure2.png',
-		hirePhoto: '/img/hire/hirePhoto.png',
-		hireProcess: '/img/hire/hireProcess.png'
+		hireSubjectPhoto: '/img/hire/hireSubjectPhoto.png',
+		hireProcess: '/img/hire/hireProcess.png',
+    hireProcess1: '/img/hire/hireProcess1.png',
+    hireProcess2: '/img/hire/hireProcess2.png',
 	};
   import { VeradiUrl } from '../url/veradiUrl.svelte';
 
-	export let subjectName, subjectIntroHref;
+	export let subjectName, subjectIntro, subjectIntroUrl;
 	export let applicationDate, applicationIntake;
-	export let requirement, prefer;
-	export let etc;
+	export let task, requirement, prefer;
 </script>
 
 <Container class="py-5">
@@ -47,37 +48,37 @@
 	</div>
 	<HireSideButton />
 </Container>
-<Form style="background-image:url('{img.hirePhoto}'); background-size:cover;">
+<Form style="background-image:url('{img.hireSubjectPhoto}'); background-size:cover;">
 	<Container class="py-4" style="position:relative;">
+    <div class="py-3 d-none d-xl-block"/>
 		<Row class="py-3">
 			<Col sm="1" />
-			<Col sm="4" class="pt-1">
+			<Col sm="4" class="pt-1 pb-2">
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-					<span style="color:#333333;">
-						<h2><b>베라디 물리학 1팀</b></h2>
-						<h2><b>모집 요강</b></h2>
+					<span style="color:#333333; word-break:keep-all; text-shadow:1px 1px 1px gray;">
+						<h2><b>베라디 {subjectName}팀 모집요강</b></h2>
 					</span>
 				</div>
 			</Col>
 			<Col sm="6">
 				<div data-aos="flip-left" data-aos-easing="linear" style="transition:2.0s;">
-					<h5 style="word-break:keep-all; line-height:160%;">
-						입시 교육 컨텐츠의 미래와 여러분의 찬란한 20대를 물리학 1팀에서 함께 합시다
-					</h5>
+					<h4 style="word-break:keep-all; line-height:160%;">
+						{subjectIntro}
+					</h4>
 				</div>
 				<Row class="pt-3">
 					<Col xs="12" sm="6" class="pb-3" style="text-align:center;">
 						<div data-aos="flip-down" data-aos-easing="linear" style="transition:2.0s;">
-							<Button href="{VeradiUrl.introPhysics}"
-								style="border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%; background-color:#17a2ff; border:0; word-break:keep-all;"
-								>물리학 1팀 소개보기</Button
+							<Button href="{subjectIntroUrl}"
+								style="border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%; background-color:#17a2ff; border:0; word-break:keep-all; letter-spacing:-1px;"
+								>{subjectName}팀 소개보기</Button
 							>
 						</div>
 					</Col>
 					<Col xs="12" sm="6" class="pb-3" style="text-align:center;">
 						<div data-aos="flip-down" data-aos-easing="linear" style="transition:2.0s;">
 							<Button
-								style="border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%; background-color:#17a2ff; border:0; word-break:keep-all;"
+								style="border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%; background-color:#17a2ff; border:0; word-break:keep-all; letter-spacing:-1px;"
 								>지원서류 다운로드</Button
 							>
 						</div>
@@ -85,6 +86,7 @@
 				</Row>
 			</Col>
 		</Row>
+    <div class="py-3 d-none d-xl-block"/>
 	</Container>
 </Form>
 <Container class="py-5">
@@ -98,7 +100,7 @@
 						<h5><b>접수기간</b></h5>
 					</Col>
 					<Col style="color:#707070;">
-						<h5>2022.03.16 ~ 30</h5>
+						<h5>{applicationDate}</h5>
 					</Col>
 				</Row>
 				<Row class="pt-3">
@@ -106,7 +108,7 @@
 						<h5><b>지원규모</b></h5>
 					</Col>
 					<Col style="color:#707070;">
-						<h5>10명 (경력 및 내규에 따라 적용)</h5>
+						<h5>{applicationIntake}</h5>
 					</Col>
 				</Row>
 			</Col>
@@ -117,8 +119,8 @@
 		<Col sm="1" />
 		<Col sm="10">
 			<h3 class="pb-3" style="color:#3597e3; text-shadow: 1px 1px 1px gray;"><b>담당업무</b></h3>
-			<span style="color:#707070;">
-				<h5><b>- 과학 실전 모의고사 출제 및 검수</b></h5>
+			<span style="color:#707070; white-space:pre-line; ">
+				<h5 style="line-height:160%;"><b>{task}</b></h5>
 			</span>
 		</Col>
 	</Row>
@@ -130,24 +132,18 @@
 			<h3 style="color:#3597e3; text-shadow: 1px 1px 1px gray;"><b>자격요건</b></h3>
 			<Row class="pt-3">
 				<Col sm="3" md="2">
-					<h5><b>자격사항</b></h5>
+					<h5 style="line-height:160%"><b>자격사항</b></h5>
 				</Col>
-				<Col style="color:#707070;">
-					<h5>1. 관련학과 전공자(과학계열)</h5>
-					<h5>2. 고졸 이상 학력 소지자</h5>
-					<h5>3. 수능 2등급 이상</h5>
-					<h5>4. 수능 물리학 1등급 성적표 제출</h5>
+				<Col>
+					<h5 style="color:#707070; white-space:pre-line; line-height:160%;">{requirement}</h5>
 				</Col>
 			</Row>
 			<Row class="pt-3">
 				<Col sm="3" md="2">
-					<h5><b>우대사항</b></h5>
+					<h5 style="line-height:160%"><b>우대사항</b></h5>
 				</Col>
-				<Col style="color:#707070;">
-					<h5>1. 유관업무 경험자 (인턴, 알바)</h5>
-					<h5>2. 장기근무 가능한 자</h5>
-					<h5>3. 대학교 저학년</h5>
-					<h5>4. 교육 분야에 종사한 경험이 있는 사람</h5>
+				<Col>
+					<h5 style="color:#707070; white-space:pre-line; line-height:160%;">{prefer}</h5>
 				</Col>
 			</Row>
 		</Col>
@@ -174,7 +170,11 @@
 			<h3 class="pb-3" style="color:#3597e3; text-shadow: 1px 1px 1px gray;">
 				<b>채용 프로세스</b>
 			</h3>
-			<Image class="pb-4" src={img.hireProcess} />
+			<Image class="pb-4 d-none d-sm-block" src={img.hireProcess} />
+      <div class="pb-4 d-block d-sm-none">
+        <Image src={img.hireProcess1}/>
+        <Image src={img.hireProcess2}/>
+      </div>
 			<span style="color:#707070; letter-spacing:-1px;">
 				<div>
 					* 빠른 성장을 하고 있는 입시 교육 컨텐츠 회사인 만큼 입사하시면 많은 기회와 성장을 할 수
