@@ -84,7 +84,7 @@
 			style="vertical-align:middle; display:inline-block; text-align:center;"
 		>
 			<Image
-				src="/img/test2.png"
+				src="img/test2.png"
 				class="pt-2"
 				style="max-width:350px; width:100%; display:inline-block;"
 			/>

@@ -68,17 +68,17 @@
 			</Container>
 			<Row class="py-5">
 				<HireThumbnail
-					src="/img/test.png"
+					src="img/test.png"
 					title="컨텐츠 혁신"
 					text="앞선 기술력과 정보력으로 확실하고 검증된 컨텐츠만을 개발합니다"
 				/>
 				<HireThumbnail
-					src="/img/test.png"
+					src="img/test.png"
 					title="리더 양성"
 					text="뛰어난 수준의 업무를 통해 세상의 변화에 기여할 리더를 양성합니다"
 				/>
 				<HireThumbnail
-					src="/img/test.png"
+					src="img/test.png"
 					title="지식의 나눔"
 					text="개인의 지식이 공공의 지식으로 확장되며 사회, 경제적 가치를 확보하고 지식의 재상산에 기여합니다"
 				/>
@@ -93,7 +93,7 @@
 				<Col xs="8" sm="8" md="12">
 					<Form style="">
 						<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-							<Image fluid src="/img/test2.png" style="display:inline-block;" />
+							<Image fluid src="img/test2.png" style="display:inline-block;" />
 						</div>
 					</Form>
 				</Col>
@@ -147,7 +147,7 @@
 		</Row>
 		<Row>
 			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
-				<Image src="/img/test2.png" style="width:50%;" />
+				<Image src="img/test2.png" style="width:50%;" />
 			</div>
 		</Row>
 	</Container>
