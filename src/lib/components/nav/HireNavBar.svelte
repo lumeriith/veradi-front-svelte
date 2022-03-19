@@ -51,13 +51,13 @@
 	}
 
 	const svgVue = [
-		'/svg/nav/VERADI.svg',
-		'/svg/nav/About.svg',
-		'/svg/nav/Contents.svg',
-		'/svg/nav/Community.svg',
-		'/svg/nav/Program.svg',
-		'/svg/nav/Contact.svg',
-		'/svg/nav/Login.svg'
+		'svg/nav/VERADI.svg',
+		'svg/nav/About.svg',
+		'svg/nav/Contents.svg',
+		'svg/nav/Community.svg',
+		'svg/nav/Program.svg',
+		'svg/nav/Contact.svg',
+		'svg/nav/Login.svg'
 	];
 </script>
 

@@ -1,11 +1,11 @@
 <script>
 	const img = {
-		landingMain: '/img/landing/landingMain.png',
-		veradi: '/svg/landing/veradi.svg',
-		landingPhoto1: '/img/landing/landingPhoto1.jpg',
-		landingPhoto2: '/img/landing/landingPhoto2.jpg',
-		landingPhoto3: '/img/landing/landingPhoto3.jpg',
-		landingPhoto4: '/img/landing/landingPhoto4.jpg'
+		landingMain: 'img/landing/landingMain.png',
+		veradi: 'svg/landing/veradi.svg',
+		landingPhoto1: 'img/landing/landingPhoto1.jpg',
+		landingPhoto2: 'img/landing/landingPhoto2.jpg',
+		landingPhoto3: 'img/landing/landingPhoto3.jpg',
+		landingPhoto4: 'img/landing/landingPhoto4.jpg'
 	};
 	import { Container, Col, Row, Image, Form, Button } from 'sveltestrap/src';
 

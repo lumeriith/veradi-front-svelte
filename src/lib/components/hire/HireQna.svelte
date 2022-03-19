@@ -22,8 +22,8 @@
 	export let answerContents = 'contents';
 
 	const img = {
-		iconQ: '/svg/hire/qna/iconQ.svg',
-		iconA: '/svg/hire/qna/iconA.svg'
+		iconQ: 'svg/hire/qna/iconQ.svg',
+		iconA: 'svg/hire/qna/iconA.svg'
 	};
 </script>
 

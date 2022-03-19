@@ -20,13 +20,13 @@
 	} from 'sveltestrap/src';
 
 	const img = [
-		'/svg/login/login.svg',
-		'/img/logo/veradi.png',
-		'/svg/login/veradi.svg',
-		'/img/login/email.png',
-		'/img/login/password.png',
-		'/img/login/google.png',
-		'/img/login/kakao.png'
+		'svg/login/login.svg',
+		'img/logo/veradi.png',
+		'svg/login/veradi.svg',
+		'img/login/email.png',
+		'img/login/password.png',
+		'img/login/google.png',
+		'img/login/kakao.png'
 	];
 
 	let inputName, inputEmail, inputPassword;

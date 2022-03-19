@@ -5,14 +5,12 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'SUIT-Regular';
-  font-style: normal;
-  font-weight: 400;
-  src: local('SUIT-Regular'), url('/font/SUIT-otf/SUIT-Regular.otf') format('woff2');
-
+	font-family: 'SUIT-Regular';
+	font-style: normal;
+	font-weight: 400;
+	src: local('SUIT-Regular'), url('font/SUIT-otf/SUIT-Regular.otf') format('woff2');
 }
 
 * {
-  font-family: SUIT-Regular
+	font-family: SUIT-Regular;
 }
-

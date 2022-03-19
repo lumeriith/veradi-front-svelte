@@ -14,8 +14,7 @@
 		Image
 	} from 'sveltestrap/src';
 
-  import { VeradiUrl } from "$lib/components/url/VeradiUrl.svelte"
-
+	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 
 	let isOpen = false;
 
@@ -36,10 +35,10 @@
 		}
 	}
 
-	$: innerWidth = 0
+	$: innerWidth = 0;
 	let navWidth = 0;
 	function updateNavWidth() {
-		handleLoginTransition()
+		handleLoginTransition();
 		navWidth = innerWidth;
 	}
 
@@ -47,36 +46,39 @@
 	function handleLoginTransition() {
 		if (navWidth < innerWidth) {
 			loginTransition = 1.0;
-		}
-		else {
+		} else {
 			loginTransition = 0;
 		}
 	}
 
 	const svgVue = [
-		'/svg/nav/VERADI.svg',
-		'/svg/nav/About.svg',
-		'/svg/nav/Contents.svg',
-		'/svg/nav/Community.svg',
-		'/svg/nav/Program.svg',
-		'/svg/nav/Contact.svg',
-		'/svg/nav/Login.svg'
-	]
-
-
+		'svg/nav/VERADI.svg',
+		'svg/nav/About.svg',
+		'svg/nav/Contents.svg',
+		'svg/nav/Community.svg',
+		'svg/nav/Program.svg',
+		'svg/nav/Contact.svg',
+		'svg/nav/Login.svg'
+	];
 </script>
 
-<svelte:window on:scroll={updateOpacity} on:resize={handleResize} on:resize={updateNavWidth} bind:innerWidth />
+<svelte:window
+	on:scroll={updateOpacity}
+	on:resize={handleResize}
+	on:resize={updateNavWidth}
+	bind:innerWidth
+/>
 
 <div style="height: 64.5px;" />
 <Navbar
 	light
 	expand="md"
 	class="top-0 z-50 w-full flex flex-wrap items-center justify-between px-2 py-2 navbar-expand-lg"
-	style="transition: background 0.2s, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity * 0.2});"
+	style="transition: background 0.2s, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity *
+		0.2});"
 >
 	<NavbarBrand style="margin-left:20px">
-		<Image alt=".." src={svgVue[0]} style/>
+		<Image alt=".." src={svgVue[0]} style />
 	</NavbarBrand>
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
@@ -84,38 +86,37 @@
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>구성원 소개</DropdownToggle>
 				<DropdownMenu>
-					<DropdownItem href="{VeradiUrl.introMath}">수학팀</DropdownItem>
-					<DropdownItem href="{VeradiUrl.introPhysics}">물리학1팀</DropdownItem>
-					<DropdownItem href="{VeradiUrl.introChemistry}">화학1팀</DropdownItem>
-					<DropdownItem href="{VeradiUrl.introBiology}">생명과학1팀</DropdownItem>
-					<DropdownItem href="{VeradiUrl.introEarthscience}">지구과학1팀</DropdownItem>
+					<DropdownItem href={VeradiUrl.introMath}>수학팀</DropdownItem>
+					<DropdownItem href={VeradiUrl.introPhysics}>물리학1팀</DropdownItem>
+					<DropdownItem href={VeradiUrl.introChemistry}>화학1팀</DropdownItem>
+					<DropdownItem href={VeradiUrl.introBiology}>생명과학1팀</DropdownItem>
+					<DropdownItem href={VeradiUrl.introEarthscience}>지구과학1팀</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>채용</DropdownToggle>
 				<DropdownMenu>
-          <DropdownItem href="{VeradiUrl.hireWelfare}">인재채용</DropdownItem>
+					<DropdownItem href={VeradiUrl.hireWelfare}>인재채용</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>출판물</DropdownToggle>
-				<DropdownMenu>
-				</DropdownMenu>
+				<DropdownMenu />
 			</Dropdown>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>학습/입시</DropdownToggle>
-				<DropdownMenu>
-				</DropdownMenu>
+				<DropdownMenu />
 			</Dropdown>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>제보</DropdownToggle>
-				<DropdownMenu>
-				</DropdownMenu>
+				<DropdownMenu />
 			</Dropdown>
-			<NavItem style="transition-duration:{loginTransition}s; margin-left:{
-			!isOpen ? innerWidth-670 : 0
-			}px;">
-				<NavLink href="{VeradiUrl.login}"><Image alt=".." src={svgVue[6]}/></NavLink>
+			<NavItem
+				style="transition-duration:{loginTransition}s; margin-left:{!isOpen
+					? innerWidth - 670
+					: 0}px;"
+			>
+				<NavLink href={VeradiUrl.login}><Image alt=".." src={svgVue[6]} /></NavLink>
 			</NavItem>
 		</Nav>
 	</Collapse>

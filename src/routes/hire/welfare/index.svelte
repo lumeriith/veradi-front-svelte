@@ -21,9 +21,9 @@
 	import HireCards from '$lib/components/hire/HireCards.svelte';
 
 	const img = {
-		mainButton: '/svg/hire/mainButton.svg',
-		mainTitle1: '/svg/hire/mainTitle1.svg',
-		mainTitle2: '/svg/hire/mainTitle2.svg'
+		mainButton: 'svg/hire/mainButton.svg',
+		mainTitle1: 'svg/hire/mainTitle1.svg',
+		mainTitle2: 'svg/hire/mainTitle2.svg'
 	};
 </script>
 

@@ -1,6 +1,6 @@
 <script>
 	import { Col, Image } from 'sveltestrap/src';
-	export let src = 'static/img/test.png';
+	export let src = 'staticimg/test.png';
 </script>
 
 <Col xs="12" sm="6" lg="6" class="pb-5" style="text-align:center;">

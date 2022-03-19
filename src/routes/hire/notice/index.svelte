@@ -18,14 +18,14 @@
 
 	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
 	const img = {
-		math: '/img/hire/subject/math.png',
-		physics: '/img/hire/subject/physics.png',
-		chemistry: '/img/hire/subject/chemistry.png',
-		biology: '/img/hire/subject/biology.png',
-		earthscience: '/img/hire/subject/earthscience.png',
-		procedure: '/img/hire/procedure.png',
-		procedure1: '/img/hire/procedure1.png',
-		procedure2: '/img/hire/procedure2.png'
+		math: 'img/hire/subject/math.png',
+		physics: 'img/hire/subject/physics.png',
+		chemistry: 'img/hire/subject/chemistry.png',
+		biology: 'img/hire/subject/biology.png',
+		earthscience: 'img/hire/subject/earthscience.png',
+		procedure: 'img/hire/procedure.png',
+		procedure1: 'img/hire/procedure1.png',
+		procedure2: 'img/hire/procedure2.png'
 	};
 </script>
 
@@ -48,50 +48,50 @@
 	class="py-5"
 	style="transition:2.0s; background-color:#e1f5ff;"
 >
-<Container>
-	<Row style="padding-left:0px;">
-		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="1" />
-		<Col xs="10" sm="10" md="5" lg="5" xl="4" xxl="4">
-			<span style="">
-				<h5 class="py-2">
-					서울시 강남구 역삼동, 우리나라에서 가장 바쁘게 돌아가는 동(洞) 중 하나인 이곳에 내노라하는
-					인재들이 오늘도 함께하고 있습니다.
-				</h5>
-				<div class="py-3 d-none d-xxl-block" />
-				<h5 class="py-2">
-					후배들을 자신들이 지난날 걸어온, 그 목적지를 향한 가장 빠르고 안전한 길로 이끌겠다는
-					사명감(使命感) 하나로 똘똘 뭉쳤습니다. 올바른 교육의 방향이 무엇이든 그 길을 기어코
-					찾아내서 걸어갑니다.
-				</h5>
-				<div class="py-3 d-none d-xxl-block" />
-				<h5 class="py-2">
-					얼굴도 이름도 모르지만 보석같은 청춘을 입시라는 하나의 목표를 향해 보내고 있을 학생
-					여러분과 내 손으로, 팀원들과 함께 빚어낸 컨텐츠를 통해 소통하고 싶으시다면 베라디 1기에
-					지원 부탁드립니다.
-				</h5>
-				<div class="py-4 d-block d-md-none" />
-			</span>
-		</Col>
-		<Col xs="1" sm="2" md="1" lg="1" xl="1" xxl="1" />
-		<Col xs="1" sm="1" class="d-block d-md-none" style="text-align:center;" />
-		<Col
-			xs="12"
-			sm="12"
-			md="5"
-			lg="5"
-			xl="4"
-			xxl="5"
-			style="vertical-align:middle; display:inline-block; text-align:center;"
-		>
-			<Image
-				src="img/test2.png"
-				class="pt-2"
-				style="max-width:350px; width:100%; display:inline-block;"
-			/>
-		</Col>
-		<Col xs="1" sm="1" md="0" lg="0" xl="1" xxl="1" class="d-none d-md-block"/>
-	</Row>
-</Container>
+	<Container>
+		<Row style="padding-left:0px;">
+			<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="1" />
+			<Col xs="10" sm="10" md="5" lg="5" xl="4" xxl="4">
+				<span style="">
+					<h5 class="py-2">
+						서울시 강남구 역삼동, 우리나라에서 가장 바쁘게 돌아가는 동(洞) 중 하나인 이곳에
+						내노라하는 인재들이 오늘도 함께하고 있습니다.
+					</h5>
+					<div class="py-3 d-none d-xxl-block" />
+					<h5 class="py-2">
+						후배들을 자신들이 지난날 걸어온, 그 목적지를 향한 가장 빠르고 안전한 길로 이끌겠다는
+						사명감(使命感) 하나로 똘똘 뭉쳤습니다. 올바른 교육의 방향이 무엇이든 그 길을 기어코
+						찾아내서 걸어갑니다.
+					</h5>
+					<div class="py-3 d-none d-xxl-block" />
+					<h5 class="py-2">
+						얼굴도 이름도 모르지만 보석같은 청춘을 입시라는 하나의 목표를 향해 보내고 있을 학생
+						여러분과 내 손으로, 팀원들과 함께 빚어낸 컨텐츠를 통해 소통하고 싶으시다면 베라디 1기에
+						지원 부탁드립니다.
+					</h5>
+					<div class="py-4 d-block d-md-none" />
+				</span>
+			</Col>
+			<Col xs="1" sm="2" md="1" lg="1" xl="1" xxl="1" />
+			<Col xs="1" sm="1" class="d-block d-md-none" style="text-align:center;" />
+			<Col
+				xs="12"
+				sm="12"
+				md="5"
+				lg="5"
+				xl="4"
+				xxl="5"
+				style="vertical-align:middle; display:inline-block; text-align:center;"
+			>
+				<Image
+					src="img/test2.png"
+					class="pt-2"
+					style="max-width:350px; width:100%; display:inline-block;"
+				/>
+			</Col>
+			<Col xs="1" sm="1" md="0" lg="0" xl="1" xxl="1" class="d-none d-md-block" />
+		</Row>
+	</Container>
 </Form>
 <!---------------------------------------------------------------->
 <Container class="py-5">
@@ -142,7 +142,9 @@
 			<Row>
 				<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
 				<Col xs="12" sm="12" md="3" lg="3" xl="3" xxl="3" style="display:table;">
-          <div style="display:table-cell; height:100%; align-items:center; color:gray; vertical-align:middle;">
+					<div
+						style="display:table-cell; height:100%; align-items:center; color:gray; vertical-align:middle;"
+					>
 						<h2 style="vertical-align:center;">지원방식</h2>
 					</div>
 				</Col>
@@ -168,14 +170,14 @@
 <!---------------------------------------------------------------->
 <Container class="py-5">
 	<Row>
-    <Col xs="1" sm="1" class="d-block d-sm-none d-lg-block"/>
+		<Col xs="1" sm="1" class="d-block d-sm-none d-lg-block" />
 		<Col xs="10" sm="10" md="3">
 			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
 				<h2 style="margin-left:0px;" class="py-3">지원부서</h2>
 			</div>
 		</Col>
-    <Col xs="1" sm="1" class="d-block d-sm-none d-xl-block"/>
-		<Col xs="1" class="d-block d-sm-none"/>
+		<Col xs="1" sm="1" class="d-block d-sm-none d-xl-block" />
+		<Col xs="1" class="d-block d-sm-none" />
 		<Col xs="10" sm="12" md="8" lg="7">
 			<Row>
 				<HireSubjects />
