@@ -1,5 +1,7 @@
 <script>
 	import '$lib/notusTemplate/styles/index.css';
+  import '$lib/notusTemplate/styles/tailwind.css';
+  
 	import 'bootstrap/dist/css/bootstrap.min.css';
 	import HireNavBar from '$lib/components/nav/HireNavBar.svelte';
 

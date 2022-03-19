@@ -1,7 +1,7 @@
 <script context="module">
 	export const CardContents = [
 		{
-			img: 'img/test.png',
+			img: test,
 			title: '자율 출퇴근제',
 			text: '구성원들이 집중할 수 있다면 집, 카페 사무실 언제 어디서나 자유롭게 업무를 할 수 있습니다'
 		},
@@ -46,4 +46,8 @@
 			text: '빈백과 쇼파, 카페테리어 좌석과 파티션으로 구획된 독서실형 책상이 마련되어 있습니다'
 		}
 	];
+</script>
+
+<script>
+	import test from '$static/static/test.png';
 </script>

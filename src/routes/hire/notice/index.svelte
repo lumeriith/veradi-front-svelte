@@ -17,9 +17,10 @@
 	} from 'sveltestrap/src';
 
 	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
+	import math from '$lib/static/test.png';
 	const img = {
-		math: 'img/hire/subject/math.png',
-		physics: 'img/hire/subject/physics.png',
+		math: '$lib/static/test.png',
+		physics: '../img/hire/subject/physics.png',
 		chemistry: 'img/hire/subject/chemistry.png',
 		biology: 'img/hire/subject/biology.png',
 		earthscience: 'img/hire/subject/earthscience.png',
@@ -110,11 +111,7 @@
 		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
 			<Row style="text-align:center;">
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-					<Image
-						src={img.procedure}
-						style="display:inline-block; width:100%;"
-						class="d-none d-sm-block"
-					/>
+					<Image src={math} style="display:inline-block; width:100%;" class="d-none d-sm-block" />
 				</div>
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
 					<Image
