@@ -29,22 +29,22 @@
   class="mySwiper"
 >
   <SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" /></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-2.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-3.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-4.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-5.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-6.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-7.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-8.jpg" alt=""/></SwiperSlide
   ><SwiperSlide
-    ><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></SwiperSlide
+    ><img src="https://swiperjs.com/demos/images/nature-9.jpg" alt=""/></SwiperSlide
   >
 </Swiper>
