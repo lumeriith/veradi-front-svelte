@@ -27,7 +27,7 @@
     hireProcess1: '/img/hire/hireProcess1.png',
     hireProcess2: '/img/hire/hireProcess2.png',
 	};
-  import { VeradiUrl } from '../url/veradiUrl.svelte';
+
 
 	export let subjectName, subjectIntro, subjectIntroUrl;
 	export let applicationDate, applicationIntake;

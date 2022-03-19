@@ -14,7 +14,7 @@
 		Image
 	} from 'sveltestrap/src';
 
-import { VeradiUrl } from '../url/veradiUrl.svelte';
+import { VeradiUrl } from '$lib/components/url/veradiUrl.svelte';
 	let isOpen = false;
 
 	const toggle = () => {
