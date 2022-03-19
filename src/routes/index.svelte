@@ -2,10 +2,10 @@
 	const img = {
 		landingMain: '/img/landing/landingMain.png',
 		veradi: '/svg/landing/veradi.svg',
-    landingPhoto1: '/img/landing/landingPhoto1.jpg',
-    landingPhoto2: '/img/landing/landingPhoto2.jpg',
-    landingPhoto3: '/img/landing/landingPhoto3.jpg',
-    landingPhoto4: '/img/landing/landingPhoto4.jpg',
+		landingPhoto1: '/img/landing/landingPhoto1.jpg',
+		landingPhoto2: '/img/landing/landingPhoto2.jpg',
+		landingPhoto3: '/img/landing/landingPhoto3.jpg',
+		landingPhoto4: '/img/landing/landingPhoto4.jpg'
 	};
 	import { Container, Col, Row, Image, Form, Button } from 'sveltestrap/src';
 
@@ -25,7 +25,7 @@
 			<div class="d-none d-xxl-block py-4" />
 			<div style="table-cell;">
 				<div data-aos="zoom-out-down" data-aos-easing="linear" style="transition:1.0s;">
-					<Image src={img.veradi} style="margin-left: 10px; width:90%;"/>
+					<Image src={img.veradi} style="margin-left: 10px; width:90%;" />
 				</div>
 				<span style="letter-spacing:-1px; word-break: keep-all;">
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
@@ -73,16 +73,15 @@
 </Form>
 <Container class="py-5">
 	<Row class="py-3">
-    <div data-aos="flip-down" data-aos-easing="linear" style="transition:1.0s;">
-      <h4>Fast way to Victory</h4>
-      <h1>
-        <b>
-          <span style="color:#3c9fcb;">VERADI</span>
-          의 가치
-        </b>
-      </h1>
-    </div>
-
+		<div data-aos="flip-down" data-aos-easing="linear" style="transition:1.0s;">
+			<h4>Fast way to Victory</h4>
+			<h1>
+				<b>
+					<span style="color:#3c9fcb;">VERADI</span>
+					의 가치
+				</b>
+			</h1>
+		</div>
 	</Row>
 	<Row class="py-3">
 		{#each ValueInfo as info}
@@ -97,10 +96,10 @@
 		{/each}
 	</Row>
 	<Row class="py-2">
-		<VeradiValueImage src={img.landingPhoto1}/>
-		<VeradiValueImage src={img.landingPhoto2}/>
-		<VeradiValueImage src={img.landingPhoto3}/>
-		<VeradiValueImage src={img.landingPhoto4}/>
+		<VeradiValueImage src={img.landingPhoto1} />
+		<VeradiValueImage src={img.landingPhoto2} />
+		<VeradiValueImage src={img.landingPhoto3} />
+		<VeradiValueImage src={img.landingPhoto4} />
 	</Row>
 </Container>
 <Form class="py-5" style="background-color:#e1f5ff;">
@@ -118,8 +117,7 @@
 			<Form>
 				<Button
 					style="background-color:#3c9fcb; border:0; box-shadow:2px 2px 2px 2px gray; font-size:25px;"
-					href="/hire/intro"
-          >베라디 1기 지원하기</Button
+					href="/hire/welfare">베라디 1기 지원하기</Button
 				>
 			</Form>
 		</Row>
