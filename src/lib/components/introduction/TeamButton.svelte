@@ -15,7 +15,7 @@
 		Image
 	} from 'sveltestrap/src';
 
-  import { VeradiUrl } from '../url/veradiUrl.svelte';
+  import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 </script>
 
 
