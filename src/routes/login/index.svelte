@@ -2,7 +2,7 @@
 	import SocialLoginButton from '$lib/components/social/SocialLoginButton.svelte';
 	import IconInput from '$lib/components/social/IconInput.svelte';
 	import PillButton from '$lib/components/social/PillButton.svelte';
-	import MainError from '$lib/components/social/mainError.svelte';
+	import MainError from '$lib/components/social/MainError.svelte';
 	import {
 		Button,
 		Container,
@@ -20,18 +20,16 @@
 	} from 'sveltestrap/src';
 
 	const img = {
-		'ground' : '/svg/landing/ground.svg',
-		'man' : '/svg/landing/man.svg',
-    'login' : '/svg/login/login.svg',
-		'veradipng' : '/img/logo/veradi.png',
-		'veradisvg' : '/svg/login/veradi.svg',
-		'email' : '/img/login/email.png',
-		'password' : '/img/login/password.png',
-		'google' : '/img/login/google.png',
-		'kakao' : '/img/login/kakao.png'
-  };
-
-
+		ground: '/svg/landing/ground.svg',
+		man: '/svg/landing/man.svg',
+		login: '/svg/login/login.svg',
+		veradipng: '/img/logo/veradi.png',
+		veradisvg: '/svg/login/veradi.svg',
+		email: '/img/login/email.png',
+		password: '/img/login/password.png',
+		google: '/img/login/google.png',
+		kakao: '/img/login/kakao.png'
+	};
 
 	let inputEmail, inputPassword;
 	let loginError = false;
@@ -97,103 +95,109 @@
 						<Col xs="1" sm="1" md="1" lg="1" xl="1" />
 						<Col xs="10" sm="10" md="10" lg="10" xl="10">
 							<Row>
-              <Col xl="6">
-								<Form on:submit={(e) => e.preventDefault()}>
-									<Row class="pb-3" style="text-align:center">
+								<Col xl="6">
+									<Form on:submit={(e) => e.preventDefault()}>
+										<Row class="pb-3" style="text-align:center">
+											<Image
+												alt="veardiLogo"
+												src={img.veradipng}
+												style="height:45px; width:auto; margin-left:-15px;"
+											/>
+											<Image
+												alt="veardiLogo"
+												src={img.veradisvg}
+												style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
+											/>
+										</Row>
+										<IconInput
+											title="Email Address"
+											type="email"
+											name="email"
+											inputId="exampleEmail"
+											placeholder="이메일"
+											iconUrl={img.email}
+											bind:value={inputEmail}
+										/>
+										<IconInput
+											title="Password"
+											type="password"
+											name="password"
+											inputId="examplePassword"
+											placeholder="비밀번호"
+											iconUrl={img.password}
+											size="25"
+											position="12"
+											bind:value={inputPassword}
+										/>
+										<Row class="pb-3" style="margin-top:-10px">
+											<Col
+												xs="12"
+												sm="6"
+												md="5"
+												style="padding-right:0px; margin-bottom:-15px; padding-bottom:-15px;"
+											>
+												<FormGroup style="margin-left:-12px; font-size:16px;">
+													<Input id="c1" type="checkbox" label="로그인 상태 유지" />
+												</FormGroup>
+											</Col>
+											<Col xs="12" sm="6" md="7" align="right" style="margin-right:-13px;">
+												<Row>
+													<Col xs="12" sm="12" md="6">
+														<a
+															href="/login/register"
+															style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; text-align:right;"
+															>회원가입</a
+														>
+													</Col>
+													<Col xs="12" sm="12" md="6">
+														<a
+															href="/login/resetPassword"
+															style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; padding-left:-5px"
+															>PW 찾기</a
+														>
+													</Col>
+												</Row>
+											</Col>
+										</Row>
+										<MainError isState={loginError} title="로그인 오류" text={loginErrorText} />
+										<PillButton
+											on:click={onLoginClick}
+											title="로그인"
+											color="#42B9FF"
+											buttonId="awesome"
+										/>
+										<!--------------------------------------------------------------------->
+										<Row class="py-1 pt-3">
+											<hr />
+										</Row>
+										<Row style="gap:7px;">
+											<SocialLoginButton
+												href="http://www.google.com"
+												url={img.google}
+												text="Google로 로그인"
+											/>
+											<SocialLoginButton
+												href="http://www.kakao.com"
+												url={img.kakao}
+												text="Kakao로 로그인"
+											/>
+										</Row>
+									</Form>
+								</Col>
+								<Col xl="6" class="d-none d-xl-block">
+									<Row style="margin-right:-170px; padding-right:-170px;">
 										<Image
-											alt="veardiLogo"
-											src={img.veradipng}
-											style="height:45px; width:auto; margin-left:-15px;"
-										/>
-										<Image
-											alt="veardiLogo"
-											src={img.veradisvg}
-											style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
+											alt=".."
+											src={img.man}
+											draggable="false"
+											style="width:80%; transition:2.0s;"
+											data-aos="zoom-in"
 										/>
 									</Row>
-									<IconInput
-										title="Email Address"
-										type="email"
-										name="email"
-										inputId="exampleEmail"
-										placeholder="이메일"
-										iconUrl={img.email}
-										bind:value={inputEmail}
-									/>
-									<IconInput
-										title="Password"
-										type="password"
-										name="password"
-										inputId="examplePassword"
-										placeholder="비밀번호"
-										iconUrl={img.password}
-										size="25"
-										position="12"
-										bind:value={inputPassword}
-									/>
-									<Row class="pb-3" style="margin-top:-10px">
-										<Col
-											xs="12"
-											sm="6"
-											md="5"
-											style="padding-right:0px; margin-bottom:-15px; padding-bottom:-15px;"
-										>
-											<FormGroup style="margin-left:-12px; font-size:16px;">
-												<Input id="c1" type="checkbox" label="로그인 상태 유지" />
-											</FormGroup>
-										</Col>
-										<Col xs="12" sm="6" md="7" align="right" style="margin-right:-13px;">
-											<Row>
-												<Col xs="12" sm="12" md="6">
-													<a
-														href="/login/register"
-														style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; text-align:right;"
-														>회원가입</a
-													>
-												</Col>
-												<Col xs="12" sm="12" md="6">
-													<a
-														href="/login/resetPassword"
-														style="color:gray; margin-right:-12px; padding-right:0px; font-size:15px; letter-spacing:-1px; padding-left:-5px"
-														>PW 찾기</a
-													>
-												</Col>
-											</Row>
-										</Col>
-									</Row>
-									<MainError isState={loginError} title="로그인 오류" text={loginErrorText} />
-									<PillButton
-										on:click={onLoginClick}
-										title="로그인"
-										color="#42B9FF"
-										buttonId="awesome"
-									/>
-									<!--------------------------------------------------------------------->
-									<Row class="py-1 pt-3">
-										<hr />
-									</Row>
-									<Row style="gap:7px;">
-										<SocialLoginButton
-											href="http://www.google.com"
-											url={img.google}
-											text="Google로 로그인"
-										/>
-										<SocialLoginButton
-											href="http://www.kakao.com"
-											url={img.kakao}
-											text="Kakao로 로그인"
-										/>
-									</Row>
-								</Form>
-							</Col>
-							<Col xl="6" class="d-none d-xl-block" >
-                <Row style="margin-right:-170px; padding-right:-170px;">
-                  <Image alt=".." src={img.man} draggable="false" style="width:80%; transition:2.0s;" data-aos="zoom-in"/>
-                </Row>
-              </Col>
-            </Row>
+								</Col>
+							</Row>
 						</Col>
-						<Col xs="1" sm="1" md="1" lg="1" xl="1" class="d-xl-none"/>
+						<Col xs="1" sm="1" md="1" lg="1" xl="1" class="d-xl-none" />
 					</Row>
 				</CardBody>
 				<Row class="pb-2" />

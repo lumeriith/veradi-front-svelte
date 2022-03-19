@@ -2,7 +2,7 @@
 	import SocialRegisterButton from '$lib/components/social/SocialLoginButton.svelte';
 	import IconInput from '$lib/components/social/IconInput.svelte';
 	import PillButton from '$lib/components/social/PillButton.svelte';
-	import MainError from '$lib/components/social/mainError.svelte';
+	import MainError from '$lib/components/social/MainError.svelte';
 	import {
 		Button,
 		Container,
@@ -19,16 +19,16 @@
 	} from 'sveltestrap/src';
 
 	const img = {
-		'login' : '/svg/login/login.svg',
-		'veradiLogo' : '/img/logo/veradi.png',
-		'veradiTitle' : '/svg/login/veradi.svg',
-		'email' : '/img/login/email.png',
-		'password' : '/img/login/password.png',
-		'google' : '/img/login/google.png',
-		'kakao' : '/img/login/kakao.png'
-  };
+		login: '/svg/login/login.svg',
+		veradiLogo: '/img/logo/veradi.png',
+		veradiTitle: '/svg/login/veradi.svg',
+		email: '/img/login/email.png',
+		password: '/img/login/password.png',
+		google: '/img/login/google.png',
+		kakao: '/img/login/kakao.png'
+	};
 
-  let inputName, inputEmail;
+	let inputName, inputEmail;
 
 	const SEARCH_VALIDATION_CHECKS = [
 		{
@@ -107,8 +107,8 @@
 									inputId="exampleName"
 									placeholder="이름"
 									iconUrl={img[3]}
-                  bind:value={inputName}
-                  />
+									bind:value={inputName}
+								/>
 								<IconInput
 									title="Email Address"
 									type="email"
@@ -116,7 +116,7 @@
 									inputId="exampleEmail"
 									placeholder="이메일"
 									iconUrl={img[3]}
-                  bind:value={inputEmail}
+									bind:value={inputEmail}
 								/>
 								<Row class="pb-1" style="margin-top:-10px">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">

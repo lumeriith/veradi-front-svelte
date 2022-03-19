@@ -2,7 +2,7 @@
 	import SocialRegisterButton from '$lib/components/social/SocialRegisterButton.svelte';
 	import IconInput from '$lib/components/social/IconInput.svelte';
 	import PillButton from '$lib/components/social/PillButton.svelte';
-	import MainError from '$lib/components/social/mainError.svelte';
+	import MainError from '$lib/components/social/MainError.svelte';
 	import {
 		Alert,
 		Button,
@@ -33,15 +33,15 @@
 	let registerError = false;
 
 	const REGISTER_VALIDATION_CHECKS = [
-    {
+		{
 			message: '이름을 입력해주세요.',
 			isWrong: () => inputName == ''
 		},
-    {
+		{
 			message: '이름은 한글로 입력되어야 합니다.',
 			isWrong: () => !checkNameStandard(inputName)
 		},
-    {
+		{
 			message: '이메일을 입력해주세요.',
 			isWrong: () => inputEmail == ''
 		},
@@ -112,7 +112,7 @@
 									inputId="exampleName"
 									placeholder="이름"
 									iconUrl={img[3]}
-                  bind:value={inputName}
+									bind:value={inputName}
 								/>
 								<IconInput
 									title="Email Address"
@@ -121,7 +121,7 @@
 									inputId="exampleEmail"
 									placeholder="이메일"
 									iconUrl={img[3]}
-                  bind:value={inputEmail}
+									bind:value={inputEmail}
 								/>
 								<IconInput
 									title="Password"
@@ -132,7 +132,7 @@
 									iconUrl={img[4]}
 									size="25"
 									position="12"
-                  bind:value={inputPassword}
+									bind:value={inputPassword}
 								/>
 								<Row class="pb-3" style="margin-top:-10px">
 									<FormGroup style="margin-left:-12px; font-size:16px; display:flex;">
@@ -147,11 +147,7 @@
 										</Form>
 									</FormGroup>
 								</Row>
-								<MainError
-									isState={registerError}
-									title="회원가입 오류"
-									text={registerErrorText}
-								/>
+								<MainError isState={registerError} title="회원가입 오류" text={registerErrorText} />
 								<PillButton
 									on:click={onRegisterClick}
 									title="회원가입"
