@@ -20,15 +20,15 @@
 	} from 'sveltestrap/src';
 
 	const img = {
-		ground: '/svg/landing/ground.svg',
-		man: '/svg/landing/man.svg',
-		login: '/svg/login/login.svg',
-		veradipng: '/img/logo/veradi.png',
-		veradisvg: '/svg/login/veradi.svg',
-		email: '/img/login/email.png',
-		password: '/img/login/password.png',
-		google: '/img/login/google.png',
-		kakao: '/img/login/kakao.png'
+		ground: 'svg/landing/ground.svg',
+		man: 'svg/landing/man.svg',
+		login: 'svg/login/login.svg',
+		veradipng: 'img/logo/veradi.png',
+		veradisvg: 'svg/login/veradi.svg',
+		email: 'img/login/email.png',
+		password: 'img/login/password.png',
+		google: 'img/login/google.png',
+		kakao: 'img/login/kakao.png'
 	};
 
 	let inputEmail, inputPassword;
