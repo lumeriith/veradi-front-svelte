@@ -15,7 +15,7 @@
 	} from 'sveltestrap/src';
 
   import { VeradiUrl } from "$lib/components/url/VeradiUrl.svelte"
-import VeradiValueContent from '../landing/VeradiValueContent.svelte';
+
 
 	let isOpen = false;
 

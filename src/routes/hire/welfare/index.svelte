@@ -16,7 +16,7 @@
 		TabContent
 	} from 'sveltestrap/src';
 
-  import { VeradiUrl } from '$lib/components/url/veradiUrl.svelte';
+	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import HireThumbnail from '$lib/components/hire/HireThumbnail.svelte';
 	import HireCards from '$lib/components/hire/HireCards.svelte';
 
@@ -29,12 +29,11 @@
 
 <!----------------------------------------------------------------------------->
 <Form style=" background-color:#e1f5ff;" on:submit={(e) => e.preventDefault()}>
-  <Container>
-	<div data-aos="zoom-out-up" class="py-5" style="transition:1.0s;">
-		<Row>
-			<Col sm="1" md="1" lg="1" xl="1" />
-			<Col sm="10" md="10" lg="10" xl="10">
-				
+	<Container>
+		<div data-aos="zoom-out-up" class="py-5" style="transition:1.0s;">
+			<Row>
+				<Col sm="1" md="1" lg="1" xl="1" />
+				<Col sm="10" md="10" lg="10" xl="10">
 					<span style="font-size:30px; font-weight:bold; word-break:keep-all;">
 						<div>교육의 내일을</div>
 						<div>함께 만들어갈 인재</div>
@@ -45,15 +44,14 @@
 						<div>협력하는 인재, 새로운 생각과 도전으로 함께 성장할 인재상을 기다립니다.</div>
 					</span>
 					<Row class="py-3" />
-					<Button primary href="{VeradiUrl.hireNotice}" data-aos="fade-right" style="transition:1.5s;"
+					<Button primary href={VeradiUrl.hireNotice} data-aos="fade-right" style="transition:1.5s;"
 						>베라디 1기 지원하기</Button
 					>
-				
-			</Col>
-			<Col sm="1" md="1" lg="1" xl="1" />
-		</Row>
-	</div>
-</Container>
+				</Col>
+				<Col sm="1" md="1" lg="1" xl="1" />
+			</Row>
+		</div>
+	</Container>
 </Form>
 <!----------------------------------------------------------------------------->
 <Container class="py-5">
