@@ -29,7 +29,7 @@
 				</div>
 				<span style="letter-spacing:-1px; word-break: keep-all;">
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-						<h4 class="py-1">노하우와 기술력의 집결체인 프리미엄 컨텐츠로</h4>
+						<h4 class="py-1">노하우와 기술력의 집결체인 프리미엄 컨텐츠 로</h4>
 					</div>
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
 						<h4 class="py-1">수험생에게 새로운 시각과</h4>
