@@ -27,7 +27,6 @@
 		google: 'img_login/google.png',
 		kakao: 'img_login/kakao.png'
 	};
-  import img_login from '$lib/static/img/login/login.svg';
   import img_veradiLogo from '$lib/static/img/logo/veradi.png';
   import img_veradiTitle from '$lib/static/img/login/veradi.svg';
   import img_email from '$lib/static/img/login/email.png';
