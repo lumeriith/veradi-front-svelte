@@ -23,8 +23,8 @@
   import img_veradi from '$lib/static/img/login/veradi.svg';
   import img_email from '$lib/static/img/login/email.png';
   import img_password from '$lib/static/img/login/password.png';
-  import img_google from '$lib/static/img/login/google.png';
-  import img_kakao from '$lib/static/img/login/kakao.png';
+  import img_google from '$lib/static/img/login/googleIcon.png';
+  import img_kakao from '$lib/static/img/login/kakaoIcon.png';
 
 	let inputName, inputEmail, inputPassword;
 	let registerError = false;
