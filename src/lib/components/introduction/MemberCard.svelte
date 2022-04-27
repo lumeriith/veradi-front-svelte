@@ -16,22 +16,28 @@
 	} from 'sveltestrap/src';
 	export let name, rank, education;
 	export let letterSpacing = -1;
-	export let bgColor = 'white';
+
+	import circle from '$lib/static/img/introduction/circle.svg';
 </script>
 
-<Row class="d-block d-sm-none" />
-<Col xs="1" class="d-block d-sm-none" />
-<Col class="py-3" xs="10" sm="6" md="4" lg="4" xl="3">
-	<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
-		<Card
-			style="padding:25px 20px 35px 20px; box-shadow:1.5px 1.5px 3px 3px gray; background-color:{bgColor};"
-		>
-			<h4>{name}</h4>
-			<h5 class="py-1" style="color:gray;">{rank}</h5>
-			<div class="pt-4" style="color:lightslategrey; letter-spacing:{letterSpacing}px;">
+<Col class="py-3" xs="6" sm="6" md="4" lg="4" xl="3">
+	<div>
+		<Card style="padding:25px 20px 35px 20px; border:0;">
+			<div style="float:left;">
+				<Image
+					src={circle}
+					style="display:inline-block; margin-left: -10px; margin-right: 10px; margin-top: 6.5px; vertical-align:top; width:15px;"
+				/>
+				<h4 style="display:inline;"><b>{name}</b></h4>
+			</div>
+			<h5 class="pt-3" style="color:#333333; margin-left: 20px;">{rank}</h5>
+			<div
+				class="pt-1"
+				style="color:lightslategrey; letter-spacing:{letterSpacing}px; margin-left: 20px; word-break:keep-all"
+			>
 				{education}
 			</div>
 		</Card>
 	</div>
 </Col>
-<Col xs="1" class="d-block d-sm-none" />
+

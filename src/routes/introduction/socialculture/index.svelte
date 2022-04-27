@@ -19,14 +19,14 @@
 	} from 'sveltestrap/src';
 
 	// <------------------- Modify here ----------------->
-	import { BiologyMemberCardInfo as MemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
-	import { BiologyHashTagInfo as HashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	const hireUrl = VeradiUrl.hireBiology;
-  const subject = "생명과학팀";
-  const title1 = "차세대 교육팀";
-  const introduction1 = "우리 베라디 생명과학 팀은 수능을 볼 미래의 친구들을 위해 끝없이 노력합니다. 또한 대학생 문화가 뿌리잡고 있어 자유롭게 업무 활동을 하고 있습니다. 불필요한 업무는 프로그램에 맡기고, 회의 시간에는 서로의 능력을 존중하면서 이야기하며, 업무를 한 만큼 확실한 보상을 약속하는 팀, 그 팀이 바로 생명과학입니다.";
-  const title2 = "우리 팀은 준비되었습니다."
-  const introduction2 = "오직 베라디 생명과학에서만 가능한 길, 당신도 동참하세요."
+	import { SocialcultureMemberCardInfo as MemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
+	import { SocialcultureHashTagInfo as HashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
+	const hireUrl = VeradiUrl.hireSocialculture;
+  const subject = "사회문화팀";
+  const title1 = "교육의 미래를 이끌어갈";
+  const introduction1 = "설명문";
+  const title2 = "제목"
+  const introduction2 = "설명문"
 	//
 
   const buttonName = subject + " 채용공고";

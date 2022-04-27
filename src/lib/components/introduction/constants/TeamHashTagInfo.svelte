@@ -135,4 +135,50 @@
       bgColor: "#cdf3ff",
     },
   ]
+
+  export const LifeethicsHashTagInfo = [
+    {
+      content: "열정적인",
+      //fontColor: "",
+      //bgColor: "",
+      //letterSpacing: "",
+    },
+    {
+      content: "열린 소통",
+      fontColor: "#072f47",
+      bgColor: "#cdf3ff",
+    },
+    {
+      content: "고객의 마인드",
+      letterSpacing: -1,
+    },
+    {
+      content: "팀원간 협동",
+      fontColor: "#072f47",
+      bgColor: "#cdf3ff",
+    },
+  ]
+
+  export const SocialcultureHashTagInfo = [
+    {
+      content: "열정적인",
+      //fontColor: "",
+      //bgColor: "",
+      //letterSpacing: "",
+    },
+    {
+      content: "열린 소통",
+      fontColor: "#072f47",
+      bgColor: "#cdf3ff",
+    },
+    {
+      content: "고객의 마인드",
+      letterSpacing: -1,
+    },
+    {
+      content: "팀원간 협동",
+      fontColor: "#072f47",
+      bgColor: "#cdf3ff",
+    },
+  ]
 </script>

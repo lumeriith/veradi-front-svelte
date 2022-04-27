@@ -89,6 +89,8 @@
 					<DropdownItem href={VeradiUrl.introChemistry}>화학1팀</DropdownItem>
 					<DropdownItem href={VeradiUrl.introBiology}>생명과학1팀</DropdownItem>
 					<DropdownItem href={VeradiUrl.introEarthscience}>지구과학1팀</DropdownItem>
+          <DropdownItem href={VeradiUrl.introLifeethics}>생활과윤리팀</DropdownItem>
+          <DropdownItem href={VeradiUrl.introSocialculture}>사회문화팀</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
 			<Dropdown nav inNavbar>

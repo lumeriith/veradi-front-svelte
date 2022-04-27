@@ -109,6 +109,42 @@
       ],
 		}
 	];
+
+  export const LifeethicsInfo = [
+		{
+			subjectName: '생활과윤리',
+      subjectIntro: "빈 칸",
+			applicationDate : '2022.03.16 ~ 30',
+      applicationIntake : '10명 (경력 및 내규에 따라 적용)',
+      task : [
+        "- 빈 칸",
+      ],
+      requirement : [
+        "1. 빈 칸",
+      ],
+      prefer : [
+        "1. 빈 칸",
+      ],
+		}
+	];
+
+  export const SocialcultureInfo = [
+		{
+			subjectName: '사회문화',
+      subjectIntro: "빈 칸",
+			applicationDate : '2022.03.16 ~ 30',
+      applicationIntake : '10명 (경력 및 내규에 따라 적용)',
+      task : [
+        "- 빈 칸",
+      ],
+      requirement : [
+        "1. 빈 칸",
+      ],
+      prefer : [
+        "1. 빈 칸",
+      ],
+		}
+	];
 </script>
 
 
