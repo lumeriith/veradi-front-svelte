@@ -11,7 +11,6 @@
 	import { ValueInfo } from '$lib/components/landing/constants/VeradiValueContentInfo.svelte';
 	import VeradiValueContent from '$lib/components/landing/VeradiValueContent.svelte';
 	import VeradiValueImage from '$lib/components/landing/VeradiValueImage.svelte';
-  import SwiperManipulation from '$lib/components/style/swiper/Manipulation/SwiperManipulation.svelte';
 </script>
 
 
