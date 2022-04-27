@@ -18,24 +18,44 @@
 </script>
 
 {#each SubjectContents as subject}
-	<Col sm="6" class="py-4 d-none d-sm-block">
-		<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s; margin-left:10px;">
-			<Image src={subject.img} class="py-2" style="width:100px;" />
-			<h3 class="py-1" style="color:gray;"><u>{subject.title}</u></h3>
-			<h5 style="margin-right:25px; ">{subject.text}</h5>
-			<Button class="pb-2" href={subject.src}>지원공고보기</Button>
-		</div>
+	<Col xxl="2" class="py-4 d-none d-xxl-block">
+		<Button outline href={subject.src} style="border:0; text-align:center; display:block;">
+			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
+				<Container style="text-align:center;">
+					<Image src={subject.img} class="py-2" style="width:100px; padding:0 0 0 0;"/>
+				</Container>
+				<h4 class="py-1" style="color:gray; text-align:center;">{subject.title}</h4>
+			</div>
+		</Button>
 	</Col>
-	<Col xs="12" class="py-5 d-block d-sm-none" >
-		<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
-			<div style=" text-align:left; margin-left:15px;">
-				<Image src={subject.img} class="py-2" style="width:120px; display:inline-block;" />
+	<Col md="3" class="py-4 d-none d-md-block d-xxl-none">
+		<Button outline href={subject.src} style="border:0; text-align:center; display:block;">
+			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
+				<Container style="text-align:center;">
+					<Image src={subject.img} class="py-2" style="width:100px; padding:0 0 0 0;"/>
+				</Container>
+				<h4 class="py-1" style="color:gray; text-align:center;">{subject.title}</h4>
 			</div>
-			<div style="margin-left:10px;">
-				<h1 class="py-1" style="color:gray;"><u>{subject.title}</u></h1>
-				<h4 style="margin-right:30px; word-break:keep-all; letter-spacing:-1px;">{subject.text}</h4>
-				<Button class="pb-2" href={subject.src}>지원공고보기</Button>
+		</Button>
+	</Col>
+	<Col sm="4" class="py-4 d-none d-sm-block d-md-none">
+		<Button outline href={subject.src} style="border:0; text-align:center; display:block;">
+			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
+				<Container style="text-align:center;">
+					<Image src={subject.img} class="py-2" style="width:100px; padding:0 0 0 0;"/>
+				</Container>
+				<h3 class="py-1" style="color:gray; text-align:center;">{subject.title}</h3>
 			</div>
-		</div>
+		</Button>
+	</Col>
+  <Col xs="6" class="py-4 d-block d-sm-none">
+		<Button outline href={subject.src} style="border:0; ">
+			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
+				<Container style="text-align:center;">
+					<Image src={subject.img} class="py-2" style="width:80px; padding:0 0 0 0;"/>
+				</Container>
+				<h2 class="py-1" style="color:gray;">{subject.title}</h2>
+			</div>
+		</Button>
 	</Col>
 {/each}

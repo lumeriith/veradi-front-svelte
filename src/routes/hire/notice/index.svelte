@@ -18,99 +18,57 @@
 
 	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
 
-  import img_test from '$lib/static/test.png';
-  import img_math from '$lib/static/img/hire/subject/math.png';
-  import img_physics from '$lib/static/img/hire/subject/physics.png';
-  import img_chemistry from '$lib/static/img/hire/subject/chemistry.png';
-  import img_biology from '$lib/static/img/hire/subject/biology.png';
-  import img_earthscience from '$lib/static/img/hire/subject/earthscience.png';
-  import img_procedure from '$lib/static/img/hire/procedure.png';
-  import img_procedure1 from '$lib/static/img/hire/procedure1.png';
-  import img_procedure2 from '$lib/static/img/hire/procedure2.png';
+	import img_test from '$lib/static/test.png';
+	import img_math from '$lib/static/img/hire/subject/math.png';
+	import img_physics from '$lib/static/img/hire/subject/physics.png';
+	import img_chemistry from '$lib/static/img/hire/subject/chemistry.png';
+	import img_biology from '$lib/static/img/hire/subject/biology.png';
+	import img_earthscience from '$lib/static/img/hire/subject/earthscience.png';
+	import img_procedure from '$lib/static/img/hire/procedure.png';
+	import img_procedure1 from '$lib/static/img/hire/procedure1.png';
+	import img_procedure2 from '$lib/static/img/hire/procedure2.png';
+	import img_mainPhoto from '$lib/static/img/hire/hireNoticePhoto.png';
+import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 </script>
 
-<Container data-aos="fade-right" style="transition:2.0s" class="py-4">
-	<Row>
-		<Col xs="1" md="1" lg="1" xl="1" xxl="1" />
-		<Col xs="10" md="10" lg="10" xl="10" xxl="10">
-			<span>
-				<h1>가슴 뛰는 미래</h1>
-				<h1>목표있는 삶</h1>
-			</span>
-		</Col>
-		<Col xs="1" md="1" lg="1" />
-	</Row>
-</Container>
-<!---------------------------------------------------------------->
 <Form
-	data-aos="zoom-out"
-	data-aos-easing="ease-out-cubic"
 	class="py-5"
-	style="transition:2.0s; background-color:#e1f5ff;"
+	style="background-image:url('{img_mainPhoto}'); background-size:cover; margin-top:-65px;"
 >
-	<Container>
-		<Row style="padding-left:0px;">
-			<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="1" />
-			<Col xs="10" sm="10" md="5" lg="5" xl="4" xxl="4">
-				<span style="">
-					<h5 class="py-2">
-						서울시 강남구 역삼동, 우리나라에서 가장 바쁘게 돌아가는 동(洞) 중 하나인 이곳에
-						내노라하는 인재들이 오늘도 함께하고 있습니다.
-					</h5>
-					<div class="py-3 d-none d-xxl-block" />
-					<h5 class="py-2">
-						후배들을 자신들이 지난날 걸어온, 그 목적지를 향한 가장 빠르고 안전한 길로 이끌겠다는
-						사명감(使命感) 하나로 똘똘 뭉쳤습니다. 올바른 교육의 방향이 무엇이든 그 길을 기어코
-						찾아내서 걸어갑니다.
-					</h5>
-					<div class="py-3 d-none d-xxl-block" />
-					<h5 class="py-2">
-						얼굴도 이름도 모르지만 보석같은 청춘을 입시라는 하나의 목표를 향해 보내고 있을 학생
-						여러분과 내 손으로, 팀원들과 함께 빚어낸 컨텐츠를 통해 소통하고 싶으시다면 베라디 1기에
-						지원 부탁드립니다.
-					</h5>
-					<div class="py-4 d-block d-md-none" />
-				</span>
-			</Col>
-			<Col xs="1" sm="2" md="1" lg="1" xl="1" xxl="1" />
-			<Col xs="1" sm="1" class="d-block d-md-none" style="text-align:center;" />
-			<Col
-				xs="12"
-				sm="12"
-				md="5"
-				lg="5"
-				xl="4"
-				xxl="5"
-				style="vertical-align:middle; display:inline-block; text-align:center;"
-			>
-				<Image
-					src={img_test}
-					class="pt-2"
-					style="max-width:350px; width:100%; display:inline-block;"
-				/>
-			</Col>
-			<Col xs="1" sm="1" md="0" lg="0" xl="1" xxl="1" class="d-none d-md-block" />
-		</Row>
+	<Container class="py-5">
+		<div class="py-5" />
+		<div class="py-5" style="color:white; text-shadow: 4px 2px 2px gray; text-align:center;">
+			<div data-aos="zoom-in" data-aos-easing="linear" style="transition:1.0s;">
+				<h1>Team Work, 도전, 그리고 성장은</h1>
+				<div class="py-3" />
+				<h1>베라디 구성원들의 일상입니다</h1>
+			</div>
+		</div>
+		<div class="py-3" />
 	</Container>
 </Form>
 <!---------------------------------------------------------------->
 <Container class="py-5">
 	<Row>
-		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="1" />
-		<Col xs="10" sm="10" md="10" lg="10" xl="10" xxl="8">
-			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
-				<h1 class="py-1">베라디 1기 지원안내</h1>
-				<h2 class="py-1" style="color:gray">지원절차</h2>
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
+			<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+				<h2 class="py-1"><b>베라디 1기 지원안내</b></h2>
+				<h4 class="py-1" style="color:#656565"><b>지원절차</b></h4>
 			</div>
 		</Col>
-		<Col xs="1" sm="1" md="1" lg="1" xl="1" xxl="2" />
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
 	</Row>
 	<Row class="pt-3">
 		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="3" />
 		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
 			<Row style="text-align:center;">
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-					<Image src={img_procedure} style="display:inline-block; width:100%;" class="d-none d-sm-block" />
+					<Image
+						src={img_procedure}
+						style="display:inline-block; width:100%;"
+						class="d-none d-sm-block"
+					/>
 				</div>
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
 					<Image
@@ -130,63 +88,52 @@
 		</Col>
 		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
 	</Row>
-</Container>
-<!---------------------------------------------------------------->
-<Form class="py-5" style="background-color:#e1f5ff; ">
-	<Container class="py-3" style="padding-left:20px;">
-		<div data-aos="flip-left" data-aos-easing="linear" style="transition:1.0s;">
-			<Row>
-				<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
-				<Col xs="12" sm="12" md="3" lg="3" xl="3" xxl="3" style="display:table;">
-					<div
-						style="display:table-cell; height:100%; align-items:center; color:gray; vertical-align:middle;"
+	<Row class="py-5">
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
+			<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+				<h2 class="py-3"><b>지원방식</b></h2>
+				<h5 class="py-2">
+					<b>
+						지원할 부서의 지원 양식을 다운로드하여 작성 후 홈페이지 내 기재된 메일
+						주소(~@gmail.com)로 제출</b
 					>
-						<h2 style="vertical-align:center;">지원방식</h2>
-					</div>
-				</Col>
-				<Col xs="12" sm="12" md="7" lg="7" xl="7" xxl="6">
-					<div style="word-break:keep-all;">
-						<h5 class="pb-2">
-							지원할 부서의 지원 양식을 다운로드하여 작성 후 홈페이지 내 기재된 메일
-							주소(~@gmail.com)로 제출
-						</h5>
-						<span style="color:gray;">
-							<h5>* 이메일 제목 양식 : [베라디] [1기] [OO팀] [날짜] [이름]</h5>
-							<h5>* 모집 기간 : 2022년 02월 03일 ~ 2022년 03월 01일 자정까지</h5>
-							<h5>* 서류 합격자 발표 : 2022년 03월 03일</h5>
-							<h5>* 면접 등 추후 일정 안내 : 개별 공지 예정</h5>
-						</span>
-					</div>
-				</Col>
-				<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
-			</Row>
-		</div>
-	</Container>
-</Form>
-<!---------------------------------------------------------------->
-<Container class="py-5">
-	<Row>
-		<Col xs="1" sm="1" class="d-block d-sm-none d-lg-block" />
-		<Col xs="10" sm="10" md="3">
-			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
-				<h2 style="margin-left:0px;" class="py-3">지원부서</h2>
+				</h5>
+				<span style="color:#656565; display:block; line-height:200%;">
+					<h5 class="py-1">* 이메일 제목 양식 : [베라디] [1기] [ㅇㅇ팀] [날짜] [이름]</h5>
+					<h5 class="py-1">* 모집 기간 : 2022년 06월 21일 ~ 2022년 07월 31일 자정까지</h5>
+					<h5 class="py-1">* 서류 합격자 발표 : 2022년 08월 03일까지</h5>
+					<h5 class="py-1">* 면접 등 추후 일정 안내 : 서류 합격 발표와 함께 개별 통지 예정</h5>
+				</span>
 			</div>
 		</Col>
-		<Col xs="1" sm="1" class="d-block d-sm-none d-xl-block" />
-		<Col xs="1" class="d-block d-sm-none" />
-		<Col xs="10" sm="12" md="8" lg="7">
-			<Row>
-				<HireSubjects />
-			</Row>
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
+	</Row>
+  <Row class="py-5">
+    <Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="10">
+			<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+				<h2 class="py-3"><b>지원부서</b></h2>
+        <Row>
+          <HireSubjects/>
+        </Row>
+        <div style="color:#656565;">* 생활과 윤리팀은 A, B팀, 생명과학팀은 서울팀, 천안팀으로 나뉘어서 모집합니다.</div>
+			</div>
+      
 		</Col>
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+  </Row>
+	<Row class="pt-5">
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
+			<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+				<h2 class="py-3"><b>채용문의</b></h2>
+				<h5 class="py-1" style="color:#656565;">
+					채용 관련 문의는 Q&A 게시판 혹은 veradi@gmail.com을 통하여 가능합니다.
+				</h5>
+
+			</div>
+		</Col>
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
 	</Row>
 </Container>
-<!---------------------------------------------------------------->
-<Form class="py-5" style="background-color:whitesmoke">
-	<Container class="py-1">
-		<div style="margin-left:10px;">
-			<h1>채용문의</h1>
-			<h5>채용 관련 문의는 Q&A 게시판 또는 @gmail.com을 통해서 가능합니다.</h5>
-		</div>
-	</Container>
-</Form>
