@@ -9,6 +9,8 @@
 	import 'aos/dist/aos.css';
 	import AOS from 'aos';
 	onMount(() => AOS.init());
+
+
 </script>
 
 <MainNavBar />

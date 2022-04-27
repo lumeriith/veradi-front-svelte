@@ -19,15 +19,12 @@
 		Image
 	} from 'sveltestrap/src';
 
-	const img = [
-		'svg/login/login.svg',
-		'img/logo/veradi.png',
-		'svg/login/veradi.svg',
-		'img/login/email.png',
-		'img/login/password.png',
-		'img/login/google.png',
-		'img/login/kakao.png'
-	];
+  import img_logo from '$lib/static/img/logo/veradi.png';
+  import img_veradi from '$lib/static/img/login/veradi.svg';
+  import img_email from '$lib/static/img/login/email.png';
+  import img_password from '$lib/static/img/login/password.png';
+  import img_google from '$lib/static/img/login/google.png';
+  import img_kakao from '$lib/static/img/login/kakao.png';
 
 	let inputName, inputEmail, inputPassword;
 	let registerError = false;
@@ -96,12 +93,12 @@
 								<Row class="pb-3" style="text-align:center">
 									<Image
 										alt="veardiLogo"
-										src={img[1]}
+										src={img_logo}
 										style="height:45px; width:auto; margin-left:-15px;"
 									/>
 									<Image
 										alt="veardiLogo"
-										src={img[2]}
+										src={img_veradi}
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
@@ -111,7 +108,7 @@
 									name="name"
 									inputId="exampleName"
 									placeholder="이름"
-									iconUrl={img[3]}
+									iconUrl={img_email}
 									bind:value={inputName}
 								/>
 								<IconInput
@@ -120,7 +117,7 @@
 									name="email"
 									inputId="exampleEmail"
 									placeholder="이메일"
-									iconUrl={img[3]}
+									iconUrl={img_email}
 									bind:value={inputEmail}
 								/>
 								<IconInput
@@ -129,7 +126,7 @@
 									name="password"
 									inputId="examplePassword"
 									placeholder="비밀번호"
-									iconUrl={img[4]}
+									iconUrl={img_password}
 									size="25"
 									position="12"
 									bind:value={inputPassword}
@@ -161,12 +158,12 @@
 								<Row style="gap:7px;">
 									<SocialRegisterButton
 										href="http://www.google.com"
-										url={img[5]}
+										url={img_google}
 										text="Google로 회원가입하기"
 									/>
 									<SocialRegisterButton
 										href="http://www.kakao.com"
-										url={img[6]}
+										url={img_kakao}
 										text="Kakao로 회원가입하기"
 									/>
 								</Row>

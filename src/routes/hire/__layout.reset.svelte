@@ -10,6 +10,7 @@
 	import AOS from 'aos';
 	onMount(() => AOS.init());
 
+
 </script>
 
 <HireNavBar/>

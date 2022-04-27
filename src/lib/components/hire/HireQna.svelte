@@ -21,16 +21,14 @@
 	export let questionContents = 'contents';
 	export let answerContents = 'contents';
 
-	const img = {
-		iconQ: 'svg/hire/qna/iconQ.svg',
-		iconA: 'svg/hire/qna/iconA.svg'
-	};
+  import img_iconQ from '$lib/static/img/hire/qna/iconQ.svg';
+  import img_iconA from '$lib/static/img/hire/qna/iconA.svg';
 </script>
 
 <AccordionItem>
 	<Row slot="header">
 		<Col sm="2" md="1" lg="1" class="d-none d-sm-block">
-			<Image src={img.iconQ} style="width:100px; height:50px;" />
+			<Image src={img_iconQ} style="width:100px; height:50px;" />
 		</Col>
 		<Col sm="10" md="11" lg="11">
 			<h5>
@@ -41,7 +39,7 @@
 	</Row>
 	<Row>
 		<Col sm="2" md="1" lg="1" class="d-none d-sm-block">
-			<Image src={img.iconA} style="width:100px; height:50px;" />
+			<Image src={img_iconA} style="width:100px; height:50px;" />
 		</Col>
 		<Col sm="10" md="11" lg="11">
 			<h5>

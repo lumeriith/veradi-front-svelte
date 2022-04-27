@@ -17,17 +17,16 @@
 	} from 'sveltestrap/src';
 
 	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
-	import math from '$lib/static/test.png';
-	const img = {
-		math: '$lib/static/test.png',
-		physics: '../img/hire/subject/physics.png',
-		chemistry: 'img/hire/subject/chemistry.png',
-		biology: 'img/hire/subject/biology.png',
-		earthscience: 'img/hire/subject/earthscience.png',
-		procedure: 'img/hire/procedure.png',
-		procedure1: 'img/hire/procedure1.png',
-		procedure2: 'img/hire/procedure2.png'
-	};
+
+  import img_test from '$lib/static/test.png';
+  import img_math from '$lib/static/img/hire/subject/math.png';
+  import img_physics from '$lib/static/img/hire/subject/physics.png';
+  import img_chemistry from '$lib/static/img/hire/subject/chemistry.png';
+  import img_biology from '$lib/static/img/hire/subject/biology.png';
+  import img_earthscience from '$lib/static/img/hire/subject/earthscience.png';
+  import img_procedure from '$lib/static/img/hire/procedure.png';
+  import img_procedure1 from '$lib/static/img/hire/procedure1.png';
+  import img_procedure2 from '$lib/static/img/hire/procedure2.png';
 </script>
 
 <Container data-aos="fade-right" style="transition:2.0s" class="py-4">
@@ -85,7 +84,7 @@
 				style="vertical-align:middle; display:inline-block; text-align:center;"
 			>
 				<Image
-					src="img/test2.png"
+					src={img_test}
 					class="pt-2"
 					style="max-width:350px; width:100%; display:inline-block;"
 				/>
@@ -111,18 +110,18 @@
 		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
 			<Row style="text-align:center;">
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-					<Image src={math} style="display:inline-block; width:100%;" class="d-none d-sm-block" />
+					<Image src={img_procedure} style="display:inline-block; width:100%;" class="d-none d-sm-block" />
 				</div>
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
 					<Image
-						src={img.procedure1}
+						src={img_procedure1}
 						style="display:inline-block; width:88%;"
 						class="d-block d-sm-none"
 					/>
 				</div>
 				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.8s;">
 					<Image
-						src={img.procedure2}
+						src={img_procedure2}
 						style="display:inline-block; width:100%;"
 						class="d-block d-sm-none"
 					/>

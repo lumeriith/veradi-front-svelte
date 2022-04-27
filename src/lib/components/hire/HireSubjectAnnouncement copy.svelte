@@ -17,12 +17,11 @@
 	} from 'sveltestrap/src';
 
 	import HireSideButton from '$lib/components/hire/HireSideButton.svelte';
-	const img = {
-		team: 'svg/hire/team.svg',
-		procedure: 'img/hire/procedure.png',
-		procedure1: 'img/hire/procedure1.png',
-		procedure2: 'img/hire/procedure2.png'
-	};
+
+  import img_team from '$lib/static/img/hire/team.svg';
+  import img_procedure from '$lib/static/img/hire/procedure1.png';
+  import img_procedure1 from '$lib/static/img/hire/procedure2.png';
+  import img_procedure2 from '$lib/static/img/hire/procedure3.png';
 
 	export let subjectName, subjectIntroHref;
 	export let applicationDate, applicationIntake;
@@ -38,7 +37,7 @@
 	<div style="position:absolute; text-align:center; margin-top:-20px; width:100%">
 		<Image
 			class="center"
-			src={img.team}
+			src={img_team}
 			style="display:inline-block; text-align:center; opacity:0.22; max-height:260px;"
 		/>
 	</div>
@@ -139,21 +138,21 @@
 					<Row style="text-align:center;">
 						<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
 							<Image
-								src={img.procedure}
+								src={img_procedure}
 								style="display:inline-block; width:100%;"
 								class="d-none d-sm-block"
 							/>
 						</div>
 						<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
 							<Image
-								src={img.procedure1}
+								src={img_procedure1}
 								style="display:inline-block; width:88%;"
 								class="d-block d-sm-none"
 							/>
 						</div>
 						<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.8s;">
 							<Image
-								src={img.procedure2}
+								src={img_procedure2}
 								style="display:inline-block; width:100%;"
 								class="d-block d-sm-none"
 							/>

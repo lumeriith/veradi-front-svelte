@@ -18,15 +18,22 @@
 		Image
 	} from 'sveltestrap/src';
 
-	const img = {
+	const img_= {
 		login: 'svg/login/login.svg',
-		veradiLogo: 'img/logo/veradi.png',
+		veradiLogo: 'img_logo/veradi.png',
 		veradiTitle: 'svg/login/veradi.svg',
-		email: 'img/login/email.png',
-		password: 'img/login/password.png',
-		google: 'img/login/google.png',
-		kakao: 'img/login/kakao.png'
+		email: 'img_login/email.png',
+		password: 'img_login/password.png',
+		google: 'img_login/google.png',
+		kakao: 'img_login/kakao.png'
 	};
+  import img_login from '$lib/static/img/login/login.svg';
+  import img_veradiLogo from '$lib/static/img/logo/veradi.png';
+  import img_veradiTitle from '$lib/static/img/login/veradi.svg';
+  import img_email from '$lib/static/img/login/email.png';
+  import img_password from '$lib/static/img/login/password.png';
+  import img_google from '$lib/static/img/login/google.png';
+  import img_kakao from '$lib/static/img/login/kakao.png';
 
 	let inputName, inputEmail;
 
@@ -91,12 +98,12 @@
 								<Row class="pb-3" style="text-align:center">
 									<Image
 										alt="veardiLogo"
-										src={img.veradiLogo}
+										src={img_veradiLogo}
 										style="height:45px; width:auto; margin-left:-15px;"
 									/>
 									<Image
 										alt="veardiLogo"
-										src={img.veradiTitle}
+										src={img_veradiTitle}
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
@@ -106,7 +113,7 @@
 									name="name"
 									inputId="exampleName"
 									placeholder="이름"
-									iconUrl={img[3]}
+									iconUrl={img_email}
 									bind:value={inputName}
 								/>
 								<IconInput
@@ -115,7 +122,7 @@
 									name="email"
 									inputId="exampleEmail"
 									placeholder="이메일"
-									iconUrl={img[3]}
+									iconUrl={img_email}
 									bind:value={inputEmail}
 								/>
 								<Row class="pb-1" style="margin-top:-10px">

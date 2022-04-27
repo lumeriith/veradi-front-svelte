@@ -19,17 +19,19 @@
 		Alert
 	} from 'sveltestrap/src';
 
-	const img = {
-		ground: 'svg/landing/ground.svg',
-		man: 'svg/landing/man.svg',
-		login: 'svg/login/login.svg',
-		veradipng: 'img/logo/veradi.png',
-		veradisvg: 'svg/login/veradi.svg',
-		email: 'img/login/email.png',
-		password: 'img/login/password.png',
-		google: 'img/login/google.png',
-		kakao: 'img/login/kakao.png'
-	};
+
+  import img_ground from '$lib/static/img/landing/ground.svg';
+  import img_man from '$lib/static/img/landing/man.svg';
+  import img_login from '$lib/static/img/login/login.svg';
+  import img_veradipng from '$lib/static/img/logo/veradi.png';
+  import img_veradisvg from '$lib/static/img/login/veradi.svg';
+  import img_email from '$lib/static/img/login/email.png';
+  import img_password from '$lib/static/img/login/password.png';
+  import img_google from '$lib/static/img/login/google.png';
+  import img_kakao from '$lib/static/img/login/kakao.png';
+
+
+
 
 	let inputEmail, inputPassword;
 	let loginError = false;
@@ -100,12 +102,12 @@
 										<Row class="pb-3" style="text-align:center">
 											<Image
 												alt="veardiLogo"
-												src={img.veradipng}
+												src={img_veradipng}
 												style="height:45px; width:auto; margin-left:-15px;"
 											/>
 											<Image
 												alt="veardiLogo"
-												src={img.veradisvg}
+												src={img_veradisvg}
 												style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 											/>
 										</Row>
@@ -115,7 +117,7 @@
 											name="email"
 											inputId="exampleEmail"
 											placeholder="이메일"
-											iconUrl={img.email}
+											iconUrl={img_email}
 											bind:value={inputEmail}
 										/>
 										<IconInput
@@ -124,7 +126,7 @@
 											name="password"
 											inputId="examplePassword"
 											placeholder="비밀번호"
-											iconUrl={img.password}
+											iconUrl={img_password}
 											size="25"
 											position="12"
 											bind:value={inputPassword}
@@ -173,12 +175,12 @@
 										<Row style="gap:7px;">
 											<SocialLoginButton
 												href="http://www.google.com"
-												url={img.google}
+												url={img_google}
 												text="Google로 로그인"
 											/>
 											<SocialLoginButton
 												href="http://www.kakao.com"
-												url={img.kakao}
+												url={img_kakao}
 												text="Kakao로 로그인"
 											/>
 										</Row>
@@ -188,7 +190,7 @@
 									<Row style="margin-right:-170px; padding-right:-170px;">
 										<Image
 											alt=".."
-											src={img.man}
+											src={img_man}
 											draggable="false"
 											style="width:80%; transition:2.0s;"
 											data-aos="zoom-in"

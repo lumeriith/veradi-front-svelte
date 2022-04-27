@@ -17,16 +17,15 @@
 	} from 'sveltestrap/src';
 
 	import HireSideButton from '$lib/components/hire/HireSideButton.svelte';
-	const img = {
-		team: 'svg/hire/team.svg',
-		procedure: 'img/hire/procedure.png',
-		procedure1: 'img/hire/procedure1.png',
-		procedure2: 'img/hire/procedure2.png',
-		hireSubjectPhoto: 'img/hire/hireSubjectPhoto.png',
-		hireProcess: 'img/hire/hireProcess.png',
-		hireProcess1: 'img/hire/hireProcess1.png',
-		hireProcess2: 'img/hire/hireProcess2.png'
-	};
+
+  import img_team from '$lib/static/img/hire/team.svg';
+  import img_procedure from '$lib/static/img/hire/procedure.png';
+  import img_procedure1 from '$lib/static/img/hire/procedure1.png';
+  import img_procedure2 from '$lib/static/img/hire/procedure2.png';
+  import img_hireSubjectPhoto from '$lib/static/img/hire/hireSubjectPhoto.png';
+  import img_hireProcess from '$lib/static/img/hire/hireProcess.png';
+  import img_hireProcess1 from '$lib/static/img/hire/hireProcess1.png';
+  import img_hireProcess2 from '$lib/static/img/hire/hireProcess2.png';
 
 	export let subjectName, subjectIntro, subjectIntroUrl;
 	export let applicationDate, applicationIntake;
@@ -47,7 +46,7 @@
 	</div>
 	<HireSideButton />
 </Container>
-<Form style="background-image:url('{img.hireSubjectPhoto}'); background-size:cover;">
+<Form style="background-image:url('{img_hireSubjectPhoto}'); background-size:cover;">
 	<Container class="py-4" style="position:relative;">
 		<div class="py-3 d-none d-xl-block" />
 		<Row class="py-3">
@@ -170,10 +169,10 @@
 				<h3 class="pb-3" style="color:#3597e3; text-shadow: 1px 1px 1px gray;">
 					<b>채용 프로세스</b>
 				</h3>
-				<Image class="pb-4 d-none d-sm-block" src={img.hireProcess} />
+				<Image class="pb-4 d-none d-sm-block" src={img_hireProcess} />
 				<div class="pb-4 d-block d-sm-none">
-					<Image src={img.hireProcess1} />
-					<Image src={img.hireProcess2} />
+					<Image src={img_hireProcess1} />
+					<Image src={img_hireProcess2} />
 				</div>
 				<span style="color:#707070; letter-spacing:-1px;">
 					<div>

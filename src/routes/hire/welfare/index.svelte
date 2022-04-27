@@ -25,6 +25,11 @@
 		mainTitle1: 'svg/hire/mainTitle1.svg',
 		mainTitle2: 'svg/hire/mainTitle2.svg'
 	};
+
+  import img_mainButton from '$lib/static/img/hire/mainButton.svg';
+  import img_mainTitle1 from '$lib/static/img/hire/mainTitle1.svg';
+  import img_mainTitle2 from '$lib/static/img/hire/mainTitle2.svg';
+  import img_test from '$lib/static/img/test.png';
 </script>
 
 <!----------------------------------------------------------------------------->
@@ -68,17 +73,17 @@
 			</Container>
 			<Row class="py-5">
 				<HireThumbnail
-					src="img/test.png"
+					src={img_test}
 					title="컨텐츠 혁신"
 					text="앞선 기술력과 정보력으로 확실하고 검증된 컨텐츠만을 개발합니다"
 				/>
 				<HireThumbnail
-					src="img/test.png"
+					src={img_test}
 					title="리더 양성"
 					text="뛰어난 수준의 업무를 통해 세상의 변화에 기여할 리더를 양성합니다"
 				/>
 				<HireThumbnail
-					src="img/test.png"
+					src={img_test}
 					title="지식의 나눔"
 					text="개인의 지식이 공공의 지식으로 확장되며 사회, 경제적 가치를 확보하고 지식의 재상산에 기여합니다"
 				/>
@@ -93,7 +98,7 @@
 				<Col xs="8" sm="8" md="12">
 					<Form style="">
 						<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-							<Image fluid src="img/test2.png" style="display:inline-block;" />
+							<Image fluid src={img_test} style="display:inline-block;" />
 						</div>
 					</Form>
 				</Col>
@@ -110,7 +115,7 @@
 								성장률을 기록하며 수능 입시 교육 컨텐츠 패러다임을 변화시키고 있습니다.
 							</div>
 							<div class="py-2">
-								우리의 성장 그래프가 그래왔듯, 수험생 여러분에게도 그 경험을 선사하고자, 밤낮없이
+								우리의 성장 그래프가 그래왔듯, 수`험생 여러분에게도 그 경험을 선사하고자, 밤낮없이
 								치열하게 그러나 여느 20대들보다 즐겁게. 빛나는 청춘을 여기 이곳에서 우리는 함께
 								만들어나가고 있습니다.
 							</div>
@@ -147,7 +152,7 @@
 		</Row>
 		<Row>
 			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
-				<Image src="img/test2.png" style="width:50%;" />
+				<Image src={img_test} style="width:50%;" />
 			</div>
 		</Row>
 	</Container>

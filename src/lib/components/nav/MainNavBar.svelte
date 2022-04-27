@@ -51,15 +51,13 @@
 		}
 	}
 
-	const svgVue = [
-		'svg/nav/VERADI.svg',
-		'svg/nav/About.svg',
-		'svg/nav/Contents.svg',
-		'svg/nav/Community.svg',
-		'svg/nav/Program.svg',
-		'svg/nav/Contact.svg',
-		'svg/nav/Login.svg'
-	];
+  import img_veradi from '$lib/static/img/nav/VERADI.svg'
+  import img_about from '$lib/static/img/nav/About.svg'
+  import img_contents from '$lib/static/img/nav/Contents.svg'
+  import img_community from '$lib/static/img/nav/Community.svg'
+  import img_program from '$lib/static/img/nav/Program.svg'
+  import img_contact from '$lib/static/img/nav/Contact.svg'
+  import img_login from '$lib/static/img/nav/Login.svg'
 </script>
 
 <svelte:window
@@ -78,7 +76,7 @@
 		0.2});"
 >
 	<NavbarBrand style="margin-left:20px">
-		<Image alt=".." src={svgVue[0]} style />
+		<Image alt=".." src={img_veradi} style />
 	</NavbarBrand>
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
@@ -116,7 +114,7 @@
 					? innerWidth - 670
 					: 0}px;"
 			>
-				<NavLink href={VeradiUrl.login}><Image alt=".." src={svgVue[6]} /></NavLink>
+				<NavLink href={VeradiUrl.login}><Image alt=".." src={img_login} /></NavLink>
 			</NavItem>
 		</Nav>
 	</Collapse>

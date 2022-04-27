@@ -16,7 +16,7 @@
 	} from 'sveltestrap/src';
 
 	export let title, text;
-	export let src = 'img/test.png';
+	export let src;
 </script>
 
 <Col xs="2" sm="2" class="d-md-none" />

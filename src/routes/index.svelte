@@ -1,12 +1,11 @@
 <script>
-	const img = {
-		landingMain: 'img/landing/landingMain.png',
-		veradi: 'svg/landing/veradi.svg',
-		landingPhoto1: 'img/landing/landingPhoto1.jpg',
-		landingPhoto2: 'img/landing/landingPhoto2.jpg',
-		landingPhoto3: 'img/landing/landingPhoto3.jpg',
-		landingPhoto4: 'img/landing/landingPhoto4.jpg'
-	};
+  import img_landingMain from '$lib/static/img/landing/landingMain.png';
+  import img_landingPhoto1 from '$lib/static/img/landing/landingPhoto1.jpg';
+  import img_landingPhoto2 from '$lib/static/img/landing/landingPhoto2.jpg';
+  import img_landingPhoto3 from '$lib/static/img/landing/landingPhoto3.jpg';
+  import img_landingPhoto4 from '$lib/static/img/landing/landingPhoto4.jpg';
+  import img_veradi from '$lib/static/img/landing/veradi.svg';
+
 	import { Container, Col, Row, Image, Form, Button } from 'sveltestrap/src';
 
 	import { ValueInfo } from '$lib/components/landing/constants/VeradiValueContentInfo.svelte';
@@ -25,7 +24,7 @@
 			<div class="d-none d-xxl-block py-4" />
 			<div style="table-cell;">
 				<div data-aos="zoom-out-down" data-aos-easing="linear" style="transition:1.0s;">
-					<Image src={img.veradi} style="margin-left: 10px; width:90%;" />
+					<Image src={img_veradi} style="margin-left: 10px; width:90%;" />
 				</div>
 				<span style="letter-spacing:-1px; word-break: keep-all;">
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
@@ -42,7 +41,7 @@
 		</Col>
 		<Col sm="12" md="5" style="text-align:center;">
 			<div data-aos="zoom-in" data-aos-easing="linear" style="transition:2.0s;">
-				<Image src={img.landingMain} style="margin-left: 10px; width:90%;" />
+				<Image src={img_landingMain} style="margin-left: 10px; width:90%;" />
 			</div>
 		</Col>
 	</Row>
@@ -96,10 +95,10 @@
 		{/each}
 	</Row>
 	<Row class="py-2">
-		<VeradiValueImage src={img.landingPhoto1} />
-		<VeradiValueImage src={img.landingPhoto2} />
-		<VeradiValueImage src={img.landingPhoto3} />
-		<VeradiValueImage src={img.landingPhoto4} />
+		<VeradiValueImage src={img_landingPhoto1} />
+		<VeradiValueImage src={img_landingPhoto2} />
+		<VeradiValueImage src={img_landingPhoto3} />
+		<VeradiValueImage src={img_landingPhoto4} />
 	</Row>
 </Container>
 <Form class="py-5" style="background-color:#e1f5ff;">
