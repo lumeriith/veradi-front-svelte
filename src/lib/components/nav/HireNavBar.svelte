@@ -87,6 +87,7 @@
 	<NavbarBrand style="margin-left:20px">
 		<Image alt=".." src={img_veradi} style />
 	</NavbarBrand>
+	<div class="text-muted">Career</div>
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
 		<Nav style="margin-left:50px;" navbar>

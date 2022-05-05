@@ -93,12 +93,9 @@
           <DropdownItem href={VeradiUrl.introSocialculture}>사회문화팀</DropdownItem>
 				</DropdownMenu>
 			</Dropdown>
-			<Dropdown nav inNavbar>
-				<DropdownToggle nav>채용</DropdownToggle>
-				<DropdownMenu>
-					<DropdownItem href={VeradiUrl.hireWelfare}>인재채용</DropdownItem>
-				</DropdownMenu>
-			</Dropdown>
+			<NavItem>
+				<NavLink href={VeradiUrl.hireWelfare}>채용</NavLink>
+			</NavItem>
 			<Dropdown nav inNavbar>
 				<DropdownToggle nav>출판물</DropdownToggle>
 				<DropdownMenu />
