@@ -84,25 +84,25 @@
 	style="transition: background 0.2s, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity *
 		0.2});"
 >
-	<NavbarBrand style="margin-left:20px">
+	<NavbarBrand class="flex items-center gap-2" style="margin-left:20px">
 		<Image alt=".." src={img_veradi} style />
+		<div class="text-muted text-sm">Career</div>
 	</NavbarBrand>
-	<div class="text-muted">Career</div>
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
 		<Nav style="margin-left:50px;" navbar>
-			<Dropdown>
-				<DropdownItem href={VeradiUrl.hireWelfare}>복지문화</DropdownItem>
-			</Dropdown>
-			<Dropdown>
-				<DropdownItem href={VeradiUrl.hireNotice}>채용안내</DropdownItem>
-			</Dropdown>
-			<Dropdown>
-				<DropdownItem href={VeradiUrl.hireRecruitment}>모집요강</DropdownItem>
-			</Dropdown>
-			<Dropdown>
-				<DropdownItem href={VeradiUrl.hireQna}>자주 묻는 질문</DropdownItem>
-			</Dropdown>
+			<NavItem>
+				<NavLink href={VeradiUrl.hireWelfare}>복지문화</NavLink>
+			</NavItem>
+			<NavItem>
+				<NavLink href={VeradiUrl.hireNotice}>채용안내</NavLink>
+			</NavItem>
+			<NavItem>
+				<NavLink href={VeradiUrl.hireRecruitment}>모집요강</NavLink>
+			</NavItem>
+			<NavItem>
+				<NavLink href={VeradiUrl.hireQna}>자주 묻는 질문</NavLink>
+			</NavItem>
 
 			<NavItem
 				style="transition-duration:{loginTransition}s; margin-left:{!isOpen
