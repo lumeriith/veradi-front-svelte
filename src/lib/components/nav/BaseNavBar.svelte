@@ -44,26 +44,11 @@
 	}
 
 	$: innerWidth = 0;
-	let navWidth = 0;
-	function updateNavWidth() {
-		handleLoginTransition();
-		navWidth = innerWidth;
-	}
-
-	let loginTransition = 0;
-	function handleLoginTransition() {
-		if (navWidth < innerWidth) {
-			loginTransition = 1.0;
-		} else {
-			loginTransition = 0;
-		}
-	}
 </script>
 
 <svelte:window
 	on:scroll={updateOpacity}
 	on:resize={handleResize}
-	on:resize={updateNavWidth}
 	bind:innerWidth
 />
 
@@ -87,14 +72,11 @@
 	{/if}
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
-		<Nav style="margin-left:50px;" navbar>
+		<Nav style="margin-left:50px; flex: 1" navbar>
 			{#each items as item}
 				<VeradiNavItem {item} />
 			{/each}
-			<NavItem
-				style="transition-duration:{loginTransition}s; margin-left:{!isOpen
-					? innerWidth - 670
-					: 0}px;"
+			<NavItem class="md:ml-auto"
 			>
 				<NavLink href={VeradiUrl.login}><Image alt=".." src={img_login} /></NavLink>
 			</NavItem>
