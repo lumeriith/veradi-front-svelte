@@ -33,6 +33,10 @@
 <Swiper
   slidesPerView={1}
   spaceBetween={10}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: true,
+  }}
   pagination={{
     clickable: true,
   }}
@@ -54,7 +58,7 @@
       spaceBetween: 50,
     },
   }}
-  modules={[Pagination]}
+  modules={[Autoplay, Pagination]}
   class="mySwiper"
 >
   {#each SwiperCardInfo as info }
