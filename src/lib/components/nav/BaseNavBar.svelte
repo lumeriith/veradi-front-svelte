@@ -63,7 +63,7 @@
 	{#if showCareer}
 		<NavbarBrand class="flex items-center gap-2" style="margin-left:20px">
 			<Image alt=".." src={img_veradi} style />
-			<div class="text-muted text-sm">Career</div>
+			<a href={VeradiUrl.hireIndex} class="text-muted text-sm no-underline">Career</a>
 		</NavbarBrand>
 	{:else}
 		<NavbarBrand style="margin-left:20px">
