@@ -18,7 +18,7 @@ import BaseNavBar from "./BaseNavBar.svelte";
     },
     {
       text: "채용",
-      href: VeradiUrl.hireWelfare
+      href: VeradiUrl.hireIndex
     },
     {
       text: "출판물",
