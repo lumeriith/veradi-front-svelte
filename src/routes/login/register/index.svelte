@@ -1,8 +1,8 @@
 <script>
-	import SocialRegisterButton from '$lib/components/social/SocialRegisterButton.svelte';
-	import IconInput from '$lib/components/social/IconInput.svelte';
-	import PillButton from '$lib/components/social/PillButton.svelte';
-	import MainError from '$lib/components/social/MainError.svelte';
+	import SocialRegisterButton from '$lib/components/login/SocialRegisterButton.svelte';
+	import LoginInput from '$lib/components/login/LoginInput.svelte';
+	import PillButton from '$lib/components/login/PillButton.svelte';
+	import MainError from '$lib/components/login/MainError.svelte';
 	import {
 		Alert,
 		Button,
@@ -19,12 +19,12 @@
 		Image
 	} from 'sveltestrap/src';
 
-  import img_logo from '$lib/static/img/logo/veradi.png';
-  import img_veradi from '$lib/static/img/login/veradi.svg';
-  import img_email from '$lib/static/img/login/email.png';
-  import img_password from '$lib/static/img/login/password.png';
-  import img_google from '$lib/static/img/login/googleIcon.png';
-  import img_kakao from '$lib/static/img/login/kakaoIcon.png';
+	import img_logo from '$lib/static/img/logo/veradi.png';
+	import img_veradi from '$lib/static/img/login/veradi.svg';
+	import img_email from '$lib/static/img/login/email.png';
+	import img_password from '$lib/static/img/login/password.png';
+	import img_google from '$lib/static/img/login/googleIcon.png';
+	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
 
 	let inputName, inputEmail, inputPassword;
 	let registerError = false;
@@ -102,7 +102,7 @@
 										style="height:40px; width:auto; margin-top:5px; margin-left:-10px"
 									/>
 								</Row>
-								<IconInput
+								<LoginInput
 									title="Name"
 									type="name"
 									name="name"
@@ -111,7 +111,7 @@
 									iconUrl={img_email}
 									bind:value={inputName}
 								/>
-								<IconInput
+								<LoginInput
 									title="Email Address"
 									type="email"
 									name="email"
@@ -120,7 +120,7 @@
 									iconUrl={img_email}
 									bind:value={inputEmail}
 								/>
-								<IconInput
+								<LoginInput
 									title="Password"
 									type="password"
 									name="password"

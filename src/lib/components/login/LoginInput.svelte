@@ -19,21 +19,22 @@
 	export let name;
 	export let inputId;
 	export let placeholder;
-  export let iconUrl;
-  export let value;
-  export let size = 30;
-  export let position = 10;
-  export let indent = 40;
+	export let iconUrl;
+	export let value;
+	export let size = 30;
+	export let position = 10;
+	export let indent = 30;
 </script>
 
-<Row class="color:lightgray;">{title}</Row>
-<Row class="pb-3">
+<div class="login-input-container">
+	<div class="tw-text-gray-400 tw-text-sm tw-mb-1.5">{title}</div>
 	<Input
-		type={type}
-		name={name}
+		class="login-input"
+		{type}
+		{name}
 		id={inputId}
-		placeholder={placeholder}
-    bind:value={value}
+		{placeholder}
+		bind:value
 		style="
 		  background-image: url({iconUrl}) ;
 		  background-size: {size}px;
@@ -41,5 +42,15 @@
 		  background-repeat: no-repeat;
 		  text-align: left;
 		  text-indent: {indent}px;
-  "	/>
-</Row>
+  "
+	/>
+</div>
+
+<style>
+	.login-input-container :global(input) {
+		background-color: #f3f3f3;
+		border: 0;
+		font-size: 0.85rem;
+		height: 40px;
+	}
+</style>

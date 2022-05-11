@@ -16,15 +16,16 @@
 
 	export let url;
 	export let text;
-  export let href;
+	export let href;
 </script>
 
 <Button
-	href={href}
+	{href}
+	class="tw-flex-1 tw-rounded-xl"
 	style="background-color:white; align:center; border-color:silver;"
 >
-	<div style="display: flex; justify-content:center; align-items: center; gap: 10px">
-		<Image src={url} style="height:28px;" />
+	<div class="tw-flex tw-justify-center tw-items-center tw-gap-2 tw-whitespace-nowrap tw-text-sm">
+		<Image src={url} class="tw-h-7" />
 		<span style="color:gray;">{text}</span>
 	</div>
 </Button>
