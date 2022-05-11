@@ -1,6 +1,6 @@
 <script>
 import { VeradiUrl } from "../url/VeradiUrl.svelte";
-import VeradiNavBar from "./BaseNavBar.svelte";
+import BaseNavBar from "./BaseNavBar.svelte";
 
 	const items = [
     {
@@ -35,4 +35,4 @@ import VeradiNavBar from "./BaseNavBar.svelte";
   ];
 </script>
 
-<VeradiNavBar items={items}></VeradiNavBar>
+<BaseNavBar items={items}></BaseNavBar>

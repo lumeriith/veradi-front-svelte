@@ -1,6 +1,6 @@
 <script>
 	import { VeradiUrl } from "../url/VeradiUrl.svelte";
-	import VeradiNavBar from "./BaseNavBar.svelte";
+	import BaseNavBar from "./BaseNavBar.svelte";
 	
 		const items = [
 			{
@@ -22,4 +22,4 @@
 		];
 	</script>
 	
-	<VeradiNavBar showCareer items={items}></VeradiNavBar>
+	<BaseNavBar showCareer items={items}></BaseNavBar>
