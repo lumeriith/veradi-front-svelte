@@ -8,8 +8,6 @@
     img_test6,
     img_test7,
     img_test8,
-    img_test9,
-    img_test10,
 	];
 
 	import img_test1 from '$lib/components/style/swiper/RatioBreakpoints/constants/img/1.jpg';
@@ -20,6 +18,4 @@
 	import img_test6 from '$lib/components/style/swiper/RatioBreakpoints/constants/img/6.jpg';
 	import img_test7 from '$lib/components/style/swiper/RatioBreakpoints/constants/img/7.jpg';
 	import img_test8 from '$lib/components/style/swiper/RatioBreakpoints/constants/img/8.jpg';
-	import img_test9 from '$lib/components/style/swiper/RatioBreakpoints/constants/img/9.jpg';
-	import img_test10 from '$lib/components/style/swiper/RatioBreakpoints/constants/img/10.jpg';
 </script>
