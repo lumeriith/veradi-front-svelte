@@ -9,6 +9,8 @@
 	} from 'sveltestrap';
 	import { page } from '$app/stores';
 
+	import "./BaseNavItem.css";
+
 	export let item = {
 		text: '',
 		href: '',
@@ -55,14 +57,3 @@
 		<NavLink href={item.href}>{item.text}</NavLink>
 	</NavItem>
 {/if}
-
-<style>
-	:global(.nav-item.active > a) {
-		color: #7fc4fd !important;
-	}
-  
-  :global(.nav-item.show > a) {
-		color: #7fc4fd !important;
-	}
-  
-</style>
