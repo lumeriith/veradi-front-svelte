@@ -1,5 +1,6 @@
 module.exports = {
   // add this section
+  prefix: 'tw-',
   content: [
     './src/**/*.html',
     './src/**/*.svelte'
@@ -11,4 +12,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  important: true,
 }

@@ -76,7 +76,7 @@
 			{#each items as item}
 				<VeradiNavItem {item} />
 			{/each}
-			<NavItem class="md:ml-auto"
+			<NavItem class="md:tw-ml-auto"
 			>
 				<NavLink href={VeradiUrl.login}><Image alt=".." src={img_login} /></NavLink>
 			</NavItem>
