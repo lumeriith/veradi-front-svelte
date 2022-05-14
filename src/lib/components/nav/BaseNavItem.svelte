@@ -9,13 +9,14 @@
 	} from 'sveltestrap';
 	import { page } from '$app/stores';
 
-	import "./BaseNavItem.css";
+	import './BaseNavItem.css';
 
 	export let item = {
 		text: '',
 		href: '',
 		children: []
 	};
+	export let whiteText = false;
 
 	function isUrlEqual(a = '', b = '') {
 		if (a.endsWith('/')) a = a.substring(0, a.length - 1);
@@ -45,7 +46,7 @@
 
 {#if item.children}
 	<Dropdown nav inNavbar class={isCurrentPage ? 'active' : ''}>
-		<DropdownToggle nav>{item.text}</DropdownToggle>
+		<DropdownToggle nav class={whiteText ? 'tw-text-white' : ''}>{item.text}</DropdownToggle>
 		<DropdownMenu>
 			{#each item.children as child}
 				<DropdownItem href={child.href}>{child.text}</DropdownItem>
@@ -54,6 +55,6 @@
 	</Dropdown>
 {:else}
 	<NavItem class={isCurrentPage ? 'active' : ''}>
-		<NavLink href={item.href}>{item.text}</NavLink>
+		<NavLink href={item.href} class={whiteText ? 'tw-text-white' : ''}>{item.text}</NavLink>
 	</NavItem>
 {/if}
