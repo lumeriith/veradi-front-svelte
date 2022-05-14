@@ -16,12 +16,11 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
-  import SwiperCard from '$lib/components/style/swiper/RatioBreakpoints/SwiperCard.svelte';
+	import SwiperCard from '$lib/components/style/swiper/RatioBreakpoints/SwiperCard.svelte';
 </script>
-<Container>
-  새 페이지 생성
-</Container>
+
+<Container>새 페이지 생성</Container>
 
 <SwiperCard />

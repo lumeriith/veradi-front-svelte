@@ -14,8 +14,8 @@
 		Image,
 		Alert,
 		TabContent
-	} from 'sveltestrap/src';
-
+	} from 'sveltestrap';
+	import { fly } from 'svelte/transition';
 	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
 
 	import img_test from '$lib/static/test.png';
@@ -28,7 +28,7 @@
 	import img_procedure1 from '$lib/static/img/hire/procedure1.png';
 	import img_procedure2 from '$lib/static/img/hire/procedure2.png';
 	import img_mainPhoto from '$lib/static/img/hire/hireNoticePhoto.png';
-import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
+	import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 </script>
 
 <Form
@@ -37,8 +37,8 @@ import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncemen
 >
 	<Container class="py-5">
 		<div class="py-5" />
-		<div class="py-5" style="color:white; text-shadow: 4px 2px 2px gray; text-align:center;">
-			<div data-aos="zoom-in" data-aos-easing="linear" style="transition:1.0s;">
+		<div class="py-5" style="color:white; text-shadow: 0 0 33px #000; text-align:center;">
+			<div in:fly={{ duration: 1000, y: 100 }}>
 				<h1>Team Work, 도전, 그리고 성장은</h1>
 				<div class="py-3" />
 				<h1>베라디 구성원들의 일상입니다</h1>
@@ -109,20 +109,21 @@ import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncemen
 		</Col>
 		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />
 	</Row>
-  <Row class="py-5">
-    <Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
+	<Row class="py-5">
+		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
 		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="10">
 			<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
 				<h2 class="py-3"><b>지원부서</b></h2>
-        <Row>
-          <HireSubjects/>
-        </Row>
-        <div style="color:#656565;">* 생활과 윤리팀은 A, B팀, 생명과학팀은 서울팀, 천안팀으로 나뉘어서 모집합니다.</div>
+				<Row>
+					<HireSubjects />
+				</Row>
+				<div style="color:#656565;">
+					* 생활과 윤리팀은 A, B팀, 생명과학팀은 서울팀, 천안팀으로 나뉘어서 모집합니다.
+				</div>
 			</div>
-      
 		</Col>
 		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
-  </Row>
+	</Row>
 	<Row class="pt-5">
 		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="1" />
 		<Col xs="12" sm="12" md="10" lg="10" xl="10" xxl="8">
@@ -131,7 +132,6 @@ import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncemen
 				<h5 class="py-1" style="color:#656565;">
 					채용 관련 문의는 Q&A 게시판 혹은 veradi@gmail.com을 통하여 가능합니다.
 				</h5>
-
 			</div>
 		</Col>
 		<Col xs="0" sm="0" md="1" lg="1" xl="1" xxl="2" />

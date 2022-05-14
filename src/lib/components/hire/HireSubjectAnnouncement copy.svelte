@@ -14,14 +14,14 @@
 		FormGroup,
 		Image,
 		TabContent
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import HireSideButton from '$lib/components/hire/HireSideButton.svelte';
 
-  import img_team from '$lib/static/img/hire/team.svg';
-  import img_procedure from '$lib/static/img/hire/procedure1.png';
-  import img_procedure1 from '$lib/static/img/hire/procedure2.png';
-  import img_procedure2 from '$lib/static/img/hire/procedure3.png';
+	import img_team from '$lib/static/img/hire/team.svg';
+	import img_procedure from '$lib/static/img/hire/procedure1.png';
+	import img_procedure1 from '$lib/static/img/hire/procedure2.png';
+	import img_procedure2 from '$lib/static/img/hire/procedure3.png';
 
 	export let subjectName, subjectIntroHref;
 	export let applicationDate, applicationIntake;

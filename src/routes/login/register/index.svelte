@@ -17,7 +17,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import img_logo from '$lib/static/img/logo/veradi.png';
 	import img_veradi from '$lib/static/img/login/veradi.svg';
@@ -172,7 +172,7 @@
 						<Row data-aos="fade-right" style="transition:1s" class="pt-3">
 							<Form style="text-align:right; font-size:14px; letter-spacing:-1px; color:gray;">
 								<span>이미 회원이신가요?</span>
-								<a href="/login">로그인 하기</a>
+								<a>로그인 하기</a>
 							</Form>
 						</Row>
 						<Col xs="1" sm="1" md="1" lg="1" xl="1" />

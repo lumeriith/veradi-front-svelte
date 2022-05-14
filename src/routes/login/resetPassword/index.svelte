@@ -16,7 +16,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	const img_ = {
 		login: 'svg/login/login.svg',

@@ -13,9 +13,9 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
-  export let subject;
-  export let introduction;
+	} from 'sveltestrap';
+	export let subject;
+	export let introduction;
 </script>
 
 <Row class="py-2">

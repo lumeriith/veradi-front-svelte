@@ -1,18 +1,17 @@
 <script>
-  import img_landingMain from '$lib/static/img/landing/landingMain.png';
-  import img_landingPhoto1 from '$lib/static/img/landing/landingPhoto1.jpg';
-  import img_landingPhoto2 from '$lib/static/img/landing/landingPhoto2.jpg';
-  import img_landingPhoto3 from '$lib/static/img/landing/landingPhoto3.jpg';
-  import img_landingPhoto4 from '$lib/static/img/landing/landingPhoto4.jpg';
-  import img_veradi from '$lib/static/img/landing/veradi.svg';
+	import img_landingMain from '$lib/static/img/landing/landingMain.png';
+	import img_landingPhoto1 from '$lib/static/img/landing/landingPhoto1.jpg';
+	import img_landingPhoto2 from '$lib/static/img/landing/landingPhoto2.jpg';
+	import img_landingPhoto3 from '$lib/static/img/landing/landingPhoto3.jpg';
+	import img_landingPhoto4 from '$lib/static/img/landing/landingPhoto4.jpg';
+	import img_veradi from '$lib/static/img/landing/veradi.svg';
 
-	import { Container, Col, Row, Image, Form, Button } from 'sveltestrap/src';
+	import { Container, Col, Row, Image, Form, Button } from 'sveltestrap';
 
 	import { ValueInfo } from '$lib/components/landing/constants/VeradiValueContentInfo.svelte';
 	import VeradiValueContent from '$lib/components/landing/VeradiValueContent.svelte';
 	import VeradiValueImage from '$lib/components/landing/VeradiValueImage.svelte';
 </script>
-
 
 <Container>
 	<Row class="py-5">
