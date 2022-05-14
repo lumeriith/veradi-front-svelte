@@ -15,7 +15,7 @@
 		Alert,
 		TabContent
 	} from 'sveltestrap';
-
+	import { fly } from 'svelte/transition';
 	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
 
 	import img_test from '$lib/static/test.png';
@@ -37,8 +37,8 @@
 >
 	<Container class="py-5">
 		<div class="py-5" />
-		<div class="py-5" style="color:white; text-shadow: 4px 2px 2px gray; text-align:center;">
-			<div data-aos="zoom-in" data-aos-easing="linear" style="transition:1.0s;">
+		<div class="py-5" style="color:white; text-shadow: 0 0 33px #000; text-align:center;">
+			<div in:fly={{ duration: 1000, y: 100 }}>
 				<h1>Team Work, 도전, 그리고 성장은</h1>
 				<div class="py-3" />
 				<h1>베라디 구성원들의 일상입니다</h1>
