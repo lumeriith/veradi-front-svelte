@@ -12,7 +12,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	export let color = '#555555';
 	export let title = 'Button';

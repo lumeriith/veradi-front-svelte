@@ -18,12 +18,10 @@
 		Alert,
 		TabContent,
 		Table
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import { QnaInfo } from '$lib/components/hire/constants/QnaInfo.svelte';
-  import HireQna from '$lib/components/hire/HireQna.svelte';
-
-
+	import HireQna from '$lib/components/hire/HireQna.svelte';
 </script>
 
 <Form class="py-3" style="background-color:#f1faff;">
@@ -35,13 +33,13 @@
 		<Table>
 			<thead style="" />
 			<Accordion>
-        {#each QnaInfo as info}
-        <HireQna
-          questionTitle = {info.questionTitle}
-          questionContents = {info.questionContents}
-          answerContents = {info.answerContents}
-        />
-        {/each}
+				{#each QnaInfo as info}
+					<HireQna
+						questionTitle={info.questionTitle}
+						questionContents={info.questionContents}
+						answerContents={info.answerContents}
+					/>
+				{/each}
 			</Accordion>
 		</Table>
 	</Container>

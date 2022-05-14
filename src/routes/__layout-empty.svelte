@@ -11,5 +11,4 @@
 	onMount(() => AOS.init());
 </script>
 
-<MainNavBar />
 <slot />

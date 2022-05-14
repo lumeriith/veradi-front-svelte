@@ -15,14 +15,14 @@
 		FormGroup,
 		Image,
 		TabContent
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	export let questionTitle = 'title';
 	export let questionContents = 'contents';
 	export let answerContents = 'contents';
 
-  import img_iconQ from '$lib/static/img/hire/qna/iconQ.png';
-  import img_iconA from '$lib/static/img/hire/qna/iconA.png';
+	import img_iconQ from '$lib/static/img/hire/qna/iconQ.png';
+	import img_iconA from '$lib/static/img/hire/qna/iconA.png';
 </script>
 
 <AccordionItem>

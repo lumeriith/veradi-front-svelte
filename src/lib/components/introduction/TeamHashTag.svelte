@@ -13,11 +13,11 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 	export let content;
 	export let fontColor = '#072f47';
 	export let bgColor = '#97cadb';
-  export let letterSpacing = '-1';
+	export let letterSpacing = '-1';
 </script>
 
 <Col class="py-2" xs="6" md="3" lg="2">

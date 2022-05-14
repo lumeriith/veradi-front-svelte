@@ -14,18 +14,18 @@
 		FormGroup,
 		Image,
 		TabContent
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import HireSideButton from '$lib/components/hire/HireSideButton.svelte';
 
-  import img_team from '$lib/static/img/hire/team.svg';
-  import img_procedure from '$lib/static/img/hire/procedure.png';
-  import img_procedure1 from '$lib/static/img/hire/procedure1.png';
-  import img_procedure2 from '$lib/static/img/hire/procedure2.png';
-  import img_hireSubjectPhoto from '$lib/static/img/hire/hireSubjectPhoto.png';
-  import img_hireProcess from '$lib/static/img/hire/hireProcess.png';
-  import img_hireProcess1 from '$lib/static/img/hire/hireProcess1.png';
-  import img_hireProcess2 from '$lib/static/img/hire/hireProcess2.png';
+	import img_team from '$lib/static/img/hire/team.svg';
+	import img_procedure from '$lib/static/img/hire/procedure.png';
+	import img_procedure1 from '$lib/static/img/hire/procedure1.png';
+	import img_procedure2 from '$lib/static/img/hire/procedure2.png';
+	import img_hireSubjectPhoto from '$lib/static/img/hire/hireSubjectPhoto.png';
+	import img_hireProcess from '$lib/static/img/hire/hireProcess.png';
+	import img_hireProcess1 from '$lib/static/img/hire/hireProcess1.png';
+	import img_hireProcess2 from '$lib/static/img/hire/hireProcess2.png';
 
 	export let subjectName, subjectIntro, subjectIntroUrl;
 	export let applicationDate, applicationIntake;

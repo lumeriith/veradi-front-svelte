@@ -13,7 +13,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 

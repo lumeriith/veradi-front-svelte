@@ -17,7 +17,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import img_logo from '$lib/static/img/logo/veradi.png';
 	import img_veradi from '$lib/static/img/login/veradi.svg';

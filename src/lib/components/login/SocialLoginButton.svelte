@@ -12,7 +12,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	export let url;
 	export let text;

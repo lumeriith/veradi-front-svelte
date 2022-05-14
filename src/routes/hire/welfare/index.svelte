@@ -14,7 +14,7 @@
 		Image,
 		Alert,
 		TabContent
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import HireThumbnail from '$lib/components/hire/HireThumbnail.svelte';
@@ -26,10 +26,10 @@
 		mainTitle2: 'svg/hire/mainTitle2.svg'
 	};
 
-  import img_mainButton from '$lib/static/img/hire/mainButton.svg';
-  import img_mainTitle1 from '$lib/static/img/hire/mainTitle1.svg';
-  import img_mainTitle2 from '$lib/static/img/hire/mainTitle2.svg';
-  import img_test from '$lib/static/img/test.png';
+	import img_mainButton from '$lib/static/img/hire/mainButton.svg';
+	import img_mainTitle1 from '$lib/static/img/hire/mainTitle1.svg';
+	import img_mainTitle2 from '$lib/static/img/hire/mainTitle2.svg';
+	import img_test from '$lib/static/img/test.png';
 </script>
 
 <!----------------------------------------------------------------------------->

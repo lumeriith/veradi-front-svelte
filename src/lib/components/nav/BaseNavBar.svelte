@@ -8,7 +8,7 @@
 		NavItem,
 		NavLink,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 
 	import img_veradi from '$lib/static/img/nav/VERADI.svg';
 	import img_about from '$lib/static/img/nav/About.svg';

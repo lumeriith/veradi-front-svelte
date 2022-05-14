@@ -3,7 +3,7 @@
 	import LoginInput from '$lib/components/login/LoginInput.svelte';
 	import PillButton from '$lib/components/login/PillButton.svelte';
 	import MainError from '$lib/components/login/MainError.svelte';
-	import { Card, Input } from 'sveltestrap/src';
+	import { Card, Input } from 'sveltestrap';
 
 	import img_email from '$lib/static/img/login/email.png';
 	import img_password from '$lib/static/img/login/password.png';

@@ -13,7 +13,7 @@
 		Form,
 		FormGroup,
 		Image
-	} from 'sveltestrap/src';
+	} from 'sveltestrap';
 	export let name, rank, education;
 	export let letterSpacing = -1;
 
@@ -40,4 +40,3 @@
 		</Card>
 	</div>
 </Col>
-
