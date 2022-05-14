@@ -51,32 +51,17 @@
 </script>
 
 <Card
-	class="tw-relative tw-flex tw-flex-row tw-rounded-none sm:tw-rounded-xl tw-w-full sm:tw-w-[450px] tw-shadow-2xl"
+	class="tw-relative tw-flex tw-flex-row tw-rounded-none sm:tw-rounded-xl tw-w-[100vw] tw-h-[100vh] sm:tw-w-[450px] sm:tw-h-auto tw-shadow-2xl"
 >
-	<button class="tw-absolute tw-right-0 tw-top-0 tw-p-4" on:click={onClose}> Close </button>
+	<button class="tw-absolute tw-right-0 tw-top-0 tw-p-5" on:click={onClose}>
+		<IconBytesizeClose class="tw-text-sm" />
+	</button>
 	<form class="tw-py-6 tw-px-10 tw-w-full" on:submit={(e) => e.preventDefault()}>
 		<header class="tw-text-center tw-mb-5 tw-text-xl tw-text-slate-600">로그인</header>
 		<main>
 			<div class="tw-flex tw-flex-col tw-gap-4 tw-mb-5">
-				<LoginInput
-					title="이메일"
-					type="email"
-					name="email"
-					placeholder="이메일"
-					iconUrl={img_email}
-					size="23"
-					bind:value={inputEmail}
-				/>
-				<LoginInput
-					title="비밀번호"
-					type="password"
-					name="password"
-					placeholder="비밀번호"
-					iconUrl={img_password}
-					size="20"
-					position="12"
-					bind:value={inputPassword}
-				/>
+				<LoginInput title="이메일" type="email" bind:value={inputEmail} />
+				<LoginInput title="비밀번호" type="password" bind:value={inputPassword} />
 			</div>
 			<Input id="c1" type="checkbox" label="로그인 상태 유지" />
 
@@ -91,7 +76,7 @@
 				<div class="tw-flex tw-mb-5 tw-text-sm tw-gap-2 tw-text-gray-500 tw-justify-center">
 					<a href="/login/register">회원가입</a>
 					<div class="tw-w-[1px] tw-bg-slate-300" />
-					<a href="/login/resetPassword">PW 찾기</a>
+					<a href="/login/resetPassword">비밀번호 찾기</a>
 				</div>
 			</div>
 		</main>
