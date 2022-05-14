@@ -27,7 +27,7 @@
 </script>
 
 <div class="login-input-container">
-	<div class="tw-text-gray-400 tw-text-sm tw-mb-1.5">{title}</div>
+	<div class="tw-text-sm tw-mb-1.5">{title}</div>
 	<Input
 		class="login-input"
 		{type}

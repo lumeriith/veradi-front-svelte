@@ -20,7 +20,8 @@
 	export let text;
 </script>
 
-<Alert color="danger" style="transition:0.5s;" data-aos="fade-right" isOpen={isState}>
-	<div class="alert-heading text-capitalize tw-font-bold tw-text-lg">{title}</div>
-	<div>{text}</div>
-</Alert>
+<div class="tw-h-20">
+	<Alert color="danger" class="tw-py-3 tw-my-5" isOpen={isState}>
+		<div>{text || '알 수 없는 오류'}</div>
+	</Alert>
+</div>

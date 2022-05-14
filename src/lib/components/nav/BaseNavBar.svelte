@@ -9,7 +9,7 @@
 		NavLink,
 		Image
 	} from 'sveltestrap/src';
-	
+
 	import img_veradi from '$lib/static/img/nav/VERADI.svg';
 	import img_about from '$lib/static/img/nav/About.svg';
 	import img_contents from '$lib/static/img/nav/Contents.svg';
@@ -20,6 +20,7 @@
 
 	import VeradiNavItem from './BaseNavItem.svelte';
 	import { VeradiUrl } from '../url/VeradiUrl.svelte';
+	import LoginPopup from '../login/LoginPopup.svelte';
 
 	export let items = [];
 	export let showCareer = false;
@@ -42,15 +43,18 @@
 			updateOpacity();
 		}
 	}
-
 	$: innerWidth = 0;
+
+	let isLoginPopupShown = false;
+	function openLoginPopup() {
+		isLoginPopupShown = true;
+	}
+	function closeLoginPopup() {
+		isLoginPopupShown = false;
+	}
 </script>
 
-<svelte:window
-	on:scroll={updateOpacity}
-	on:resize={handleResize}
-	bind:innerWidth
-/>
+<svelte:window on:scroll={updateOpacity} on:resize={handleResize} bind:innerWidth />
 
 <div style="height: 64.5px;" />
 <Navbar
@@ -76,10 +80,13 @@
 			{#each items as item}
 				<VeradiNavItem {item} />
 			{/each}
-			<NavItem class="md:tw-ml-auto"
-			>
-				<NavLink href={VeradiUrl.login}><Image alt=".." src={img_login} /></NavLink>
+			<NavItem class="md:tw-ml-auto">
+				<NavLink on:click={openLoginPopup}><Image alt=".." src={img_login} /></NavLink>
 			</NavItem>
 		</Nav>
 	</Collapse>
 </Navbar>
+
+{#if isLoginPopupShown}
+	<LoginPopup onClose={closeLoginPopup} />
+{/if}

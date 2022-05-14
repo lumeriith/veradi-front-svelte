@@ -20,9 +20,9 @@
 </script>
 
 <Button
-	class="tw-flex-1 tw-max-w-[220px] tw-font-bold tw-py-2"
+	class="tw-flex-1 tw-py-3 tw-rounded-full tw-border-0"
 	on:click
 	id={buttonId}
-	style="background-color:{color}; border:none; border-radius:18px;"
+	style="background-color:{color};"
 	>{title}
 </Button>

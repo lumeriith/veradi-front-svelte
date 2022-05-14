@@ -21,11 +21,11 @@
 
 <Button
 	{href}
-	class="tw-flex-1 tw-rounded-xl"
+	class="tw-flex-1 tw-rounded-full"
 	style="background-color:white; align:center; border-color:silver;"
 >
 	<div class="tw-flex tw-justify-center tw-items-center tw-gap-2 tw-whitespace-nowrap tw-text-sm">
-		<Image src={url} class="tw-h-7" />
-		<span style="color:gray;">{text}</span>
+		<Image src={url} class="tw-h-6" />
+		<span style="color:black;">{text}</span>
 	</div>
 </Button>
