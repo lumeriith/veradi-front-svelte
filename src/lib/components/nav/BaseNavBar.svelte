@@ -11,11 +11,6 @@
 	} from 'sveltestrap';
 
 	import img_veradi from '$lib/static/img/nav/VERADI.svg';
-	import img_about from '$lib/static/img/nav/About.svg';
-	import img_contents from '$lib/static/img/nav/Contents.svg';
-	import img_community from '$lib/static/img/nav/Community.svg';
-	import img_program from '$lib/static/img/nav/Program.svg';
-	import img_contact from '$lib/static/img/nav/Contact.svg';
 	import img_login from '$lib/static/img/nav/Login.svg';
 
 	import VeradiNavItem from './BaseNavItem.svelte';
@@ -24,6 +19,7 @@
 
 	export let items = [];
 	export let showCareer = false;
+	export let whiteTextWhenTransparent = false;
 
 	let isOpen = false;
 
@@ -34,7 +30,10 @@
 
 	let opacity = 0;
 	function updateOpacity() {
-		opacity = isOpen ? 1.0 : Math.min(document.documentElement.scrollTop / 300, 1.0);
+		if (isOpen) opacity = 1.0;
+		else {
+			opacity = document.documentElement.scrollTop > 5 ? 1.0 : 0.0;
+		}
 	}
 
 	function handleResize() {
@@ -52,6 +51,8 @@
 	function closeLoginPopup() {
 		isLoginPopupShown = false;
 	}
+
+	$: isWhiteText = whiteTextWhenTransparent && opacity < 0.01;
 </script>
 
 <svelte:window on:scroll={updateOpacity} on:resize={handleResize} bind:innerWidth />
@@ -67,7 +68,11 @@
 	{#if showCareer}
 		<NavbarBrand class="flex items-center gap-2" style="margin-left:20px">
 			<Image alt=".." src={img_veradi} style />
-			<a href={VeradiUrl.hireIndex} class="text-muted text-sm no-underline">Career</a>
+			<a
+				href={VeradiUrl.hireIndex}
+				class="{isWhiteText ? 'tw-text-gray-200' : 'tw-text-gray-500'} tw-text-sm tw-no-underline"
+				>Career</a
+			>
 		</NavbarBrand>
 	{:else}
 		<NavbarBrand style="margin-left:20px">
@@ -78,7 +83,7 @@
 	<Collapse {isOpen} navbar expand="md">
 		<Nav style="margin-left:50px; flex: 1" navbar>
 			{#each items as item}
-				<VeradiNavItem {item} />
+				<VeradiNavItem {item} whiteText={isWhiteText} />
 			{/each}
 			<NavItem class="md:tw-ml-auto">
 				<NavLink on:click={openLoginPopup}><Image alt=".." src={img_login} /></NavLink>
