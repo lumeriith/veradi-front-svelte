@@ -51,6 +51,8 @@
 	function closeLoginPopup() {
 		isLoginPopupShown = false;
 	}
+
+	$: isWhiteText = whiteTextWhenTransparent && opacity < 0.01;
 </script>
 
 <svelte:window on:scroll={updateOpacity} on:resize={handleResize} bind:innerWidth />
@@ -66,7 +68,11 @@
 	{#if showCareer}
 		<NavbarBrand class="flex items-center gap-2" style="margin-left:20px">
 			<Image alt=".." src={img_veradi} style />
-			<a href={VeradiUrl.hireIndex} class="text-muted text-sm no-underline">Career</a>
+			<a
+				href={VeradiUrl.hireIndex}
+				class="{isWhiteText ? 'tw-text-gray-200' : 'tw-text-gray-500'} tw-text-sm tw-no-underline"
+				>Career</a
+			>
 		</NavbarBrand>
 	{:else}
 		<NavbarBrand style="margin-left:20px">
@@ -77,10 +83,7 @@
 	<Collapse {isOpen} navbar expand="md">
 		<Nav style="margin-left:50px; flex: 1" navbar>
 			{#each items as item}
-				<VeradiNavItem
-					{item}
-					whiteText={whiteTextWhenTransparent && opacity < 0.01 ? true : false}
-				/>
+				<VeradiNavItem {item} whiteText={isWhiteText} />
 			{/each}
 			<NavItem class="md:tw-ml-auto">
 				<NavLink on:click={openLoginPopup}><Image alt=".." src={img_login} /></NavLink>
