@@ -27,15 +27,15 @@
 
 <AccordionItem>
 	<Row slot="header">
-		<Col sm="2" md="2" lg="2" class="d-none d-sm-block">
-			<Image src={img_iconQ} style="width:50px; height:50px;" />
-		</Col>
-		<Col sm="10" md="10" lg="10">
-			<h5>
-				<b style="color:grey;">[{questionTitle}]</b>&nbsp
-				{questionContents}
+    <Col>
+			<Image src={img_iconQ} style="width:50px; margin-right:20px; display:inline-block;"/>
+			<h5 style="display:inline-block;">
+				  <b style="color:grey; width:50px; margin-right:10px;">[{questionTitle}]</b>&nbsp
 			</h5>
-		</Col>
+      <h5 style="display:inline-flex;">
+        {questionContents}
+      </h5>
+    </Col>
 	</Row>
 	<Row>
 		<Col sm="2" md="2" lg="2" class="d-none d-md-block">
