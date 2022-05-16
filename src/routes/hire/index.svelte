@@ -28,13 +28,13 @@
 				</div>
 				<span style="letter-spacing:-1px; word-break: keep-all;">
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-						<h4 class="py-1">노하우와 기술력의 집결체인 프리미엄 컨텐츠 로</h4>
+						<h4 class="py-1">프리미엄 컨텐츠의 응용으로</h4>
 					</div>
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-						<h4 class="py-1">수험생에게 새로운 시각과</h4>
+						<h4 class="py-1">승리로 가는 가장 빠른 길,</h4>
 					</div>
 					<div data-aos="fade-right" data-aos-easing="linear" style="transition:2.0s;">
-						<h4 class="py-1">승리로 가는 가장 빠른 길을 선사합니다.</h4>
+						<h4 class="py-1">베라디와 함께하세요.</h4>
 					</div>
 				</span>
 			</div>
@@ -56,15 +56,14 @@
 					</h2>
 				</div>
 				<span class="py-4" style="color:#808080; letter-spacing:-1px;">
-					<h5>베라디의 끝없는 본질을 향한 탐구정신으로 수험생들에게 더 나은,</h5>
-					<h5>더 진화된 프리미엄 컨텐츠를 제공하여</h5>
-					<h5>수험생들의 미래에 기여하고자 하는 우리의 사명이 담겨 있습니다.</h5>
-					<h5>밤낮을 가리지 않는 열정과 사명감으로, 그리고 기술력과 서비스로</h5>
+					<h5>교육 컨텐츠 혁신을 이끌어가는 베라디는,</h5>
+					<h5>항상 검증된 자료로 수험생들에게 다가가고 있습니다.</h5>
+					<h5>수험생들의 미래에 기여하고자 하는 저희의 사명은,</h5>
+					<h5>밤낮을 가리지 않고, 포기할 줄 모르는 열정으로 무장 되어 있습니다.</h5>
 				</span>
 				<h4 class="py-3" style="">
-					단 한 명의 수험생도 놓치지 않고 우리가 그려가는
-					<span style="color:#3c9fcb;"> 'fast way to victory' </span>
-					에 함께하고자 합니다.
+					<span style="color:#3c9fcb;">“The Fastest way to Victory”</span>
+					의 여정에 함께 할 수험생 여러분들을 환영합니다.
 				</h4>
 			</div>
 		</Container>
@@ -73,7 +72,7 @@
 <Container class="py-5">
 	<Row class="py-3">
 		<div data-aos="flip-down" data-aos-easing="linear" style="transition:1.0s;">
-			<h4>Fast way to Victory</h4>
+			<h4>The Fastest Way to Victory</h4>
 			<h1>
 				<b>
 					<span style="color:#3c9fcb;">VERADI</span>
@@ -93,6 +92,26 @@
 				transition={info.transition}
 			/>
 		{/each}
+		<div class="tw-h-4" />
+		<h5
+			class="py-2"
+			data-aos="fade-right"
+			data-aos-easing="linear"
+			style="color:#bbbbbb; transition:2.4s"
+		>
+			<h3 class="tw-text-[#3b86c8] tw-font-bold tw-mb-4">VERADI</h3>
+			<div class="tw-text-[#707070]">
+				<p class="tw-mb-2">
+					저희는 포기할 줄 모르는 끝 없는 열정으로, 학생들에게 확실하고 주목할만한 교육 컨텐츠를
+					제공 중입니다.
+				</p>
+				<p>
+					변화무쌍한 한국의 입시 제도 안에서 빠르게 성공할 수 있는 길을 제공해주는
+					<span style="color:#2d81cb;">VERADI</span>
+					는 교육의 혁신을 이끌어가는 중입니다.
+				</p>
+			</div>
+		</h5>
 	</Row>
 	<Row class="py-2">
 		<VeradiValueImage src={img_landingPhoto1} />
