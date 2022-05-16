@@ -22,7 +22,7 @@
 </script>
 
 <div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-	<Row>
+	<Row class="tw-max-w-2xl">
 		<h2 class="pt-5 pb-3">
 			<b>
 				<span>

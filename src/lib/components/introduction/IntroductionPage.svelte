@@ -43,7 +43,13 @@
 		</Col>
 		<Col xs="12" sm="9" md="10">
 			<TeamIntro title={teamTitle} subject={teamName} introduction={teamIntro} />
-			<Row class="py-3">
+
+			<div
+				class="tw-flex tw-gap-6 tw-flex-wrap"
+				data-aos="fade-right"
+				data-aos-easing="linear"
+				style="transition:1.5s;"
+			>
 				{#each hashTags as tag}
 					<TeamHashTag
 						content={tag.content}
@@ -52,7 +58,7 @@
 						letterSpacing={tag.letterSpacing}
 					/>
 				{/each}
-			</Row>
+			</div>
 		</Col>
 	</Row>
 </Container>
