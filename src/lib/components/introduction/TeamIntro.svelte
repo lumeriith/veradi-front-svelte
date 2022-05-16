@@ -16,7 +16,9 @@
 	} from 'sveltestrap';
 	export let title;
 	export let subject;
-	export let introduction;
+	export let introduction = [];
+
+	$: isIntroArray = !!introduction.push;
 </script>
 
 <div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
@@ -32,8 +34,14 @@
 			</b>
 		</h2>
 		<div class="py-1">
-			<span style="color:#333333; line-height:220%;">
-				{introduction}
+			<span style="color:#333333;">
+				{#if isIntroArray}
+					{#each introduction as intro}
+						<p>{intro}</p>
+					{/each}
+				{:else}
+					{introduction}
+				{/if}
 			</span>
 		</div>
 	</Row>

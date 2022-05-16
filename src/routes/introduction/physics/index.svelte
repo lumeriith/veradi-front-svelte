@@ -1,105 +1,20 @@
 <script>
-	import {
-		Accordion,
-		AccordionItem,
-		Alert,
-		Button,
-		ButtonGroup,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
-
-	// <------------------- Modify here ----------------->
-	import { PhysicsMemberCardInfo as MemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
-	import { PhysicsHashTagInfo as HashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	const hireUrl = VeradiUrl.hirePhysics;
-	const subject = '물리학팀';
-	const title1 = '교육의 미래를 이끌어갈';
-	const introduction1 = '설명문';
-	const title2 = '제목';
-	const introduction2 = '설명문';
-	//
-
-	const buttonName = subject + ' 채용공고';
+	import { PhysicsMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
+	import { PhysicsHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
-	import MemberCard from '$lib/components/introduction/MemberCard.svelte';
-	import TeamHashTag from '$lib/components/introduction/TeamHashTag.svelte';
-	import TeamButton from '$lib/components/introduction/TeamButton.svelte';
-	import TeamIntro from '$lib/components/introduction/TeamIntro.svelte';
-	import TeamFamilyIntro from '$lib/components/introduction/TeamFamilyIntro.svelte';
-	import TeamReviewIntro from '$lib/components/introduction/TeamReviewIntro.svelte';
-	import TeamHireLink from '$lib/components/introduction/TeamHireLink.svelte';
-
-	import SwiperCoverFlow from '$lib/components/style/swiper/coverflow/SwiperCoverFlow.svelte';
+	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 </script>
 
-<Container>
-	<Row>
-		<Col class="d-none d-sm-block py-4" sm="3" md="2" style="margin-left:-20px; margin-right:10px;">
-			<TeamButton />
-		</Col>
-		<Col xs="12" sm="9" md="10">
-			<TeamIntro title={title1} {subject} introduction={introduction1} />
-			<Row class="py-3">
-				{#each HashTagInfo as info}
-					<TeamHashTag
-						content={info.content}
-						fontColor={info.fontColor}
-						bgColor={info.bgColor}
-						letterSpacing={info.letterSpacing}
-					/>
-				{/each}
-			</Row>
-		</Col>
-	</Row>
-</Container>
-<Form class="py-4">
-	<Container class="d-none d-sm-block">
-		<TeamFamilyIntro introduction="Introduce our Family" {subject} />
-		<div style="border-top:1px; border-style: solid; border-color:#bbbbbb;" />
-		<Row class="py-2">
-			{#each MemberCardInfo as info}
-				<MemberCard
-					name={info.name}
-					rank={info.rank}
-					education={info.education}
-					letterSpacing={info.letterSpacing}
-					bgColor={info.bgColor}
-				/>
-			{/each}
-		</Row>
-	</Container>
-	<Container class="d-block d-sm-none">
-		<TeamFamilyIntro introduction="Introduce our Family" {subject} />
-		<Row
-			class="py-2"
-			style="height:250px; overflow:scroll; overflow-x:hidden; background: linear-gradient( to bottom, #eeeeee, #fbfbfb) "
-		>
-			{#each MemberCardInfo as info}
-				<MemberCard
-					name={info.name}
-					rank={info.rank}
-					education={info.education}
-					letterSpacing={info.letterSpacing}
-					bgColor={info.bgColor}
-				/>
-			{/each}
-		</Row>
-	</Container>
-</Form>
-<Container class="py-5">
-	<TeamReviewIntro />
-	<SwiperCoverFlow />
-</Container>
-<Form>
-	<TeamHireLink title={title2} introduction={introduction2} button={buttonName} url={hireUrl} />
-</Form>
+<IntroductionPage
+	hireUrl={VeradiUrl.hirePhysics}
+	teamName="물리학1팀"
+	teamTitle="상상을 실현시키는"
+	teamIntro={[
+		'베라디 물리학 1팀은 자연 현상의 보편적 법칙을 진정으로 탐구 할 수 있는 인재들을 좋아합니다.',
+		'소립자에서 우주 크기까지에 이르는 모든 물질의 성질과 운동을 지배하는 자연의 기본 법칙을 연구하는 물리학은 이론을 바탕으로 상상을 현실로 실현시키기도 하죠.',
+		'베라디 물리학1팀은 이렇듯 다양한 상상력을 바탕으로 본인이 추구하는 것을 실현하기를 소망합니다.',
+		'가슴 벅찬 호기심로 자연을 배우는 물리학1팀과 함께 여정을 떠나지 않으실래요?'
+	]}
+	members={Members}
+	hashTags={HashTags}
+/>

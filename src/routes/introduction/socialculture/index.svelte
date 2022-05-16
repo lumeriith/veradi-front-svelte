@@ -1,105 +1,20 @@
 <script>
-	import {
-		Accordion,
-		AccordionItem,
-		Alert,
-		Button,
-		ButtonGroup,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
-
-	// <------------------- Modify here ----------------->
-	import { SocialcultureMemberCardInfo as MemberCardInfo } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
-	import { SocialcultureHashTagInfo as HashTagInfo } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	const hireUrl = VeradiUrl.hireSocialculture;
-	const subject = '사회문화팀';
-	const title1 = '교육의 미래를 이끌어갈';
-	const introduction1 = '설명문';
-	const title2 = '제목';
-	const introduction2 = '설명문';
-	//
-
-	const buttonName = subject + ' 채용공고';
+	import { SocialcultureMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
+	import { SocialcultureHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
-	import MemberCard from '$lib/components/introduction/MemberCard.svelte';
-	import TeamHashTag from '$lib/components/introduction/TeamHashTag.svelte';
-	import TeamButton from '$lib/components/introduction/TeamButton.svelte';
-	import TeamIntro from '$lib/components/introduction/TeamIntro.svelte';
-	import TeamFamilyIntro from '$lib/components/introduction/TeamFamilyIntro.svelte';
-	import TeamReviewIntro from '$lib/components/introduction/TeamReviewIntro.svelte';
-	import TeamHireLink from '$lib/components/introduction/TeamHireLink.svelte';
-
-	import SwiperCoverFlow from '$lib/components/style/swiper/coverflow/SwiperCoverFlow.svelte';
+	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 </script>
 
-<Container>
-	<Row>
-		<Col class="d-none d-sm-block py-4" sm="3" md="2" style="margin-left:-20px; margin-right:10px;">
-			<TeamButton />
-		</Col>
-		<Col xs="12" sm="9" md="10">
-			<TeamIntro title={title1} {subject} introduction={introduction1} />
-			<Row class="py-3">
-				{#each HashTagInfo as info}
-					<TeamHashTag
-						content={info.content}
-						fontColor={info.fontColor}
-						bgColor={info.bgColor}
-						letterSpacing={info.letterSpacing}
-					/>
-				{/each}
-			</Row>
-		</Col>
-	</Row>
-</Container>
-<Form class="py-4">
-	<Container class="d-none d-sm-block">
-		<TeamFamilyIntro introduction="Introduce our Family" {subject} />
-		<div style="border-top:1px; border-style: solid; border-color:#bbbbbb;" />
-		<Row class="py-2">
-			{#each MemberCardInfo as info}
-				<MemberCard
-					name={info.name}
-					rank={info.rank}
-					education={info.education}
-					letterSpacing={info.letterSpacing}
-					bgColor={info.bgColor}
-				/>
-			{/each}
-		</Row>
-	</Container>
-	<Container class="d-block d-sm-none">
-		<TeamFamilyIntro introduction="Introduce our Family" {subject} />
-		<Row
-			class="py-2"
-			style="height:250px; overflow:scroll; overflow-x:hidden; background: linear-gradient( to bottom, #eeeeee, #fbfbfb) "
-		>
-			{#each MemberCardInfo as info}
-				<MemberCard
-					name={info.name}
-					rank={info.rank}
-					education={info.education}
-					letterSpacing={info.letterSpacing}
-					bgColor={info.bgColor}
-				/>
-			{/each}
-		</Row>
-	</Container>
-</Form>
-<Container class="py-5">
-	<TeamReviewIntro />
-	<SwiperCoverFlow />
-</Container>
-<Form>
-	<TeamHireLink title={title2} introduction={introduction2} button={buttonName} url={hireUrl} />
-</Form>
+<IntroductionPage
+	hireUrl={VeradiUrl.hireSocialculture}
+	teamName="사회문화팀"
+	teamTitle="세상의 질서와 변화를 만들어내는"
+	teamIntro={[
+		'베라디 사회문화팀은 사회를 이끌어갈 글로벌 리더들을 좋아합니다.',
+		'사회문화는 단순한 사회 형상을 이해하는 것으로 그치는 것이 아닌, 문화를 분석할 수 있는 틀들을 응용해야 합니다.',
+		'다양한 학문을 바탕으로 인식의 틀을 사용해야 한다는 것이죠. 때문에 베라디 사회문화팀 또한 다양한 학문에 대한 이해가 있는 사람들을 선호하죠. ',
+		'세상을 바꾸는 부드러운 힘, 저희 사회문화팀과 같이 가실 준비 되셨나요?'
+	]}
+	members={Members}
+	hashTags={HashTags}
+/>
