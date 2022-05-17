@@ -33,7 +33,7 @@
 				</span>
 			</b>
 		</h2>
-		<div class="py-1">
+		<div class="py-1" style="word-break: keep-all;">
 			<span style="color:#333333;">
 				{#if isIntroArray}
 					{#each introduction as intro}
