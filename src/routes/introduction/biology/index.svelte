@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="미래를 선도하는 인재로 성장하는 기회, 생명과학팀에서 함께하세요."
 />

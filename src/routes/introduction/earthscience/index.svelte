@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="지속 가능한 발전을 위한 길, 지구과학팀 동참하세요."
 />

@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="옳은 답을 위해 끊임없이 노력하는 모험 화학팀에서 함께하세요"
 />

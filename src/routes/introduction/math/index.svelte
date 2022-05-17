@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="창의로운 미래의 위한 길, 수학 팀과 함께 하세요"
 />

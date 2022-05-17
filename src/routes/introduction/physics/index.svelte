@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="상상을 현실로 펼치는 모험 물리학1팀과 함께 하세요."
 />

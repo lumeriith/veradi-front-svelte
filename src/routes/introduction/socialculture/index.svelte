@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="세상을 바꾸는 힘, 사회문화팀과 함께 하실 준비 됐나요?"
 />

@@ -16,4 +16,5 @@
 	]}
 	members={Members}
 	hashTags={HashTags}
+	hireIntro="학문들을 통찰할 수 있는 능력을 생활과윤리팀에서 펼쳐 보세요"
 />
