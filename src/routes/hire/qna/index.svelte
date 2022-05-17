@@ -48,7 +48,7 @@
 	<Container class="py-1">
 		<div style="margin-left:10px;">
 			<h1>추가 질문</h1>
-			<h5>질문 관련 문의는 Q&A 게시판 또는 @gmail.com을 통해서 가능합니다.</h5>
+			<h5>추가적인 질문이 있을 시, 웹사이트 하단 이메일 문의창으로 문의 주세요.</h5>
 		</div>
 	</Container>
 </Form>
