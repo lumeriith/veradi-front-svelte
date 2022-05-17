@@ -9,6 +9,10 @@ module.exports = {
 			lg: '992px',
 			xl: '1200px'
 		},
+		fontFamily: {
+			heading: ['DotumHanjaOnly', 'BMHANNAPro', 'Tahoma', 'Arial', 'Helvetica', 'sans-serif'],
+			body: ['SUIT-Regular']
+		},
 		extend: {}
 	},
 	variants: {

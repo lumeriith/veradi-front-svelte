@@ -14,29 +14,19 @@
 		FormGroup,
 		Image
 	} from 'sveltestrap';
-	export let name, rank, education;
-	export let letterSpacing = -1;
+	export let name, rank, education, team;
 
-	import circle from '$lib/static/img/introduction/circle.svg';
+	import circlesIcon from '$lib/static/img/introduction/circlesIcon.png';
 </script>
 
-<Col class="py-3" xs="6" sm="6" md="4" lg="4" xl="3">
-	<div>
-		<Card style="padding:25px 20px 35px 20px; border:0;">
-			<div style="float:left;">
-				<Image
-					src={circle}
-					style="display:inline-block; margin-left: -10px; margin-right: 10px; margin-top: 6.5px; vertical-align:top; width:15px;"
-				/>
-				<h4 style="display:inline;"><b>{name}</b></h4>
-			</div>
-			<h5 class="pt-3" style="color:#333333; margin-left: 20px;">{rank}</h5>
-			<div
-				class="pt-1"
-				style="color:lightslategrey; letter-spacing:{letterSpacing}px; margin-left: 20px; word-break:keep-all"
-			>
-				{education}
-			</div>
-		</Card>
+<div class="tw-px-6 tw-flex tw-flex-col tw-gap-2 tw-w-64">
+	<div class="tw-relative tw-font-semibold tw-text-xl">
+		<img class="tw-absolute -tw-left-7 -tw-top-1 -tw-z-10 tw-w-9" src={circlesIcon} alt="" />{name}
 	</div>
-</Col>
+	<div class="tw-text-md tw-font-semibold">
+		{team}&nbsp;{rank}
+	</div>
+	<div class="tw-text-sm">
+		{education}
+	</div>
+</div>

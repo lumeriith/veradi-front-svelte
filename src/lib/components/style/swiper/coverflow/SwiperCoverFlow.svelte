@@ -1,63 +1,45 @@
 <script>
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
+	import { Image } from 'sveltestrap';
 	// Import Swiper styles
 	import 'swiper/css';
 
 	import 'swiper/css/effect-coverflow';
 	import 'swiper/css/pagination';
 	import './style.css';
+
 	// import required modules
-	import { Autoplay, EffectCoverflow, Pagination } from 'swiper';
+	import { FreeMode, Autoplay, EffectCoverflow, Pagination } from 'swiper';
 
 	import dotIcon from '$lib/static/img/introduction/dotIcon.png';
 	import { IntroductionSwiperInfo } from '$lib/components/introduction/constants/IntroductionSwiperInfo.svelte';
 </script>
 
 <Swiper
-	effect={'coverflow'}
 	grabCursor={true}
-	centeredSlides={true}
+	loop={true}
 	slidesPerView={'auto'}
+	centeredSlides={true}
+	slidesPerGroup={1}
 	autoplay={{
-		delay: 3000,
 		disableOnInteraction: false
 	}}
-	coverflowEffect={{
-		rotate: 50,
-		stretch: 0,
-		depth: 100,
-		modifier: 1,
-		slideShadows: false,
-		autoplay: 3000
-	}}
+	speed={500}
+	spaceBetween={50}
 	pagination={true}
-	modules={[Autoplay, EffectCoverflow, Pagination]}
+	modules={[Autoplay]}
 	class="mySwiper"
 >
 	{#each IntroductionSwiperInfo as info}
 		<SwiperSlide>
-			<Card
-				style="padding: 20px 40px 20px 40px; border-radius:20px; box-shadow: 2px 2px 3px 3px #cccccc;"
+			<div
+				class="tw-py-6 tw-px-10 tw-h-72 tw-w-80 tw-rounded-2xl tw-flex tw-flex-col"
+				style="box-shadow: 0 4px 22px #0003;"
 			>
 				<Image class="pb-3" src={dotIcon} style="width:30px;" />
 				<div style="color:#707070; line-height:180%;">{info.content}</div>
-				<div class="py-3" style="color:#555555;"><b>{info.name}</b></div>
-			</Card>
+				<div class="py-3 tw-mt-auto" style="color:#555555;"><b>{info.name}</b></div>
+			</div>
 		</SwiperSlide>
 	{/each}
 </Swiper>

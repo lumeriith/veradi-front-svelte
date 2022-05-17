@@ -23,17 +23,34 @@
 	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
 </script>
 
-<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.5s;">
+<div>
 	<Form class="py-5" style="background-image:url('{img_mainPhoto}'); background-size:cover;">
 		<Container class="py-5">
 			<Col>
-				<h3 class="py-3" style="color:#4d4d4d;"><b>{title}</b></h3>
-				<h5 class="pb-4" style="color:#707070;">{introduction}</h5>
-				<Button
-					style="background-color:#2bc6ff; border:0; border-radius: 20px; padding: 10px 50px 10px 50px;"
-					href={url}>{button}</Button
-				>
+				<h3 class="tw-mb-4 tw-font-heading tw-text-3xl">{title}</h3>
+				<h5 class="tw-mb-8 tw-font-semibold tw-text-xl tw-text-[#7b7b7b]">{introduction}</h5>
+				<button href={url}>{button}</button>
 			</Col>
 		</Container>
 	</Form>
 </div>
+
+<style>
+	button {
+		background-color: #2bc6ff;
+		color: white;
+		font-weight: 500;
+		font-size: large;
+		padding: 11px 40px;
+		border-radius: 9999px;
+		box-shadow: 0 0 8px #0002;
+	}
+
+	button:hover {
+		filter: brightness(0.95);
+	}
+
+	button:active {
+		filter: brightness(0.8);
+	}
+</style>

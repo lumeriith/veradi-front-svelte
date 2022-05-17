@@ -5,12 +5,33 @@
 @tailwind utilities;
 
 @font-face {
+	font-family: 'DotumHanjaOnly';
+	src: local('Dotum');
+	unicode-range: U+3001, U+3002, U+300C-300F, U+3041-3096, U+309D, U+309E, U+30A1-30FA, U+30FC,
+		U+4E00-9FEA, U+3400-4DB5, U+FF5E, U+F900-FA6D;
+}
+
+@font-face {
 	font-family: 'SUIT-Regular';
 	font-style: normal;
 	font-weight: 400;
 	src: local('SUIT-Regular'), url('$lib/static/font/SUIT-otf/SUIT-Regular.otf') format('woff2');
 }
 
-* {
-	font-family: SUIT-Regular;
+@font-face {
+	font-family: 'BMHANNAPro';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	--bs-body-font-family: SUIT-Regular, sans-serif !important;
+	--bs-body-color: #333333 !important;
+}
+
+hr {
+	color: #e3e3e3 !important;
+	opacity: 1 !important;
 }

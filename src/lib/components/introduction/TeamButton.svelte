@@ -1,59 +1,45 @@
 <script>
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
+	import { Button } from 'sveltestrap';
+	import { page } from '$app/stores';
 
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	export let href = '';
+	$: isActive = isUrlEqual($page.url.pathname, href);
+
+	function isUrlEqual(a = '', b = '') {
+		if (a.endsWith('/')) a = a.substring(0, a.length - 1);
+		if (b.endsWith('/')) b = b.substring(0, b.length - 1);
+
+		a = a.toLowerCase();
+		b = b.toLowerCase();
+
+		return a == b;
+	}
 </script>
 
-<Form>
-	<Row style="display:flex; gap:10px;">
-		<Button
-			outline
-			href={VeradiUrl.introMath}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">수학팀</Button
-		>
-		<Button
-			outline
-			href={VeradiUrl.introSocialculture}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">사회문화팀</Button
-		>
-		<Button
-			outline
-			href={VeradiUrl.introLifeethics}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">생활과윤리팀</Button
-		>
-		<Button
-			outline
-			href={VeradiUrl.introPhysics}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">물리학팀</Button
-		>
-		<Button
-			outline
-			href={VeradiUrl.introChemistry}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">화학팀</Button
-		>
-		<Button
-			outline
-			href={VeradiUrl.introBiology}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">생명과학팀</Button
-		>
-		<Button
-			outline
-			href={VeradiUrl.introEarthscience}
-			style="border: 0; border-color:#99dbff; border-radius: 50px;">지구과학팀</Button
-		>
-	</Row>
-</Form>
+<a {href}>
+	<button class={isActive ? 'active' : ''}>
+		<slot />
+	</button>
+</a>
+
+<style>
+	button {
+		color: #7b7b7b;
+		padding: 5px 0px;
+		background-color: white;
+		width: 110px;
+		white-space: nowrap;
+		border-radius: 9999px;
+		font-weight: bold;
+	}
+
+	button.active {
+		background-color: #ddf3ff;
+		color: #3c9fcb;
+	}
+
+	button:hover:not(.active) {
+		color: black;
+		background-color: #eee;
+	}
+</style>
