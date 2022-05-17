@@ -36,7 +36,7 @@
 				class="tw-py-6 tw-px-10 tw-h-72 tw-w-80 tw-rounded-2xl tw-flex tw-flex-col"
 				style="box-shadow: 0 4px 22px #0003;"
 			>
-				<Image class="pb-3" src={dotIcon} style="width:30px;" />
+				<img class="pb-3" src={dotIcon} alt="" style="width:30px;" />
 				<div style="color:#707070; line-height:180%;">{info.content}</div>
 				<div class="py-3 tw-mt-auto" style="color:#555555;"><b>{info.name}</b></div>
 			</div>
