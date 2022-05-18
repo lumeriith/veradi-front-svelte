@@ -1,26 +1,11 @@
 <script>
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
+	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
+	import { Container, Col } from 'sveltestrap';
 
 	export let introduction = '내용';
 	export let title = '제목';
 	export let button = '채용 공고';
 	export let url;
-
-	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
 </script>
 
 <div

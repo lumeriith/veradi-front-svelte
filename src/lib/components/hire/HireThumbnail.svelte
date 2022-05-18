@@ -1,19 +1,5 @@
 <script>
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
+	import { Col, Image } from 'sveltestrap';
 
 	export let title, text;
 	export let src;

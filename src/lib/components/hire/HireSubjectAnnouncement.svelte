@@ -1,20 +1,5 @@
 <script>
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image,
-		TabContent
-	} from 'sveltestrap';
+	import { Button, Container, Col, Row, Form, Image } from 'sveltestrap';
 
 	import HireSideButton from '$lib/components/hire/HireSideButton.svelte';
 

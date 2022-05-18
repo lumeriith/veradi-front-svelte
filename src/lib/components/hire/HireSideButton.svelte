@@ -1,20 +1,5 @@
 <script>
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image,
-		TabContent
-	} from 'sveltestrap';
+	import { Button, Col, Row, Card } from 'sveltestrap';
 	import { SubjectContents } from './constants/SubjectContents.svelte';
 </script>
 
