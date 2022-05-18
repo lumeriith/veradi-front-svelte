@@ -29,6 +29,7 @@
 body {
 	--bs-body-font-family: SUIT-Regular, sans-serif !important;
 	--bs-body-color: #333333 !important;
+	word-break: keep-all;
 }
 
 hr {
