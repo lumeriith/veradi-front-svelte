@@ -1,75 +1,61 @@
 <script>
 	import {
-		Alert,
-		Button,
-		Container,
-		Col,
 		Row,
 		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image,
 		Carousel,
 		CarouselControl,
 		CarouselIndicators,
-		CarouselItem,
-		CarouselCaption
+		CarouselItem
 	} from 'sveltestrap';
 	import { HireCardInfo } from '$lib/components/hire/constants/HireCardInfo.svelte';
-	
-  let activeIndex = 0;
 
-  $: slideTitle = HireCardInfo[activeIndex].title;
-  $: slideText = HireCardInfo[activeIndex].text;
+	let activeIndex = 0;
+
+	$: slideTitle = HireCardInfo[activeIndex].title;
+	$: slideText = HireCardInfo[activeIndex].text;
 </script>
 
 <!------------------- PC MODE ------------------->
-<div class="d-none d-sm-block">
-	<Row>
+<div class="tw-hidden sm:tw-flex tw-justify-center">
+	<div class="tw-flex tw-flex-wrap tw-gap-y-12 tw-justify-around tw-gap-x-8 tw-max-w-4xl">
 		{#each HireCardInfo as content}
-			<Col xs="6" sm="4" style="text-align:center;" class="py-4">
-				<div
-					class="py-3 align:center;"
-					data-aos="zoom-in-up"
-					data-aos-easing="linear"
-					style="transition:1.0s;"
-				>
-					<Image
-						thumbnail
-						src={content.img}
-						style="display:inline-block; height:120px; width:120px; margin-bottom:10px;"
-					/>
-					<span style="letter-spacing:-1.5px; word-break:keep-all;">
-						<h4>{content.title}</h4>
-						<div>{content.text}</div>
-					</span>
-				</div>
-			</Col>
+			<div class="tw-w-56 tw-text-center">
+				<img
+					src={content.img}
+					alt=""
+					class="tw-rounded-full"
+					style="display:inline-block; height:120px; width:120px; margin-bottom:25px;"
+				/>
+				<span class="tw-flex tw-flex-col tw-gap-2.5">
+					<div class="tw-text-xl tw-font-semibold">{content.title}</div>
+					<div style="line-height: 160%;">{content.text}</div>
+				</span>
+			</div>
 		{/each}
-	</Row>
+	</div>
 </div>
 <!------------------- MOBILE MODE ------------------->
-<div class="d-block d-sm-none">
+<div class="tw-block sm:tw-hidden">
 	<Row>
-    <Carousel dark items={HireCardInfo} bind:activeIndex>
-      <CarouselIndicators bind:activeIndex items={HireCardInfo} style="transform: translateY(15px);"/>
-      <div class="carousel-inner">
-        {#each HireCardInfo as item, index}
-          <CarouselItem bind:activeIndex itemIndex={index}>
-            <Card class="pb-4" style="align-items:center; border:none;">
-              <Image thumbnail src={item.img} alt={`${item} ${index + 1}`} style="width:75%;"/>
-            </Card>
-          </CarouselItem>
-        {/each}
-      </div>
-      <CarouselControl direction="prev" bind:activeIndex items={HireCardInfo} />
-      <CarouselControl direction="next" bind:activeIndex items={HireCardInfo} />
-    </Carousel>
-    <h4 class="pt-3">{slideTitle}</h4>
-    <div>{slideText}</div>
+		<Carousel dark items={HireCardInfo} bind:activeIndex>
+			<CarouselIndicators
+				bind:activeIndex
+				items={HireCardInfo}
+				style="transform: translateY(25px); opacity: 0.5;"
+			/>
+			<div class="carousel-inner">
+				{#each HireCardInfo as item, index}
+					<CarouselItem bind:activeIndex itemIndex={index}>
+						<Card class="pb-4" style="align-items:center; border:none;">
+							<img src={item.img} alt="" class="tw-rounded-full" style="width:60%;" />
+						</Card>
+					</CarouselItem>
+				{/each}
+			</div>
+			<CarouselControl direction="prev" bind:activeIndex items={HireCardInfo} />
+			<CarouselControl direction="next" bind:activeIndex items={HireCardInfo} />
+		</Carousel>
+		<h4 class="pt-3 tw-font-semibold">{slideTitle}</h4>
+		<div>{slideText}</div>
 	</Row>
 </div>
