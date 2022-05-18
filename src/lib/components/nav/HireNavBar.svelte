@@ -6,16 +6,16 @@
 
 	const items = [
 		{
-			text: '복지문화',
-			href: VeradiUrl.hireWelfare
+			text: '회사소개',
+			href: VeradiUrl.hireIndex
 		},
 		{
 			text: '채용안내',
 			href: VeradiUrl.hireNotice
 		},
 		{
-			text: '모집요강',
-			href: VeradiUrl.hireYogang
+			text: '채용공고',
+			href: '#'
 		},
 		{
 			text: '자주 묻는 질문',

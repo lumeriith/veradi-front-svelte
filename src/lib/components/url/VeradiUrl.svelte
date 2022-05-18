@@ -2,7 +2,6 @@
 	export const VeradiUrl = {
 		// 채용 페이지
 		hireIndex: '/hire',
-		hireWelfare: '/hire/welfare/',
 		hireNotice: '/hire/notice/',
 		hireQna: '/hire/qna/',
 		hireMath: '/hire/subject/math/',

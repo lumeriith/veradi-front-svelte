@@ -1,143 +1,163 @@
 <script>
-	import img_landingMain from '$lib/static/img/landing/landingMain.png';
-	import img_landingPhoto1 from '$lib/static/img/landing/landingPhoto1.jpg';
-	import img_landingPhoto2 from '$lib/static/img/landing/landingPhoto2.jpg';
-	import img_landingPhoto3 from '$lib/static/img/landing/landingPhoto3.jpg';
-	import img_landingPhoto4 from '$lib/static/img/landing/landingPhoto4.jpg';
-	import img_veradi from '$lib/static/img/landing/veradi.svg';
+	import {
+		Button,
+		Container,
+		Col,
+		Row,
+		Card,
+		CardBody,
+		CardHeader,
+		CardTitle,
+		Input,
+		Form,
+		FormGroup,
+		Image,
+		Alert,
+		TabContent
+	} from 'sveltestrap';
 
-	import { Container, Col, Row, Image, Form, Button } from 'sveltestrap';
+	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import HireThumbnail from '$lib/components/hire/HireThumbnail.svelte';
+	import HireCards from '$lib/components/hire/HireCards.svelte';
 
-	import { ValueInfo } from '$lib/components/landing/constants/VeradiValueContentInfo.svelte';
-	import VeradiValueContent from '$lib/components/landing/VeradiValueContent.svelte';
-	import VeradiValueImage from '$lib/components/landing/VeradiValueImage.svelte';
+	const img = {
+		mainButton: 'svg/hire/mainButton.svg',
+		mainTitle1: 'svg/hire/mainTitle1.svg',
+		mainTitle2: 'svg/hire/mainTitle2.svg'
+	};
+
+	import img_test from '$lib/static/img/test.png';
 </script>
 
-<Container>
-	<Row class="py-5">
-		<Col sm="1" md="1" class="d-none d-md-block" />
-		<Col sm="12" md="6" style="vertical-align:middle; display:table;">
-			<div class="d-none d-sm-block py-2" />
-			<div class="d-none d-md-block py-1" />
-			<div class="d-none d-lg-block py-4" />
-			<div class="d-none d-xl-block py-4" />
-			<div class="d-none d-xxl-block py-4" />
-			<div style="table-cell;">
-				<div data-aos="zoom-out-down" data-aos-easing="linear" style="transition:1.0s;">
-					<Image src={img_veradi} style="margin-left: 10px; width:90%;" />
-				</div>
-				<span style="letter-spacing:-1px; word-break: keep-all;">
-					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-						<h4 class="py-1">프리미엄 컨텐츠의 응용으로</h4>
-					</div>
-					<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.5s;">
-						<h4 class="py-1">승리로 가는 가장 빠른 길,</h4>
-					</div>
-					<div data-aos="fade-right" data-aos-easing="linear" style="transition:2.0s;">
-						<h4 class="py-1">베라디와 함께하세요.</h4>
-					</div>
-				</span>
-			</div>
-		</Col>
-		<Col sm="12" md="5" style="text-align:center;">
-			<div data-aos="zoom-in" data-aos-easing="linear" style="transition:2.0s;">
-				<Image src={img_landingMain} style="margin-left: 10px; width:90%;" />
-			</div>
-		</Col>
-	</Row>
-</Container>
-<Form class="py-5" style="background-color:#e1f5ff;">
-	<div data-aos="zoom-in" data-aos-easing="linear" style="transition:1.0s;">
-		<Container>
-			<div style="text-align:center;">
-				<div class="py-3">
-					<h2>
-						베라디(Veradi)의 <b>Vera</b>는 <b>진실</b>을, <b>di</b>는 <b>말하다</b>를 뜻합니다.
-					</h2>
-				</div>
-				<span class="py-4" style="color:#808080; letter-spacing:-1px;">
-					<h5>교육 컨텐츠 혁신을 이끌어가는 베라디는,</h5>
-					<h5>항상 검증된 자료로 수험생들에게 다가가고 있습니다.</h5>
-					<h5>수험생들의 미래에 기여하고자 하는 저희의 사명은,</h5>
-					<h5>밤낮을 가리지 않고, 포기할 줄 모르는 열정으로 무장 되어 있습니다.</h5>
-				</span>
-				<h4 class="py-3" style="">
-					<span style="color:#3c9fcb;">“The Fastest way to Victory”</span>
-					의 여정에 함께 할 수험생 여러분들을 환영합니다.
-				</h4>
-			</div>
-		</Container>
-	</div>
+<!----------------------------------------------------------------------------->
+<Form style=" background-color:#e1f5ff;" on:submit={(e) => e.preventDefault()}>
+	<Container>
+		<div data-aos="zoom-out-up" class="py-5" style="transition:1.0s;">
+			<Row>
+				<Col sm="1" md="1" lg="1" xl="1" />
+				<Col sm="10" md="10" lg="10" xl="10">
+					<span style="font-size:30px; font-weight:bold; word-break:keep-all;">
+						<div>교육의 내일을</div>
+						<div>함께 만들어갈 인재</div>
+					</span>
+					<Row class="py-2" />
+					<span style="font-size:17px; letter-spacing: -1px; word-break:keep-all;">
+						<div>열린 태도와 신뢰를 바탕으로 서로를 존중하고</div>
+						<div>협력하는 인재, 새로운 생각과 도전으로 함께 성장할 인재상을 기다립니다.</div>
+					</span>
+					<Row class="py-3" />
+					<Button primary href={VeradiUrl.hireNotice} data-aos="fade-right" style="transition:1.5s;"
+						>베라디 1기 지원하기</Button
+					>
+				</Col>
+				<Col sm="1" md="1" lg="1" xl="1" />
+			</Row>
+		</div>
+	</Container>
 </Form>
+<!----------------------------------------------------------------------------->
 <Container class="py-5">
 	<Row class="py-3">
-		<div data-aos="flip-down" data-aos-easing="linear" style="transition:1.0s;">
-			<h4>The Fastest Way to Victory</h4>
-			<h1>
-				<b>
-					<span style="color:#3c9fcb;">VERADI</span>
-					의 가치
-				</b>
-			</h1>
-		</div>
+		<Col sm="1" lg="1" />
+		<Col sm="10" lg="10">
+			<Container data-aos="zoom-out-up" style="transition:1.0s;">
+				<span style="font-size:25px; word-break:keep-all;">
+					<h2>베라디는 당신의 꿈을 응원합니다.</h2>
+				</span>
+				<span style="font-size:20px; word-break:keep-all;">
+					<h4>창의적 사고로 변화와 도전을 두려워하지 않는 열정적인 꿈</h4>
+				</span>
+			</Container>
+			<Row class="py-5">
+				<HireThumbnail
+					src={img_test}
+					title="컨텐츠 혁신"
+					text="앞선 기술력과 정보력으로 확실하고 검증된 컨텐츠만을 개발합니다"
+				/>
+				<HireThumbnail
+					src={img_test}
+					title="리더 양성"
+					text="뛰어난 수준의 업무를 통해 세상의 변화에 기여할 리더를 양성합니다"
+				/>
+				<HireThumbnail
+					src={img_test}
+					title="지식의 나눔"
+					text="개인의 지식이 공공의 지식으로 확장되며 사회, 경제적 가치를 확보하고 지식의 재상산에 기여합니다"
+				/>
+			</Row>
+		</Col>
+		<Col sm="1" lg="1" />
 	</Row>
-	<Row class="py-3">
-		{#each ValueInfo as info}
-			<VeradiValueContent
-				titleSpelling={info.titleSpelling}
-				title={info.title}
-				contentForward={info.contentForward}
-				contentBold={info.contentBold}
-				contentBackward={info.contentBackward}
-				transition={info.transition}
-			/>
-		{/each}
-		<div class="tw-h-4" />
-		<h5
-			class="py-2"
-			data-aos="fade-right"
-			data-aos-easing="linear"
-			style="color:#bbbbbb; transition:2.4s"
-		>
-			<h3 class="tw-text-[#3b86c8] tw-font-bold tw-mb-4">VERADI</h3>
-			<div class="tw-text-[#707070]">
-				<p class="tw-mb-2">
-					저희는 포기할 줄 모르는 끝 없는 열정으로, 학생들에게 확실하고 주목할만한 교육 컨텐츠를
-					제공 중입니다.
-				</p>
-				<p>
-					변화무쌍한 한국의 입시 제도 안에서 빠르게 성공할 수 있는 길을 제공해주는
-					<span style="color:#2d81cb;">VERADI</span>
-					는 교육의 혁신을 이끌어가는 중입니다.
-				</p>
-			</div>
-		</h5>
-	</Row>
-	<Row class="py-2">
-		<VeradiValueImage src={img_landingPhoto1} />
-		<VeradiValueImage src={img_landingPhoto2} />
-		<VeradiValueImage src={img_landingPhoto3} />
-		<VeradiValueImage src={img_landingPhoto4} />
+	<Row class="pt-3">
+		<Col xs="12" md="4" lg="4">
+			<Row class="pb-4">
+				<Col xs="2" sm="2" class="d-md-none" />
+				<Col xs="8" sm="8" md="12">
+					<Form style="">
+						<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+							<Image fluid src={img_test} style="display:inline-block;" />
+						</div>
+					</Form>
+				</Col>
+				<Col xs="2" sm="2" class="d-md-none" />
+			</Row>
+		</Col>
+		<Col xs="12" md="8" lg="8">
+			<Form>
+				<Container>
+					<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
+						<span style="word-break:keep-all">
+							<div class="py-2">
+								베라디는 2019년 6월 (주)베라디 법인 설립 이후로 매년 200% 이상을 상회하는 놀라운
+								성장률을 기록하며 수능 입시 교육 컨텐츠 패러다임을 변화시키고 있습니다.
+							</div>
+							<div class="py-2">
+								우리의 성장 그래프가 그래왔듯, 수`험생 여러분에게도 그 경험을 선사하고자, 밤낮없이
+								치열하게 그러나 여느 20대들보다 즐겁게. 빛나는 청춘을 여기 이곳에서 우리는 함께
+								만들어나가고 있습니다.
+							</div>
+							<div class="py-2">
+								단일 법인으로는 최대 규모의 프리미엄 수능 입시 컨텐츠를 제공하고자 베라디는 지금 이
+								순간도 성장을 멈추지 않습니다. 이러한 베라디의 끊임없는 변화와 성장은 베라디의
+								구성원들이 아니었다면 불가능했을 것입니다.
+							</div>
+							<div class="py-2">
+								이런 우리와 함께 빛나는 20대를 함께하고, 미래를 그려나가며 한 발 앞서갈 인재를
+								찾습니다.
+							</div>
+						</span>
+					</div>
+				</Container>
+			</Form>
+		</Col>
 	</Row>
 </Container>
-<Form class="py-5" style="background-color:#e1f5ff;">
-	<Container>
-		<Row class="py-3" style="text-align:center;">
-			<div data-aos="fade-up" data-aos-easing="linear" style="transition:1.0s;">
-				<span style="word-break:keep-all; ">
-					<h1 class="py-2" style="color:#707070;"><b>베라디 1기 1차 공개 채용</b></h1>
-					<h4 style="color:#3c9fcb;">1월 31일 24:00까지 지원 가능합니다</h4>
-					<h4 style="color:#3c9fcb;">2월 주말 중으로 수습 교육 일정이 있으니 참고 부탁드립니다</h4>
-				</span>
-			</div>
-		</Row>
-		<Row class="py-5" style="text-align:center;">
-			<Form>
-				<Button
-					style="background-color:#3c9fcb; border:0; box-shadow:2px 2px 2px 2px gray; font-size:25px;"
-					href="/hire/welfare">베라디 1기 지원하기</Button
-				>
+<!------------------------------------------------------------------------------>
+<Container class="py-5">
+	<Row>
+		<Col xs="1" sm="1" md="2" />
+		<Col xs="10" sm="10" md="8">
+			<Form class="py-2">
+				<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+					<span style="letter-spacing:-1px;">
+						<h4 style="color:gray">미래를 이끌어갈 소중한 당신께</h4>
+						<h2>베라디는 아낌없이 지원합니다</h2>
+					</span>
+				</div>
 			</Form>
-		</Row>
+			<Row class="py-3">
+				<HireCards />
+			</Row>
+		</Col>
+		<Col xs="1" sm="1" md="2" />
+	</Row>
+</Container>
+<!---------------------------------------------------------------->
+<Form class="py-5" style="background-color:whitesmoke">
+	<Container class="py-1">
+		<div style="margin-left:10px;">
+			<h1>채용문의</h1>
+			<h5>채용 관련 문의는 Q&A 게시판 또는 @gmail.com을 통해서 가능합니다.</h5>
+		</div>
 	</Container>
 </Form>
