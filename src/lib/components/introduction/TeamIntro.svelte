@@ -25,13 +25,13 @@
 	$: isIntroArray = !!introduction.push;
 </script>
 
-<div class="tw-mt-10 tw-mb-5 tw-flex tw-gap-x-14 tw-gap-y-8 tw-flex-wrap tw-justify-center">
-	<img
-		class="tw-max-w-[500px] tw-max-h-[300px] tw-w-auto tw-h-auto tw-shrink-0"
-		src={photo}
-		alt=""
-	/>
-	<div class="tw-flex-1 tw-flex tw-flex-col tw-items-start tw-max-w-2xl">
+<div
+	class="lg:tw-mt-10 tw-mb-5 tw-flex tw-gap-x-14 tw-gap-y-8 tw-flex-wrap lg:tw-flex-nowrap tw-justify-center"
+>
+	<div class="tw-w-full lg:tw-w-[400px] tw-shrink-0">
+		<img src={photo} alt="" />
+	</div>
+	<div class="tw-px-2 lg:tw-px-0 tw-flex-1 tw-flex tw-flex-col tw-items-start tw-max-w-2xl">
 		<h2 class="tw-relative tw-w-auto tw-inline-block tw-font-heading tw-mb-5 tw-whitespace-nowrap">
 			{title}
 			<span style="color:#3c9fcb;">

@@ -19,7 +19,7 @@
 	import circlesIcon from '$lib/static/img/introduction/circlesIcon.png';
 </script>
 
-<div class="tw-px-6 tw-flex tw-flex-col tw-gap-2 tw-w-64">
+<div class="tw-px-6 tw-flex tw-flex-col tw-gap-2 tw-w-full">
 	<div class="tw-relative tw-font-semibold tw-text-xl">
 		<img class="tw-absolute -tw-left-7 -tw-top-1 -tw-z-10 tw-w-9" src={circlesIcon} alt="" />{name}
 	</div>

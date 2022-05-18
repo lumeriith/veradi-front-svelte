@@ -23,16 +23,17 @@
 	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
 </script>
 
-<div>
-	<Form class="py-5" style="background-image:url('{img_mainPhoto}'); background-size:cover;">
-		<Container class="py-5">
-			<Col>
-				<h3 class="tw-mb-4 tw-font-heading tw-text-3xl">{title}</h3>
-				<h5 class="tw-mb-8 tw-font-semibold tw-text-xl tw-text-[#7b7b7b]">{introduction}</h5>
-				<button href={url}>{button}</button>
-			</Col>
-		</Container>
-	</Form>
+<div
+	class="tw-bg-cover tw-bg-center tw-px-5 tw-py-8 lg:tw-py-16"
+	style="background-image:url('{img_mainPhoto}');"
+>
+	<Container>
+		<Col>
+			<h3 class="tw-mb-4 tw-font-heading tw-text-3xl">{title}</h3>
+			<h5 class="tw-mb-8 tw-font-semibold tw-text-xl tw-text-[#7b7b7b]">{introduction}</h5>
+			<button href={url}>{button}</button>
+		</Col>
+	</Container>
 </div>
 
 <style>
