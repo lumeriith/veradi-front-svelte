@@ -24,4 +24,11 @@
 	];
 </script>
 
-<BaseNavBar showCareer {items} {whiteTextWhenTransparent} />
+<BaseNavBar
+	showCareer
+	hideLogin
+	alignItems="right"
+	gapX="20px"
+	{items}
+	{whiteTextWhenTransparent}
+/>

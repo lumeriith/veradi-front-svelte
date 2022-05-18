@@ -20,6 +20,9 @@
 	export let items = [];
 	export let showCareer = false;
 	export let whiteTextWhenTransparent = false;
+	export let hideLogin = false;
+	export let alignItems = 'left';
+	export let gapX = '6px';
 
 	let isOpen = false;
 
@@ -52,7 +55,13 @@
 		isLoginPopupShown = false;
 	}
 
+	let navJustifyContent = 'flex-start';
 	$: isWhiteText = whiteTextWhenTransparent && opacity < 0.01;
+	$: {
+		if (alignItems === 'left') navJustifyContent = 'flex-start';
+		else if (alignItems === 'right') navJustifyContent = 'flex-end';
+		else if (alignItems === 'center') navJustifyContent = 'center';
+	}
 </script>
 
 <svelte:window on:scroll={updateOpacity} on:resize={handleResize} bind:innerWidth />
@@ -81,13 +90,20 @@
 	{/if}
 	<NavbarToggler on:click={toggle} />
 	<Collapse {isOpen} navbar expand="md">
-		<Nav style="margin-left:50px; flex: 1" navbar>
+		<Nav
+			class="tw-ml-12 tw-flex-1"
+			style="column-gap: {gapX}; justify-content: {navJustifyContent};"
+			navbar
+		>
 			{#each items as item}
 				<VeradiNavItem {item} whiteText={isWhiteText} />
 			{/each}
-			<NavItem class="md:tw-ml-auto">
-				<NavLink on:click={openLoginPopup}><Image alt=".." src={img_login} /></NavLink>
-			</NavItem>
+			<div class="tw-w-4" />
+			{#if !hideLogin}
+				<NavItem class="md:tw-ml-auto">
+					<NavLink on:click={openLoginPopup}><Image alt=".." src={img_login} /></NavLink>
+				</NavItem>
+			{/if}
 		</Nav>
 	</Collapse>
 </Navbar>
