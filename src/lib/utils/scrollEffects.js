@@ -29,7 +29,7 @@ function stopObserving(target) {
 	io.unobserve(target);
 }
 
-export function seTrigger(node) {
+export function animTrigger(node) {
 	startObserving(node);
 	return {
 		destroy: () => stopObserving(node)
@@ -44,7 +44,7 @@ function valOrDefault(val, defVal) {
 // ============= Animation Code =============
 // 새 애니메이션 추가하려면 이 아래에서 하시면 됩니다.
 
-export function seFlyUp(node, settings = { delay: 0, duration: 500, offset: 30 }) {
+export function animFlyUp(node, settings = { delay: 0, duration: 500, offset: 30 }) {
 	node.classList.add('se-animated');
 	node.classList.add('se-flyup');
 	node.style.setProperty('--se-delay', valOrDefault(settings.delay, 0) + 'ms');
@@ -55,10 +55,10 @@ export function seFlyUp(node, settings = { delay: 0, duration: 500, offset: 30 }
 // ============== Preset Code ================
 // 애니메이션 자체가 아닌 Semantic한 의미의 프리셋이 정의된 공간입니다.
 
-export function seHeading(node, index = 0) {
-	return seFlyUp(node, { delay: index * 200 });
+export function animHeading(node, index = 0) {
+	return animFlyUp(node, { delay: index * 200 });
 }
 
-export function seBody(node, index = 0) {
-	return seFlyUp(node, { delay: index * 125 });
+export function animBody(node, index = 0) {
+	return animFlyUp(node, { delay: index * 125 });
 }
