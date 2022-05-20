@@ -8,8 +8,10 @@
 	import { onMount } from 'svelte';
 	import 'aos/dist/aos.css';
 	import AOS from 'aos';
+	import BottomNav from '$lib/components/nav/BottomNav.svelte';
 	onMount(() => AOS.init());
 </script>
 
 <HireNavBar whiteTextWhenTransparent />
 <slot />
+<BottomNav />
