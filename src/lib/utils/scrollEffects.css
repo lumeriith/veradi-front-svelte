@@ -1,0 +1,23 @@
+/* Base Code */
+.se-animated {
+	transition-delay: var(--se-delay);
+	transition-duration: 0;
+}
+
+.se-trigger .se-animated,
+.se-trigger.se-animated {
+	transition-duration: var(--se-duration);
+}
+
+/* Animation Code */
+.se-flyup {
+	transition-property: transform, opacity;
+	transform: translateY(var(--se-offset));
+	opacity: 0;
+}
+
+.se-trigger .se-flyup,
+.se-trigger.se-flyup {
+	transform: none;
+	opacity: 1;
+}
