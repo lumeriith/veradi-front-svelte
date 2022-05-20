@@ -1,4 +1,6 @@
 <script>
+	import { animTrigger, animFlyUp } from '$lib/utils/scrollEffects';
+
 	import {
 		Row,
 		Card,
@@ -19,7 +21,7 @@
 <div class="tw-hidden sm:tw-flex tw-justify-center">
 	<div class="tw-flex tw-flex-wrap tw-gap-y-12 tw-justify-around tw-gap-x-8 tw-max-w-4xl">
 		{#each HireCardInfo as content}
-			<div class="tw-w-56 tw-text-center">
+			<div class="tw-w-56 tw-text-center" use:animTrigger use:animFlyUp={{ offset: 50 }}>
 				<img
 					src={content.img}
 					alt=""

@@ -1,4 +1,6 @@
 <script>
+	import { animTrigger, animHeading, animBody } from '$lib/utils/scrollEffects';
+
 	import { Container, Col, Row, Form, Image } from 'sveltestrap';
 	import { fade, fly } from 'svelte/transition';
 
@@ -47,21 +49,33 @@
 <div class="tw-h-8" />
 <!------------------------------------------------------------------------------>
 <Container class="tw-px-6 tw-mb-16">
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
+	<div use:animTrigger>
 		<header class="tw-font-heading tw-flex tw-flex-col tw-gap-2">
-			<div class="tw-text-2xl">미래를 이끌어갈 소중한 당신께</div>
-			<div class="tw-text-3xl">아낌없이 지원합니다</div>
+			<div use:animHeading={0} class="tw-text-2xl">베라디는 오늘도</div>
+			<div use:animHeading={1} class="tw-text-3xl">성장하고 있습니다</div>
 		</header>
 	</div>
 	<div class="tw-h-8" />
+	계단형 레이아웃
+</Container>
+<!------------------------------------------------------------------------------>
+<Container class="tw-px-6 tw-mb-16">
+	<div use:animTrigger use:animHeading class="tw-font-heading tw-text-3xl tw-mb-2.5">
+		여러분의 꿈과 열정을 응원합니다
+	</div>
+	<div use:animTrigger class="tw-font-bold tw-text-lg tw-flex tw-flex-col tw-gap-0.5">
+		<div use:animBody={0}>창의적 사고를 바탕으로 도전을 통해</div>
+		<div use:animBody={1}>비전을 실현해나갈 인재를 찾습니다.</div>
+	</div>
+	<div class="tw-h-8" />
+	그림 4개
+</Container>
+<!------------------------------------------------------------------------------>
+<Container class="tw-px-6 tw-mb-16">
+	<header use:animTrigger class="tw-font-heading tw-flex tw-flex-col tw-gap-2">
+		<div use:animHeading={0} class="tw-text-2xl">미래를 이끌어갈 소중한 당신께</div>
+		<div use:animHeading={1} class="tw-text-3xl">아낌없이 지원합니다</div>
+	</header>
+	<div class="tw-h-8" />
 	<HireCards />
 </Container>
-<!---------------------------------------------------------------->
-<div class="py-5" style="background-color:whitesmoke">
-	<Container class="py-1">
-		<div style="margin-left:10px;">
-			<h1>채용문의</h1>
-			<h5>채용 관련 문의는 Q&A 게시판 또는 @gmail.com을 통해서 가능합니다.</h5>
-		</div>
-	</Container>
-</div>
