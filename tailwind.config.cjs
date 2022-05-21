@@ -13,6 +13,20 @@ module.exports = {
 			heading: ['DotumHanjaOnly', 'BMHANNAPro', 'Tahoma', 'Arial', 'Helvetica', 'sans-serif'],
 			body: ['SUIT-Regular']
 		},
+		fontSize: {
+			xs: '.675rem',
+			sm: '.75rem',
+			base: '.875rem',
+			md: '.875rem',
+			lg: '1rem',
+			xl: '1.25rem',
+			'2xl': '1.5rem',
+			'3xl': '1.875rem',
+			'4xl': '2rem',
+			'5xl': '2.25rem',
+			'6xl': '3rem',
+			'7xl': '4rem'
+		},
 		extend: {}
 	},
 	variants: {
