@@ -6,13 +6,13 @@
 		{
 			text: '구성원 소개',
 			children: [
-				{ text: '화학팀', href: VeradiUrl.introChemistry },
-				{ text: '생활과윤리팀', href: VeradiUrl.introLifeethics },
-				{ text: '수학팀', href: VeradiUrl.introMath },
-				{ text: '사회문화팀', href: VeradiUrl.introSocialculture },
-				{ text: '물리학1팀', href: VeradiUrl.introPhysics },
-				{ text: '생명과학팀', href: VeradiUrl.introBiology },
-				{ text: '지구과학팀', href: VeradiUrl.introEarthscience }
+        { text: '수학팀', href: VeradiUrl.introMath },
+        { text: '생활과윤리팀', href: VeradiUrl.introLifeethics },
+        { text: '사회문화팀', href: VeradiUrl.introSocialculture },
+				{ text: '물리학Ⅰ팀', href: VeradiUrl.introPhysics },
+        { text: '화학Ⅰ팀', href: VeradiUrl.introChemistry },
+				{ text: '생명과학Ⅰ팀', href: VeradiUrl.introBiology },
+				{ text: '지구과학Ⅰ팀', href: VeradiUrl.introEarthscience }
 			]
 		},
 		{

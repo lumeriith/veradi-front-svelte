@@ -3,13 +3,13 @@
 	import TeamButton from './TeamButton.svelte';
 
 	const teams = [
-		['화학팀', VeradiUrl.introChemistry],
+    ['수학팀', VeradiUrl.introMath],
 		['생활과윤리팀', VeradiUrl.introLifeethics],
-		['수학팀', VeradiUrl.introMath],
 		['사회문화팀', VeradiUrl.introSocialculture],
-		['물리학1팀', VeradiUrl.introPhysics],
-		['생명과학팀', VeradiUrl.introBiology],
-		['지구과학팀', VeradiUrl.introEarthscience]
+		['물리학Ⅰ팀', VeradiUrl.introPhysics],
+    ['화학Ⅰ팀', VeradiUrl.introChemistry],
+		['생명과학Ⅰ팀', VeradiUrl.introBiology],
+		['지구과학Ⅰ팀', VeradiUrl.introEarthscience]
 	];
 </script>
 
