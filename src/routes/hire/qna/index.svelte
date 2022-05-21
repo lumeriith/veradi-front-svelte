@@ -22,14 +22,15 @@
 
 	import { QnaInfo } from '$lib/components/hire/constants/QnaInfo.svelte';
 	import HireQna from '$lib/components/hire/HireQna.svelte';
+	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
 </script>
 
-<Form class="py-3" style="background-color:#f1faff;">
-	<Container class="py-5" style="text-align:center;">
+<div class="py-3" style="background-color:#f1faff;">
+	<header class="py-5" style="text-align:center;">
 		<h1 class="py-2" style="color:#333333;"><b>자주 묻는 질문</b></h1>
 		<h2 class="py-2" style="color:#575757;">베라디에 궁금한 점이 있다면</h2>
-	</Container>
-	<Container class="py-5" style="background-color:white;">
+	</header>
+	<NarrowContainer class="py-2">
 		<Table>
 			<thead style="" />
 			<Accordion>
@@ -42,8 +43,8 @@
 				{/each}
 			</Accordion>
 		</Table>
-	</Container>
-</Form>
+	</NarrowContainer>
+</div>
 <Form class="py-5" style="background-color:whitesmoke">
 	<Container class="py-1">
 		<div style="margin-left:10px;">
