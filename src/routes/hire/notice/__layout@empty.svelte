@@ -12,6 +12,6 @@
 	onMount(() => AOS.init());
 </script>
 
-<HireNavBar whiteTextWhenTransparent />
+<HireNavBar whiteTextWhenTransparent animateBackground />
 <slot />
 <BottomNav />

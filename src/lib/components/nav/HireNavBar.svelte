@@ -3,6 +3,7 @@
 	import BaseNavBar from './BaseNavBar.svelte';
 
 	export let whiteTextWhenTransparent = false;
+	export let animateBackground = false;
 
 	const items = [
 		{
@@ -31,4 +32,5 @@
 	gapX="20px"
 	{items}
 	{whiteTextWhenTransparent}
+	{animateBackground}
 />

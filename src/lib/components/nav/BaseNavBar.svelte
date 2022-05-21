@@ -21,6 +21,7 @@
 	export let items = [];
 	export let showCareer = false;
 	export let whiteTextWhenTransparent = false;
+	export let animateBackground = false;
 	export let hideLogin = false;
 	export let alignItems = 'left';
 	export let gapX = '6px';
@@ -74,7 +75,9 @@
 	light
 	expand="md"
 	class="top-0 z-50 w-full flex flex-wrap items-center justify-between px-2 py-2 navbar-expand-lg"
-	style="transition: background 0.2s, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity *
+	style="transition: background {animateBackground
+		? '0.2s'
+		: '0s'}, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity *
 		0.2});"
 >
 	{#if showCareer}
