@@ -33,12 +33,12 @@
 	{#each IntroductionSwiperInfo as info}
 		<SwiperSlide>
 			<div
-				class="tw-py-6 tw-px-10 tw-h-72 tw-w-80 tw-rounded-2xl tw-flex tw-flex-col"
+				class="tw-py-3 tw-px-10 tw-h-60 tw-w-80 tw-rounded-2xl tw-flex tw-flex-col tw-text-md"
 				style="box-shadow: 0 4px 22px #0003;"
 			>
-				<img class="pb-3" src={dotIcon} alt="" style="width:30px;" />
+				<img class="pb-3 tw-mt-2" src={dotIcon} alt="" style="width:30px;" />
 				<div style="color:#707070; line-height:180%;">{info.content}</div>
-				<div class="py-3 tw-mt-auto" style="color:#555555;"><b>{info.name}</b></div>
+				<div class="py-3 tw-mt-auto tw-text-lg" style="color:#555555;"><b>{info.name}</b></div>
 			</div>
 		</SwiperSlide>
 	{/each}

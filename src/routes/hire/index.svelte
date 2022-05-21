@@ -10,6 +10,8 @@
 
 	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
 	import img_test from '$lib/static/img/test.png';
+	import HireGrowth from '$lib/components/hire/HireGrowth.svelte';
+	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
 
 	const img = {
 		mainButton: 'svg/hire/mainButton.svg',
@@ -23,9 +25,9 @@
 	class="tw-relative tw-bg-cover tw-bg-center tw-h-[250px] md:tw-h-[400px] lg:tw-h-[450px]"
 	style="background-image:url('{img_mainPhoto}');"
 >
-	<div class="tw-absolute tw-bg-[#0003] tw-inset-0" />
+	<div class="tw-absolute tw-bg-[#0000003f] tw-inset-0" />
 	<div class="tw-absolute tw-inset-0 tw-z-10 tw-flex tw-items-center tw-text-white">
-		<Container class="tw-pl-6 lg:tw-px-20">
+		<NarrowContainer>
 			<header
 				class="tw-font-heading tw-text-4xl md:tw-text-5xl tw-flex tw-flex-col md:tw-gap-3"
 				in:fade={{ duration: 1000 }}
@@ -43,12 +45,12 @@
 					베라디와 함께 성장해나갈 인재를 기다립니다.
 				</div>
 			</div>
-		</Container>
+		</NarrowContainer>
 	</div>
 </div>
-<div class="tw-h-8" />
+<div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
-<Container class="tw-px-6 tw-mb-16">
+<NarrowContainer>
 	<div use:animTrigger>
 		<header class="tw-font-heading tw-flex tw-flex-col tw-gap-2">
 			<div use:animHeading={0} class="tw-text-2xl">베라디는 오늘도</div>
@@ -56,10 +58,11 @@
 		</header>
 	</div>
 	<div class="tw-h-8" />
-	계단형 레이아웃
-</Container>
+	<HireGrowth />
+</NarrowContainer>
+<div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
-<Container class="tw-px-6 tw-mb-16">
+<NarrowContainer>
 	<div use:animTrigger use:animHeading class="tw-font-heading tw-text-3xl tw-mb-2.5">
 		여러분의 꿈과 열정을 응원합니다
 	</div>
@@ -69,13 +72,15 @@
 	</div>
 	<div class="tw-h-8" />
 	그림 4개
-</Container>
+</NarrowContainer>
+<div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
-<Container class="tw-px-6 tw-mb-16">
+<NarrowContainer>
 	<header use:animTrigger class="tw-font-heading tw-flex tw-flex-col tw-gap-2">
 		<div use:animHeading={0} class="tw-text-2xl">미래를 이끌어갈 소중한 당신께</div>
 		<div use:animHeading={1} class="tw-text-3xl">아낌없이 지원합니다</div>
 	</header>
-	<div class="tw-h-8" />
+	<div class="tw-h-16" />
 	<HireCards />
-</Container>
+</NarrowContainer>
+<div class="tw-h-16 md:tw-h-20" />
