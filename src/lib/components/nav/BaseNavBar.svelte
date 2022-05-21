@@ -16,6 +16,7 @@
 	import VeradiNavItem from './BaseNavItem.svelte';
 	import { VeradiUrl } from '../url/VeradiUrl.svelte';
 	import LoginPopup from '../login/LoginPopup.svelte';
+	import { onMount } from 'svelte';
 
 	export let items = [];
 	export let showCareer = false;
@@ -62,6 +63,8 @@
 		else if (alignItems === 'right') navJustifyContent = 'flex-end';
 		else if (alignItems === 'center') navJustifyContent = 'center';
 	}
+
+	onMount(() => updateOpacity());
 </script>
 
 <svelte:window on:scroll={updateOpacity} on:resize={handleResize} bind:innerWidth />
