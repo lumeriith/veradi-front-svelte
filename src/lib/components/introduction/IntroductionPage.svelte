@@ -10,6 +10,7 @@
 	import SwiperCoverFlow from '$lib/components/style/swiper/coverflow/SwiperCoverFlow.svelte';
 
 	import sampleTeamPic from '$lib/static/img/introduction/sampleTeamPic.jpg';
+	import NarrowContainer from '../NarrowContainer.svelte';
 
 	export let hireUrl = VeradiUrl.hireBiology;
 	export let teamName = '생명과학팀';
@@ -37,7 +38,7 @@
 	$: buttonName = teamName + ' 채용공고';
 </script>
 
-<Container class="tw-mt-10">
+<NarrowContainer class="tw-mt-10">
 	<TeamButtons />
 	<hr />
 	<div in:fly={{ duration: 500, y: 50 }}>
@@ -51,7 +52,7 @@
 	</div>
 	<div class="tw-flex tw-justify-center">
 		<div
-			class="tw-mt-20 tw-inline-grid tw-grid-cols-2 md:tw-grid-cols-3 xl:tw-grid-cols-4 tw-gap-6 tw-ml-4 md:tw-px-12"
+			class="tw-mt-20 tw-inline-grid tw-grid-cols-2 md:tw-grid-cols-3 xl:tw-grid-cols-4 tw-gap-6 tw-gap-y-10 tw-ml-4 md:tw-px-12"
 		>
 			{#each members as member, i}
 				<div
@@ -74,6 +75,6 @@
 	<h3 class="tw-font-heading tw-mt-28 tw-mb-0 tw-pb-0">
 		<span class="tw-text-[#3c9fcb]">VERADI</span> 인에게 묻습니다
 	</h3>
-</Container>
+</NarrowContainer>
 <SwiperCoverFlow />
 <TeamHireLink title={hireTitle} introduction={hireIntro} button={buttonName} url={hireUrl} />

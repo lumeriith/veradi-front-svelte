@@ -1,6 +1,7 @@
 <script>
 	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
 	import { Container, Col } from 'sveltestrap';
+	import NarrowContainer from '../NarrowContainer.svelte';
 
 	export let introduction = '내용';
 	export let title = '제목';
@@ -12,13 +13,13 @@
 	class="tw-bg-cover tw-bg-center tw-px-5 tw-py-8 lg:tw-py-16"
 	style="background-image:url('{img_mainPhoto}');"
 >
-	<Container>
+	<NarrowContainer>
 		<Col>
 			<h3 class="tw-mb-4 tw-font-heading tw-text-3xl">{title}</h3>
 			<h5 class="tw-mb-8 tw-font-semibold tw-text-xl tw-text-[#7b7b7b]">{introduction}</h5>
 			<button href={url}>{button}</button>
 		</Col>
-	</Container>
+	</NarrowContainer>
 </div>
 
 <style>
