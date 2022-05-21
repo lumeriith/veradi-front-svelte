@@ -22,21 +22,21 @@
 
 <!----------------------------------------------------------------------------->
 <div
-	class="tw-relative tw-bg-cover tw-bg-center tw-h-[250px] md:tw-h-[400px] lg:tw-h-[450px]"
+	class="tw-relative tw-bg-cover tw-bg-center tw-h-[250px] md:tw-h-[350px] lg:tw-h-[400px]"
 	style="background-image:url('{img_mainPhoto}');"
 >
 	<div class="tw-absolute tw-bg-[#0000003f] tw-inset-0" />
 	<div class="tw-absolute tw-inset-0 tw-z-10 tw-flex tw-items-center tw-text-white">
 		<NarrowContainer>
 			<header
-				class="tw-font-heading tw-text-4xl md:tw-text-5xl tw-flex tw-flex-col md:tw-gap-3"
+				class="tw-font-heading tw-text-4xl md:tw-text-5xl tw-flex tw-flex-col"
 				in:fade={{ duration: 1000 }}
 			>
 				<div>교육의 내일을</div>
 				<div>함께 만들어갈 인재</div>
 			</header>
-			<div class="tw-h-6 md:tw-h-12 lg:tw-h-20" />
-			<div class="tw-text-lg tw-flex tw-flex-col md:tw-gap-3.5">
+			<div class="tw-h-4 md:tw-h-8 lg:tw-h-12" />
+			<div class="tw-text-lg tw-flex tw-flex-col md:tw-gap-3">
 				<div in:fly={{ duration: 700, delay: 400, y: 30 }}>
 					열린 태도와 상호간의 존중과 신뢰를 바탕으로
 				</div>
@@ -52,7 +52,7 @@
 <!------------------------------------------------------------------------------>
 <NarrowContainer>
 	<div use:animTrigger>
-		<header class="tw-font-heading tw-flex tw-flex-col tw-gap-2">
+		<header class="tw-font-heading tw-flex tw-flex-col tw-gap-0.5">
 			<div use:animHeading={0} class="tw-text-2xl">베라디는 오늘도</div>
 			<div use:animHeading={1} class="tw-text-3xl">성장하고 있습니다</div>
 		</header>
@@ -63,7 +63,7 @@
 <div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
 <NarrowContainer>
-	<div use:animTrigger use:animHeading class="tw-font-heading tw-text-3xl tw-mb-2.5">
+	<div use:animTrigger use:animHeading class="tw-font-heading tw-text-3xl tw-mb-1.5">
 		여러분의 꿈과 열정을 응원합니다
 	</div>
 	<div use:animTrigger class="tw-font-bold tw-text-lg tw-flex tw-flex-col tw-gap-0.5">
@@ -76,7 +76,7 @@
 <div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
 <NarrowContainer>
-	<header use:animTrigger class="tw-font-heading tw-flex tw-flex-col tw-gap-2">
+	<header use:animTrigger class="tw-font-heading tw-flex tw-flex-col tw-gap-0.5">
 		<div use:animHeading={0} class="tw-text-2xl">미래를 이끌어갈 소중한 당신께</div>
 		<div use:animHeading={1} class="tw-text-3xl">아낌없이 지원합니다</div>
 	</header>
