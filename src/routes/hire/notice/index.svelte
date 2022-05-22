@@ -33,15 +33,29 @@
 </script>
 
 <Form
-	class="py-5"
+	class="py-5 d-none d-sm-block"
 	style="background-image:url('{img_mainPhoto}'); background-size:cover; margin-top:-65px;"
 >
 	<div class="py-5" />
 	<div class="py-5" style="color:white; text-shadow: 0 0 33px #000; text-align:center;">
 		<div in:fly={{ duration: 1000, y: 100 }}>
-			<h1>Team Work, 도전, 그리고 성장은</h1>
+			<h1 class="tw-font-heading">Team Work, 도전, 그리고 성장은</h1>
 			<div class="py-3" />
-			<h1>베라디 구성원들의 일상입니다</h1>
+			<h1 class="tw-font-heading">베라디 구성원들의 일상입니다</h1>
+		</div>
+	</div>
+	<div class="py-3" />
+</Form>
+<Form
+	class="py-5 d-block d-sm-none"
+	style="background-image:url('{img_mainPhoto}'); background-size:cover; margin-top:-65px;"
+>
+	<div class="py-5" />
+	<div class="py-5" style="color:white; text-shadow: 0 0 33px #000; text-align:center;">
+		<div in:fly={{ duration: 1000, y: 100 }}>
+			<h3 class="tw-font-heading">Team Work, 도전, 그리고 성장은</h3>
+			<div class="py-3" />
+			<h3 class="tw-font-heading">베라디 구성원들의 일상입니다</h3>
 		</div>
 	</div>
 	<div class="py-3" />

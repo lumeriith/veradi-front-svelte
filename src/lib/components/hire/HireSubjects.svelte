@@ -10,7 +10,7 @@
 				<Container style="text-align:center;">
 					<Image src={subject.img} class="py-2" style="width:100px; padding:0 0 0 0;" />
 				</Container>
-				<h3 class="py-1" style="color:gray; text-align:center;">{subject.title}</h3>
+				<h5 class="py-1" style="color:gray; text-align:center;">{subject.title}</h5>
 			</div>
 		</Button>
 	</Col>
@@ -20,7 +20,7 @@
 				<Container style="text-align:center;">
 					<Image src={subject.img} class="py-2" style="width:80px; padding:0 0 0 0;" />
 				</Container>
-				<h3 class="py-1" style="color:gray;">{subject.title}</h3>
+				<h4 class="py-1" style="color:gray;">{subject.title}</h4>
 			</div>
 		</Button>
 	</Col>
@@ -30,17 +30,17 @@
 				<Container style="text-align:center;">
 					<Image src={subject.img} class="py-2" style="width:80px; padding:0 0 0 0;" />
 				</Container>
-				<h3 class="py-1" style="color:gray;">{subject.title}</h3>
+				<h4 class="py-1" style="color:gray;">{subject.title}</h4>
 			</div>
 		</Button>
 	</Col>
 	<Col xs="6" class="py-4 d-block d-sm-none">
-		<Button outline href={subject.src} style="border:0; ">
+		<Button outline href={subject.src} style="border:0; padding:0 0 0 0;">
 			<div data-aos="flip-up" data-aos-easing="linear" style="transition:1.0s;">
 				<Container style="text-align:center;">
 					<Image src={subject.img} class="py-2" style="width:80px; padding:0 0 0 0;" />
 				</Container>
-				<h2 class="py-1" style="color:gray;">{subject.title}</h2>
+				<h4 class="py-1" style="color:gray; letter-spacing:-3px;">{subject.title}</h4>
 			</div>
 		</Button>
 	</Col>
