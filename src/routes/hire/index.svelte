@@ -12,6 +12,7 @@
 	import img_test from '$lib/static/img/test.png';
 	import HireGrowth from '$lib/components/hire/HireGrowth.svelte';
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
+	import HireVision from '$lib/components/hire/HireVision.svelte';
 
 	const img = {
 		mainButton: 'svg/hire/mainButton.svg',
@@ -71,8 +72,8 @@
 		<div use:animBody={1}>비전을 실현해나갈 인재를 찾습니다.</div>
 	</div>
 	<div class="tw-h-8" />
-	그림 4개
 </NarrowContainer>
+<HireVision />
 <div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
 <NarrowContainer>
