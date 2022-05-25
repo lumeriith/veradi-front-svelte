@@ -1,31 +1,51 @@
 <script context="module">
   export const MathMemberCardInfo = [
     {
-      name: "홍길동",
-      rank: "팀장",
-      education: "ㅇㅇ대학교 ㅇㅇ학과"
+      name: "양상호",
+      rank: "대표팀장",
+      education: "성균관대학교 수학교육과 졸업"
     },
     {
-      name: "홍길동",
+      name: "지정희",
       rank: "팀장",
-      education: "ㅇㅇ대학교 ㅇㅇ학과"
+      education: "이화여대 수학과 졸업"
     },
     {
-      name: "홍길동",
-      rank: "팀장",
-      education: "ㅇㅇ대학교 ㅇㅇ학과"
+      name: "김보민",
+      rank: "팀원",
+      education: "가톨릭대학교 의예과"
     },
     {
-      name: "홍길동",
-      rank: "팀장",
-      education: "ㅇㅇ대학교 ㅇㅇ학과"
+      name: "김수민",
+      rank: "팀원",
+      education: "연세대학교 신소재공학과"
+    },
+    {
+      name: "성우진",
+      rank: "팀원",
+      education: "순천향대학교 의예과"
+    },
+    {
+      name: "이승연",
+      rank: "팀원",
+      education: "고려대학교 생명공학부"
+    },
+    {
+      name: "이윤환",
+      rank: "팀원",
+      education: "고려대학교 생명공학부"
+    },
+    {
+      name: "홍창현",
+      rank: "팀원",
+      education: "중앙대학교 소프트웨어학과"
     },
   ]
 
   export const BiologyMemberCardInfo = [
     {
       name: "심현섭",
-      rank: "대표 팀장 (서울)",
+      rank: "대표팀장 (서울)",
       education: "홍익대학교 컴퓨터공학과",
       bgColor: "#c5fbee",
     },
