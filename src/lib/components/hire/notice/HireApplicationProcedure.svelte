@@ -1,5 +1,6 @@
 <script>
 	import HireApplicationProcedureItem from './HireApplicationProcedureItem.svelte';
+	import Icon from '@iconify/svelte';
 
 	const items = [
 		{ text: '서류전형', bg: '#2c82c4' },
@@ -14,7 +15,8 @@
 	{#each items as item, i}
 		<HireApplicationProcedureItem text={item.text} bg={item.bg} index={i} />
 		{#if i < items.length - 1}
-			<IconAkarIconsChevronRight
+			<Icon
+				icon="akar-icons:chevron-right"
 				class="tw-text-xl sm:tw-text-3xl md:tw-text-6xl tw-text-[#d1d0d2]"
 			/>
 		{/if}

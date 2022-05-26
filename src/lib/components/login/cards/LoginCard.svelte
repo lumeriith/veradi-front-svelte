@@ -4,6 +4,7 @@
 	import PillButton from '$lib/components/login/PillButton.svelte';
 	import MainError from '$lib/components/login/MainError.svelte';
 	import { Card, Input } from 'sveltestrap';
+	import Icon from '@iconify/svelte';
 
 	import img_email from '$lib/static/img/login/email.png';
 	import img_password from '$lib/static/img/login/password.png';
@@ -54,7 +55,7 @@
 	class="tw-relative tw-flex tw-flex-row tw-rounded-none sm:tw-rounded-xl tw-w-[100vw] tw-h-[100vh] sm:tw-w-[450px] sm:tw-h-auto tw-shadow-2xl"
 >
 	<button class="tw-absolute tw-right-0 tw-top-0 tw-p-5" on:click={onClose}>
-		<IconBytesizeClose class="tw-text-sm" />
+		<Icon icon="bytesize:close" class="tw-text-sm" />z
 	</button>
 	<form class="tw-py-6 tw-px-10 tw-w-full" on:submit={(e) => e.preventDefault()}>
 		<header class="tw-text-center tw-mb-5 tw-text-xl tw-text-slate-600">로그인</header>
