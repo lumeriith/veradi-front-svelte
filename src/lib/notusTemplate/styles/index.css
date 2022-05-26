@@ -29,6 +29,7 @@
 body {
 	--bs-body-font-family: SUIT-Regular, sans-serif !important;
 	--bs-body-color: #333333 !important;
+	--bs-body-font-size: 0.875rem;
 	word-break: keep-all;
 	font-size: 0.875rem;
 }
