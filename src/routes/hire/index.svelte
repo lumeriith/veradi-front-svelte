@@ -1,11 +1,8 @@
 <script>
 	import { animTrigger, animHeading, animBody } from '$lib/utils/scrollEffects';
 
-	import { Container, Col, Row, Form, Image } from 'sveltestrap';
 	import { fade, fly } from 'svelte/transition';
 
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
-	import HireThumbnail from '$lib/components/hire/HireThumbnail.svelte';
 	import HireCards from '$lib/components/hire/HireCards.svelte';
 
 	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
@@ -14,12 +11,6 @@
 	import HireGrowth from '$lib/components/hire/HireGrowth.svelte';
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
 	import HireVision from '$lib/components/hire/HireVision.svelte';
-
-	const img = {
-		mainButton: 'svg/hire/mainButton.svg',
-		mainTitle1: 'svg/hire/mainTitle1.svg',
-		mainTitle2: 'svg/hire/mainTitle2.svg'
-	};
 </script>
 
 <!----------------------------------------------------------------------------->
@@ -53,12 +44,10 @@
 <div class="tw-h-16 md:tw-h-20" />
 <!------------------------------------------------------------------------------>
 <NarrowContainer>
-	<div use:animTrigger>
-		<header class="tw-font-heading tw-flex tw-flex-col tw-gap-0.5">
-			<div use:animHeading={0} class="tw-text-2xl">베라디는 오늘도</div>
-			<div use:animHeading={1} class="tw-text-3xl">성장하고 있습니다</div>
-		</header>
-	</div>
+	<header class="tw-font-heading tw-flex tw-flex-col tw-gap-0.5" use:animTrigger>
+		<div use:animHeading={0} class="tw-text-2xl">베라디는 오늘도</div>
+		<div use:animHeading={1} class="tw-text-3xl">성장하고 있습니다</div>
+	</header>
 	<div class="tw-h-8" />
 	<HireGrowth />
 </NarrowContainer>
