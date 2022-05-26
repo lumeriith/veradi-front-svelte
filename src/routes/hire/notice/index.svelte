@@ -1,22 +1,9 @@
 <script>
-	import {
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image,
-		Alert,
-		TabContent
-	} from 'sveltestrap';
-	import { fly } from 'svelte/transition';
-	import HireSubjects from '$lib/components/hire/HireSubjects.svelte';
+	import { Row, Image } from 'sveltestrap';
+
+	import { animTrigger, animHeading } from '$lib/utils/scrollEffects';
+	import { fly, fade } from 'svelte/transition';
+	import HireSubjects from '$lib/components/hire/notice/HireSubjects.svelte';
 
 	import img_test from '$lib/static/test.png';
 	import img_math from '$lib/static/img/hire/subject/math.png';
@@ -30,91 +17,71 @@
 	import img_mainPhoto from '$lib/static/img/hire/hireNoticePhoto.png';
 	import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
+	import HireApplicationProcedure from '$lib/components/hire/notice/HireApplicationProcedure.svelte';
 </script>
 
-<Form
-	class="py-5 d-none d-sm-block"
-	style="background-image:url('{img_mainPhoto}'); background-size:cover; margin-top:-65px;"
+<!----------------------------------------------------------------------------->
+<div
+	class="tw-relative tw-bg-cover tw-bg-center tw-h-[250px] md:tw-h-[350px] lg:tw-h-[400px]"
+	style="background-image:url('{img_mainPhoto}');"
 >
-	<div class="py-5" />
-	<div class="py-5" style="color:white; text-shadow: 0 0 33px #000; text-align:center;">
-		<div in:fly={{ duration: 1000, y: 100 }}>
-			<h1 class="tw-font-heading">Team Work, 도전, 그리고 성장은</h1>
-			<div class="py-3" />
-			<h1 class="tw-font-heading">베라디 구성원들의 일상입니다</h1>
-		</div>
-	</div>
-	<div class="py-3" />
-</Form>
-<Form
-	class="py-5 d-block d-sm-none"
-	style="background-image:url('{img_mainPhoto}'); background-size:cover; margin-top:-65px;"
->
-	<div class="py-5" />
-	<div class="py-5" style="color:white; text-shadow: 0 0 33px #000; text-align:center;">
-		<div in:fly={{ duration: 1000, y: 100 }}>
-			<h3 class="tw-font-heading">Team Work, 도전, 그리고 성장은</h3>
-			<div class="py-3" />
-			<h3 class="tw-font-heading">베라디 구성원들의 일상입니다</h3>
-		</div>
-	</div>
-	<div class="py-3" />
-</Form>
-<!---------------------------------------------------------------->
-<NarrowContainer class="py-5">
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-		<h2 class="py-1"><b>베라디 1기 지원안내</b></h2>
-		<h4 class="py-1" style="color:#656565"><b>지원절차</b></h4>
-	</div>
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-		<Image
-			src={img_procedure}
-			style="display:inline-block; width:100%;"
-			class="d-none d-sm-block"
-		/>
-	</div>
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-		<Image
-			src={img_procedure1}
-			style="display:inline-block; width:88%;"
-			class="d-block d-sm-none"
-		/>
-	</div>
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.8s;">
-		<Image
-			src={img_procedure2}
-			style="display:inline-block; width:100%;"
-			class="d-block d-sm-none"
-		/>
-	</div>
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-		<h2 class="py-3"><b>지원방식</b></h2>
-		<h5 class="py-2">
-			<b>
-				지원할 부서의 지원 양식을 다운로드하여 작성 후 홈페이지 내 기재된 메일 주소(~@gmail.com)로
-				제출</b
+	<div class="tw-absolute tw-bg-[#0000003f] tw-inset-0" />
+	<div class="tw-absolute tw-inset-0 tw-z-10 tw-flex tw-items-center tw-text-white">
+		<NarrowContainer>
+			<header
+				class="tw-font-heading tw-text-2xl sm:tw-text-4xl md:tw-text-5xl tw-flex tw-flex-col tw-gap-2 md:tw-gap-5 tw-text-center"
+				in:fade={{ duration: 1000 }}
 			>
-		</h5>
-		<span style="color:#656565; display:block; line-height:200%;">
-			<h5 class="py-1">* 이메일 제목 양식 : [베라디] [1기] [ㅇㅇ팀] [날짜] [이름]</h5>
-			<h5 class="py-1">* 모집 기간 : 2022년 06월 21일 ~ 2022년 07월 31일 자정까지</h5>
-			<h5 class="py-1">* 서류 합격자 발표 : 2022년 08월 03일까지</h5>
-			<h5 class="py-1">* 면접 등 추후 일정 안내 : 서류 합격 발표와 함께 개별 통지 예정</h5>
-		</span>
+				<div>Team Work, 도전, 그리고 성장은</div>
+				<div>베라디 구성원들의 일상입니다</div>
+			</header>
+		</NarrowContainer>
 	</div>
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-		<h2 class="py-3"><b>지원부서</b></h2>
-		<Row>
-			<HireSubjects />
-		</Row>
-		<div style="color:#656565;">
-			* 생활과 윤리팀은 A, B팀, 생명과학팀은 서울팀, 천안팀으로 나뉘어서 모집합니다.
+</div>
+<div class="tw-h-16 md:tw-h-20" />
+<!---------------------------------------------------------------->
+<NarrowContainer>
+	<header
+		class="tw-font-heading tw-flex tw-flex-col tw-gap-0.5 tw-text-4xl tw-mb-10"
+		use:animTrigger
+		use:animHeading
+	>
+		베라디 8기 지원안내
+	</header>
+	<section class="tw-mb-10 sm:tw-mb-20">
+		<header class="tw-font-bold tw-text-2xl tw-my-4">지원절차</header>
+		<HireApplicationProcedure />
+	</section>
+	<section class="tw-mb-10 sm:tw-mb-20">
+		<header class="tw-font-bold tw-text-2xl tw-my-4">지원방식</header>
+		<div class="tw-font-bold tw-text-lg tw-mb-5">
+			지원할 부서의 지원 양식을 다운로드하여 작성 후 메일 주소(example@gmail.com)으로 제출
 		</div>
-	</div>
-	<div data-aos="fade-right" data-aos-easing="linear" style="transition:1.0s;">
-		<h2 class="py-3"><b>채용문의</b></h2>
-		<h5 class="py-1" style="color:#656565;">
-			채용 관련 문의는 Q&A 게시판 혹은 veradi@gmail.com을 통하여 가능합니다.
-		</h5>
-	</div>
+		<div class="tw-flex tw-flex-col tw-gap-2.5">
+			<div>* 이메일 제목 양식 : [베라디] [8기] [OO팀] [날짜] [이름]</div>
+			<div>* 모집 기간 : 2022년 06월 21일 ~ 2022년 07월 31일</div>
+			<div>* 서류 합격자 발표 : 2022년 08월 03일</div>
+			<div>* 면접 일정은 추후 서류 발표와 함께 개별 통지합니다.</div>
+		</div>
+	</section>
+	<section class="tw-mb-10 sm:tw-mb-20">
+		<header class="tw-font-bold tw-text-2xl tw-my-4">지원부서</header>
+		<HireSubjects />
+		<div class="tw-text-[#656565] tw-mt-4">
+			* 생활과 윤리팀은 A, B팀, 생명과학팀은 1팀, 천안팀으로 나뉘어서 모집합니다.
+		</div>
+	</section>
+	<section class="tw-mb-10 sm:tw-mb-20">
+		<header class="tw-font-bold tw-text-2xl tw-my-4">유의사항</header>
+		<div class="tw-flex tw-flex-col tw-gap-2 tw-text-[#656565]">
+			<div>* 입사지원 서류에서 허위기재 사실이 발견될 경우, 입사가 취소될 수 있습니다.</div>
+			<div>
+				* 접수 기한이 명시되어있지 않은 공고는 인재 영입이 완료될 경우 조기 마감될 수 있습니다.
+			</div>
+			<div>* 상황에 따라 1, 2차 면접이 동시 진행될 수 있습니다.</div>
+		</div>
+	</section>
 </NarrowContainer>
+
+<style>
+</style>
