@@ -3,21 +3,39 @@
 	export let title = '';
 	export let content = '';
 
+	let box = null;
+
 	let isOpen = false;
 
-	function open() {
+	function getAspectRatio() {
+		return box.clientHeight / box.clientWidth;
+	}
+
+	function mouseEnter() {
+		let ratio = getAspectRatio();
+		if (ratio < 0.9) return;
 		isOpen = true;
 	}
 
-	function close() {
+	function mouseLeave() {
+		let ratio = getAspectRatio();
+		if (ratio < 0.9) return;
 		isOpen = false;
+	}
+
+	function click() {
+		let ratio = getAspectRatio();
+		if (ratio > 0.9) return;
+		isOpen = !isOpen;
 	}
 </script>
 
 <div
-	class="tw-relative tw-w-full tw-aspect-[4/3] sm:tw-h-auto sm:tw-aspect-square tw-overflow-hidden tw-rounded-2xl"
-	on:mouseenter={open}
-	on:mouseleave={close}
+	class="tw-relative tw-w-full tw-aspect-[4/3] sm:tw-h-auto sm:tw-aspect-square tw-overflow-hidden tw-rounded-2xl tw-isolate"
+	bind:this={box}
+	on:mouseenter={mouseEnter}
+	on:mouseleave={mouseLeave}
+	on:click={click}
 >
 	<img
 		class="-tw-z-20 tw-object-cover tw-w-full tw-h-full tw-absolute {isOpen
