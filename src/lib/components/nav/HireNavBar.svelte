@@ -16,7 +16,15 @@
 		},
 		{
 			text: '채용공고',
-			href: '#'
+			children: [
+				{ text: '수학팀', href: VeradiUrl.hireMath },
+				{ text: '생활과윤리팀', href: VeradiUrl.hireLifeethics },
+				{ text: '사회문화팀', href: VeradiUrl.hireSocialculture },
+				{ text: '물리학Ⅰ팀', href: VeradiUrl.hirePhysics },
+				{ text: '화학Ⅰ팀', href: VeradiUrl.hireChemistry },
+				{ text: '생명과학Ⅰ팀', href: VeradiUrl.hireBiology },
+				{ text: '지구과학Ⅰ팀', href: VeradiUrl.hireEarthscience }
+			]
 		},
 		{
 			text: '자주 묻는 질문',
