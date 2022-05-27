@@ -18,11 +18,9 @@
 	import { fly, fade } from 'svelte/transition';
 	export let title;
 	export let subject;
-	export let introduction = [];
+	export let introduction = '';
 	export let photo;
 	export let hashTags;
-
-	$: isIntroArray = !!introduction.push;
 </script>
 
 <div
@@ -40,13 +38,9 @@
 			<div class="tw-bg-[#d6efff] tw-absolute tw-bottom-0 -tw-left-2 -tw-right-2 tw-h-3 -tw-z-10" />
 		</h2>
 		<div class="py-1 tw-text-[#333333] tw-font-semibold" style="word-break: keep-all;">
-			{#if isIntroArray}
-				{#each introduction as intro, i}
-					<p in:fly={{ delay: 100 + i * 100, duration: 400, y: 30 }}>{intro}</p>
-				{/each}
-			{:else}
-				<p>{introduction}</p>
-			{/if}
+			{#each introduction.split('\n') as intro, i}
+				<p in:fly={{ delay: 100 + i * 100, duration: 400, y: 30 }}>{intro}</p>
+			{/each}
 		</div>
 		<div class="tw-flex tw-gap-x-4 tw-gap-y-1 tw-flex-wrap tw-mt-auto">
 			{#each hashTags as tag, i}
