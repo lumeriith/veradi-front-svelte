@@ -12,10 +12,34 @@
 }
 
 @font-face {
-	font-family: 'SUIT-Regular';
-	font-style: normal;
+	font-family: 'SUIT';
+	font-weight: 200;
+	src: local('SUIT-ExtraLight'),
+		url('$lib/static/font/SUIT-otf/SUIT-ExtraLight.otf') format('woff2');
+}
+
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 300;
+	src: local('SUIT-Light'), url('$lib/static/font/SUIT-otf/SUIT-Light.otf') format('woff2');
+}
+
+@font-face {
+	font-family: 'SUIT';
 	font-weight: 400;
 	src: local('SUIT-Regular'), url('$lib/static/font/SUIT-otf/SUIT-Regular.otf') format('woff2');
+}
+
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 600;
+	src: local('SUIT-SemiBold'), url('$lib/static/font/SUIT-otf/SUIT-SemiBold.otf') format('woff2');
+}
+
+@font-face {
+	font-family: 'SUIT';
+	font-weight: 800;
+	src: local('SUIT-Bold'), url('$lib/static/font/SUIT-otf/SUIT-Bold.otf') format('woff2');
 }
 
 @font-face {
@@ -27,7 +51,7 @@
 }
 
 body {
-	--bs-body-font-family: SUIT-Regular, sans-serif !important;
+	--bs-body-font-family: SUIT, sans-serif !important;
 	--bs-body-color: #333333 !important;
 	--bs-body-font-size: 0.875rem;
 	word-break: keep-all;
