@@ -1,11 +1,12 @@
 /* Base Code */
 .se-animated {
-	transition-delay: var(--se-delay);
+	transition-delay: 0;
 	transition-duration: 0;
 }
 
 .se-trigger .se-animated,
 .se-trigger.se-animated {
+	transition-delay: var(--se-delay);
 	transition-duration: var(--se-duration);
 }
 
@@ -19,5 +20,27 @@
 .se-trigger .se-flyup,
 .se-trigger.se-flyup {
 	transform: none;
+	opacity: 1;
+}
+
+.se-scale {
+	transition-property: transform, opacity;
+	transform: scale(var(--se-start-scale));
+	opacity: var(--se-start-opacity);
+}
+
+.se-trigger .se-scale,
+.se-trigger.se-scale {
+	transform: none;
+	opacity: 1;
+}
+
+.se-fade {
+	transition-property: opacity;
+	opacity: var(--se-start-opacity);
+}
+
+.se-trigger .se-fade,
+.se-trigger.se-fade {
 	opacity: 1;
 }

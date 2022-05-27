@@ -52,6 +52,26 @@ export function animFlyUp(node, settings = { delay: 0, duration: 500, offset: 30
 	node.style.setProperty('--se-offset', valOrDefault(settings.offset, 30) + 'px');
 }
 
+export function animScale(
+	node,
+	settings = { delay: 0, duration: 500, startScale: 0.8, startOpacity: 0 }
+) {
+	node.classList.add('se-animated');
+	node.classList.add('se-scale');
+	node.style.setProperty('--se-delay', valOrDefault(settings.delay, 0) + 'ms');
+	node.style.setProperty('--se-duration', valOrDefault(settings.duration, 500) + 'ms');
+	node.style.setProperty('--se-start-scale', valOrDefault(settings.startScale, 0.7));
+	node.style.setProperty('--se-start-opacity', valOrDefault(settings.startOpacity, 0));
+}
+
+export function animFade(node, settings = { delay: 0, duration: 500, startOpacity: 0 }) {
+	node.classList.add('se-animated');
+	node.classList.add('se-fade');
+	node.style.setProperty('--se-delay', valOrDefault(settings.delay, 0) + 'ms');
+	node.style.setProperty('--se-duration', valOrDefault(settings.duration, 500) + 'ms');
+	node.style.setProperty('--se-start-opacity', valOrDefault(settings.startOpacity, 0));
+}
+
 // ============== Preset Code ================
 // 애니메이션 자체가 아닌 Semantic한 의미의 프리셋이 정의된 공간입니다.
 
@@ -61,4 +81,8 @@ export function animHeading(node, index = 0) {
 
 export function animBody(node, index = 0) {
 	return animFlyUp(node, { delay: index * 125 });
+}
+
+export function animItem(node, index = 0) {
+	return animScale(node, { delay: index * 150 });
 }
