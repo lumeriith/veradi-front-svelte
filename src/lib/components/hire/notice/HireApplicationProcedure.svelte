@@ -1,4 +1,5 @@
 <script>
+	import { animTrigger, animItem, animFade } from '$lib/utils/scrollEffects';
 	import HireApplicationProcedureItem from './HireApplicationProcedureItem.svelte';
 	import Icon from '@iconify/svelte';
 
@@ -11,14 +12,18 @@
 	];
 </script>
 
-<div class="tw-flex tw-justify-between tw-items-center">
+<div class="tw-flex tw-justify-between tw-items-center" use:animTrigger>
 	{#each items as item, i}
-		<HireApplicationProcedureItem text={item.text} bg={item.bg} index={i} />
+		<div use:animItem={i}>
+			<HireApplicationProcedureItem text={item.text} bg={item.bg} index={i} />
+		</div>
 		{#if i < items.length - 1}
-			<Icon
-				icon="akar-icons:chevron-right"
-				class="tw-text-xl sm:tw-text-3xl md:tw-text-6xl tw-text-[#d1d0d2]"
-			/>
+			<div use:animFade={{ duration: 1500 }}>
+				<Icon
+					icon="akar-icons:chevron-right"
+					class="tw-text-xl sm:tw-text-3xl md:tw-text-6xl tw-text-[#d1d0d2]"
+				/>
+			</div>
 		{/if}
 	{/each}
 </div>
