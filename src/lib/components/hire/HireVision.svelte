@@ -5,8 +5,6 @@
 	import vision1 from '$lib/static/img/hire/index/vision1.jpg';
 	import vision2 from '$lib/static/img/hire/index/vision2.jpg';
 	import vision3 from '$lib/static/img/hire/index/vision3.jpg';
-	import { Swiper, SwiperSlide } from 'swiper/svelte';
-	import 'swiper/css';
 	import NarrowContainer from '../NarrowContainer.svelte';
 
 	const items = [
@@ -33,10 +31,9 @@
 	];
 </script>
 
-<!------------------- PC MODE ------------------->
 <NarrowContainer>
 	<div
-		class="tw-hidden sm:tw-grid tw-grid-cols-2 tw-gap-6 md:tw-gap-8"
+		class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 tw-gap-6 md:tw-gap-8"
 		use:animTrigger
 		use:animFlyUp
 	>
@@ -45,13 +42,3 @@
 		{/each}
 	</div>
 </NarrowContainer>
-<!------------------- MOBILE MODE ------------------->
-<div class="tw-block sm:tw-hidden" use:animTrigger use:animFlyUp>
-	<Swiper spaceBetween={50} slidesPerView={1} class="tw-h-auto">
-		{#each items as item}
-			<SwiperSlide class="tw-p-4">
-				<HireVisionItem img={item.img} title={item.title} content={item.content} />
-			</SwiperSlide>
-		{/each}
-	</Swiper>
-</div>
