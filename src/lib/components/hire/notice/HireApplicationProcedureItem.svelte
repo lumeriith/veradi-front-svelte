@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="tw-w-28 lg:tw-w-32 tw-aspect-square tw-rounded-full tw-flex tw-flex-col tw-justify-center tw-items-center"
+	class="tw-w-full lg:tw-w-32 tw-aspect-square tw-rounded-full tw-flex tw-flex-col tw-justify-center tw-items-center"
 	style="background-color: {bg};"
 >
 	<div class="tw-text-white tw-text-lg lg:tw-text-xl tw-hidden sm:tw-block">0{index + 1}</div>

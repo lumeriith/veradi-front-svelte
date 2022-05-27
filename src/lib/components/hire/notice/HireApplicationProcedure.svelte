@@ -14,7 +14,7 @@
 
 <div class="tw-flex tw-justify-between tw-items-center" use:animTrigger>
 	{#each items as item, i}
-		<div use:animItem={i}>
+		<div use:animItem={i} class="tw-flex-1">
 			<HireApplicationProcedureItem text={item.text} bg={item.bg} index={i} />
 		</div>
 		{#if i < items.length - 1}

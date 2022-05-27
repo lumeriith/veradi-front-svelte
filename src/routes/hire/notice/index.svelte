@@ -11,8 +11,8 @@
 
 <!----------------------------------------------------------------------------->
 <div
-	class="tw-relative tw-bg-cover tw-bg-center tw-h-[250px] md:tw-h-[350px] lg:tw-h-[400px] xl:tw-h-[600px]"
-	style="background-image:url('{img_mainPhoto}');"
+	class="tw-relative tw-bg-cover tw-h-[250px] md:tw-h-[350px] lg:tw-h-[400px]"
+	style="background-image: url('{img_mainPhoto}'); background-position: 50% 15%;"
 >
 	<div class="tw-absolute tw-bg-[#0000003f] tw-inset-0" />
 	<div class="tw-absolute tw-inset-0 tw-z-10 tw-flex tw-items-center tw-text-white">
