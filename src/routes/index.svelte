@@ -19,8 +19,9 @@
 	} from 'sveltestrap';
 
 	import SwiperCard from '$lib/components/style/swiper/RatioBreakpoints/SwiperCard.svelte';
+	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
 </script>
 
-<Container>새 페이지 생성</Container>
+<NarrowContainer>새 페이지 생성</NarrowContainer>
 
 <SwiperCard />

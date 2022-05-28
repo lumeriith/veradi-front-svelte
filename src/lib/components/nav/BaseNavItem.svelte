@@ -8,8 +8,7 @@
 		NavLink
 	} from 'sveltestrap';
 	import { page } from '$app/stores';
-
-	import './BaseNavItem.css';
+	import { clickOutside } from '$lib/utils/clickOutside';
 
 	export let item = {
 		text: '',
@@ -42,19 +41,84 @@
 			isCurrentPage = isUrlEqual(currentUrl, item.href);
 		}
 	}
+
+	let isExpanded = false;
+	let childrenList = null;
+
+	function toggleChildren() {
+		isExpanded = !isExpanded;
+		if (isExpanded) {
+			setTimeout(() => childrenList.focus(), 0);
+		}
+	}
+	function hideChildren() {
+		isExpanded = false;
+	}
+
+	$: appliedClasses =
+		'root tw-relative tw-font-semibold tw-px-12 tw-py-2 md:tw-px-0 md:tw-py-0' +
+		(whiteText ? 'tw-text-white ' : '') +
+		(isCurrentPage || isExpanded ? 'active ' : '');
 </script>
 
 {#if item.children}
-	<Dropdown nav inNavbar class={isCurrentPage ? 'active' : ''}>
-		<DropdownToggle nav class={whiteText ? 'tw-text-white' : ''}>{item.text}</DropdownToggle>
-		<DropdownMenu>
+	<button class={appliedClasses} on:click={toggleChildren}>
+		{item.text}
+		<div
+			class="{isExpanded
+				? 'tw-opacity-100'
+				: 'tw-opacity-0 tw-pointer-events-none'} tw-absolute tw-bg-white tw-rounded-lg tw-flex tw-flex-col tw-py-1.5 tw-top-8 md:tw-top-14 tw-w-32 tw-z-50"
+			style="transition: opacity 0.1s; box-shadow: 0 0 3px #0001, 0 4px 22px #0001"
+			use:clickOutside={hideChildren}
+			bind:this={childrenList}
+			tabindex="0"
+		>
 			{#each item.children as child}
-				<DropdownItem href={child.href}>{child.text}</DropdownItem>
+				<a class="child" href={child.href} on:click>{child.text}</a>
 			{/each}
-		</DropdownMenu>
-	</Dropdown>
+		</div>
+	</button>
 {:else}
-	<NavItem class={isCurrentPage ? 'active' : ''}>
-		<NavLink href={item.href} class={whiteText ? 'tw-text-white' : ''}>{item.text}</NavLink>
-	</NavItem>
+	<a href={item.href} class={appliedClasses} on:click>
+		{item.text}
+	</a>
 {/if}
+
+<style>
+	.root {
+		color: #989898;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.root:active {
+		color: #000;
+	}
+
+	.root.active {
+		color: #7fc4fd !important;
+	}
+
+	.child {
+		font-weight: 400;
+		text-decoration: none;
+		color: #333333;
+		text-align: left;
+		padding: 3px 14px;
+	}
+
+	.child:hover {
+		color: #003058;
+		background-color: #e1f3ff;
+	}
+
+	.child:active {
+		background-color: #bdd2df;
+	}
+
+	.child.active {
+		background-color: #5db6ff;
+	}
+</style>

@@ -12,11 +12,14 @@
 
 	import img_veradi from '$lib/static/img/nav/VERADI.svg';
 	import img_login from '$lib/static/img/nav/Login.svg';
+	import Icon from '@iconify/svelte';
+	import { clickOutside } from '$lib/utils/clickOutside';
 
 	import VeradiNavItem from './BaseNavItem.svelte';
 	import { VeradiUrl } from '../url/VeradiUrl.svelte';
 	import LoginPopup from '../login/LoginPopup.svelte';
 	import { onMount } from 'svelte';
+	import NarrowContainer from '../NarrowContainer.svelte';
 
 	export let items = [];
 	export let showCareer = false;
@@ -26,28 +29,18 @@
 	export let alignItems = 'left';
 	export let gapX = '6px';
 
-	let isOpen = false;
-
-	const toggle = () => {
-		isOpen = !isOpen;
-		updateOpacity();
-	};
-
-	let opacity = 0;
-	function updateOpacity() {
-		if (isOpen) opacity = 1.0;
-		else {
-			opacity = document.documentElement.scrollTop > 5 ? 1.0 : 0.0;
-		}
+	let isScrolled = 0;
+	function updateIsScrolled() {
+		isScrolled = document.documentElement.scrollTop > 5;
 	}
 
-	function handleResize() {
-		if (window.innerWidth > 767) {
-			isOpen = false;
-			updateOpacity();
-		}
+	let isDropdownOpen = false;
+	function toggleDropdown() {
+		isDropdownOpen = !isDropdownOpen;
 	}
-	$: innerWidth = 0;
+	function closeDropdown() {
+		isDropdownOpen = false;
+	}
 
 	let isLoginPopupShown = false;
 	function openLoginPopup() {
@@ -58,61 +51,76 @@
 	}
 
 	let navJustifyContent = 'flex-start';
-	$: isWhiteText = whiteTextWhenTransparent && opacity < 0.01;
+	$: isWhiteText = whiteTextWhenTransparent && isScrolled;
 	$: {
 		if (alignItems === 'left') navJustifyContent = 'flex-start';
 		else if (alignItems === 'right') navJustifyContent = 'flex-end';
 		else if (alignItems === 'center') navJustifyContent = 'center';
 	}
 
-	onMount(() => updateOpacity());
+	onMount(() => updateIsScrolled());
 </script>
 
-<svelte:window on:scroll={updateOpacity} on:resize={handleResize} bind:innerWidth />
+<svelte:window on:scroll={updateIsScrolled} />
 
-<div style="height: 64.5px;" />
-<Navbar
-	light
-	expand="md"
-	class="top-0 z-50 w-full flex flex-wrap items-center justify-between px-2 py-2 navbar-expand-lg"
-	style="transition: background {animateBackground
-		? '0.2s'
-		: '0s'}, box-shadow 0.2s; background: rgba(255,255,255,{opacity}); position: fixed; box-shadow: 0 2px 4px 0 rgba(0,0,0, {opacity *
-		0.2});"
+<nav
+	class="tw-h-12 tw-z-50 tw-w-full tw-fixed tw-top-0 tw-bg-white {isScrolled
+		? 'tw-shadow-md'
+		: ''} tw-whitespace-nowrap"
+	use:clickOutside={closeDropdown}
 >
-	{#if showCareer}
-		<NavbarBrand class="flex items-center gap-2" style="margin-left:20px">
-			<Image alt=".." src={img_veradi} style />
-			<a
-				href={VeradiUrl.hireIndex}
-				class="{isWhiteText ? 'tw-text-gray-200' : 'tw-text-gray-500'} tw-text-sm tw-no-underline"
-				>Career</a
-			>
-		</NavbarBrand>
-	{:else}
-		<NavbarBrand style="margin-left:20px">
-			<Image alt=".." src={img_veradi} style />
-		</NavbarBrand>
-	{/if}
-	<NavbarToggler on:click={toggle} />
-	<Collapse {isOpen} navbar expand="md">
-		<Nav
-			class="tw-ml-12 tw-flex-1"
-			style="column-gap: {gapX}; justify-content: {navJustifyContent};"
-			navbar
-		>
+	<NarrowContainer class="tw-h-full tw-flex tw-items-stretch">
+		<header class="tw-flex tw-items-center tw-mr-8">
+			<a href="/"><img src={img_veradi} alt="베라디 로고" /></a>
+			{#if showCareer}
+				<a
+					href={VeradiUrl.hireIndex}
+					class="{isWhiteText
+						? 'tw-text-gray-200'
+						: 'tw-text-gray-500'} tw-text-xs tw-no-underline tw-ml-1.5">Career</a
+				>
+			{/if}
+		</header>
+		<!-- PC -->
+		<main class="tw-flex-1 tw-hidden md:tw-flex md:tw-gap-6" style="justify-content: {alignItems};">
 			{#each items as item}
 				<VeradiNavItem {item} whiteText={isWhiteText} />
 			{/each}
-			<div class="tw-w-4" />
 			{#if !hideLogin}
-				<NavItem class="md:tw-ml-auto">
-					<NavLink on:click={openLoginPopup}><Image alt=".." src={img_login} /></NavLink>
-				</NavItem>
+				<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
+				<button on:click={openLoginPopup} class="tw-font-bold tw-ml-auto tw-text-[#648fb1]"
+					>LOGIN</button
+				>
 			{/if}
-		</Nav>
-	</Collapse>
-</Navbar>
+		</main>
+		<!-- Mobile -->
+		<button class="tw-ml-auto tw-block md:tw-hidden" on:click={toggleDropdown}
+			><Icon icon="eva:menu-fill" class="tw-text-2xl" /></button
+		>
+		<main
+			class="{isDropdownOpen
+				? 'tw-flex'
+				: 'tw-hidden'} md:tw-hidden tw-flex-col tw-w-full tw-fixed tw-top-12 tw-left-0 tw-shrink-0 tw-text-left tw-shadow-md tw-bg-white tw-pb-3"
+		>
+			{#each items as item}
+				<VeradiNavItem {item} on:click={closeDropdown} />
+			{/each}
+			{#if !hideLogin}
+				<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
+				<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1] tw-px-12 tw-py-1"
+					>LOGIN</button
+				>
+			{/if}
+		</main>
+	</NarrowContainer>
+</nav>
+<div
+	class="tw-block md:tw-hidden tw-fixed tw-inset-0 tw-bg-[#0005] tw-z-10 {isDropdownOpen
+		? 'tw-opacity-100'
+		: 'tw-opacity-0'}"
+/>
+
+<div class="tw-h-12" />
 
 {#if isLoginPopupShown}
 	<LoginPopup onClose={closeLoginPopup} />
