@@ -64,7 +64,7 @@
 <svelte:window on:scroll={updateIsScrolled} />
 
 <nav
-	class="tw-h-12 tw-z-50 tw-w-full tw-fixed tw-top-0 tw-bg-white {isScrolled
+	class="tw-h-12 md:tw-h-14 tw-z-50 tw-w-full tw-fixed tw-top-0 tw-bg-white {isScrolled
 		? 'tw-shadow-md'
 		: ''} tw-whitespace-nowrap"
 	use:clickOutside={closeDropdown}
@@ -114,13 +114,14 @@
 		</main>
 	</NarrowContainer>
 </nav>
+
 <div
 	class="tw-block md:tw-hidden tw-fixed tw-inset-0 tw-bg-[#0005] tw-z-10 {isDropdownOpen
 		? 'tw-opacity-100'
 		: 'tw-opacity-0'}"
 />
 
-<div class="tw-h-12" />
+<div class="tw-h-12 md:tw-h-14" />
 
 {#if isLoginPopupShown}
 	<LoginPopup onClose={closeLoginPopup} />

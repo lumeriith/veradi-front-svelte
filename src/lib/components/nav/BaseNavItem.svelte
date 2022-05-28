@@ -56,7 +56,7 @@
 	}
 
 	$: appliedClasses =
-		'root tw-relative tw-font-semibold tw-px-12 tw-py-2 md:tw-px-0 md:tw-py-0' +
+		'root tw-relative tw-font-semibold tw-px-12 tw-py-2 tw-text-md md:tw-px-0 md:tw-py-0 ' +
 		(whiteText ? 'tw-text-white ' : '') +
 		(isCurrentPage || isExpanded ? 'active ' : '');
 </script>
@@ -67,7 +67,7 @@
 		<div
 			class="{isExpanded
 				? 'tw-opacity-100'
-				: 'tw-opacity-0 tw-pointer-events-none'} tw-absolute tw-bg-white tw-rounded-lg tw-flex tw-flex-col tw-py-1.5 tw-top-8 md:tw-top-14 tw-w-32 tw-z-50"
+				: 'tw-opacity-0 tw-pointer-events-none'} tw-absolute tw-bg-white tw-rounded-lg tw-flex tw-flex-col tw-py-1.5 tw-top-10 md:tw-top-16 tw-w-32 tw-z-50"
 			style="transition: opacity 0.1s; box-shadow: 0 0 3px #0001, 0 4px 22px #0001"
 			use:clickOutside={hideChildren}
 			bind:this={childrenList}
