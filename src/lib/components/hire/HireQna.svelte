@@ -11,22 +11,22 @@
 
 <AccordionItem>
 	<Row slot="header">
-		<Col class="tw-flex tw-items-start">
-			<Image src={img_iconQ} style="width:50px; margin-right:20px" />
-			<h5 class="tw-whitespace-nowrap">
+		<Col class="tw-flex tw-items-start tw-text-md">
+			<Image src={img_iconQ} class="tw-w-12 tw-mr-4" />
+			<div class="tw-whitespace-nowrap">
 				<b class="tw-mr-2 tw-w-12" style="color:grey;">[{questionTitle}]</b>&nbsp
-			</h5>
-			<h5>
+			</div>
+			<div>
 				{questionContents}
-			</h5>
+			</div>
 		</Col>
 	</Row>
 	<Row>
 		<Col class="tw-flex tw-items-start">
-			<Image src={img_iconA} style="width:50px; margin-right:20px" />
-			<h5>
+			<Image src={img_iconA} class="tw-w-12 tw-mr-4" />
+			<div>
 				{answerContents}
-			</h5>
+			</div>
 		</Col>
 	</Row>
 </AccordionItem>

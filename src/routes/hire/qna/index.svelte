@@ -26,9 +26,9 @@
 </script>
 
 <div class="py-3" style="background-color:#f1faff;">
-	<header class="py-5" style="text-align:center;">
-		<h1 class="py-2" style="color:#333333;"><b>자주 묻는 질문</b></h1>
-		<h2 class="py-2" style="color:#575757;">베라디에 궁금한 점이 있다면</h2>
+	<header class="tw-text-center tw-pt-8 tw-pb-4">
+		<h1 class="tw-text-3xl"><b>자주 묻는 질문</b></h1>
+		<h2 class="tw-text-xl" style="color:#575757;">베라디에 궁금한 점이 있다면</h2>
 	</header>
 	<NarrowContainer class="py-2">
 		<Table>
@@ -45,11 +45,3 @@
 		</Table>
 	</NarrowContainer>
 </div>
-<Form class="py-5" style="background-color:whitesmoke">
-	<Container class="py-1">
-		<div style="margin-left:10px;">
-			<h1>추가 질문</h1>
-			<h5>추가적인 질문이 있을 시, 웹사이트 하단 이메일 문의창으로 문의 주세요.</h5>
-		</div>
-	</Container>
-</Form>
