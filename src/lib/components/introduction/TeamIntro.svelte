@@ -42,10 +42,10 @@
 				<p in:fly={{ delay: 100 + i * 100, duration: 400, y: 30 }}>{intro}</p>
 			{/each}
 		</div>
-		<div class="tw-flex tw-gap-x-4 tw-gap-y-1 tw-flex-wrap tw-mt-auto">
+		<div class="tw-flex tw-gap-x-4 tw-gap-y-1 tw-flex-wrap tw-mt-auto tw-font-semibold">
 			{#each hashTags as tag, i}
 				<div
-					class="tw-text-[#7fc4fd] tw-"
+					class="tw-text-[#72c0ff] tw-"
 					in:fade={{ delay: (600 / hashTags.length) * i, duration: 200 }}
 				>
 					#{tag.content}
