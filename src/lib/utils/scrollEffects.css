@@ -11,14 +11,14 @@
 }
 
 /* Animation Code */
-.se-flyup {
+.se-fly {
 	transition-property: transform, opacity;
-	transform: translateY(var(--se-offset));
+	transform: translateX(var(--se-offset-x)) translateY(var(--se-offset-y));
 	opacity: 0;
 }
 
-.se-trigger .se-flyup,
-.se-trigger.se-flyup {
+.se-trigger .se-fly,
+.se-trigger.se-fly {
 	transform: none;
 	opacity: 1;
 }

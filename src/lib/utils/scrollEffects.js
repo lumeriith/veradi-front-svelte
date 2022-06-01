@@ -44,12 +44,13 @@ function valOrDefault(val, defVal) {
 // ============= Animation Code =============
 // 새 애니메이션 추가하려면 이 아래에서 하시면 됩니다.
 
-export function animFlyUp(node, settings = { delay: 0, duration: 500, offset: 30 }) {
+export function animFly(node, settings = { delay: 0, duration: 500, x: 0, y: 0 }) {
 	node.classList.add('se-animated');
-	node.classList.add('se-flyup');
+	node.classList.add('se-fly');
 	node.style.setProperty('--se-delay', valOrDefault(settings.delay, 0) + 'ms');
 	node.style.setProperty('--se-duration', valOrDefault(settings.duration, 500) + 'ms');
-	node.style.setProperty('--se-offset', valOrDefault(settings.offset, 30) + 'px');
+	node.style.setProperty('--se-offset-x', valOrDefault(settings.x, 0) + 'px');
+	node.style.setProperty('--se-offset-y', valOrDefault(settings.y, 0) + 'px');
 }
 
 export function animScale(
@@ -76,13 +77,13 @@ export function animFade(node, settings = { delay: 0, duration: 500, startOpacit
 // 애니메이션 자체가 아닌 Semantic한 의미의 프리셋이 정의된 공간입니다.
 
 export function animHeading(node, index = 0) {
-	return animFlyUp(node, { delay: index * 200 });
+	return animFly(node, { delay: index * 200, y: 30 });
 }
 
 export function animBody(node, index = 0) {
-	return animFlyUp(node, { delay: index * 125 });
+	return animFly(node, { delay: index * 125, y: 30 });
 }
 
 export function animItem(node, index = 0) {
-	return animScale(node, { delay: index * 150 });
+	return animScale(node, { delay: index * 150, y: 30 });
 }

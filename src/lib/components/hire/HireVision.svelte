@@ -1,5 +1,5 @@
 <script>
-	import { animTrigger, animFlyUp } from '$lib/utils/scrollEffects';
+	import { animTrigger, animScale } from '$lib/utils/scrollEffects';
 	import HireVisionItem from './HireVisionItem.svelte';
 	import vision0 from '$lib/static/img/hire/index/vision0.jpg';
 	import vision1 from '$lib/static/img/hire/index/vision1.jpg';
@@ -35,7 +35,7 @@
 	<div
 		class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 tw-gap-6 md:tw-gap-8"
 		use:animTrigger
-		use:animFlyUp
+		use:animScale={{ startScale: 0.9 }}
 	>
 		{#each items as item}
 			<HireVisionItem img={item.img} title={item.title} content={item.content} />
