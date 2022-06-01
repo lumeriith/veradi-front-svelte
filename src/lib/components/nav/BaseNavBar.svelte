@@ -10,6 +10,8 @@
 		Image
 	} from 'sveltestrap';
 
+	import { fly } from 'svelte/transition';
+
 	import img_veradi from '$lib/static/img/nav/VERADI.svg';
 	import img_login from '$lib/static/img/nav/Login.svg';
 	import Icon from '@iconify/svelte';
@@ -70,7 +72,7 @@
 	use:clickOutside={closeDropdown}
 >
 	<NarrowContainer class="tw-h-full tw-flex tw-items-stretch">
-		<header class="tw-flex tw-items-center tw-mr-8">
+		<header class="tw-flex tw-items-center tw-mr-8 tw-z-10">
 			<a href="/"><img src={img_veradi} alt="베라디 로고" /></a>
 			{#if showCareer}
 				<a
@@ -94,29 +96,30 @@
 			{/if}
 		</main>
 		<!-- Mobile -->
-		<button class="tw-ml-auto tw-block md:tw-hidden" on:click={toggleDropdown}
+		<button class="tw-ml-auto tw-block md:tw-hidden menu-button tw-z-10" on:click={toggleDropdown}
 			><Icon icon="eva:menu-fill" class="tw-text-2xl" /></button
 		>
-		<main
-			class="{isDropdownOpen
-				? 'tw-flex'
-				: 'tw-hidden'} md:tw-hidden tw-flex-col tw-w-full tw-fixed tw-top-12 tw-left-0 tw-shrink-0 tw-text-left tw-shadow-md tw-bg-white tw-pb-3"
-		>
-			{#each items as item}
-				<VeradiNavItem {item} on:click={closeDropdown} />
-			{/each}
-			{#if !hideLogin}
-				<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
-				<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1] tw-px-12 tw-py-1"
-					>LOGIN</button
-				>
-			{/if}
-		</main>
+		{#if isDropdownOpen}
+			<main
+				transition:fly={{ duration: 300, y: -300, opacity: 1 }}
+				class="tw-flex md:tw-hidden tw-flex-col tw-w-full tw-fixed tw-top-12 tw-left-0 tw-shrink-0 tw-text-left tw-shadow-md tw-bg-white tw-pb-3"
+			>
+				{#each items as item}
+					<VeradiNavItem {item} on:click={closeDropdown} />
+				{/each}
+				{#if !hideLogin}
+					<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
+					<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1] tw-px-12 tw-py-1"
+						>LOGIN</button
+					>
+				{/if}
+			</main>
+		{/if}
 	</NarrowContainer>
 </nav>
 
 <div
-	class="tw-block md:tw-hidden tw-fixed tw-inset-0 tw-bg-[#0005] tw-z-10 {isDropdownOpen
+	class="tw-block md:tw-hidden tw-fixed tw-inset-0 tw-bg-[#0005] tw-z-10 tw-transition-opacity {isDropdownOpen
 		? 'tw-opacity-100'
 		: 'tw-opacity-0'}"
 />
@@ -126,3 +129,13 @@
 {#if isLoginPopupShown}
 	<LoginPopup onClose={closeLoginPopup} />
 {/if}
+
+<style>
+	.menu-button {
+		color: #888;
+	}
+
+	.menu-button:active {
+		color: #444;
+	}
+</style>

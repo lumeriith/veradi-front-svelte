@@ -99,12 +99,12 @@
 		align-items: center;
 	}
 
-	.root:active {
-		color: #000;
-	}
-
 	.root:hover {
 		color: #bbb;
+	}
+
+	.root:active {
+		color: #000;
 	}
 
 	.root.active {
