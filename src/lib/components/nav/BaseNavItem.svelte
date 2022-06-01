@@ -56,7 +56,7 @@
 	}
 
 	$: appliedClasses =
-		'root tw-relative tw-font-semibold tw-px-12 tw-py-2 tw-text-md md:tw-px-0 md:tw-py-0 ' +
+		'root tw-relative tw-px-12 tw-py-2 tw-text-md md:tw-px-4 md:tw-py-0 ' +
 		(whiteText ? 'tw-text-white ' : '') +
 		(isCurrentPage || isExpanded ? 'active ' : '');
 </script>
@@ -74,7 +74,13 @@
 			tabindex="0"
 		>
 			{#each item.children as child}
-				<a class="child" href={child.href} on:click>{child.text}</a>
+				<a class="child tw-relative" href={child.href} on:click>
+					{#if false}
+						<!-- Selected Indicator. Not Yet Implemented! -->
+						<div class="tw-bg-blue-300 tw-absolute tw-left-0 tw-w-0.5 tw-top-0 tw-h-full" />
+					{/if}
+					{child.text}
+				</a>
 			{/each}
 		</div>
 	</button>
@@ -95,6 +101,10 @@
 
 	.root:active {
 		color: #000;
+	}
+
+	.root:hover {
+		color: #bbb;
 	}
 
 	.root.active {

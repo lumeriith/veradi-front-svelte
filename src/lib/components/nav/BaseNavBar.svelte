@@ -82,7 +82,7 @@
 			{/if}
 		</header>
 		<!-- PC -->
-		<main class="tw-flex-1 tw-hidden md:tw-flex md:tw-gap-6" style="justify-content: {alignItems};">
+		<main class="tw-flex-1 tw-hidden md:tw-flex" style="justify-content: {alignItems};">
 			{#each items as item}
 				<VeradiNavItem {item} whiteText={isWhiteText} />
 			{/each}
