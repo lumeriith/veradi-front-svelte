@@ -66,6 +66,7 @@
 						education={member.education}
 						letterSpacing={member.letterSpacing}
 						bgColor={member.bgColor}
+						important={member.important}
 					/>
 				</div>
 			{/each}
