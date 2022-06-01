@@ -10,15 +10,20 @@
 </script>
 
 <div
-	class="tw-bg-cover tw-bg-center tw-px-5 tw-py-8 lg:tw-py-16"
+	class="tw-bg-cover tw-bg-center tw-py-6 lg:tw-py-16"
 	style="background-image:url('{img_mainPhoto}');"
 >
 	<NarrowContainer>
-		<Col>
-			<h3 class="tw-mb-4 tw-font-heading tw-text-3xl">{title}</h3>
-			<h5 class="tw-mb-8 tw-font-semibold tw-text-xl tw-text-[#7b7b7b]">{introduction}</h5>
+		<div class="sm:tw-mb-4 tw-font-heading tw-text-2xl md:tw-text-3xl">{title}</div>
+		<div
+			class="tw-mb-5 sm:tw-mb-8 tw-font-semibold tw-text-lg md:tw-text-xl tw-text-[#7b7b7b]"
+			style="line-height: 1.6;"
+		>
+			{introduction}
+		</div>
+		<div class="tw-flex sm:tw-block tw-justify-center ">
 			<button href={url}>{button}</button>
-		</Col>
+		</div>
 	</NarrowContainer>
 </div>
 
