@@ -121,7 +121,7 @@
 <div
 	class="tw-block md:tw-hidden tw-fixed tw-inset-0 tw-bg-[#0005] tw-z-10 tw-transition-opacity {isDropdownOpen
 		? 'tw-opacity-100'
-		: 'tw-opacity-0'}"
+		: 'tw-opacity-0 tw-pointer-events-none'}"
 />
 
 <div class="tw-h-12 md:tw-h-14" />
