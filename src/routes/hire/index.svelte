@@ -87,8 +87,10 @@
 				class="tw-font-heading tw-flex tw-flex-col tw-items-center"
 				in:fade={{ duration: 1000 }}
 			>
-				<div class="tw-text-3xl md:tw-text-5xl">당신의 역량을 펼치세요</div>
-				<div class="tw-text-xl md:tw-text-3xl">베라디에서, 뜨겁게 노력하고 힘차게 비상합시다</div>
+				<div class="tw-text-2xl sm:tw-text-3xl md:tw-text-5xl">당신의 역량을 펼치세요</div>
+				<div class="tw-text-lg sm:tw-text-xl md:tw-text-3xl">
+					베라디에서, 뜨겁게 노력하고 힘차게 비상합시다
+				</div>
 			</header>
 			<div class="tw-h-4 md:tw-h-8 lg:tw-h-12" />
 			<div
