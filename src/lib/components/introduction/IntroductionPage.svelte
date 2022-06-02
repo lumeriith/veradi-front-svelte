@@ -3,7 +3,7 @@
 	import { Container, Row, Form } from 'sveltestrap';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import MemberCard from '$lib/components/introduction/MemberCard.svelte';
-	import TeamButtons from '$lib/components/introduction/TeamButtons.svelte';
+	import TeamButtons from '$lib/components/TeamButtons.svelte';
 	import TeamIntro from '$lib/components/introduction/TeamIntro.svelte';
 	import TeamHireLink from '$lib/components/introduction/TeamHireLink.svelte';
 
@@ -35,11 +35,21 @@
 		}
 	];
 
+	const teamButtons = [
+		['수학팀', VeradiUrl.introMath],
+		['생활과윤리팀', VeradiUrl.introLifeethics],
+		['사회문화팀', VeradiUrl.introSocialculture],
+		['물리학Ⅰ팀', VeradiUrl.introPhysics],
+		['화학Ⅰ팀', VeradiUrl.introChemistry],
+		['생명과학Ⅰ팀', VeradiUrl.introBiology],
+		['지구과학Ⅰ팀', VeradiUrl.introEarthscience]
+	];
+
 	$: buttonName = teamName + ' 채용공고';
 </script>
 
 <NarrowContainer class="tw-mt-10">
-	<TeamButtons />
+	<TeamButtons buttons={teamButtons} />
 	<hr />
 	<div in:fly={{ duration: 500, y: 50 }}>
 		<TeamIntro
