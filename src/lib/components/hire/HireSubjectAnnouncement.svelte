@@ -44,22 +44,24 @@
 </NarrowContainer>
 
 <div
-	class="tw-bg-cover tw-bg-center tw-h-60"
+	class="tw-bg-cover tw-bg-center tw-py-8 md:tw-py-0 md:tw-h-60"
 	style="background-image:url('{img_hireSubjectPhoto}')"
 >
 	<NarrowContainer class="tw-h-full">
-		<div class="tw-h-full tw-flex tw-flex-col md:tw-flex-row tw-gap-16 tw-items-center">
-			<header class="tw-font-heading tw-text-2xl tw-whitespace-nowrap">
+		<div
+			class="tw-h-full tw-flex tw-flex-col md:tw-flex-row tw-gap-4 md:tw-gap-16 tw-justify-center tw-items-center tw-text-center md:tw-text-left"
+		>
+			<header class="tw-font-heading tw-text-2xl tw-whitespace-nowrap md:tw-w-36">
 				<div>베라디 {subjectName}팀</div>
 				<div>모집 요강</div>
 			</header>
-			<main class="tw-font-semibold tw-text-lg">
+			<main class="tw-font-semibold tw-text-lg md:tw-flex-1">
 				<div class="tw-py-2">
 					{#each subjectIntro.split('\n') as para}
 						<p class="tw-mb-2">{para}</p>
 					{/each}
 				</div>
-				<div class="tw-flex tw-gap-4">
+				<div class="tw-flex tw-gap-4 tw-flex-wrap tw-justify-center md:tw-justify-start">
 					<BluePillButton href={subjectIntroUrl}>{subjectName}팀 소개보기</BluePillButton>
 					<BluePillButton>지원서류 다운로드</BluePillButton>
 				</div>
@@ -102,3 +104,4 @@
 		<div>인턴 기간 한해서 소정의 급여가 제공됩니다</div>
 	</section>
 </NarrowContainer>
+<div class="tw-h-24" />

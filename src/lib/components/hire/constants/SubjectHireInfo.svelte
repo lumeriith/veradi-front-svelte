@@ -26,7 +26,7 @@
 
 	export const PhysicsInfo = [
 		{
-			subjectName: '물리학Ⅰ',
+			subjectName: '물리학I',
 			subjectIntro: '입시 교육 컨텐츠의 미래와 여러분의 찬란한 20대를 물리학 1팀에서 함께 합시다',
 			applicationDate: '2022.03.16 ~ 30',
 			applicationIntake: '10명 (경력 및 내규에 따라 적용)',
@@ -48,7 +48,7 @@
 
 	export const ChemistryInfo = [
 		{
-			subjectName: '화학Ⅰ',
+			subjectName: '화학I',
 			subjectIntro: '빈 칸',
 			applicationDate: '2022.03.16 ~ 30',
 			applicationIntake: '10명 (경력 및 내규에 따라 적용)',
@@ -60,7 +60,7 @@
 
 	export const BiologyInfo = [
 		{
-			subjectName: '생명과학Ⅰ',
+			subjectName: '생명과학I',
 			subjectIntro:
 				'대학생의 자유로운 문화와 교육업의 전문성이 함께 어우러진 팀,\n생명과학 팀이 이끌어가는 길에 동참하세요',
 			applicationDate: '2022.03.16 ~ 30',
@@ -83,7 +83,7 @@
 
 	export const EarthscienceInfo = [
 		{
-			subjectName: '지구과학Ⅰ',
+			subjectName: '지구과학I',
 			subjectIntro: '빈 칸',
 			applicationDate: '2022.03.16 ~ 30',
 			applicationIntake: '10명 (경력 및 내규에 따라 적용)',
