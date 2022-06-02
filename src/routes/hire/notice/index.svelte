@@ -56,9 +56,6 @@
 	<section class="tw-mb-10 sm:tw-mb-20" use:animTrigger>
 		<header class="tw-font-bold tw-text-2xl tw-my-4" use:animHeading>지원부서</header>
 		<HireSubjects />
-		<div class="tw-text-[#656565] tw-mt-4" use:animFade>
-			* 생활과 윤리팀은 A, B팀, 생명과학팀은 1팀, 천안팀으로 나뉘어서 모집합니다.
-		</div>
 	</section>
 	<section class="tw-mb-10 sm:tw-mb-20" use:animTrigger>
 		<header class="tw-font-bold tw-text-2xl tw-my-4" use:animHeading>유의사항</header>
