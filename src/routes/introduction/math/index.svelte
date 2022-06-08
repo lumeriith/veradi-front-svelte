@@ -3,6 +3,7 @@
 	import { MathHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
+	import teamPic from '$lib/static/img/introduction/teampics/math.jpg';
 </script>
 
 <IntroductionPage
@@ -15,6 +16,7 @@
   순수 수학을 파고드는 우리 수학 팀, 그 팀이 추구하고자 하는 목표를 베라디에서 펼치실 준비가 되셨나요?`}
 	members={Members}
 	hashTags={HashTags}
-	hireTitle="지금 지원하세요"
-	hireIntro="서로 열렬한 토론을 통해 수험생들을 위한 문제를 만들어봅시다"
+	hireTitle={'교육의 혁신을 함께 할\n수학 팀원을 찾습니다.'}
+	hireIntro={'수학팀이 추구하는 가치와 문화에\n공감하신다면 지원하세요.'}
+	teamPhoto={teamPic}
 />

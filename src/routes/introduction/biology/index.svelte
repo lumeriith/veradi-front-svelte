@@ -3,6 +3,7 @@
 	import { BiologyHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
+	import teamPic from '$lib/static/img/introduction/teampics/bio.jpg';
 </script>
 
 <IntroductionPage
@@ -15,4 +16,5 @@
 	hashTags={HashTags}
 	hireTitle="우리 팀은 준비되었습니다"
 	hireIntro="오직 베라디 생명과학에서만 가능한 길, 당신도 동참하세요"
+	teamPhoto={teamPic}
 />

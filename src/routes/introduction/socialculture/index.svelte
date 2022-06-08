@@ -3,6 +3,7 @@
 	import { SocialcultureHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
+	import teamPic from '$lib/static/img/introduction/teampics/social.jpg';
 </script>
 
 <IntroductionPage
@@ -16,4 +17,5 @@
 	hashTags={HashTags}
 	hireTitle="현 수능의 대비책을 알고 있는 당신"
 	hireIntro="바람직한 수험 생활의 변화로 이끌어 주실 수 있나요?"
+	teamPhoto={teamPic}
 />

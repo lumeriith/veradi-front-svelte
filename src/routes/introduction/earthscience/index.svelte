@@ -3,6 +3,7 @@
 	import { EarthscienceHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
+	import teamPic from '$lib/static/img/introduction/teampics/earth.jpg';
 </script>
 
 <IntroductionPage
@@ -16,4 +17,5 @@
 	hashTags={HashTags}
 	hireTitle="새벽에 가장 밝은 샛별 같은 당신"
 	hireIntro="우리 지구과학 팀과 함께 하실건가요?"
+	teamPhoto={teamPic}
 />

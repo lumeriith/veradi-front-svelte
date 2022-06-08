@@ -3,6 +3,7 @@
 	import { PhysicsHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
+	import teamPic from '$lib/static/img/introduction/teampics/phys.jpg';
 </script>
 
 <IntroductionPage
@@ -18,4 +19,5 @@
 	hashTags={HashTags}
 	hireTitle="물리학팀 수석 연구원"
 	hireIntro="그게 바로 당신입니다"
+	teamPhoto={teamPic}
 />
