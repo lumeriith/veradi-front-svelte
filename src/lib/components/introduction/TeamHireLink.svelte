@@ -1,6 +1,5 @@
 <script>
-	import img_mainPhoto from '$lib/static/img/introduction/mainPhoto.png';
-	import { Container, Col } from 'sveltestrap';
+	import introbottom from '$lib/static/img/introduction/introbottom.jpg';
 	import BluePillButton from '../BluePillButton.svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
 
@@ -11,14 +10,21 @@
 </script>
 
 <div
-	class="tw-bg-cover tw-bg-center tw-py-6 lg:tw-py-16"
-	style="background-image:url('{img_mainPhoto}');"
+	class="tw-bg-cover tw-bg-center tw-h-64 sm:tw-h-80 xl:tw-h-[400px]"
+	style="background-image:url('{introbottom}');"
 >
-	<NarrowContainer>
-		<div class="sm:tw-mb-4 tw-font-heading tw-text-2xl md:tw-text-3xl">{title}</div>
+	<NarrowContainer
+		class="tw-flex tw-flex-col tw-items-end tw-text-right tw-h-full tw-justify-center"
+	>
 		<div
-			class="tw-mb-5 sm:tw-mb-8 tw-font-semibold tw-text-lg md:tw-text-xl tw-text-[#7b7b7b]"
-			style="line-height: 1.6;"
+			class="tw-mb-4 tw-font-heading tw-text-xl sm:tw-text-2xl md:tw-text-3xl tw-text-white tw-whitespace-pre-line"
+			style="text-shadow: 0 0 16px black;"
+		>
+			{title}
+		</div>
+		<div
+			class="tw-mb-5 sm:tw-mb-8 tw-font-semibold  tw-text-sm sm:tw-text-md md:tw-text-lg tw-text-white tw-whitespace-pre-line"
+			style="line-height: 1.7; text-shadow: 0 0 8px black;"
 		>
 			{introduction}
 		</div>
