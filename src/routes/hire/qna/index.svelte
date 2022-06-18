@@ -25,7 +25,7 @@
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
 </script>
 
-<div class="py-3" style="background-color:#f1faff;">
+<div class="py-3">
 	<header class="tw-text-center tw-pt-8 tw-pb-4">
 		<h1 class="tw-text-3xl"><b>자주 묻는 질문</b></h1>
 		<h2 class="tw-text-xl" style="color:#575757;">베라디에 궁금한 점이 있다면</h2>
