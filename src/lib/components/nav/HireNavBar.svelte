@@ -31,6 +31,8 @@
 			href: VeradiUrl.hireQna
 		}
 	];
+
+	const extItems = [{ text: '베라디 홈페이지', href: '/' }];
 </script>
 
 <BaseNavBar
@@ -39,6 +41,7 @@
 	alignItems="left"
 	gapX="20px"
 	{items}
+	{extItems}
 	{whiteTextWhenTransparent}
 	{animateBackground}
 />

@@ -17,13 +17,16 @@
 	import Icon from '@iconify/svelte';
 	import { clickOutside } from '$lib/utils/clickOutside';
 
-	import VeradiNavItem from './BaseNavItem.svelte';
+	import BaseNavItem from './BaseNavItem.svelte';
+	import BaseNavExtItem from './BaseNavExtItem.svelte';
+
 	import { VeradiUrl } from '../url/VeradiUrl.svelte';
 	import LoginPopup from '../login/LoginPopup.svelte';
 	import { onMount } from 'svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
 
 	export let items = [];
+	export let extItems = [];
 	export let showCareer = false;
 	export let whiteTextWhenTransparent = false;
 	export let animateBackground = false;
@@ -73,7 +76,8 @@
 >
 	<NarrowContainer class="tw-h-full tw-flex tw-items-stretch">
 		<header class="tw-flex tw-items-center tw-mr-8 tw-z-10">
-			<a href="/"><img src={img_veradi} alt="베라디 로고" /></a>
+			<a href={showCareer ? VeradiUrl.hireIndex : '/'}><img src={img_veradi} alt="베라디 로고" /></a
+			>
 			{#if showCareer}
 				<a
 					href={VeradiUrl.hireIndex}
@@ -86,13 +90,15 @@
 		<!-- PC -->
 		<main class="tw-flex-1 tw-hidden md:tw-flex" style="justify-content: {alignItems};">
 			{#each items as item}
-				<VeradiNavItem {item} whiteText={isWhiteText} />
+				<BaseNavItem {item} whiteText={isWhiteText} />
+			{/each}
+			<div class="tw-flex-1" />
+			{#each extItems as item}
+				<BaseNavExtItem {item} whiteText={isWhiteText} />
 			{/each}
 			{#if !hideLogin}
 				<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
-				<button on:click={openLoginPopup} class="tw-font-bold tw-ml-auto tw-text-[#648fb1]"
-					>LOGIN</button
-				>
+				<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1]">LOGIN</button>
 			{/if}
 		</main>
 		<!-- Mobile -->
@@ -105,12 +111,17 @@
 				class="tw-flex md:tw-hidden tw-flex-col tw-w-full tw-fixed tw-top-12 tw-left-0 tw-shrink-0 tw-text-left tw-shadow-md tw-bg-white tw-pb-3"
 			>
 				{#each items as item}
-					<VeradiNavItem {item} on:click={closeDropdown} />
+					<BaseNavItem {item} on:click={closeDropdown} />
+				{/each}
+				<div class="tw-h-4" />
+				{#each extItems as item}
+					<BaseNavExtItem {item} whiteText={isWhiteText} />
 				{/each}
 				{#if !hideLogin}
 					<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
-					<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1] tw-px-12 tw-py-1"
-						>LOGIN</button
+					<button
+						on:click={openLoginPopup}
+						class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1">LOGIN</button
 					>
 				{/if}
 			</main>

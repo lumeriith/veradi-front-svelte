@@ -92,7 +92,7 @@
 
 <style>
 	.root {
-		color: #989898;
+		color: #333;
 		text-decoration: none;
 		display: flex;
 		justify-content: center;
@@ -100,7 +100,7 @@
 	}
 
 	.root:hover {
-		color: #bbb;
+		color: #999;
 	}
 
 	.root:active {

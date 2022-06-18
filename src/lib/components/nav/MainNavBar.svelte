@@ -16,10 +16,6 @@
 			]
 		},
 		{
-			text: '채용',
-			href: VeradiUrl.hireIndex
-		},
-		{
 			text: '문제집',
 			children: []
 		},
@@ -32,6 +28,8 @@
 			href: VeradiUrl.contentsQna
 		}
 	];
+
+	const extItems = [{ text: '채용', href: VeradiUrl.hireIndex }];
 </script>
 
-<BaseNavBar {items} />
+<BaseNavBar {items} {extItems} />
