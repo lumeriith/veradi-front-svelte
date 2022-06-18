@@ -1,5 +1,7 @@
 <script context="module">
 	export const VeradiUrl = {
+		// 출판물 QnA 게시판
+		contentsQna: '/qna/',
 		// 채용
 		hireIndex: '/hire',
 		hireNotice: '/hire/notice/',

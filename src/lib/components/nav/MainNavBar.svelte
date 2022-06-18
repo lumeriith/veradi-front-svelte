@@ -4,13 +4,13 @@
 
 	const items = [
 		{
-			text: '구성원 소개',
+			text: '팀 소개',
 			children: [
-        { text: '수학팀', href: VeradiUrl.introMath },
-        { text: '생활과윤리팀', href: VeradiUrl.introLifeethics },
-        { text: '사회문화팀', href: VeradiUrl.introSocialculture },
+				{ text: '수학팀', href: VeradiUrl.introMath },
+				{ text: '생활과윤리팀', href: VeradiUrl.introLifeethics },
+				{ text: '사회문화팀', href: VeradiUrl.introSocialculture },
 				{ text: '물리학Ⅰ팀', href: VeradiUrl.introPhysics },
-        { text: '화학Ⅰ팀', href: VeradiUrl.introChemistry },
+				{ text: '화학Ⅰ팀', href: VeradiUrl.introChemistry },
 				{ text: '생명과학Ⅰ팀', href: VeradiUrl.introBiology },
 				{ text: '지구과학Ⅰ팀', href: VeradiUrl.introEarthscience }
 			]
@@ -20,7 +20,7 @@
 			href: VeradiUrl.hireIndex
 		},
 		{
-			text: '출판물',
+			text: '문제집',
 			children: []
 		},
 		{
@@ -28,8 +28,8 @@
 			children: []
 		},
 		{
-			text: '제보',
-			children: []
+			text: 'QnA',
+			href: VeradiUrl.contentsQna
 		}
 	];
 </script>
