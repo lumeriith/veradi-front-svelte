@@ -17,7 +17,7 @@
 >
 	{#if isPhotoArray}
 		<Swiper
-			class="tw-w-[400px] tw-h-64 tw-p-0"
+			class="tw-w-full tw-h-auto lg:tw-w-[400px] lg:tw-h-64 tw-p-0 tw-m-0"
 			spaceBetween={20}
 			slidesPerView={1}
 			grabCursor={true}
@@ -32,12 +32,12 @@
 			modules={[Autoplay]}
 		>
 			{#each photo as p}
-				<SwiperSlide class="tw-w-[400px] tw-h-64"
-					><div
-						class="tw-hidden lg:tw-block tw-w-[400px] tw-h-full tw-shrink-0 tw-bg-cover tw-bg-center"
+				<SwiperSlide class="tw-w-full tw-h-auto">
+					<div
+						class="tw-w-full lg:tw-w-[400px] tw-aspect-[3/2] lg:tw-h-full tw-shrink-0 tw-bg-cover tw-bg-center"
 						style="background-image: url({p});"
-					/></SwiperSlide
-				>
+					/>
+				</SwiperSlide>
 			{/each}
 		</Swiper>
 	{:else}
@@ -45,9 +45,9 @@
 			class="tw-hidden lg:tw-block tw-w-[400px] tw-h-64 tw-shrink-0 tw-bg-cover tw-bg-center"
 			style="background-image: url({photo});"
 		/>
+		<img src={photo} alt="" class="lg:tw-hidden" />
 	{/if}
 
-	<img src={photo} alt="" class="lg:tw-hidden" />
 	<div class="tw-px-2 lg:tw-px-0 tw-flex-1 tw-flex tw-flex-col tw-items-start tw-max-w-2xl">
 		<h2 class="tw-relative tw-w-auto tw-inline-block tw-font-heading tw-mb-5 tw-whitespace-nowrap">
 			{title}
