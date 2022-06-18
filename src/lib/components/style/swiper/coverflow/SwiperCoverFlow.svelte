@@ -1,6 +1,5 @@
 <script>
 	import { Swiper, SwiperSlide } from 'swiper/svelte';
-	import { Image } from 'sveltestrap';
 	// Import Swiper styles
 	import 'swiper/css';
 

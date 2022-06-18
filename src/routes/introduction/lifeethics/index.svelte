@@ -3,7 +3,8 @@
 	import { LifeethicsHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
-	import teamPic from '$lib/static/img/introduction/teampics/lifeeth.jpg';
+	import teamPic1 from '$lib/static/img/introduction/teampics/lifeeth1.jpg';
+	import teamPic2 from '$lib/static/img/introduction/teampics/lifeeth2.jpg';
 </script>
 
 <IntroductionPage
@@ -19,5 +20,5 @@
 	hashTags={HashTags}
 	hireTitle="수험생분들이 최선의 결과를 가져가는 것"
 	hireIntro="그것이 바로 우리가 추구해야 할 목적 아닐까요?"
-	teamPhoto={teamPic}
+	teamPhoto={[teamPic1, teamPic2]}
 />

@@ -1,35 +1,52 @@
 <script>
-	import {
-		Alert,
-		Button,
-		Container,
-		Col,
-		Row,
-		Card,
-		CardBody,
-		CardHeader,
-		CardTitle,
-		Input,
-		Form,
-		FormGroup,
-		Image
-	} from 'sveltestrap';
-
 	import { fly, fade } from 'svelte/transition';
+	import { Swiper, SwiperSlide } from 'swiper/svelte';
+	import { Autoplay } from 'swiper';
+
 	export let title;
 	export let subject;
 	export let introduction = '';
 	export let photo;
 	export let hashTags;
+
+	$: isPhotoArray = !!photo.push;
 </script>
 
 <div
 	class="lg:tw-mt-10 tw-mb-5 tw-flex tw-gap-x-12 tw-gap-y-8 tw-flex-wrap lg:tw-flex-nowrap tw-justify-center"
 >
-	<div
-		class="tw-hidden lg:tw-block tw-w-[400px] tw-h-64 tw-shrink-0 tw-bg-cover tw-bg-center"
-		style="background-image: url({photo});"
-	/>
+	{#if isPhotoArray}
+		<Swiper
+			class="tw-w-[400px] tw-h-64 tw-p-0"
+			spaceBetween={20}
+			slidesPerView={1}
+			grabCursor={true}
+			loop={true}
+			centeredSlides={true}
+			slidesPerGroup={1}
+			autoplay={{
+				disableOnInteraction: false
+			}}
+			speed={500}
+			pagination={true}
+			modules={[Autoplay]}
+		>
+			{#each photo as p}
+				<SwiperSlide class="tw-w-[400px] tw-h-64"
+					><div
+						class="tw-hidden lg:tw-block tw-w-[400px] tw-h-full tw-shrink-0 tw-bg-cover tw-bg-center"
+						style="background-image: url({p});"
+					/></SwiperSlide
+				>
+			{/each}
+		</Swiper>
+	{:else}
+		<div
+			class="tw-hidden lg:tw-block tw-w-[400px] tw-h-64 tw-shrink-0 tw-bg-cover tw-bg-center"
+			style="background-image: url({photo});"
+		/>
+	{/if}
+
 	<img src={photo} alt="" class="lg:tw-hidden" />
 	<div class="tw-px-2 lg:tw-px-0 tw-flex-1 tw-flex tw-flex-col tw-items-start tw-max-w-2xl">
 		<h2 class="tw-relative tw-w-auto tw-inline-block tw-font-heading tw-mb-5 tw-whitespace-nowrap">
