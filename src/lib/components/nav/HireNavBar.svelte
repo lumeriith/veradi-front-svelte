@@ -36,7 +36,7 @@
 <BaseNavBar
 	showCareer
 	hideLogin
-	alignItems="right"
+	alignItems="left"
 	gapX="20px"
 	{items}
 	{whiteTextWhenTransparent}
