@@ -22,6 +22,6 @@
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
 </script>
 
-<NarrowContainer>새 페이지..</NarrowContainer>
+<NarrowContainer>새 페이지.</NarrowContainer>
 
 <SwiperCard />
