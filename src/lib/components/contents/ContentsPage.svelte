@@ -46,7 +46,7 @@
 		class="tw-py-6 tw-flex tw-gap-4 tw-flex-wrap tw-justify-between tw-items-stretch"
 	>
 		{#each exams as exam, i}
-			<div use:animScale={{ delay: i * 70 }}><ExamItem {exam} /></div>
+			<div use:animScale={{ delay: i * 70, startScale: 0.875 }}><ExamItem {exam} /></div>
 		{/each}
 	</NarrowContainer>
 </div>

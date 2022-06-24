@@ -9,12 +9,12 @@
 	};
 </script>
 
-<div class="item tw-w-64 tw-p-4 tw-rounded-md tw-flex tw-flex-col tw-cursor-pointer tw-h-full">
+<div class="item tw-w-72 tw-p-6 tw-rounded-lg tw-flex tw-flex-col tw-cursor-pointer tw-h-full">
 	<img
 		src={exam.image}
 		alt=""
 		class="tw-w-full tw-mb-6"
-		style="box-shadow: 2px 3px 10px 0px #0007"
+		style="box-shadow: 2px 3px 12px 0px #0005"
 	/>
 
 	<main class="tw-flex tw-flex-col tw-gap-2 tw-flex-1">
@@ -33,16 +33,16 @@
 	}
 
 	.item img {
-		transform: scale(1) translateY(0);
+		transform: scale(0.98) translateY(0);
 		transition: transform 0.2s;
 	}
 
 	.item:hover {
-		background-color: #00000009;
-		filter: brightness(1.075);
+		background-color: #fff8;
+		filter: brightness(1.02);
 	}
 
 	.item:hover img {
-		transform: scale(1.05) translateY(-2px);
+		transform: scale(1.03) translateY(-2px);
 	}
 </style>
