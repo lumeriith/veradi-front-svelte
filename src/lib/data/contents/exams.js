@@ -1,4 +1,4 @@
-import samplehelios from '$lib/static/img/contents/exams/sampleHelios.jpg';
+import samplehelios from '$lib/static/img/contents/exams/samplehelios.jpg';
 import { subjectIds } from '../subjects';
 
 export default [
