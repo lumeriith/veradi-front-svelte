@@ -55,7 +55,7 @@
 	class="tw-relative tw-flex tw-flex-row tw-rounded-none sm:tw-rounded-xl tw-w-[100vw] tw-h-[100vh] sm:tw-w-[450px] sm:tw-h-auto tw-shadow-2xl"
 >
 	<button class="tw-absolute tw-right-0 tw-top-0 tw-p-5" on:click={onClose}>
-		<Icon icon="bytesize:close" class="tw-text-sm" />z
+		<Icon icon="bytesize:close" class="tw-text-sm" />
 	</button>
 	<form class="tw-py-6 tw-px-10 tw-w-full" on:submit={(e) => e.preventDefault()}>
 		<header class="tw-text-center tw-mb-5 tw-text-xl tw-text-slate-600">로그인</header>
