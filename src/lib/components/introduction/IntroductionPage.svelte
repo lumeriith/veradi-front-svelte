@@ -3,7 +3,7 @@
 	import { Container, Row, Form } from 'sveltestrap';
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
 	import MemberCard from '$lib/components/introduction/MemberCard.svelte';
-	import TeamButtons from '$lib/components/TeamButtons.svelte';
+	import TabButtons from '$lib/components/TabButtons.svelte';
 	import TeamIntro from '$lib/components/introduction/TeamIntro.svelte';
 	import TeamHireLink from '$lib/components/introduction/TeamHireLink.svelte';
 
@@ -35,7 +35,7 @@
 		}
 	];
 
-	const teamButtons = [
+	const items = [
 		['수학팀', VeradiUrl.introMath],
 		['생활과윤리팀', VeradiUrl.introLifeethics],
 		['사회문화팀', VeradiUrl.introSocialculture],
@@ -49,7 +49,7 @@
 </script>
 
 <NarrowContainer class="tw-mt-10">
-	<TeamButtons buttons={teamButtons} />
+	<TabButtons buttons={items} />
 	<hr />
 	<div in:fly={{ duration: 500, y: 50 }}>
 		<TeamIntro

@@ -10,7 +10,7 @@
 	import img_hireProcess from '$lib/static/img/hire/hireProcess.png';
 	import img_hireProcess1 from '$lib/static/img/hire/hireProcess1.png';
 	import img_hireProcess2 from '$lib/static/img/hire/hireProcess2.png';
-	import TeamButtons from '../TeamButtons.svelte';
+	import TabButtons from '../TabButtons.svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
 	import BluePillButton from '../BluePillButton.svelte';
 	import ContentItem from './subject/ContentItem.svelte';
@@ -19,7 +19,7 @@
 	export let applicationDate, applicationIntake;
 	export let task, requirement, prefer;
 
-	const teamButtons = [
+	const items = [
 		['수학팀', VeradiUrl.hireMath],
 		['생활과윤리팀', VeradiUrl.hireLifeethics],
 		['사회문화팀', VeradiUrl.hireSocialculture],
@@ -39,7 +39,7 @@
 		<div>열정적인 당신을 기다립니다</div>
 	</header>
 	<div class="tw-h-5" />
-	<TeamButtons buttons={teamButtons} />
+	<TabButtons buttons={items} />
 	<div class="tw-h-8" />
 </NarrowContainer>
 

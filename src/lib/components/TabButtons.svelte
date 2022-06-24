@@ -1,6 +1,6 @@
 <script>
 	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
-	import TeamButton from './TeamButton.svelte';
+	import TabButtonItem from './TabButtonItem.svelte';
 
 	export let buttons = [];
 </script>
@@ -9,6 +9,6 @@
 	class="tw-flex tw-gap-x-4 tw-gap-y-2 tw-flex-wrap tw-justify-center lg:tw-justify-start lg:tw-max-w-lg"
 >
 	{#each buttons as [name, href]}
-		<TeamButton {href}>{name}</TeamButton>
+		<TabButtonItem {href}>{name}</TabButtonItem>
 	{/each}
 </div>
