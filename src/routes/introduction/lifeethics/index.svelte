@@ -1,14 +1,14 @@
 <script>
 	import { LifeethicsMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
 	import { LifeethicsHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 	import teamPic1 from '$lib/static/img/introduction/teampics/lifeeth1.jpg';
 	import teamPic2 from '$lib/static/img/introduction/teampics/lifeeth2.jpg';
 </script>
 
 <IntroductionPage
-	hireUrl={VeradiUrl.hireLifeethics}
+	hireUrl={veradiUrls.hireLifeethics}
 	teamName="생활과윤리팀"
 	teamTitle="가장 도덕적인"
 	teamIntro={`수험생분들께 수능은 인생의 전환점에 해당하는 가장 중요한 시험입니다.

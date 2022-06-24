@@ -1,13 +1,13 @@
 <script>
 	import { SocialcultureMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
 	import { SocialcultureHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 	import teamPic from '$lib/static/img/introduction/teampics/social.jpg';
 </script>
 
 <IntroductionPage
-	hireUrl={VeradiUrl.hireSocialculture}
+	hireUrl={veradiUrls.hireSocialculture}
 	teamName="사회문화팀"
 	teamTitle="항상 해결책을 제시하는"
 	teamIntro={`수능장에서 우리를 곤혹스럽게 만들었던 영역은 항상 자료 분석 문제였습니다.

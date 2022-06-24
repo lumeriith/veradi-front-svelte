@@ -20,7 +20,7 @@
 	import BaseNavItem from './BaseNavItem.svelte';
 	import BaseNavExtItem from './BaseNavExtItem.svelte';
 
-	import { VeradiUrl } from '../url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import LoginPopup from '../login/LoginPopup.svelte';
 	import { onMount } from 'svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
@@ -76,11 +76,12 @@
 >
 	<NarrowContainer class="tw-h-full tw-flex tw-items-stretch">
 		<header class="tw-flex tw-items-center tw-mr-8 tw-z-10">
-			<a href={showCareer ? VeradiUrl.hireIndex : '/'}><img src={img_veradi} alt="베라디 로고" /></a
+			<a href={showCareer ? veradiUrls.hireIndex : '/'}
+				><img src={img_veradi} alt="베라디 로고" /></a
 			>
 			{#if showCareer}
 				<a
-					href={VeradiUrl.hireIndex}
+					href={veradiUrls.hireIndex}
 					class="{isWhiteText
 						? 'tw-text-gray-200'
 						: 'tw-text-gray-500'} tw-text-xs tw-no-underline tw-ml-1.5">Career</a

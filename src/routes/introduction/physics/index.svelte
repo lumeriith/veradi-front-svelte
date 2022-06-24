@@ -1,13 +1,13 @@
 <script>
 	import { PhysicsMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
 	import { PhysicsHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 	import teamPic from '$lib/static/img/introduction/teampics/phys.jpg';
 </script>
 
 <IntroductionPage
-	hireUrl={VeradiUrl.hirePhysics}
+	hireUrl={veradiUrls.hirePhysics}
 	teamName="물리학1팀"
 	teamTitle="평가원 연구"
 	teamIntro={`수능에서 좋은 성적을 거두기 위해서는 문제에서 평가원이 만든 의도를 파악해야 합니다.

@@ -1,13 +1,13 @@
 <script>
 	import { MathMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
 	import { MathHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 	import teamPic from '$lib/static/img/introduction/teampics/math.jpg';
 </script>
 
 <IntroductionPage
-	hireUrl={VeradiUrl.hireMath}
+	hireUrl={veradiUrls.hireMath}
 	teamName="수학팀"
 	teamTitle="논리로 파고드는"
 	teamIntro={`우리 팀은 논리적인 생각을 많이 하는 인재들을 좋아합니다.

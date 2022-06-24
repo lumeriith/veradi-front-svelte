@@ -1,13 +1,13 @@
 <script>
 	import { ChemistryMemberCardInfo as Members } from '$lib/components/introduction/constants/MemberCardInfo.svelte';
 	import { ChemistryHashTagInfo as HashTags } from '$lib/components/introduction/constants/TeamHashTagInfo.svelte';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import IntroductionPage from '$lib/components/introduction/IntroductionPage.svelte';
 	import teamPic from '$lib/static/img/introduction/teampics/chem.jpg';
 </script>
 
 <IntroductionPage
-	hireUrl={VeradiUrl.hireChemistry}
+	hireUrl={veradiUrls.hireChemistry}
 	teamName="화학팀"
 	teamTitle="엘리트 클래스"
 	teamIntro={`우리 화학팀은 최고가 되고자 노력했던 분들을 찾습니다.

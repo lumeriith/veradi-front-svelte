@@ -14,12 +14,12 @@
 		FormGroup,
 		Image
 	} from 'sveltestrap';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 
 	// Modify here!
 	import { ChemistryInfo as subjectInfo } from '$lib/components/hire/constants/SubjectHireInfo.svelte';
-	let subjectUrl = VeradiUrl.introChemistry;
+	let subjectUrl = veradiUrls.introChemistry;
 	//
 </script>
 

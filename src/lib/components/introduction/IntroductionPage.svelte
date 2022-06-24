@@ -1,7 +1,7 @@
 <script>
 	import { fly, fade } from 'svelte/transition';
 	import { Container, Row, Form } from 'sveltestrap';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import MemberCard from '$lib/components/introduction/MemberCard.svelte';
 	import TabButtons from '$lib/components/TabButtons.svelte';
 	import TeamIntro from '$lib/components/introduction/TeamIntro.svelte';
@@ -12,7 +12,7 @@
 	import sampleTeamPic from '$lib/static/img/introduction/sampleTeamPic.jpg';
 	import NarrowContainer from '../NarrowContainer.svelte';
 
-	export let hireUrl = VeradiUrl.hireBiology;
+	export let hireUrl = veradiUrls.hireBiology;
 	export let teamName = '생명과학팀';
 	export let teamTitle = '차세대 교육팀';
 	export let teamIntro = '팀 설명입니다.';
@@ -36,13 +36,13 @@
 	];
 
 	const items = [
-		['수학팀', VeradiUrl.introMath],
-		['생활과윤리팀', VeradiUrl.introLifeethics],
-		['사회문화팀', VeradiUrl.introSocialculture],
-		['물리학Ⅰ팀', VeradiUrl.introPhysics],
-		['화학Ⅰ팀', VeradiUrl.introChemistry],
-		['생명과학Ⅰ팀', VeradiUrl.introBiology],
-		['지구과학Ⅰ팀', VeradiUrl.introEarthscience]
+		['수학팀', veradiUrls.introMath],
+		['생활과윤리팀', veradiUrls.introLifeethics],
+		['사회문화팀', veradiUrls.introSocialculture],
+		['물리학Ⅰ팀', veradiUrls.introPhysics],
+		['화학Ⅰ팀', veradiUrls.introChemistry],
+		['생명과학Ⅰ팀', veradiUrls.introBiology],
+		['지구과학Ⅰ팀', veradiUrls.introEarthscience]
 	];
 
 	$: buttonName = teamName + ' 채용공고';

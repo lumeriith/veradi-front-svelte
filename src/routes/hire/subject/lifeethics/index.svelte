@@ -14,12 +14,12 @@
 		FormGroup,
 		Image
 	} from 'sveltestrap';
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import HireSubjectAnnouncement from '$lib/components/hire/HireSubjectAnnouncement.svelte';
 
 	// Modify here!
 	import { LifeethicsInfo as subjectInfo } from '$lib/components/hire/constants/SubjectHireInfo.svelte';
-	let subjectUrl = VeradiUrl.introLifeethics;
+	let subjectUrl = veradiUrls.introLifeethics;
 	//
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-	import { VeradiUrl } from '$lib/components/url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import TabButtonItem from './TabButtonItem.svelte';
 
 	export let buttons = [];

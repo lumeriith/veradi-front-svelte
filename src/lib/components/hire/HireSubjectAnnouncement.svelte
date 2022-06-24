@@ -1,7 +1,7 @@
 <script>
 	import { Button, Container, Col, Row, Form, Image } from 'sveltestrap';
 
-	import { VeradiUrl } from '../url/VeradiUrl.svelte';
+	import veradiUrls from '$lib/data/veradiUrls.js';
 	import img_team from '$lib/static/img/hire/team.svg';
 	import img_procedure from '$lib/static/img/hire/procedure.png';
 	import img_procedure1 from '$lib/static/img/hire/procedure1.png';
@@ -20,13 +20,13 @@
 	export let task, requirement, prefer;
 
 	const items = [
-		['수학팀', VeradiUrl.hireMath],
-		['생활과윤리팀', VeradiUrl.hireLifeethics],
-		['사회문화팀', VeradiUrl.hireSocialculture],
-		['물리학Ⅰ팀', VeradiUrl.hirePhysics],
-		['화학Ⅰ팀', VeradiUrl.hireChemistry],
-		['생명과학Ⅰ팀', VeradiUrl.hireBiology],
-		['지구과학Ⅰ팀', VeradiUrl.hireEarthscience]
+		['수학팀', veradiUrls.hireMath],
+		['생활과윤리팀', veradiUrls.hireLifeethics],
+		['사회문화팀', veradiUrls.hireSocialculture],
+		['물리학Ⅰ팀', veradiUrls.hirePhysics],
+		['화학Ⅰ팀', veradiUrls.hireChemistry],
+		['생명과학Ⅰ팀', veradiUrls.hireBiology],
+		['지구과학Ⅰ팀', veradiUrls.hireEarthscience]
 	];
 
 	const headingClasses = 'tw-font-bold tw-text-xl tw-mt-14 tw-mb-3';
