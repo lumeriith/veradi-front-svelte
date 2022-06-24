@@ -9,7 +9,7 @@
 	};
 </script>
 
-<div class="item tw-w-64 tw-p-4 tw-rounded-md tw-flex tw-flex-col tw-cursor-pointer">
+<div class="item tw-w-64 tw-p-4 tw-rounded-md tw-flex tw-flex-col tw-cursor-pointer tw-h-full">
 	<img
 		src={exam.image}
 		alt=""
@@ -34,7 +34,7 @@
 
 	.item img {
 		transform: scale(1) translateY(0);
-		transition: transform 0.3s;
+		transition: transform 0.2s;
 	}
 
 	.item:hover {

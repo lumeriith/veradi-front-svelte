@@ -1,4 +1,6 @@
 <script>
+	import { animTrigger, animScale } from '$lib/utils/scrollEffects';
+
 	import allExams from '$lib/data/contents/exams';
 	import veradiUrls from '$lib/data/veradiUrls.js';
 	import NarrowContainer from '../NarrowContainer.svelte';
@@ -39,12 +41,12 @@
 	<TabButtons buttons={tabs} />
 </NarrowContainer>
 
-<div class="tw-bg-[#f3f3f3] ">
+<div class="tw-bg-[#f3f3f3]" use:animTrigger>
 	<NarrowContainer
 		class="tw-py-6 tw-flex tw-gap-4 tw-flex-wrap tw-justify-between tw-items-stretch"
 	>
-		{#each exams as exam}
-			<ExamItem {exam} />
+		{#each exams as exam, i}
+			<div use:animScale={{ delay: i * 70 }}><ExamItem {exam} /></div>
 		{/each}
 	</NarrowContainer>
 </div>
