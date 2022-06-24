@@ -11,7 +11,7 @@
 	import { FreeMode, Autoplay, EffectCoverflow, Pagination } from 'swiper';
 
 	import dotIcon from '$lib/static/img/introduction/dotIcon.png';
-	import { IntroductionSwiperInfo } from '$lib/components/introduction/constants/IntroductionSwiperInfo.svelte';
+	import swiperInfo from '$lib/data/introduction/swiperInfo';
 </script>
 
 <Swiper
@@ -29,7 +29,7 @@
 	modules={[Autoplay]}
 	class="mySwiper"
 >
-	{#each IntroductionSwiperInfo as info}
+	{#each swiperInfo as info}
 		<SwiperSlide
 			class="tw-py-3 tw-px-10 tw-h-72 sm:tw-h-64 tw-w-68 sm:tw-w-80 tw-rounded-2xl tw-flex tw-flex-col tw-text-md"
 			style="box-shadow: 0 4px 18px #0003;"

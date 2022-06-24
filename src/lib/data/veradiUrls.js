@@ -1,24 +1,38 @@
 export default {
 	// 출판물 QnA 게시판
-	contentsQna: '/qna/',
+	qna: '/qna/',
+	// 문제집
+	contents: {
+		all: '/contents/all/',
+		math: '/contents/math/',
+		chemistry: '/contents/chemistry/',
+		socialculture: '/contents/socialculture/',
+		lifeethics: '/contents/lifeethics/',
+		biology: '/contents/biology/',
+		earthscience: '/contents/earthscience/'
+	},
 	// 채용
 	hireIndex: '/hire',
 	hireNotice: '/hire/notice/',
 	hireQna: '/hire/qna/',
 	// 채용공고
-	hireMath: '/hire/subject/math/',
-	hirePhysics: '/hire/subject/physics/',
-	hireChemistry: '/hire/subject/chemistry/',
-	hireBiology: '/hire/subject/biology/',
-	hireEarthscience: '/hire/subject/earthscience/',
-	hireLifeethics: '/hire/subject/lifeethics/',
-	hireSocialculture: '/hire/subject/socialculture',
+	hireSubject: {
+		math: '/hire/subject/math/',
+		physics: '/hire/subject/physics/',
+		chemistry: '/hire/subject/chemistry/',
+		biology: '/hire/subject/biology/',
+		earthscience: '/hire/subject/earthscience/',
+		lifeethics: '/hire/subject/lifeethics/',
+		socialculture: '/hire/subject/socialculture'
+	},
 	// 소개
-	introMath: '/introduction/math/',
-	introPhysics: '/introduction/physics/',
-	introChemistry: '/introduction/chemistry/',
-	introBiology: '/introduction/biology/',
-	introEarthscience: '/introduction/earthscience/',
-	introLifeethics: '/introduction/lifeethics/',
-	introSocialculture: '/introduction/socialculture'
+	introduction: {
+		math: '/introduction/math/',
+		physics: '/introduction/physics/',
+		chemistry: '/introduction/chemistry/',
+		biology: '/introduction/biology/',
+		earthscience: '/introduction/earthscience/',
+		lifeethics: '/introduction/lifeethics/',
+		socialculture: '/introduction/socialculture'
+	}
 };

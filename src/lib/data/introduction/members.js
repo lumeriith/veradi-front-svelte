@@ -1,5 +1,5 @@
-<script context="module">
-	export const MathMemberCardInfo = [
+export default {
+	math: [
 		{
 			name: '양상호',
 			rank: '대표팀장',
@@ -42,9 +42,8 @@
 			rank: '팀원',
 			education: '중앙대학교 소프트웨어학과'
 		}
-	];
-
-	export const BiologyMemberCardInfo = [
+	],
+	biology: [
 		{
 			name: '심현섭',
 			rank: '대표팀장 (서울)',
@@ -147,9 +146,8 @@
 			rank: '팀원',
 			education: '연세대학교 약학과'
 		}
-	];
-
-	export const PhysicsMemberCardInfo = [
+	],
+	physics: [
 		{
 			name: '윤장호',
 			rank: '대표팀장',
@@ -229,9 +227,8 @@
 			rank: '팀원',
 			education: '연세대학교 물리학과'
 		}
-	];
-
-	export const ChemistryMemberCardInfo = [
+	],
+	chemistry: [
 		{
 			name: '김용욱',
 			rank: '대표팀장',
@@ -327,9 +324,8 @@
 			rank: '팀원',
 			education: '경희대학교 한의예과'
 		}
-	];
-
-	export const EarthscienceMemberCardInfo = [
+	],
+	earthscience: [
 		{
 			name: '오지석',
 			rank: '총괄팀장',
@@ -395,9 +391,8 @@
 			rank: '팀원',
 			education: '한양대학교 의과대학 의예과'
 		}
-	];
-
-	export const LifeethicsMemberCardInfo = [
+	],
+	lifeethics: [
 		{
 			name: '강명수',
 			rank: '파트장',
@@ -440,9 +435,8 @@
 			rank: '팀원',
 			education: '서울대학교 경영학부 경영학과'
 		}
-	];
-
-	export const SocialcultureMemberCardInfo = [
+	],
+	socialculture: [
 		{
 			name: '김현태',
 			rank: '파트장',
@@ -459,5 +453,5 @@
 			rank: '팀원',
 			education: '연세대학교 경영학부'
 		}
-	];
-</script>
+	]
+};

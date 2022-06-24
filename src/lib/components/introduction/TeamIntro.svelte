@@ -7,7 +7,7 @@
 	export let subject;
 	export let introduction = '';
 	export let photo;
-	export let hashTags;
+	export let hashtags;
 
 	$: isPhotoArray = !!photo.push;
 </script>
@@ -62,10 +62,10 @@
 			{/each}
 		</div>
 		<div class="tw-flex tw-gap-x-4 tw-gap-y-1 tw-flex-wrap tw-mt-auto tw-font-semibold">
-			{#each hashTags as tag, i}
+			{#each hashtags as tag, i}
 				<div
 					class="tw-text-[#72c0ff] tw-"
-					in:fade={{ delay: (600 / hashTags.length) * i, duration: 200 }}
+					in:fade={{ delay: (600 / hashtags.length) * i, duration: 200 }}
 				>
 					#{tag.content}
 				</div>
