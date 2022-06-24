@@ -2,11 +2,10 @@
 	import { Container } from 'sveltestrap';
 
 	const navItems = [
-		{ text: '구성원 소개', href: '#' },
-		{ text: '채용', href: '#' },
-		{ text: '출판물', href: '#' },
+		{ text: '팀 소개', href: '#' },
+		{ text: '문제집', href: '#' },
 		{ text: '학습/입시', href: '#' },
-		{ text: '이메일 문의', href: '#' }
+		{ text: 'QnA', href: '#' }
 	];
 </script>
 
