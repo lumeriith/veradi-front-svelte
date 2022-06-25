@@ -17,10 +17,11 @@
 	export let url;
 	export let text;
 	export let href;
+  export let event;
 </script>
 
 <Button
-	{href}
+	on:click={event}
 	class="tw-flex-1 tw-rounded-full"
 	style="background-color:white; align:center; border-color:silver;"
 >

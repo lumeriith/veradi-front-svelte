@@ -10,6 +10,9 @@
 	import img_password from '$lib/static/img/login/password.png';
 	import img_google from '$lib/static/img/login/googleIcon.png';
 	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
+  import { app } from '$lib/firebase';
+  import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+  import { onMount } from 'svelte';
 
 	export let onClose = () => {};
 
@@ -49,6 +52,38 @@
 			/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 		return reg_email.test(str);
 	}
+
+// -------------- firebase - login ------------------- //
+let user;
+
+  const login = () => {
+    const auth = getAuth(app);
+    signInWithEmailAndPassword(auth, inputEmail, inputPassword)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  };
+
+  const logout = async () => {
+    const auth = getAuth(app);
+    signOut(auth).then(() => {
+      user = null;
+    });
+  };
+
+  onMount(async () => {
+    const auth = getAuth(app);
+    onAuthStateChanged(auth, (newUser) => {
+      user = newUser;
+    })
+  });
+
 </script>
 
 <Card
@@ -68,9 +103,13 @@
 
 			<MainError isState={loginError} title="로그인 오류" text={loginErrorText} />
 			<div class="tw-flex tw-items-stretch tw-flex-col tw-gap-5">
-				<PillButton on:click={onLoginClick} title="로그인" color="#5AC2FF" />
+        {#if user}
+          <PillButton on:click={logout} title="로그아웃" color="#5AC2FF" />
+        {:else}
+				  <PillButton on:click={login} title="로그인" color="#5AC2FF" />
+        {/if}
 				<div class="tw-flex tw-gap-8">
-					<SocialLoginButton href="http://www.google.com" url={img_google} text="Google로 로그인" />
+					<SocialLoginButton url={img_google} text="Google로 로그인" />
 					<SocialLoginButton href="http://www.kakao.com" url={img_kakao} text="Kakao로 로그인" />
 				</div>
 				<div />

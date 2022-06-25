@@ -9,9 +9,10 @@
 	import { onMount } from 'svelte';
 	import 'aos/dist/aos.css';
 	import AOS from 'aos';
+	import { app } from '$lib/firebase';
+
 	import BottomNav from '$lib/components/nav/BaseBottomNav.svelte';
 	import BaseNavBar from '$lib/components/nav/BaseNavBar.svelte';
-	onMount(() => AOS.init());
 
 	const items = [
 		{
@@ -51,6 +52,10 @@
 	];
 
 	const extItems = [{ text: '채용', href: veradiUrls.hireIndex }];
+
+	onMount(() => {
+		AOS.init();
+	});
 </script>
 
 <BaseNavBar {items} {extItems} />
