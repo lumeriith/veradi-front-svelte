@@ -5,6 +5,7 @@
 	const items = [
 		{
 			text: '팀 소개',
+			href: veradiUrls.introduction.index,
 			children: [
 				{ text: '수학팀', href: veradiUrls.introduction.math },
 				{ text: '생활과윤리팀', href: veradiUrls.introduction.lifeethics },
@@ -17,6 +18,7 @@
 		},
 		{
 			text: '문제집',
+			href: veradiUrls.contents.index,
 			children: [
 				{ text: '전체', href: veradiUrls.contents.all },
 				{ text: '수학', href: veradiUrls.contents.math },
@@ -29,7 +31,7 @@
 		},
 		{
 			text: '학습/입시',
-			children: []
+			href: '#'
 		},
 		{
 			text: 'QnA',

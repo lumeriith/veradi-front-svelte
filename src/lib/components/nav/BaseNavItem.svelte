@@ -1,14 +1,8 @@
 <script>
-	import {
-		Dropdown,
-		DropdownItem,
-		DropdownMenu,
-		DropdownToggle,
-		NavItem,
-		NavLink
-	} from 'sveltestrap';
 	import { page } from '$app/stores';
 	import { clickOutside } from '$lib/utils/clickOutside';
+
+	const enableDropdownChildren = false;
 
 	export let item = {
 		text: '',
@@ -61,7 +55,7 @@
 		(isCurrentPage || isExpanded ? 'active ' : '');
 </script>
 
-{#if item.children}
+{#if item.children && enableDropdownChildren}
 	<button class={appliedClasses} on:click={toggleChildren}>
 		{item.text}
 		<div

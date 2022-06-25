@@ -3,6 +3,7 @@ export default {
 	qna: '/qna/',
 	// 문제집
 	contents: {
+		index: '/contents/',
 		all: '/contents/all/',
 		math: '/contents/math/',
 		chemistry: '/contents/chemistry/',
@@ -17,6 +18,7 @@ export default {
 	hireQna: '/hire/qna/',
 	// 채용공고
 	hireSubject: {
+		index: '/hire/subject/',
 		math: '/hire/subject/math/',
 		physics: '/hire/subject/physics/',
 		chemistry: '/hire/subject/chemistry/',
@@ -27,6 +29,7 @@ export default {
 	},
 	// 소개
 	introduction: {
+		index: '/introduction/',
 		math: '/introduction/math/',
 		physics: '/introduction/physics/',
 		chemistry: '/introduction/chemistry/',

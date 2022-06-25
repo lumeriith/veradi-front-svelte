@@ -16,14 +16,15 @@
 		},
 		{
 			text: '채용공고',
+			href: veradiUrls.hireSubject.index,
 			children: [
-				{ text: '수학팀', href: veradiUrls.hireMath },
-				{ text: '생활과윤리팀', href: veradiUrls.hireLifeethics },
-				{ text: '사회문화팀', href: veradiUrls.hireSocialculture },
-				{ text: '물리학Ⅰ팀', href: veradiUrls.hirePhysics },
-				{ text: '화학Ⅰ팀', href: veradiUrls.hireChemistry },
-				{ text: '생명과학Ⅰ팀', href: veradiUrls.hireBiology },
-				{ text: '지구과학Ⅰ팀', href: veradiUrls.hireEarthscience }
+				{ text: '수학팀', href: veradiUrls.hireSubject.math },
+				{ text: '생활과윤리팀', href: veradiUrls.hireSubject.lifeethics },
+				{ text: '사회문화팀', href: veradiUrls.hireSubject.socialculture },
+				{ text: '물리학Ⅰ팀', href: veradiUrls.hireSubject.physics },
+				{ text: '화학Ⅰ팀', href: veradiUrls.hireSubject.chemistry },
+				{ text: '생명과학Ⅰ팀', href: veradiUrls.hireSubject.biology },
+				{ text: '지구과학Ⅰ팀', href: veradiUrls.hireSubject.earthscience }
 			]
 		},
 		{
