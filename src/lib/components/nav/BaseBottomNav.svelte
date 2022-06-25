@@ -1,12 +1,7 @@
 <script>
 	import { Container } from 'sveltestrap';
 
-	const navItems = [
-		{ text: '팀 소개', href: '#' },
-		{ text: '문제집', href: '#' },
-		{ text: '학습/입시', href: '#' },
-		{ text: 'QnA', href: '#' }
-	];
+	export let items = [{ text: '팀 소개', href: '#' }];
 </script>
 
 <div class="tw-pt-8 md:tw-pt-12 tw-pb-12 md:tw-pb-16 tw-px-8 tw-flex tw-justify-center">
@@ -16,7 +11,7 @@
 				<nav
 					class="tw-flex md:tw-gap-x-4 tw-gap-y-2 tw-justify-between tw-whitespace-nowrap tw-flex-wrap"
 				>
-					{#each navItems as item}
+					{#each items as item}
 						<a href={item.href}>{item.text}</a>
 					{/each}
 				</nav>
