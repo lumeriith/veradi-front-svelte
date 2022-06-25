@@ -13,7 +13,9 @@
 	import { isLoggedIn } from '$lib/store';
 	import { login, logout } from '$lib/firebase/account';
 
-	export let onClose = () => {};
+	export let onClose = () => {
+    cardClose();
+  };
 
 	let inputEmail, inputPassword;
 	let loginError = false;
