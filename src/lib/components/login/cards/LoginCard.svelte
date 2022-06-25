@@ -10,8 +10,8 @@
 	import img_password from '$lib/static/img/login/password.png';
 	import img_google from '$lib/static/img/login/googleIcon.png';
 	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
-	import { isLoggedIn } from '$lib/store';
-	import { login, logout } from '$lib/firebase/account';
+	import { isLoggedIn } from '$lib/store.cjs';
+	import { login, logout } from '$lib/firebase/account.cjs';
 
 	export let onClose = () => {
     cardClose();

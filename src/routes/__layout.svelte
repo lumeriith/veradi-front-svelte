@@ -12,8 +12,8 @@
 
 	import BottomNav from '$lib/components/nav/BaseBottomNav.svelte';
 	import BaseNavBar from '$lib/components/nav/BaseNavBar.svelte';
-	import { initFirebase } from '$lib/firebase/app';
-	import { initAccount } from '$lib/firebase/account';
+	import { initFirebase } from '$lib/firebase/app.cjs';
+	import { initAccount } from '$lib/firebase/account.cjs';
 
 	const items = [
 		{
