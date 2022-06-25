@@ -9,10 +9,11 @@
 	import { onMount } from 'svelte';
 	import 'aos/dist/aos.css';
 	import AOS from 'aos';
-	import { app } from '$lib/firebase';
 
 	import BottomNav from '$lib/components/nav/BaseBottomNav.svelte';
 	import BaseNavBar from '$lib/components/nav/BaseNavBar.svelte';
+	import { initFirebase } from '$lib/firebase/app';
+	import { initAccount } from '$lib/firebase/account';
 
 	const items = [
 		{
@@ -55,6 +56,8 @@
 
 	onMount(() => {
 		AOS.init();
+		initFirebase();
+		initAccount();
 	});
 </script>
 

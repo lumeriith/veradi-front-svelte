@@ -24,6 +24,8 @@
 	import LoginPopup from '../login/LoginPopup.svelte';
 	import { onMount } from 'svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
+	import { isLoggedIn } from '$lib/store';
+	import { logout } from '$lib/firebase/account';
 
 	export let items = [];
 	export let extItems = [];
@@ -99,7 +101,11 @@
 			{/each}
 			{#if !hideLogin}
 				<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
-				<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1]">LOGIN</button>
+				{#if $isLoggedIn}
+					<button on:click={logout} class="tw-font-bold tw-text-[#648fb1]">LOGOUT</button>
+				{:else}
+					<button on:click={openLoginPopup} class="tw-font-bold tw-text-[#648fb1]">LOGIN</button>
+				{/if}
 			{/if}
 		</main>
 		<!-- Mobile -->
