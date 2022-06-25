@@ -9,11 +9,15 @@
 	};
 </script>
 
-<div class="item tw-w-72 tw-p-6 tw-rounded-lg tw-flex tw-flex-col tw-cursor-pointer tw-h-full">
-	<img src={exam.image} alt="" class="tw-w-full tw-mb-6" />
+<div
+	class="item tw-w-72 tw-p-6 tw-rounded-lg tw-flex tw-items-center tw-flex-col tw-cursor-pointer tw-h-full"
+>
+	<img src={exam.image} alt="" class="tw-w-[240px] tw-mb-6 tw-h-[320px]" />
 
 	<main class="tw-flex tw-flex-col tw-gap-2 tw-flex-1">
-		<div class="tw-font-bold tw-text-xl">{exam.title}</div>
+		<div class="tw-font-bold tw-text-xl tw-w-[240px]">
+			{exam.title}
+		</div>
 		<div>{exam.subtitle}</div>
 		<div class="tw-font-bold tw-text-lg tw-mt-auto tw-text-[#3c9fcb]">
 			{readableNameBySubjectIds[exam.subject]}

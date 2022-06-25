@@ -11,14 +11,15 @@ export default [
 	{
 		image: sample0,
 		subject: subjectIds.chemistry,
-		title: '실전 모의고사 3회분',
+		title: 'HeLiOS 실전 모의고사 Season1 3회분',
 		subtitle: '2023년 출제 가능성이 높은 신유형을 충분히 다룬 모의고사 3회분'
 	},
 	{
 		image: sample1,
 		subject: subjectIds.biology,
 		title: '생명과학 기출 정리',
-		subtitle: '보통 두 줄로 이루어진 공간으로, 컨테이너의 크기에 따라 텍스트의 Wrapping이 이루어짐.'
+		subtitle:
+			'보통 두 줄로 이루어진 공간으로, 컨테이너의 크기에 따라 텍스트의 Wrapping이 이루어짐. '
 	},
 	{
 		image: sample2,
