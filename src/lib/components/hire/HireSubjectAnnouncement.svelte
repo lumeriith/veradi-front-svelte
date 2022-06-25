@@ -20,13 +20,13 @@
 	export let task, requirement, prefer;
 
 	const items = [
-		['수학팀', veradiUrls.hireMath],
-		['생활과윤리팀', veradiUrls.hireLifeethics],
-		['사회문화팀', veradiUrls.hireSocialculture],
-		['물리학Ⅰ팀', veradiUrls.hirePhysics],
-		['화학Ⅰ팀', veradiUrls.hireChemistry],
-		['생명과학Ⅰ팀', veradiUrls.hireBiology],
-		['지구과학Ⅰ팀', veradiUrls.hireEarthscience]
+		['수학팀', veradiUrls.hireSubject.math],
+		['생활과윤리팀', veradiUrls.hireSubject.lifeethics],
+		['사회문화팀', veradiUrls.hireSubject.socialculture],
+		['물리학Ⅰ팀', veradiUrls.hireSubject.physics],
+		['화학Ⅰ팀', veradiUrls.hireSubject.chemistry],
+		['생명과학Ⅰ팀', veradiUrls.hireSubject.biology],
+		['지구과학Ⅰ팀', veradiUrls.hireSubject.earthscience]
 	];
 
 	const headingClasses = 'tw-font-bold tw-text-xl tw-mt-14 tw-mb-3';
