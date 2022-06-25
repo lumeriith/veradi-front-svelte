@@ -24,8 +24,8 @@
 	import LoginPopup from '../login/LoginPopup.svelte';
 	import { onMount } from 'svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
-	import { isLoggedIn } from '$lib/store.cjs';
-	import { logout } from '$lib/firebase/account.cjs';
+	import { isLoggedIn } from '$lib/store';
+	import { logout } from '$lib/firebase/account';
 
 	export let items = [];
 	export let extItems = [];

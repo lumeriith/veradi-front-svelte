@@ -1,4 +1,4 @@
-import { app } from './app.cjs';
+import { app } from './app';
 import {
 	getAuth,
 	signInWithEmailAndPassword,
@@ -8,7 +8,7 @@ import {
 	onAuthStateChanged
 } from 'firebase/auth';
 
-import { isLoggedIn } from '$lib/store.cjs';
+import { isLoggedIn } from '$lib/store';
 
 let user = null;
 
