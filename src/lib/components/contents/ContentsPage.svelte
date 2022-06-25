@@ -29,8 +29,10 @@
 	</div>
 	<div class="tw-text-xl">베라디 전체 교재를 한눈에 살펴 보세요.</div>
 </header>
-<NarrowContainer class="tw-mb-8 tw-flex tw-flex-row tw-gap-5 tw-items-start">
-	<div class="tw-text-xl tw-font-heading tw-relative tw-pr-4">
+<NarrowContainer
+	class="tw-mb-8 tw-flex tw-flex-col lg:tw-flex-row tw-gap-5 tw-items-center lg:tw-items-start"
+>
+	<div class="tw-text-xl tw-font-heading tw-relative lg:tw-pr-4 tw-hidden lg:tw-block">
 		과목선택
 		<div
 			class="tw-absolute tw-w-0.5 tw-h-full tw-right-0 tw-top-0 tw-bg-[#cecece]"
@@ -43,7 +45,7 @@
 
 <div class="tw-bg-[#f3f3f3]" use:animTrigger>
 	<NarrowContainer
-		class="tw-py-6 tw-flex tw-gap-4 tw-flex-wrap tw-justify-between tw-items-stretch"
+		class="tw-py-6 tw-flex tw-gap-4 tw-flex-wrap tw-justify-center lg:tw-justify-between tw-items-stretch"
 	>
 		{#each exams as exam, i}
 			<div use:animScale={{ delay: i * 70, startScale: 0.875 }}><ExamItem {exam} /></div>
