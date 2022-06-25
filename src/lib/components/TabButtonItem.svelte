@@ -31,6 +31,11 @@
 		white-space: nowrap;
 		border-radius: 9999px;
 		font-weight: bold;
+		transition: background-color 0.2s, color 0.2s;
+	}
+
+	button:active {
+		filter: brightness(0.9);
 	}
 
 	button.active {
