@@ -12,7 +12,7 @@
 	import img_google from '$lib/static/img/login/googleIcon.png';
 	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
 	import { isLoggedIn } from '$lib/store';
-	import { login, logout } from '$lib/firebase/account';
+	import { login, loginWithGoogle, logout } from '$lib/firebase/account';
 
 	export let onClose = () => {
     
@@ -94,7 +94,7 @@
 					<PillButton on:click={tryLogin} title="로그인" color="#5AC2FF" />
 				{/if}
 				<div class="tw-flex tw-gap-8">
-					<SocialLoginButton url={img_google} text="Google로 로그인" />
+					<SocialLoginButton event={loginWithGoogle} url={img_google} text="Google로 로그인" />
 					<SocialLoginButton url={img_kakao} text="Kakao로 로그인" />
 				</div>
 				<div />
