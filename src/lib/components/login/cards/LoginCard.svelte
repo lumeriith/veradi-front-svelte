@@ -1,9 +1,10 @@
 <script>
-	import SocialLoginButton from '$lib/components/login/SocialLoginButton.svelte';
+  
+  import SocialLoginButton from '$lib/components/login/SocialLoginButton.svelte';
 	import LoginInput from '$lib/components/login/LoginInput.svelte';
 	import PillButton from '$lib/components/login/PillButton.svelte';
 	import MainError from '$lib/components/login/MainError.svelte';
-	import { Card, Input } from 'sveltestrap';
+	import { Card, Input, Alert } from 'sveltestrap';
 	import Icon from '@iconify/svelte';
 
 	import img_email from '$lib/static/img/login/email.png';
@@ -14,7 +15,7 @@
 	import { login, logout } from '$lib/firebase/account';
 
 	export let onClose = () => {
-    cardClose();
+    
   };
 
 	let inputEmail, inputPassword;
@@ -35,7 +36,7 @@
 		}
 	];
 
-	let loginErrorText = '';
+	let loginErrorText = 'fewfafwefaq';
 
 	function onLoginClick() {
 		loginError = false;
@@ -60,11 +61,15 @@
 		login(inputEmail, inputPassword).then((didSuceed) => {
 			if (didSuceed) {
 				onClose();
+        isValidationError = false;
+        loginError = false;
 			} else {
-				console.log('ERRORRROROROROR');
+
+        loginError = true;
 			}
 		});
 	}
+
 </script>
 
 <Card
@@ -80,9 +85,8 @@
 				<LoginInput title="이메일" type="email" bind:value={inputEmail} />
 				<LoginInput title="비밀번호" type="password" bind:value={inputPassword} />
 			</div>
-			<Input id="c1" type="checkbox" label="로그인 상태 유지" />
-
-			<MainError isState={loginError} title="로그인 오류" text={loginErrorText} />
+			<Input class="tw-py-2" id="c1" type="checkbox" label="로그인 상태 유지" />
+			<MainError isState={loginError} title="로그인 오류" text="아이디와 비밀번호가 일치하지 않습니다." />
 			<div class="tw-flex tw-items-stretch tw-flex-col tw-gap-5">
 				{#if $isLoggedIn}
 					<PillButton on:click={logout} title="로그아웃" color="#5AC2FF" />
@@ -91,7 +95,7 @@
 				{/if}
 				<div class="tw-flex tw-gap-8">
 					<SocialLoginButton url={img_google} text="Google로 로그인" />
-					<SocialLoginButton href="http://www.kakao.com" url={img_kakao} text="Kakao로 로그인" />
+					<SocialLoginButton url={img_kakao} text="Kakao로 로그인" />
 				</div>
 				<div />
 				<div class="tw-flex tw-mb-5 tw-text-sm tw-gap-2 tw-text-gray-500 tw-justify-center">

@@ -20,8 +20,9 @@
 	export let text;
 </script>
 
-<div class="tw-h-20">
-	<Alert color="danger" class="tw-py-3 tw-my-5" isOpen={isState}>
-		<div>{text || '알 수 없는 오류'}</div>
+<div>
+	<Alert color="danger" class="tw-py-2 tw-my-5" isOpen={isState}>
+		<h3>{title || '알 수 없는 유형'}</h3>
+    <div>{text || '알 수 없는 오류'}</div>
 	</Alert>
 </div>
