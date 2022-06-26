@@ -44,11 +44,12 @@ export function logout() {
 	signOut(auth);
 }
 
-export async function loginWithGoogle() {
+export async function loginGoogleAPI() {
 	const provider = new GoogleAuthProvider();
 	provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-	const auth = getAuth();
-	signInWithPopup(auth, provider)
+	const auth = getAuth(app);
+  try {
+    await signInWithPopup(auth, provider)
 		.then((result) => {
 			// This gives you a Google Access Token. You can use it to access the Google API.
 			const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -56,9 +57,6 @@ export async function loginWithGoogle() {
 			// The signed-in user info.
 			const user = result.user;
 			// ...
-      console.log(credential);
-      console.log(token);
-      console.log(user);
 		})
 		.catch((error) => {
 			// Handle Errors here.
@@ -69,5 +67,12 @@ export async function loginWithGoogle() {
 			// The AuthCredential type that was used.
 			const credential = GoogleAuthProvider.credentialFromError(error);
 			// ...
+      console.log(error);
 		});
+    return true;
+  } catch (error) {
+    console.log(error)
+    return false;
+  }
+	
 }

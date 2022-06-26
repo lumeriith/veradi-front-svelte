@@ -126,10 +126,17 @@
 				{/each}
 				{#if !hideLogin}
 					<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
+					{#if $isLoggedIn}
+					<button
+						on:click={logout}
+						class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1">LOGOUT</button
+					>
+					{:else}
 					<button
 						on:click={openLoginPopup}
 						class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1">LOGIN</button
 					>
+					{/if}
 				{/if}
 			</main>
 		{/if}
@@ -139,8 +146,6 @@
 <div
 	class="tw-block md:tw-hidden tw-fixed tw-inset-0 tw-bg-[#0005] tw-z-10 tw-transition-opacity {isDropdownOpen
 		? 'tw-opacity-100'
-
-    
 		: 'tw-opacity-0 tw-pointer-events-none'}"
 />
 

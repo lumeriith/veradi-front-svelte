@@ -7,12 +7,10 @@
 	import { Card, Input, Alert } from 'sveltestrap';
 	import Icon from '@iconify/svelte';
 
-	import img_email from '$lib/static/img/login/email.png';
-	import img_password from '$lib/static/img/login/password.png';
 	import img_google from '$lib/static/img/login/googleIcon.png';
 	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
 	import { isLoggedIn } from '$lib/store';
-	import { login, loginWithGoogle, logout } from '$lib/firebase/account';
+	import { login, loginGoogleAPI, logout } from '$lib/firebase/account';
 
 	export let onClose = () => {
     
@@ -58,10 +56,9 @@
 	// -------------- firebase - login ------------------- //
 
 	function tryLogin() {
-		login(inputEmail, inputPassword).then((didSuceed) => {
-			if (didSuceed) {
+		login(inputEmail, inputPassword).then((didSucceed) => {
+			if (didSucceed) {
 				onClose();
-        isValidationError = false;
         loginError = false;
 			} else {
 
@@ -69,6 +66,17 @@
 			}
 		});
 	}
+
+  function loginWithGoogle() {
+    loginGoogleAPI().then((didSucceed) => {
+      if (didSucceed) {
+        onClose();
+        loginError = false;
+      } else {
+        loginError = true;
+      }
+    })
+  }
 
 </script>
 
@@ -95,7 +103,7 @@
 				{/if}
 				<div class="tw-flex tw-gap-8">
 					<SocialLoginButton event={loginWithGoogle} url={img_google} text="Google로 로그인" />
-					<SocialLoginButton url={img_kakao} text="Kakao로 로그인" />
+					<!----<SocialLoginButton url={img_kakao} text="Kakao로 로그인" /> --->
 				</div>
 				<div />
 				<div class="tw-flex tw-mb-5 tw-text-sm tw-gap-2 tw-text-gray-500 tw-justify-center">
