@@ -1,15 +1,15 @@
 <script>
 	import { page } from '$app/stores';
-	import ContentsPage from '$lib/components/contents/ContentsPage.svelte';
+	import ContentsListPage from '$lib/components/contents/list/ContentsListPage.svelte';
 	import { subjectIds } from '$lib/data/subjects';
 	$: isAll = $page.params.subject === 'all';
 	$: isValidSubject = !!subjectIds[$page.params.subject];
 </script>
 
 {#if isAll}
-	<ContentsPage />
+	<ContentsListPage />
 {:else if isValidSubject}
-	<ContentsPage filterSubjectId={$page.params.subject} />
+	<ContentsListPage filterSubjectId={$page.params.subject} />
 {:else}
 	Subject not found
 {/if}

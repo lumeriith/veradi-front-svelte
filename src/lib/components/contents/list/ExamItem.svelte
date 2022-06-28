@@ -1,7 +1,8 @@
 <script>
 	import { readableNameBySubjectIds } from '$lib/data/subjects';
+	import veradiUrls from '$lib/data/veradiUrls';
 
-	export let exam = {
+	export let book = {
 		image: '',
 		subject: subjectIds.chemistry,
 		title: 'Title Not Found',
@@ -9,23 +10,29 @@
 	};
 </script>
 
-<div
+<a
 	class="item tw-w-72 tw-p-6 tw-rounded-lg tw-flex tw-items-center tw-flex-col tw-cursor-pointer tw-h-full"
+	href={veradiUrls.contents.books(book.id)}
 >
-	<img src={exam.image} alt="" class="tw-w-[240px] tw-mb-6 tw-h-[320px]" />
+	<img src={book.image} alt="" class="tw-w-[240px] tw-mb-6 tw-h-[320px]" />
 
 	<main class="tw-flex tw-flex-col tw-gap-2 tw-flex-1">
 		<div class="tw-font-bold tw-text-xl tw-w-[240px]">
-			{exam.title}
+			{book.title}
 		</div>
-		<div>{exam.subtitle}</div>
+		<div>{book.subtitle}</div>
 		<div class="tw-font-bold tw-text-lg tw-mt-auto tw-text-[#3c9fcb]">
-			{readableNameBySubjectIds[exam.subject]}
+			{readableNameBySubjectIds[book.subject]}
 		</div>
 	</main>
-</div>
+</a>
 
 <style>
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	.item {
 		transition: background-color 0.2s;
 		filter: brightness(1);

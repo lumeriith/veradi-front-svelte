@@ -1,10 +1,10 @@
 <script>
 	import { animTrigger, animScale } from '$lib/utils/scrollEffects';
 
-	import allExams from '$lib/data/contents/exams';
+	import allBooks from '$lib/data/contents/books';
 	import veradiUrls from '$lib/data/veradiUrls.js';
-	import NarrowContainer from '../NarrowContainer.svelte';
-	import TabButtons from '../TabButtons.svelte';
+	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
+	import TabButtons from '$lib/components/TabButtons.svelte';
 	import ExamItem from './ExamItem.svelte';
 
 	export let filterSubjectId = null;
@@ -19,7 +19,7 @@
 		['지구과학', veradiUrls.contents.list.earthscience]
 	];
 
-	$: exams = allExams.filter((ex) => !filterSubjectId || ex.subject === filterSubjectId);
+	$: books = allBooks.filter((ex) => !filterSubjectId || ex.subject === filterSubjectId);
 </script>
 
 <header class="tw-flex tw-items-center tw-flex-col tw-my-16">
@@ -47,8 +47,8 @@
 	<NarrowContainer
 		class="tw-py-6 tw-flex tw-gap-4 tw-flex-wrap tw-justify-center lg:tw-justify-between tw-items-stretch"
 	>
-		{#each exams as exam, i}
-			<div use:animScale={{ delay: i * 70, startScale: 0.875 }}><ExamItem {exam} /></div>
+		{#each books as book, i}
+			<div use:animScale={{ delay: i * 70, startScale: 0.875 }}><ExamItem {book} /></div>
 		{/each}
 	</NarrowContainer>
 </div>

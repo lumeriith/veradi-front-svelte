@@ -12,7 +12,8 @@ export default {
 			lifeethics: '/contents/list/lifeethics/',
 			biology: '/contents/list/biology/',
 			earthscience: '/contents/list/earthscience/'
-		}
+		},
+		books: (id) => `/contents/books/${id}`
 	},
 	// 채용
 	hireIndex: '/hire',
