@@ -3,14 +3,16 @@ export default {
 	qna: '/qna/',
 	// 문제집
 	contents: {
-		index: '/contents/all/',
-		all: '/contents/all/',
-		math: '/contents/math/',
-		chemistry: '/contents/chemistry/',
-		socialculture: '/contents/socialculture/',
-		lifeethics: '/contents/lifeethics/',
-		biology: '/contents/biology/',
-		earthscience: '/contents/earthscience/'
+		list: {
+			index: '/contents/list/all/',
+			all: '/contents/list/all/',
+			math: '/contents/list/math/',
+			chemistry: '/contents/list/chemistry/',
+			socialculture: '/contents/list/socialculture/',
+			lifeethics: '/contents/list/lifeethics/',
+			biology: '/contents/list/biology/',
+			earthscience: '/contents/list/earthscience/'
+		}
 	},
 	// 채용
 	hireIndex: '/hire',

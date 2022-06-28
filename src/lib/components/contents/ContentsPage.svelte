@@ -10,13 +10,13 @@
 	export let filterSubjectId = null;
 
 	const tabs = [
-		['전체', veradiUrls.contents.all],
-		['수학', veradiUrls.contents.math],
-		['화학', veradiUrls.contents.chemistry],
-		['사회문화', veradiUrls.contents.socialculture],
-		['생활과윤리', veradiUrls.contents.lifeethics],
-		['생명과학', veradiUrls.contents.biology],
-		['지구과학', veradiUrls.contents.earthscience]
+		['전체', veradiUrls.contents.list.all],
+		['수학', veradiUrls.contents.list.math],
+		['화학', veradiUrls.contents.list.chemistry],
+		['사회문화', veradiUrls.contents.list.socialculture],
+		['생활과윤리', veradiUrls.contents.list.lifeethics],
+		['생명과학', veradiUrls.contents.list.biology],
+		['지구과학', veradiUrls.contents.list.earthscience]
 	];
 
 	$: exams = allExams.filter((ex) => !filterSubjectId || ex.subject === filterSubjectId);

@@ -31,15 +31,15 @@
 		},
 		{
 			text: '문제집',
-			href: veradiUrls.contents.index,
+			href: veradiUrls.contents.list.index,
 			children: [
-				{ text: '전체', href: veradiUrls.contents.all },
-				{ text: '수학', href: veradiUrls.contents.math },
-				{ text: '화학', href: veradiUrls.contents.chemistry },
-				{ text: '사회문화', href: veradiUrls.contents.socialculture },
-				{ text: '생활과윤리', href: veradiUrls.contents.lifeethics },
-				{ text: '생명과학', href: veradiUrls.contents.biology },
-				{ text: '지구과학', href: veradiUrls.contents.earthscience }
+				{ text: '전체', href: veradiUrls.contents.list.all },
+				{ text: '수학', href: veradiUrls.contents.list.math },
+				{ text: '화학', href: veradiUrls.contents.list.chemistry },
+				{ text: '사회문화', href: veradiUrls.contents.list.socialculture },
+				{ text: '생활과윤리', href: veradiUrls.contents.list.lifeethics },
+				{ text: '생명과학', href: veradiUrls.contents.list.biology },
+				{ text: '지구과학', href: veradiUrls.contents.list.earthscience }
 			]
 		},
 		{
