@@ -3,7 +3,7 @@
 	import veradiUrls from '$lib/data/veradiUrls';
 
 	export let book = {
-		image: '',
+		coverImage: '',
 		subject: subjectIds.chemistry,
 		title: 'Title Not Found',
 		subtitle: 'Subtitle Not Found'
@@ -14,7 +14,7 @@
 	class="item tw-w-72 tw-p-6 tw-rounded-lg tw-flex tw-items-center tw-flex-col tw-cursor-pointer tw-h-full"
 	href={veradiUrls.contents.books(book.id)}
 >
-	<img src={book.image} alt="" class="tw-w-[240px] tw-mb-6 tw-h-[320px]" />
+	<img src={book.coverImage} alt="" class="tw-w-[240px] tw-mb-6 tw-h-[320px]" />
 
 	<main class="tw-flex tw-flex-col tw-gap-2 tw-flex-1">
 		<div class="tw-font-bold tw-text-xl tw-w-[240px]">
