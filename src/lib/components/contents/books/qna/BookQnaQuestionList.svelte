@@ -22,7 +22,7 @@ New 융합형 문학 독법 훈련’(문학복합) 강의에 3강 이후에 교
 		<span style="color: var(--book-qna-primary)">32</span>개의 질문
 	</div>
 	<div class="tw-flex tw-flex-col tw-gap-3 tw-mb-4">
-		{#each [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] as i}
+		{#each [0, 1, 2] as i}
 			<div use:animTrigger use:animItem>
 				<BookQnaQuestionItem title={testTitles[i]} />
 			</div>
