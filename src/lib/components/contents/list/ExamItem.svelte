@@ -3,6 +3,7 @@
 	import veradiUrls from '$lib/data/veradiUrls';
 
 	export let book = {
+		id: 0,
 		coverImage: '',
 		subject: subjectIds.chemistry,
 		title: 'Title Not Found',

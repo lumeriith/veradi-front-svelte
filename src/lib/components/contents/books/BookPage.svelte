@@ -6,12 +6,12 @@
 
 	export let book = {
 		id: 0,
-		image: '',
+		coverImage: '',
 		subject: '',
 		title: '',
 		subtitle: '',
 		content: {
-			image: helios,
+			image: '',
 			imageSize: 160,
 			imageSizeMobile: 210
 		},
@@ -46,10 +46,12 @@
 <svelte:window on:resize={calculateImageSize} />
 
 <div class="tw-overflow-hidden" style="background-color: {book.theme.bg};">
-	<img
-		src={book.content.image}
-		style="width:{calculatedSize}%; margin-left: {-(calculatedSize - 100) / 2}%; max-width: none;"
-		alt=""
-	/>
+	{#if book.content.image}
+		<img
+			src={book.content.image}
+			style="width:{calculatedSize}%; margin-left: {-(calculatedSize - 100) / 2}%; max-width: none;"
+			alt=""
+		/>
+	{/if}
 </div>
 <BookFooterQna />

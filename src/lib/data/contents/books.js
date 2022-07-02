@@ -42,7 +42,7 @@ export default [
 			secondary: '#ff0606'
 		},
 		content: {
-			image: helios,
+			image: '',
 			imageSize: 100,
 			imageSizeMobile: 180
 		}
@@ -60,7 +60,7 @@ export default [
 			secondary: '#ff0606'
 		},
 		content: {
-			image: helios,
+			image: '',
 			imageSize: 100,
 			imageSizeMobile: 180
 		}
@@ -78,7 +78,7 @@ export default [
 			secondary: '#ff0606'
 		},
 		content: {
-			image: helios,
+			image: '',
 			imageSize: 100,
 			imageSizeMobile: 180
 		}
@@ -96,7 +96,7 @@ export default [
 			secondary: '#ff0606'
 		},
 		content: {
-			image: helios,
+			image: '',
 			imageSize: 100,
 			imageSizeMobile: 180
 		}
@@ -114,7 +114,7 @@ export default [
 			secondary: '#ff0606'
 		},
 		content: {
-			image: helios,
+			image: '',
 			imageSize: 100,
 			imageSizeMobile: 180
 		}
