@@ -1,5 +1,6 @@
+import bookContextKey from '$lib/components/contents/books/bookContextKey';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, doc, setDoc } from 'firebase/firestore';
+import { getFirestore, collection, doc, setDoc, deleteDoc, Timestamp, onSnapshot } from 'firebase/firestore';
 
 export let app = null;
 export let db = null;
@@ -19,10 +20,22 @@ export function initFirebase() {
   db = getFirestore(app);
 }
 
-export async function setBoard(collection, document, data) {
-  await setDoc(doc(db, collection, document), data);
+export async function setBoard(collect, document, data) {
+  await setDoc(doc(db, collect, document), data);
 }
 
-export async function deleteBoard() {
+export async function deleteBoard(collect, document) {
+  await deleteDoc(doc(db, collect, document));
+}
 
+export function getBoard(collect, document) {
+  let unsub = [];
+  onSnapshot(doc(db, collect, document), (doc) => {
+    unsub.push({ ...doc.data(), id: doc.id })
+  });
+  return unsub;
+}
+
+export function tsDate(date) {
+  return Timestamp.fromDate(new Date(date))
 }
