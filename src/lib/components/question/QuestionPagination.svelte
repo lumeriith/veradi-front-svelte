@@ -2,11 +2,11 @@
 	import { Pagination, PaginationItem, PaginationLink } from 'sveltestrap';
 </script>
 
-<div class="tw-flex tw-justify-center">
-	<Pagination ariaLabel="Page navigation example">
-		<PaginationItem disabled>
-			<PaginationLink first href="#" />
-		</PaginationItem>
+<div
+	class="tw-flex tw-justify-center question-pagination tw-select-none"
+	style="transform: scale(1)"
+>
+	<Pagination>
 		<PaginationItem disabled>
 			<PaginationLink previous href="#" />
 		</PaginationItem>
@@ -28,8 +28,48 @@
 		<PaginationItem>
 			<PaginationLink next href="#" />
 		</PaginationItem>
-		<PaginationItem>
-			<PaginationLink last href="#" />
-		</PaginationItem>
 	</Pagination>
 </div>
+
+<style>
+	.question-pagination :global(.page-link) {
+		background-color: transparent !important;
+		border: 0;
+		border-radius: 9999px;
+		color: inherit;
+		font-size: 18px;
+		box-shadow: none;
+	}
+
+	.question-pagination :global(.page-item) {
+		transition: transform 0.1s;
+	}
+
+	.question-pagination :global(.page-item:hover:not(.disabled):not(.active)) {
+		transform: scale(1.3);
+	}
+
+	.question-pagination :global(.page-item:active:not(.disabled):not(.active)) {
+		transform: scale(0.8);
+	}
+
+	.question-pagination :global(.page-item:first-child .page-link) {
+		font-size: 30px;
+		padding: 0 6px;
+		transform: translateY(-5px);
+	}
+
+	.question-pagination :global(.page-item:last-child .page-link) {
+		font-size: 30px;
+		padding: 0 6px;
+		transform: translateY(-5px);
+	}
+
+	.question-pagination :global(.active .page-link) {
+		color: var(--book-qna-primary);
+	}
+
+	.question-pagination :global(.disabled .page-link) {
+		opacity: 50%;
+	}
+</style>
