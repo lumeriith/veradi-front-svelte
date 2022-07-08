@@ -10,24 +10,22 @@
 	const comments = [
 		{
 			type: 1,
-			content:
-				'학습 운영센터 > 공부 질문하기 게시판을 이용해주세요.\n※1:1게시판의 경우 원활한 답변이 이루어지지 않을 수 있습니다.',
+			content: getTestString('answer', 10, 60) + '\n\n' + getTestString('answer', 10, 80),
 			photos: []
 		},
 		{
 			type: 0,
-			content: '그러면 질문하기의 디자인은 어떤 식으로 구성이 되는 건가요?'
+			content: getTestString('question', 8, 15)
 		},
 		{
 			type: 1,
-			content:
-				'그렇습니다. 질문 주신 해동 방식에 대해서는 다음과 같습니다.\n\n다문단으로 이루어진 답변입니다. The rows attribute specifies the visible height of a text area, in lines. Note: The size of a textarea can also be specified by the CSS height and width properties. 그러나 답변하기의 경우 구성이 다음과 같이 진행되며, 실제 사이즈는 시안 사이즈와 다를 수 있습니다. 해동 시 3개월 정도가 소요될 수 있으며, 이 점 유념하여 풀어주시면 되겠습니다.\n\n감사합니다.',
+			content: getTestString('answer', 10, 40),
 			photos: []
 		}
 	];
 </script>
 
-{#await testLoadData(getTestString(30, 30) + '\n\n' + getTestString(5, 30))}
+{#await testLoadData(getTestString('question', 30, 30) + '\n\n' + getTestString('question', 5, 30))}
 	<div class="tw-flex tw-justify-center tw-items-center">
 		<Jumper size={40} color="var(--book-qna-secondary)" />
 	</div>
