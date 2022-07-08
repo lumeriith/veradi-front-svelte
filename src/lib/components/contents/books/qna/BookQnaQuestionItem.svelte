@@ -1,8 +1,10 @@
 <script>
 	import MultiClamp from '$lib/components/MultiClamp.svelte';
+	import { getTestString, loadData } from '$lib/utils/testData';
 	import Icon from '@iconify/svelte';
 
 	export let title = '강좌 수강 및 학습 중 궁금한 점은 어디에 질문할 수 있나요?';
+	export let numOfAnswers = 0;
 
 	let isExpanded = false;
 	let isHover = false;
@@ -11,8 +13,6 @@
 	function toggleExpand() {
 		isExpanded = !isExpanded;
 	}
-
-	function doNothing() {}
 </script>
 
 <div
@@ -35,7 +35,13 @@
 				<MultiClamp clamp={1}>{title}</MultiClamp>
 			{/if}
 		</div>
-		<div class="tw-ml-auto">답변대기</div>
+		<div class="tw-ml-auto">
+			{#if numOfAnswers}
+				<span style="color: var(--book-qna-primary)">답변 ({numOfAnswers})</span>
+			{:else}
+				<span>답변대기</span>
+			{/if}
+		</div>
 
 		{#if isExpanded}
 			<Icon class="tw-ml-4 tw-shrink-0" icon="akar-icons:chevron-up" />
@@ -46,10 +52,9 @@
 	{#if isExpanded}
 		<div class="tw-h-4" />
 		<main>
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, ducimus cum neque perspiciatis
-			fugit qui incidunt optio harum corporis modi beatae maiores dicta. Voluptates quas doloribus
-			harum, explicabo ipsum aspernatur ab vel. Obcaecati illum nesciunt cupiditate iste voluptatum.
-			Sed reiciendis iusto libero commodi et placeat unde culpa quo in modi.
+			{#await loadData(getTestString(10, 30)) then data}
+				{data}
+			{/await}
 		</main>
 	{/if}
 </div>

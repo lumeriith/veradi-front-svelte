@@ -24,7 +24,7 @@ New 융합형 문학 독법 훈련’(문학복합) 강의에 3강 이후에 교
 	<div class="tw-flex tw-flex-col tw-gap-3 tw-mb-4">
 		{#each [0, 1, 2] as i}
 			<div use:animTrigger use:animItem>
-				<BookQnaQuestionItem title={testTitles[i]} />
+				<BookQnaQuestionItem title={testTitles[i]} numOfAnswers={[0, 1, 2, 3][i]} />
 			</div>
 		{/each}
 	</div>
