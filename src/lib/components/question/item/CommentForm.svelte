@@ -1,12 +1,12 @@
 <script>
-	import BookQnaQuestionMark from './BookQnaQuestionMark.svelte';
 	import Icon from '@iconify/svelte';
 	import autoExpandTextArea from '$lib/utils/autoExpandTextArea';
+	import QuestionMark from './QuestionMark.svelte';
 </script>
 
 <div class="tw-flex tw-gap-1 tw-items-stretch tw-bg-[#aaa2] tw-pl-4 tw-rounded-2xl">
 	<div class="tw-mt-[4px]">
-		<BookQnaQuestionMark />
+		<QuestionMark />
 	</div>
 	<textarea
 		use:autoExpandTextArea

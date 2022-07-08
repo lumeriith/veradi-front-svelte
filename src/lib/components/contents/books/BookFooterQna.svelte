@@ -1,10 +1,11 @@
 <script>
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
-	import { getContext } from 'svelte';
+	import NewQuestionForm from '$lib/components/question/NewQuestionForm.svelte';
+	import QuestionList from '$lib/components/question/QuestionList.svelte';
 	import bookContextKey from './bookContextKey';
-	import BookQnaNewQuestionForm from './qna/BookQnaNewQuestionForm.svelte';
-	import BookQnaQuestionList from './qna/BookQnaQuestionList.svelte';
 	import BookQnaStatistics from './qna/BookQnaStatistics.svelte';
+
+	import { getContext } from 'svelte';
 
 	const defaultBook = {
 		id: 0,
@@ -32,8 +33,8 @@
 		<div class="tw-text-2xl tw-font-bold tw-mb-5"># 화학 HeLios 모의고사</div>
 		<BookQnaStatistics />
 		<div class="tw-h-8" />
-		<BookQnaNewQuestionForm />
+		<NewQuestionForm />
 		<div class="tw-h-8" />
-		<BookQnaQuestionList />
+		<QuestionList />
 	</NarrowContainer>
 </div>

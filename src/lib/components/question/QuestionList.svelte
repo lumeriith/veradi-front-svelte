@@ -1,7 +1,7 @@
 <script>
-	import BookQnaQuestionItem from './BookQnaQuestionItem.svelte';
-	import BookQnaQuestionPagination from './BookQnaQuestionPagination.svelte';
 	import { animTrigger, animItem } from '$lib/utils/scrollEffects';
+	import QuestionItem from './QuestionItem.svelte';
+	import QuestionPagination from './QuestionPagination.svelte';
 
 	const testTitles = `강좌 수강 및 학습 중 궁금한 점은 어디에 질문할 수 있나요?
 6평 27번 1번선지 질문입니다.
@@ -19,14 +19,14 @@ New 융합형 문학 독법 훈련’(문학복합) 강의에 3강 이후에 교
 
 <div>
 	<div class="tw-mb-3 tw-font-semibold">
-		<span style="color: var(--book-qna-primary)">32</span>개의 질문
+		<span style="color: var(--book-qna-primary)">3</span>개의 질문
 	</div>
 	<div class="tw-flex tw-flex-col tw-gap-3 tw-mb-4">
 		{#each [0, 1, 2] as i}
 			<div use:animTrigger use:animItem>
-				<BookQnaQuestionItem title={testTitles[i]} numOfAnswers={[0, 1, 2, 3][i]} />
+				<QuestionItem title={testTitles[i]} numOfAnswers={[0, 1, 2, 3][i]} />
 			</div>
 		{/each}
 	</div>
-	<BookQnaQuestionPagination />
+	<QuestionPagination />
 </div>

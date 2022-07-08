@@ -1,6 +1,13 @@
 export default {
 	// 출판물 QnA 게시판
-	qna: '/qna/',
+	qna: {
+		index: '/qna/all',
+		all: '/qna/all',
+		submit: '/qna/submit',
+		myquestions: '/qna/myquestions',
+		study: '/qna/study',
+		mybooks: '/qna/mybooks'
+	},
 	// 문제집
 	contents: {
 		list: {

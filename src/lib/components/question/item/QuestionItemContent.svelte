@@ -4,8 +4,8 @@
 
 	import { Jumper } from 'svelte-loading-spinners';
 	import { fade } from 'svelte/transition';
-	import BookQnaAnswerMark from './BookQnaAnswerMark.svelte';
-	import BookQnaQuestionMark from './BookQnaQuestionMark.svelte';
+	import BookQnaAnswerMark from './AnswerMark.svelte';
+	import BookQnaQuestionMark from './QuestionMark.svelte';
 
 	const comments = [
 		{
@@ -27,7 +27,7 @@
 
 {#await testLoadData(getTestString('question', 30, 30) + '\n\n' + getTestString('question', 5, 30))}
 	<div class="tw-flex tw-justify-center tw-items-center">
-		<Jumper size={40} color="var(--book-qna-secondary)" />
+		<Jumper size={40} color="var(--book-qna-primary)" />
 	</div>
 {:then data}
 	<div class="tw-flex tw-flex-col tw-gap-6" in:fade={{ duration: 200 }}>

@@ -1,9 +1,9 @@
 <script>
 	import MultiClamp from '$lib/components/MultiClamp.svelte';
 	import Icon from '@iconify/svelte';
-	import BookQnaCommentForm from './item/BookQnaCommentForm.svelte';
-	import BookQnaQuestionItemContent from './item/BookQnaQuestionItemContent.svelte';
-	import BookQnaQuestionMark from './item/BookQnaQuestionMark.svelte';
+	import BookQnaCommentForm from './item/CommentForm.svelte';
+	import BookQnaQuestionItemContent from './item/QuestionItemContent.svelte';
+	import BookQnaQuestionMark from './item/QuestionMark.svelte';
 
 	export let title = '강좌 수강 및 학습 중 궁금한 점은 어디에 질문할 수 있나요?';
 	export let numOfAnswers = 0;
@@ -20,7 +20,7 @@
 
 <div
 	class="item tw-rounded-lg tw-p-4 {isHover ? 'hover' : ''} {isActive ? 'active' : ''}"
-	style="border: 2px solid #aaa3"
+	style="border: 2px solid #9994"
 >
 	<header
 		class="tw-flex tw-flex-row tw-items-center tw-cursor-pointer -tw-m-4 tw-p-4"

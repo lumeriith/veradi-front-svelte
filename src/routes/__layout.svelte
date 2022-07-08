@@ -48,7 +48,14 @@
 		},
 		{
 			text: 'QnA',
-			href: veradiUrls.qna
+			href: veradiUrls.qna.index,
+			children: [
+				{ text: '전체', href: veradiUrls.qna.all },
+				{ text: '질문하기', href: veradiUrls.qna.submit },
+				{ text: '내가 쓴 질문', href: veradiUrls.qna.myquestions },
+				{ text: '학습/입시', href: veradiUrls.qna.study },
+				{ text: '나의 문제집', href: veradiUrls.qna.mybooks }
+			]
 		}
 	];
 
