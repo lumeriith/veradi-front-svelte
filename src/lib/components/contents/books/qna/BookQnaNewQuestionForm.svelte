@@ -1,24 +1,7 @@
 <script>
 	import Icon from '@iconify/svelte';
-	import { onMount } from 'svelte/internal';
-
-	// https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize
-	let contentArea;
+	import autoExpandTextArea from '$lib/utils/autoExpandTextArea';
 	let titleInput;
-	onMount(() => {
-		contentArea.setAttribute(
-			'style',
-			'height:' + contentArea.scrollHeight + 'px;overflow-y:hidden;'
-		);
-		contentArea.addEventListener(
-			'input',
-			() => {
-				contentArea.style.height = 'auto';
-				contentArea.style.height = contentArea.scrollHeight + 'px';
-			},
-			false
-		);
-	});
 
 	function titleInputKeyDown(e) {
 		if (e.keyCode === 13) {
@@ -48,9 +31,9 @@
 		/>
 		<div class="tw-h-0.5 tw-ml-4 tw-w-[200px] tw-bg-[#aaa6]" />
 		<textarea
-			bind:this={contentArea}
+			use:autoExpandTextArea
 			on:keydown={contentAreaKeyDown}
-			class="tw-px-4 tw-pt-1 tw-pb-4 tw-resize-none"
+			class="tw-px-4 tw-pt-1 tw-pb-4"
 			placeholder="내용을 입력해주세요. 문의글은 자신만 볼 수 있습니다."
 		/>
 		<div>
@@ -100,5 +83,6 @@
 		outline: none;
 		border: none;
 		box-shadow: none;
+		resize: none;
 	}
 </style>

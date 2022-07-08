@@ -4,10 +4,10 @@ const TEST_STRING_SAMPLE =
 	);
 const PUNCTUATIONS = '.!?';
 
-export function loadData(data, loadTimeMin = 500, loadTimeMax = 1000, errorRate = 0) {
+export function testLoadData(data, loadTimeMin = 100, loadTimeMax = 1000, errorRate = 0) {
 	const p = new Promise((resolve, reject) => {
 		setTimeout(() => {
-			if (Math.random() < errorRate) reject('testData.loadData() Test Error');
+			if (Math.random() < errorRate) reject('Test Error');
 			else resolve(data);
 		}, Math.random() * (loadTimeMax - loadTimeMin) + loadTimeMin);
 	});

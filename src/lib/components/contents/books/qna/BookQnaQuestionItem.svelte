@@ -1,10 +1,13 @@
 <script>
 	import MultiClamp from '$lib/components/MultiClamp.svelte';
-	import { getTestString, loadData } from '$lib/utils/testData';
 	import Icon from '@iconify/svelte';
+	import BookQnaCommentForm from './item/BookQnaCommentForm.svelte';
+	import BookQnaQuestionItemContent from './item/BookQnaQuestionItemContent.svelte';
+	import BookQnaQuestionMark from './item/BookQnaQuestionMark.svelte';
 
 	export let title = '강좌 수강 및 학습 중 궁금한 점은 어디에 질문할 수 있나요?';
 	export let numOfAnswers = 0;
+	export let id = 0;
 
 	let isExpanded = false;
 	let isHover = false;
@@ -27,13 +30,17 @@
 		on:mousedown={() => (isActive = true)}
 		on:mouseup={() => (isActive = false)}
 	>
-		<div class="tw-text-lg tw-font-semibold tw-overflow-hidden tw-flex tw-gap-1 tw-mr-3">
-			<div style="color: var(--book-qna-primary)">Q.</div>
-			{#if isExpanded}
-				<div>{title}</div>
-			{:else}
-				<MultiClamp clamp={1}>{title}</MultiClamp>
-			{/if}
+		<div
+			class="tw-text-lg tw-font-semibold tw-overflow-hidden tw-flex tw-items-center tw-gap-1 tw-mr-3"
+		>
+			<BookQnaQuestionMark />
+			<div class="tw-ml-1">
+				{#if isExpanded}
+					<div>{title}</div>
+				{:else}
+					<MultiClamp clamp={1}>{title}</MultiClamp>
+				{/if}
+			</div>
 		</div>
 		<div class="tw-ml-auto">
 			{#if numOfAnswers}
@@ -51,10 +58,10 @@
 	</header>
 	{#if isExpanded}
 		<div class="tw-h-4" />
-		<main>
-			{#await loadData(getTestString(10, 30)) then data}
-				{data}
-			{/await}
+		<main class="tw-whitespace-pre-line">
+			<BookQnaQuestionItemContent {id} />
+			<div class="tw-h-8" />
+			<BookQnaCommentForm />
 		</main>
 	{/if}
 </div>
