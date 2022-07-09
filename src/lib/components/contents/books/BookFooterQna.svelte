@@ -3,7 +3,7 @@
 	import NewQuestionForm from '$lib/components/question/NewQuestionForm.svelte';
 	import QuestionList from '$lib/components/question/QuestionList.svelte';
 	import bookContextKey from './bookContextKey';
-	import BookQnaStatistics from './qna/BookQnaStatistics.svelte';
+	import BookQnaStatistics from '../../question/BookQnaStatistics.svelte';
 
 	import { getContext } from 'svelte';
 
