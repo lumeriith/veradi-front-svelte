@@ -78,7 +78,7 @@
 		<main class="tw-whitespace-pre-line">
 			<BookQnaQuestionItemContent {id} />
 			<div class="tw-h-8" />
-			<div class="tw-mx-7">
+			<div class="tw-ml-7">
 				<BookQnaCommentForm />
 			</div>
 		</main>

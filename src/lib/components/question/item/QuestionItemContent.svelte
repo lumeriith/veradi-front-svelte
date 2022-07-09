@@ -1,6 +1,5 @@
 <script>
 	import { getTestString, testLoadData } from '$lib/utils/testData';
-	import { comment } from 'postcss';
 
 	import { Jumper } from 'svelte-loading-spinners';
 	import { fade } from 'svelte/transition';
@@ -30,7 +29,7 @@
 		<Jumper size={40} color="var(--book-qna-primary)" />
 	</div>
 {:then data}
-	<div class="tw-flex tw-flex-col tw-gap-6" in:fade={{ duration: 200 }}>
+	<div class="tw-flex tw-flex-col tw-gap-8" in:fade={{ duration: 200 }}>
 		<div class="tw-ml-8" style="line-height: 160%;">
 			{data}
 		</div>

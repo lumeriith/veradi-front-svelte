@@ -4,8 +4,8 @@
 	import QuestionMark from './QuestionMark.svelte';
 </script>
 
-<div class="tw-flex tw-gap-1 tw-items-stretch tw-bg-[#aaa2] tw-pl-4 tw-rounded-2xl">
-	<div class="tw-mt-[4px]">
+<div class="tw-flex tw-gap-1 tw-items-stretch tw-border-b-2 tw-ml-2">
+	<div class="tw-mt-[4px] -tw-ml-[34px]">
 		<QuestionMark />
 	</div>
 	<textarea
@@ -38,7 +38,7 @@
 	}
 
 	textarea {
-		padding: 8px 5px 8px 2px;
+		padding: 8px 5px 2px 6px;
 		background-color: transparent;
 		color: inherit;
 		outline: none;

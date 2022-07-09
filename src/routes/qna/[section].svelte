@@ -1,13 +1,14 @@
 <script>
-	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
-	import NewQuestionForm from '$lib/components/question/NewQuestionForm.svelte';
-	import QuestionList from '$lib/components/question/QuestionList.svelte';
-	import TabButtonItem from '$lib/components/TabButtonItem.svelte';
-	import veradiUrls from '$lib/data/veradiUrls';
 	import { page } from '$app/stores';
-
 	import { animTrigger, animFly } from '$lib/utils/scrollEffects';
-	import BookSelect from '$lib/components/qna/BookSelect.svelte';
+	import veradiUrls from '$lib/data/veradiUrls';
+
+	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
+	import TabButtonItem from '$lib/components/TabButtonItem.svelte';
+	import SubmitQuestionSection from '$lib/components/qna/SubmitQuestionSection.svelte';
+	import MyQuestionsSection from '$lib/components/qna/MyQuestionsSection.svelte';
+	import StudySection from '$lib/components/qna/StudySection.svelte';
+	import MyBooksSection from '$lib/components/qna/MyBooksSection.svelte';
 
 	const buttons = [
 		{ name: '전체', href: veradiUrls.qna.all },
@@ -17,15 +18,12 @@
 		{ name: '나의 문제집', href: veradiUrls.qna.mybooks }
 	];
 
+	const flySettings = { y: 30, duration: 400 };
+
 	$: showSubmit = $page.params.section === 'all' || $page.params.section === 'submit';
 	$: showMyQuestions = $page.params.section === 'all' || $page.params.section === 'myquestions';
 	$: showStudy = $page.params.section === 'all' || $page.params.section === 'study';
 	$: showMyBooks = $page.params.section === 'all' || $page.params.section === 'mybooks';
-
-	let submitQuestionBookId = '';
-	let myQuestionsBookId = '';
-
-	const flySettings = { y: 30, duration: 400 };
 </script>
 
 <div style="--book-qna-primary: #5bb3ff; --book-qna-secondary: #ff0606">
@@ -51,51 +49,25 @@
 		<NarrowContainer class="tw-flex tw-flex-col tw-gap-12">
 			{#if showSubmit}
 				<div use:animFly={flySettings} use:animTrigger>
-					<header class="tw-font-heading tw-text-3xl tw-mb-1">질문하기</header>
-					<div class="tw-text-lg tw-mb-5">베라디에게 자유롭게 질문해주세요.</div>
-					<div class="tw-flex tw-justify-end tw-py-3">
-						<BookSelect bind:bookId={submitQuestionBookId} />
-					</div>
-					<NewQuestionForm disabled={submitQuestionBookId === ''} />
+					<SubmitQuestionSection />
 				</div>
 			{/if}
 
 			{#if showMyQuestions}
 				<div use:animFly={flySettings} use:animTrigger>
-					<header class="tw-font-heading tw-text-3xl tw-mb-1">내가 쓴 질문</header>
-					<div class="tw-flex tw-justify-end tw-py-3 -tw-mb-9">
-						<BookSelect bind:bookId={myQuestionsBookId} />
-					</div>
-					<QuestionList showFavorites bookId={myQuestionsBookId} />
+					<MyQuestionsSection />
 				</div>
 			{/if}
 
 			{#if showStudy}
 				<div use:animFly={flySettings} use:animTrigger>
-					<header class="tw-font-heading tw-text-3xl tw-mb-6">학습/입시</header>
-					<div
-						class="item tw-rounded-lg tw-p-4 tw-flex tw-flex-col tw-gap-1"
-						style="border: 2px solid #9994"
-					>
-						{#each [1, 2, 3] as i}
-							<div
-								class="tw-border-b-2 tw-p-2 tw-font-bold tw-cursor-pointer"
-								style="border: 2px 0 solid #9994"
-							>
-								학습/입시에 대한 글을 스크랩하고, 모아볼 수 있습니다. 클릭하면 해당 페이지로
-								이동합니다.
-							</div>
-						{/each}
-					</div>
+					<StudySection />
 				</div>
 			{/if}
 
 			{#if showMyBooks}
 				<div use:animFly={flySettings} use:animTrigger>
-					<header class="tw-font-heading tw-text-3xl tw-mb-6">나의 문제집</header>
-					<div class="item tw-rounded-lg tw-p-4" style="border: 2px solid #9994">
-						<div class="tw-h-40" />
-					</div>
+					<MyBooksSection />
 				</div>
 			{/if}
 		</NarrowContainer>
