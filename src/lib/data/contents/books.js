@@ -17,7 +17,7 @@ export default [
 		title: 'HeLiOS 실전 모의고사 Season1 3회분',
 		subtitle: '2023년 출제 가능성이 높은 신유형을 충분히 다룬 모의고사 3회분',
 		theme: {
-			bg: '#1a1c28',
+			bg: '#20212d',
 			body: '#ffffff',
 			primary: '#5585c1',
 			secondary: '#fdc465'
