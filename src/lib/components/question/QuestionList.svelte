@@ -15,6 +15,8 @@ New 융합형 문학 독법 훈련’(문학복합) 강의에 3강 이후에 교
 6평해설강의 들은 학생인데요 혹시 영상으로도 올리실계획이 있으신가요
 현주간지는 기출과 변형 N제를 모두 포함하고 있습니다!
 현주간지 basic 1주 4일차 고난도 독서 3에 4번 문제(p150)`.split('\n');
+
+	export let showFavorites = false;
 </script>
 
 <div>
@@ -24,7 +26,7 @@ New 융합형 문학 독법 훈련’(문학복합) 강의에 3강 이후에 교
 	<div class="tw-flex tw-flex-col tw-gap-3 tw-mb-4">
 		{#each [0, 1, 2] as i}
 			<div use:animTrigger use:animItem>
-				<QuestionItem title={testTitles[i]} numOfAnswers={[0, 1, 2, 3][i]} />
+				<QuestionItem title={testTitles[i]} numOfAnswers={[0, 1, 2, 3][i]} {showFavorites} />
 			</div>
 		{/each}
 	</div>

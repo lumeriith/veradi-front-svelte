@@ -8,13 +8,21 @@
 	export let title = '강좌 수강 및 학습 중 궁금한 점은 어디에 질문할 수 있나요?';
 	export let numOfAnswers = 0;
 	export let id = 0;
+	export let showFavorites = false;
 
 	let isExpanded = false;
+	let isFavorite = false;
+
 	let isHover = false;
 	let isActive = false;
 
 	function toggleExpand() {
 		isExpanded = !isExpanded;
+	}
+
+	function clickFavorite(e) {
+		e.stopPropagation();
+		isFavorite = !isFavorite;
 	}
 </script>
 
@@ -42,12 +50,21 @@
 				{/if}
 			</div>
 		</div>
-		<div class="tw-ml-auto">
-			{#if numOfAnswers}
-				<span style="color: var(--book-qna-primary)">답변 ({numOfAnswers})</span>
-			{:else}
-				<span>답변대기</span>
-			{/if}
+		<div class="tw-ml-auto tw-flex tw-items-center">
+			<button class="tw-text-lg tw-mr-2 {isFavorite ? 'active' : ''}" on:click={clickFavorite}>
+				{#if isFavorite}
+					<Icon icon="codicon:heart-filled" />
+				{:else}
+					<Icon icon="codicon:heart" />
+				{/if}
+			</button>
+			<div class="tw-w-[50px] tw-text-center">
+				{#if numOfAnswers}
+					<span style="color: var(--book-qna-primary)">답변 ({numOfAnswers})</span>
+				{:else}
+					<span>답변대기</span>
+				{/if}
+			</div>
 		</div>
 
 		{#if isExpanded}
@@ -79,5 +96,15 @@
 
 	.item.active {
 		background-color: #8883;
+	}
+
+	button {
+		color: #ffcbcb;
+		transition: color 0.1s;
+	}
+
+	button:hover,
+	button.active {
+		color: #ff4647;
 	}
 </style>

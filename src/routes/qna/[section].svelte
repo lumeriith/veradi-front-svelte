@@ -7,6 +7,7 @@
 	import { page } from '$app/stores';
 
 	import { animTrigger, animFly } from '$lib/utils/scrollEffects';
+	import BookSelect from '$lib/components/qna/BookSelect.svelte';
 
 	const buttons = [
 		{ name: '전체', href: veradiUrls.qna.all },
@@ -20,6 +21,9 @@
 	$: showMyQuestions = $page.params.section === 'all' || $page.params.section === 'myquestions';
 	$: showStudy = $page.params.section === 'all' || $page.params.section === 'study';
 	$: showMyBooks = $page.params.section === 'all' || $page.params.section === 'mybooks';
+
+	let submitQuestionBookId = '';
+	let myQuestionsBookId = '';
 
 	const flySettings = { y: 30, duration: 400 };
 </script>
@@ -49,16 +53,20 @@
 				<div use:animFly={flySettings} use:animTrigger>
 					<header class="tw-font-heading tw-text-3xl tw-mb-1">질문하기</header>
 					<div class="tw-text-lg tw-mb-5">베라디에게 자유롭게 질문해주세요.</div>
-					<div class="tw-flex tw-justify-end tw-p-3 tw-opacity-50">BookSelector</div>
-					<NewQuestionForm />
+					<div class="tw-flex tw-justify-end tw-py-3">
+						<BookSelect bind:bookId={submitQuestionBookId} />
+					</div>
+					<NewQuestionForm disabled={submitQuestionBookId === ''} />
 				</div>
 			{/if}
 
 			{#if showMyQuestions}
 				<div use:animFly={flySettings} use:animTrigger>
 					<header class="tw-font-heading tw-text-3xl tw-mb-1">내가 쓴 질문</header>
-					<div class="tw-flex tw-justify-end tw-p-3 tw-opacity-50 -tw-mb-9">BookSelector</div>
-					<QuestionList />
+					<div class="tw-flex tw-justify-end tw-py-3 -tw-mb-9">
+						<BookSelect bind:bookId={myQuestionsBookId} />
+					</div>
+					<QuestionList showFavorites bookId={myQuestionsBookId} />
 				</div>
 			{/if}
 

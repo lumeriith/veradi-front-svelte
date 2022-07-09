@@ -1,6 +1,9 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import autoExpandTextArea from '$lib/utils/autoExpandTextArea';
+
+	export let disabled = false;
+
 	let titleInput;
 
 	function titleInputKeyDown(e) {
@@ -21,7 +24,10 @@
 	}
 </script>
 
-<form on:submit|preventDefault>
+<form
+	on:submit|preventDefault
+	class={disabled ? 'tw-pointer-events-none tw-opacity-70 tw-saturate-0 tw-select-none' : ''}
+>
 	<div class="tw-bg-[#aaa2] tw-flex tw-flex-col tw-items-start tw-gap-2 tw-mb-4">
 		<input
 			bind:this={titleInput}
