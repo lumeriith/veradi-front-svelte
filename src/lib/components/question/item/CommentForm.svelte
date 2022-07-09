@@ -12,6 +12,7 @@
 		use:autoExpandTextArea
 		rows="1"
 		class="tw-flex-1"
+		style="line-height: 160%;"
 		placeholder="답변에 대한 추가 질문이 있으실 경우, 댓글을 입력하세요."
 	/>
 	<button>

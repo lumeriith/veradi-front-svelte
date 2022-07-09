@@ -31,7 +31,7 @@
 	</div>
 {:then data}
 	<div class="tw-flex tw-flex-col tw-gap-6" in:fade={{ duration: 200 }}>
-		<div class="tw-ml-8">
+		<div class="tw-ml-8" style="line-height: 160%;">
 			{data}
 		</div>
 		{#each comments as comment}
@@ -43,7 +43,7 @@
 						<BookQnaAnswerMark />
 					{/if}
 				</div>
-				<div class="tw-pt-1 tw-ml-1 tw-flex-1">{comment.content}</div>
+				<div class="tw-pt-1 tw-ml-1 tw-flex-1" style="line-height: 160%;">{comment.content}</div>
 			</div>
 		{/each}
 	</div>

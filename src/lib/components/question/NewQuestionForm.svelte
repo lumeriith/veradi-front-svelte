@@ -34,6 +34,7 @@
 			use:autoExpandTextArea
 			on:keydown={contentAreaKeyDown}
 			class="tw-px-4 tw-pt-1 tw-pb-4"
+			style="line-height: 160%;"
 			placeholder="내용을 입력해주세요. 문의글은 자신만 볼 수 있습니다."
 		/>
 		<div>
