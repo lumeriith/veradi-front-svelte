@@ -4,7 +4,7 @@
 
 	export let disabled = false;
 
-	let titleInput;
+	let titleInput, contentArea;
 
 	function titleInputKeyDown(e) {
 		if (e.keyCode === 13) {
@@ -32,11 +32,12 @@
 		<input
 			bind:this={titleInput}
 			on:keydown={titleInputKeyDown}
-			class="tw-px-4 tw-pt-4"
+			class="tw-px-4 tw-pt-4 tw-text-xl"
 			placeholder="제목을 입력해주세요"
 		/>
 		<div class="tw-h-0.5 tw-ml-4 tw-w-[200px] tw-bg-[#aaa6]" />
 		<textarea
+			bind:this={contentArea}
 			use:autoExpandTextArea
 			on:keydown={contentAreaKeyDown}
 			class="tw-px-4 tw-pt-1 tw-pb-4"

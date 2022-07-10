@@ -4,7 +4,7 @@
 	import QuestionMark from './QuestionMark.svelte';
 </script>
 
-<div class="tw-flex tw-gap-1 tw-items-stretch tw-border-b-2 tw-ml-2">
+<div class="tw-flex tw-gap-1 tw-items-stretch tw-border-b-2 tw-ml-2 tw-border-[#9996]">
 	<div class="tw-mt-[4px] -tw-ml-[34px]">
 		<QuestionMark />
 	</div>

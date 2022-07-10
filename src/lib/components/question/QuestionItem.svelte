@@ -5,13 +5,10 @@
 	import BookQnaQuestionItemContent from './item/QuestionItemContent.svelte';
 	import BookQnaQuestionMark from './item/QuestionMark.svelte';
 
-	export let title = '강좌 수강 및 학습 중 궁금한 점은 어디에 질문할 수 있나요?';
-	export let numOfAnswers = 0;
-	export let id = 0;
-	export let showFavorites = false;
+	export let item = { id: 0, title: '', answers: 0, favorite: false };
 
+	$: isFavorite = item.favorite;
 	let isExpanded = false;
-	let isFavorite = false;
 
 	let isHover = false;
 	let isActive = false;
@@ -44,9 +41,9 @@
 			<BookQnaQuestionMark />
 			<div class="tw-ml-1">
 				{#if isExpanded}
-					<div>{title}</div>
+					<div>{item.title}</div>
 				{:else}
-					<MultiClamp clamp={1}>{title}</MultiClamp>
+					<MultiClamp clamp={1}>{item.title}</MultiClamp>
 				{/if}
 			</div>
 		</div>
@@ -58,9 +55,9 @@
 					<Icon icon="codicon:heart" />
 				{/if}
 			</button>
-			<div class="tw-w-[50px] tw-text-center">
-				{#if numOfAnswers}
-					<span style="color: var(--book-qna-primary)">답변 ({numOfAnswers})</span>
+			<div class="tw-min-w-[55px] tw-text-center">
+				{#if item.answers}
+					<span style="color: var(--book-qna-primary)">답변 ({item.answers})</span>
 				{:else}
 					<span>답변대기</span>
 				{/if}
@@ -76,7 +73,7 @@
 	{#if isExpanded}
 		<div class="tw-h-4" />
 		<main class="tw-whitespace-pre-line">
-			<BookQnaQuestionItemContent {id} />
+			<BookQnaQuestionItemContent id={item.id} />
 			<div class="tw-h-8" />
 			<div class="tw-ml-7">
 				<BookQnaCommentForm />
@@ -99,7 +96,7 @@
 	}
 
 	button {
-		color: #ffcbcb;
+		color: #ff676777;
 		transition: color 0.1s;
 	}
 

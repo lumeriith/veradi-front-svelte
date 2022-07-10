@@ -30,7 +30,6 @@
 >
 	<NarrowContainer>
 		<header class="tw-font-heading tw-text-5xl tw-mb-7">교재 Q&A</header>
-		<div class="tw-text-2xl tw-font-bold tw-mb-5"># 화학 HeLios 모의고사</div>
 		<BookQnaStatistics />
 		<div class="tw-h-8" />
 		<NewQuestionForm />
