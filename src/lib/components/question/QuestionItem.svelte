@@ -28,7 +28,9 @@
 </script>
 
 <div
-	class="item tw-rounded-lg tw-p-4 {isHover ? 'hover' : ''} {isActive ? 'active' : ''}"
+	class="item tw-rounded-lg tw-p-4 {isHover && !isExpanded ? 'hover' : ''} {isActive && !isExpanded
+		? 'active'
+		: ''}"
 	style="border: 2px solid #9994"
 >
 	<header
