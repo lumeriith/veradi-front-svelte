@@ -1,13 +1,14 @@
 <script>
 	import MultiClamp from '$lib/components/MultiClamp.svelte';
 	import Icon from '@iconify/svelte';
+	import { createEventDispatcher } from 'svelte';
 	import BookQnaCommentForm from './item/CommentForm.svelte';
 	import BookQnaQuestionItemContent from './item/QuestionItemContent.svelte';
 	import BookQnaQuestionMark from './item/QuestionMark.svelte';
 
 	export let item = { id: 0, title: '', answers: 0, favorite: false };
 
-	$: isFavorite = item.favorite;
+	$: isFavorite = item.favorite > 0;
 	let isExpanded = false;
 
 	let isHover = false;
@@ -19,8 +20,11 @@
 
 	function clickFavorite(e) {
 		e.stopPropagation();
+		dispatch('favoriteChange');
 		isFavorite = !isFavorite;
 	}
+
+	const dispatch = createEventDispatcher();
 </script>
 
 <div
