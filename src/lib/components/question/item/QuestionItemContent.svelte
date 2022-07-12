@@ -7,6 +7,13 @@
 	import AnswerRating from './AnswerRating.svelte';
 	import BookQnaQuestionMark from './QuestionMark.svelte';
 
+	import test0 from '$lib/static/img/qna/test0.jpg';
+	import test1 from '$lib/static/img/qna/test1.png';
+	import test2 from '$lib/static/img/qna/test2.jpg';
+	import test3 from '$lib/static/img/qna/test3.jpg';
+
+	import PhotoList from './PhotoList.svelte';
+
 	export let id = '';
 
 	let request = testLoadData({
@@ -17,7 +24,12 @@
 			getTestString('question', 30, 30) +
 			'\n\n' +
 			getTestString('question', 5, 30),
-		photos: [],
+		photos: [
+			{ url: test0, thumb: test0 },
+			{ url: test1, thumb: test1 },
+			{ url: test2, thumb: test2 },
+			{ url: test1, thumb: test1 }
+		],
 		comments: [
 			{
 				id: 912,
@@ -30,13 +42,17 @@
 				id: 911,
 				type: 0,
 				content: getTestString('question', 8, 15),
+				photos: [],
 				rating: -1
 			},
 			{
 				id: 918,
 				type: 1,
 				content: getTestString('answer', 10, 40),
-				photos: [],
+				photos: [
+					{ url: test2, thumb: test2 },
+					{ url: test3, thumb: test3 }
+				],
 				rating: -1
 			}
 		]
@@ -59,6 +75,7 @@
 	<div class="tw-flex tw-flex-col tw-gap-8" in:fade={{ duration: 200 }}>
 		<div class="tw-ml-8" style="line-height: 160%;">
 			{response.content}
+			<PhotoList photos={response.photos} />
 		</div>
 		{#each response.comments as comment}
 			<div class="tw-flex">
@@ -71,6 +88,7 @@
 				</div>
 				<div class="tw-pt-1 tw-ml-1 tw-flex-1" style="line-height: 160%;">
 					{comment.content}
+					<PhotoList photos={comment.photos} />
 					{#if isCommentAnswer(comment)}
 						<AnswerRating {comment} />
 					{/if}
