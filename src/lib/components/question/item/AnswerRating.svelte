@@ -32,6 +32,11 @@
 		comment.rating = hoverRating;
 		isConfirmOpen = false;
 	}
+
+	function cancelRating() {
+		isConfirmOpen = false;
+		hoverRating = 3;
+	}
 </script>
 
 <div class="tw-mt-2 tw-flex tw-gap-2 tw-items-center">
@@ -73,7 +78,7 @@
 		<div class="tw-opacity-60">정말 이 답변에 {hoverRating}점을 주시겠습니까?</div>
 		<div class="tw-flex tw-gap-3">
 			<button on:click={giveRating}>별점주기</button>
-			<button on:click={() => (isConfirmOpen = false)}>취소</button>
+			<button on:click={cancelRating}>취소</button>
 		</div>
 	</div>
 {/if}
