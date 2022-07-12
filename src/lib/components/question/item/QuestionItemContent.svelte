@@ -4,6 +4,7 @@
 	import { Jumper } from 'svelte-loading-spinners';
 	import { fade } from 'svelte/transition';
 	import BookQnaAnswerMark from './AnswerMark.svelte';
+	import AnswerRating from './AnswerRating.svelte';
 	import BookQnaQuestionMark from './QuestionMark.svelte';
 
 	export let id = '';
@@ -19,21 +20,35 @@
 		photos: [],
 		comments: [
 			{
+				id: 912,
 				type: 1,
 				content: getTestString('answer', 10, 60) + '\n\n' + getTestString('answer', 10, 80),
-				photos: []
+				photos: [],
+				rating: 4
 			},
 			{
+				id: 911,
 				type: 0,
-				content: getTestString('question', 8, 15)
+				content: getTestString('question', 8, 15),
+				rating: -1
 			},
 			{
+				id: 918,
 				type: 1,
 				content: getTestString('answer', 10, 40),
-				photos: []
+				photos: [],
+				rating: -1
 			}
 		]
 	});
+
+	function isCommentQuestion(c) {
+		return c.type === 0;
+	}
+
+	function isCommentAnswer(c) {
+		return c.type === 1;
+	}
 </script>
 
 {#await request}
@@ -48,13 +63,18 @@
 		{#each response.comments as comment}
 			<div class="tw-flex">
 				<div class="tw-w-7">
-					{#if comment.type === 0}
+					{#if isCommentQuestion(comment)}
 						<BookQnaQuestionMark />
 					{:else}
 						<BookQnaAnswerMark />
 					{/if}
 				</div>
-				<div class="tw-pt-1 tw-ml-1 tw-flex-1" style="line-height: 160%;">{comment.content}</div>
+				<div class="tw-pt-1 tw-ml-1 tw-flex-1" style="line-height: 160%;">
+					{comment.content}
+					{#if isCommentAnswer(comment)}
+						<AnswerRating {comment} />
+					{/if}
+				</div>
 			</div>
 		{/each}
 	</div>
