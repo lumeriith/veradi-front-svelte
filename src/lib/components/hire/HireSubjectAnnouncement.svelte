@@ -45,7 +45,7 @@
 </NarrowContainer>
 
 <NarrowContainer
-	class="tw-h-full tw-bg-cover tw-bg-center tw-py-10 md:tw-h-48 tw-px-8 tw-flex tw-justify-center"
+	class="tw-h-full tw-bg-cover tw-bg-center tw-pb-2 md:tw-h-48 tw-px-8 tw-flex tw-justify-center tw-items-center"
 	style="background-image:url('{img_hireSubjectPhoto}')"
 >
 	<div
