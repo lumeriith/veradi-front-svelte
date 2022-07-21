@@ -1,6 +1,5 @@
-import bookContextKey from '$lib/components/contents/books/bookContextKey';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, doc, setDoc, deleteDoc, Timestamp, onSnapshot } from 'firebase/firestore';
+import { getFirestore, doc, setDoc, deleteDoc, Timestamp, onSnapshot } from 'firebase/firestore';
 
 export let app = null;
 export let db = null;
@@ -17,25 +16,25 @@ export function initFirebase() {
 		measurementId: 'G-YJ6FSE2ZSP'
 	};
 	app = initializeApp(firebaseConfig);
-  db = getFirestore(app);
+	db = getFirestore(app);
 }
 
 export async function setBoard(collect, document, data) {
-  await setDoc(doc(db, collect, document), data);
+	await setDoc(doc(db, collect, document), data);
 }
 
 export async function deleteBoard(collect, document) {
-  await deleteDoc(doc(db, collect, document));
+	await deleteDoc(doc(db, collect, document));
 }
 
 export function getBoard(collect, document) {
-  let unsub = [];
-  onSnapshot(doc(db, collect, document), (doc) => {
-    unsub.push({ ...doc.data(), id: doc.id })
-  });
-  return unsub;
+	let unsub = [];
+	onSnapshot(doc(db, collect, document), (doc) => {
+		unsub.push({ ...doc.data(), id: doc.id });
+	});
+	return unsub;
 }
 
 export function tsDate(date) {
-  return Timestamp.fromDate(new Date(date))
+	return Timestamp.fromDate(new Date(date));
 }

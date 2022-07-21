@@ -17,10 +17,12 @@
 	export let color = '#555555';
 	export let title = 'Button';
 	export let buttonId;
+	export let disabled = false;
 </script>
 
 <Button
 	class="tw-flex-1 tw-py-3 tw-rounded-full tw-border-0"
+	{disabled}
 	on:click
 	id={buttonId}
 	style="background-color:{color};"

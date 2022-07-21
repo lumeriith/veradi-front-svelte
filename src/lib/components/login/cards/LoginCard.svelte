@@ -1,6 +1,5 @@
 <script>
-  
-  import SocialLoginButton from '$lib/components/login/SocialLoginButton.svelte';
+	import SocialLoginButton from '$lib/components/login/SocialLoginButton.svelte';
 	import LoginInput from '$lib/components/login/LoginInput.svelte';
 	import PillButton from '$lib/components/login/PillButton.svelte';
 	import MainError from '$lib/components/login/MainError.svelte';
@@ -12,9 +11,7 @@
 	import { isLoggedIn } from '$lib/store';
 	import { login, loginGoogleAPI, logout } from '$lib/firebase/account';
 
-	export let onClose = () => {
-    
-  };
+	export let onClose = () => {};
 
 	let inputEmail, inputPassword;
 	let loginError = false;
@@ -34,7 +31,7 @@
 		}
 	];
 
-	let loginErrorText = 'fewfafwefaq';
+	let isBusy = false;
 
 	function onLoginClick() {
 		loginError = false;
@@ -56,28 +53,31 @@
 	// -------------- firebase - login ------------------- //
 
 	function tryLogin() {
+		isBusy = true;
+		loginError = false;
 		login(inputEmail, inputPassword).then((didSucceed) => {
+			isBusy = false;
 			if (didSucceed) {
 				onClose();
-        loginError = false;
+				loginError = false;
 			} else {
-
-        loginError = true;
+				loginError = true;
 			}
 		});
 	}
 
-  function loginWithGoogle() {
-    loginGoogleAPI().then((didSucceed) => {
-      if (didSucceed) {
-        onClose();
-        loginError = false;
-      } else {
-        loginError = true;
-      }
-    })
-  }
-
+	function loginWithGoogle() {
+		loginError = false;
+		loginGoogleAPI().then((didSucceed) => {
+			isBusy = false;
+			if (didSucceed) {
+				onClose();
+				loginError = false;
+			} else {
+				loginError = true;
+			}
+		});
+	}
 </script>
 
 <Card
@@ -94,12 +94,16 @@
 				<LoginInput title="비밀번호" type="password" bind:value={inputPassword} />
 			</div>
 			<Input class="tw-py-2" id="c1" type="checkbox" label="로그인 상태 유지" />
-			<MainError isState={loginError} title="로그인 오류" text="아이디와 비밀번호가 일치하지 않습니다." />
+			<MainError
+				isState={loginError}
+				title="로그인 오류"
+				text="아이디와 비밀번호가 일치하지 않습니다."
+			/>
 			<div class="tw-flex tw-items-stretch tw-flex-col tw-gap-5">
 				{#if $isLoggedIn}
 					<PillButton on:click={logout} title="로그아웃" color="#5AC2FF" />
 				{:else}
-					<PillButton on:click={tryLogin} title="로그인" color="#5AC2FF" />
+					<PillButton on:click={tryLogin} disabled={isBusy} title="로그인" color="#5AC2FF" />
 				{/if}
 				<div class="tw-flex tw-gap-8">
 					<SocialLoginButton event={loginWithGoogle} url={img_google} text="Google로 로그인" />
