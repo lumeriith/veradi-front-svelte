@@ -12,8 +12,6 @@
 
 	import BottomNav from '$lib/components/nav/BaseBottomNav.svelte';
 	import BaseNavBar from '$lib/components/nav/BaseNavBar.svelte';
-	import { initFirebase } from '$lib/firebase/app';
-	import { initAccount } from '$lib/firebase/account';
 
 	const items = [
 		{
@@ -63,8 +61,6 @@
 
 	onMount(() => {
 		AOS.init();
-		initFirebase();
-		initAccount();
 	});
 </script>
 
