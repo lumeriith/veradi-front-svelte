@@ -14,6 +14,7 @@
 	import NarrowContainer from '../NarrowContainer.svelte';
 	import BluePillButton from '../BluePillButton.svelte';
 	import ContentItem from './subject/ContentItem.svelte';
+	import ClearGrayPillButton from '../ClearGrayPillButton.svelte';
 
 	export let subjectName, subjectIntro, subjectIntroUrl;
 	export let applicationDate, applicationIntake;
@@ -43,32 +44,32 @@
 	<div class="tw-h-8" />
 </NarrowContainer>
 
-<div
-	class="tw-bg-cover tw-bg-center tw-py-8 md:tw-py-0 md:tw-h-60"
+<NarrowContainer
+	class="tw-h-full tw-bg-cover tw-bg-center tw-py-10 md:tw-h-48 tw-px-8 tw-flex tw-justify-center"
 	style="background-image:url('{img_hireSubjectPhoto}')"
 >
-	<NarrowContainer class="tw-h-full">
-		<div
-			class="tw-h-full tw-flex tw-flex-col md:tw-flex-row tw-gap-4 md:tw-gap-16 tw-justify-center tw-items-center tw-text-center md:tw-text-left"
-		>
-			<header class="tw-font-heading tw-text-2xl tw-whitespace-nowrap md:tw-w-36">
-				<div>베라디 {subjectName}팀</div>
-				<div>모집 요강</div>
-			</header>
-			<main class="tw-font-semibold tw-text-lg md:tw-flex-1">
-				<div class="tw-py-2">
-					{#each subjectIntro.split('\n') as para}
-						<p class="tw-mb-2">{para}</p>
-					{/each}
-				</div>
-				<div class="tw-flex tw-gap-4 tw-flex-wrap tw-justify-center md:tw-justify-start">
-					<BluePillButton href={subjectIntroUrl}>{subjectName}팀 소개보기</BluePillButton>
-					<BluePillButton>지원서류 다운로드</BluePillButton>
-				</div>
-			</main>
-		</div>
-	</NarrowContainer>
-</div>
+	<div
+		class="tw-flex tw-flex-col tw-gap-3 md:tw-flex-row tw-justify-between tw-flex-1 tw-max-w-2xl"
+	>
+		<header class="tw-font-heading tw-text-2xl tw-whitespace-nowrap md:tw-w-36 tw-text-white">
+			<div>베라디 {subjectName}팀</div>
+			<div>모집 요강</div>
+		</header>
+		<main class="tw-text-lg tw-text-white tw-mt-1">
+			<div class="tw-pb-2">
+				{#each subjectIntro.split('\n') as para}
+					<p class="tw-mb-1">{para}</p>
+				{/each}
+			</div>
+			<div
+				class="tw-flex tw-gap-4 tw-flex-wrap tw-justify-center md:tw-justify-start tw-mt-6 md:tw-mt-0"
+			>
+				<ClearGrayPillButton href={subjectIntroUrl}>{subjectName}팀 소개보기</ClearGrayPillButton>
+				<ClearGrayPillButton>지원서류 다운로드</ClearGrayPillButton>
+			</div>
+		</main>
+	</div>
+</NarrowContainer>
 
 <NarrowContainer>
 	<header class={headingClasses}>모집개요</header>

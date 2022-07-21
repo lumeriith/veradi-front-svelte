@@ -40,7 +40,7 @@
 		/>
 	</div>
 
-	<TabButtons buttons={tabs} />
+	<TabButtons buttons={tabs} class="lg:tw-max-w-2xl" />
 </NarrowContainer>
 
 <div class="tw-bg-[#f3f3f3]" use:animTrigger>

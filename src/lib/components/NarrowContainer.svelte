@@ -1,9 +1,10 @@
 <script>
 	let className = '';
 	export { className as class };
+	export let style = '';
 </script>
 
-<div {...$$restProps} class={className}>
+<div {...$$restProps} class={className} {style}>
 	<slot />
 </div>
 

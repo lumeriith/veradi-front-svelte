@@ -19,7 +19,7 @@
 
 	// Modify here!
 	import { MathInfo as subjectInfo } from '$lib/components/hire/constants/SubjectHireInfo.svelte';
-	let subjectUrl = veradiUrls.introMath;
+	let subjectUrl = veradiUrls.introduction.math;
 	//
 </script>
 
