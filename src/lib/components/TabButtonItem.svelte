@@ -30,7 +30,6 @@
 		width: 110px;
 		white-space: nowrap;
 		border-radius: 9999px;
-		font-weight: bold;
 		transition: background-color 0.2s, color 0.2s;
 	}
 
@@ -41,6 +40,7 @@
 	button.active {
 		background-color: #ddf3ff;
 		color: #3c9fcb;
+		font-weight: 600;
 	}
 
 	button:hover:not(.active) {
