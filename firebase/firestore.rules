@@ -1,9 +1,67 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null && request.auth.uid != null;
+    }
+
+    function isStudent() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'student';
+    }
+
+    function isTeacher() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'teacher';
+    }
+    
     match /{document=**} {
-      allow read, write: if
-          request.time < timestamp.date(2022, 7, 25);
+      allow read, write: if false;
+    }
+
+    match /users/{userId} {
+      allow read: if isSignedIn() &&
+        userId == request.auth.uid;
+    }
+
+    match /bookQuestions/{questionId} {
+      allow create: if isSignedIn() &&
+        request.resource.data;
+      allow read: if isSignedIn() && (
+          resource.data.author == request.auth.uid ||
+          isTeacher()
+        );
+      allow update: if isSignedIn() &&
+        resource.data.author == request.auth.uid &&
+        resource.data.author == request.data.author;
+      // allow delete: if isSignedIn() && resource.data.author == request.auth.uid;
+      // 기본적으로 Delete는 subcollection을 삭제하지 않으므로, 
+      // https://firebase.google.com/docs/firestore/solutions/delete-collections
+      // 이를 참고하여 Cloud Function으로 삭제해야한다.
+
+      // 답글 관련 rules
+      match /replies/{replyId} {
+        allow create: if isSignedIn() && 
+        // 기본적인 데이터 검증 절차
+        request.resource.data.author == request.auth.uid &&
+        request.resource.data.content != "" &&
+        (request.resource.data.isQuestion || isTeacher()) && // 답변은 teacher만 가능
+        request.resource.data.modifyDate == request.time &&
+        request.resource.data.postDate == request.time &&
+        request.resource.data.rating == -1 &&
+        // Teacher가 아니라면 자신의 글에만 reply할 수 있다.
+        (isTeacher() || get(/databases/$(database)/documents/bookQuestions/$(questionId)).data.author == request.auth.uid);
+        allow read: if isSignedIn() &&
+          // Teacher가 아니라면 자신이 쓴 글의 답글만 볼 수 있다.
+          (isTeacher() || get(/databases/$(database)/documents/bookQuestions/$(questionId)).data.author == request.auth.uid);
+        allow update: if isSignedIn() &&
+          resource.data.author == request.auth.uid && // 자신의 글이고
+          request.resource.data.author == resource.data.author && // 변하면 안되는 것들은 변하지 말아야 하고
+          request.resource.data.isQuestion == resource.data.isQuestion &&
+          request.resource.data.postDate == resource.data.postDate &&
+          request.resource.data.rating == resource.data.rating &&
+          request.resource.data.modifyDate == request.time; // modifyDate가 제대로 현재 시간이어야 한다.
+        allow delete: if isSignedIn() &&
+          resource.data.author == request.auth.uid;
+      }
     }
   }
 }
