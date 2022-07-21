@@ -16,7 +16,7 @@
 		color: white;
 		font-size: 1rem;
 		font-weight: 500;
-		padding: 8px 36px;
+		padding: 7px 35px;
 		border-radius: 9999px;
 		border: 2px solid white;
 		white-space: nowrap;
