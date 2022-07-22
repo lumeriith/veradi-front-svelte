@@ -3,18 +3,12 @@
 	import books from '$lib/data/contents/books';
 	import { readableNameBySubjectIds } from '$lib/data/subjects';
 
-	export let subjectId = '';
-	export let bookId = '';
+	export let subjectId = -1;
+	export let bookId = -1;
 </script>
 
-<Input
-	type="select"
-	size="sm"
-	class="book-select tw-w-auto"
-	bind:value={subjectId}
-	on:change={() => (bookId = '')}
->
-	<option value="">과목명</option>
+<Input type="select" size="sm" class="book-select tw-w-auto" bind:value={subjectId}>
+	<option value={-1}>과목명</option>
 	{#each Object.entries(readableNameBySubjectIds) as [id, name] (id)}
 		<option value={id}>{name}</option>
 	{/each}
@@ -24,10 +18,10 @@
 	type="select"
 	size="sm"
 	class="book-select book-select-subject tw-w-auto"
-	disabled={subjectId === ''}
+	disabled={subjectId === -1}
 	bind:value={bookId}
 >
-	<option value="">교재 이름</option>
+	<option value={-1}>교재 이름</option>
 	{#each books.filter((b) => b.subject === subjectId) as book (book.id)}
 		<option value={book.id}>{book.title}</option>
 	{/each}

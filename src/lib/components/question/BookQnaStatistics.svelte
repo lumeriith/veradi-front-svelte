@@ -1,4 +1,6 @@
 <script>
+	import books from '$lib/data/contents/books';
+
 	import { testLoadData } from '$lib/utils/testData';
 
 	import Icon from '@iconify/svelte';
@@ -8,7 +10,7 @@
 
 	$: request = testLoadData({
 		id: bookId,
-		title: '# 화학 HeLiOS 모의고사',
+		title: `# ${books.find((b) => b.id == bookId).title}`,
 		rating: '98%',
 		acceptanceRate: '100%',
 		estDays: '1~2'

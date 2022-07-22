@@ -1,11 +1,35 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import autoExpandTextArea from '$lib/utils/autoExpandTextArea';
+	import { createBookQuestion } from '$lib/firebase/bookQuestions';
+	import { createEventDispatcher } from 'svelte';
 
 	export let disabled = false;
+	export let bookId = -1;
+
+	const dispatch = createEventDispatcher();
+
+	let title = '',
+		content = '';
+	let isBusy = false;
+	$: isValid = title && content && bookId !== -1;
+	let errorMsg = '';
+
+	async function submitQuestion() {
+		isBusy = true;
+		errorMsg = '';
+		try {
+			await createBookQuestion(bookId, title, content);
+			title = '';
+			content = '';
+			dispatch('submit');
+		} catch (error) {
+			errorMsg = error;
+		}
+		isBusy = false;
+	}
 
 	let titleInput, contentArea;
-
 	function titleInputKeyDown(e) {
 		if (e.keyCode === 13) {
 			e.preventDefault();
@@ -13,7 +37,6 @@
 			contentArea.focus();
 		}
 	}
-
 	function contentAreaKeyDown(e) {
 		if (e.keyCode === 8 && contentArea.selectionStart === 0 && contentArea.selectionEnd === 0) {
 			e.preventDefault();
@@ -34,6 +57,8 @@
 			on:keydown={titleInputKeyDown}
 			class="tw-px-4 tw-pt-4 tw-text-xl"
 			placeholder="제목을 입력해주세요"
+			disabled={isBusy}
+			bind:value={title}
 		/>
 		<div class="tw-h-0.5 tw-ml-4 tw-w-[200px] tw-bg-[#aaa6]" />
 		<textarea
@@ -43,6 +68,8 @@
 			class="tw-px-4 tw-pt-1 tw-pb-4"
 			style="line-height: 160%;"
 			placeholder="내용을 입력해주세요. 문의글은 자신만 볼 수 있습니다."
+			disabled={isBusy}
+			bind:value={content}
 		/>
 		<div>
 			<button
@@ -51,9 +78,19 @@
 			>
 		</div>
 	</div>
-	<div class="tw-flex tw-justify-end">
-		<button class="tw-flex tw-justify-center tw-items-center tw-gap-1.5 submit"
-			><Icon icon="bi:pencil-square" /><span>질문하기</span></button
+	<div class="tw-flex tw-items-center">
+		{#if errorMsg}
+			<div
+				class="tw-bg-[#ff14143a] tw-py-1 tw-px-2 tw-flex tw-items-center tw-gap-1.5 tw-font-semibold"
+			>
+				<Icon icon="bx:error-circle" />
+				{errorMsg}
+			</div>
+		{/if}
+		<button
+			class="tw-flex tw-justify-center tw-items-center tw-gap-1.5 submit tw-ml-auto"
+			disabled={isBusy || !isValid}
+			on:click={submitQuestion}><Icon icon="bi:pencil-square" /><span>질문하기</span></button
 		>
 	</div>
 </form>
@@ -82,6 +119,10 @@
 	button.submit:active {
 		filter: brightness(0.9);
 		transform: scale(0.95);
+	}
+
+	button:disabled {
+		opacity: 0.5;
 	}
 
 	input,

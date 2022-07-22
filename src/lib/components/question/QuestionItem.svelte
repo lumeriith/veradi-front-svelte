@@ -8,7 +8,8 @@
 
 	export let item = { id: 0, title: '', answers: 0, favorite: false };
 
-	$: isFavorite = item.favorite > 0;
+	$: isFavorite = item.favorite.seconds > 0;
+	console.log(item);
 	let isExpanded = false;
 
 	let isHover = false;

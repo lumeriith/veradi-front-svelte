@@ -7,20 +7,8 @@
 
 	import { getContext } from 'svelte';
 
-	const defaultBook = {
-		id: 0,
-		image: '',
-		subject: '',
-		title: '',
-		subtitle: '',
-		theme: {
-			bg: '#fff',
-			body: '#000',
-			primary: '#f00',
-			secondary: '#0f0'
-		}
-	};
 	const book = getContext(bookContextKey);
+	let version = 0;
 </script>
 
 <div
@@ -32,8 +20,10 @@
 		<header class="tw-font-heading tw-text-5xl tw-mb-7">교재 Q&A</header>
 		<BookQnaStatistics />
 		<div class="tw-h-8" />
-		<NewQuestionForm />
+		<NewQuestionForm bookId={book.id} on:submit={() => version++} />
 		<div class="tw-h-8" />
-		<QuestionList />
+		{#key version}
+			<QuestionList bookId={book.id} />
+		{/key}
 	</NarrowContainer>
 </div>

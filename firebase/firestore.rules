@@ -23,8 +23,6 @@ service cloud.firestore {
     }
 
     match /bookQuestions/{questionId} {
-      allow create: if isSignedIn() &&
-        request.resource.data;
       allow read: if isSignedIn() && (
           resource.data.author == request.auth.uid ||
           isTeacher()
@@ -39,16 +37,6 @@ service cloud.firestore {
 
       // 답글 관련 rules
       match /replies/{replyId} {
-        allow create: if isSignedIn() && 
-        // 기본적인 데이터 검증 절차
-        request.resource.data.author == request.auth.uid &&
-        request.resource.data.content != "" &&
-        (request.resource.data.isQuestion || isTeacher()) && // 답변은 teacher만 가능
-        request.resource.data.modifyDate == request.time &&
-        request.resource.data.postDate == request.time &&
-        request.resource.data.rating == -1 &&
-        // Teacher가 아니라면 자신의 글에만 reply할 수 있다.
-        (isTeacher() || get(/databases/$(database)/documents/bookQuestions/$(questionId)).data.author == request.auth.uid);
         allow read: if isSignedIn() &&
           // Teacher가 아니라면 자신이 쓴 글의 답글만 볼 수 있다.
           (isTeacher() || get(/databases/$(database)/documents/bookQuestions/$(questionId)).data.author == request.auth.uid);
@@ -57,7 +45,10 @@ service cloud.firestore {
           request.resource.data.author == resource.data.author && // 변하면 안되는 것들은 변하지 말아야 하고
           request.resource.data.isQuestion == resource.data.isQuestion &&
           request.resource.data.postDate == resource.data.postDate &&
-          request.resource.data.rating == resource.data.rating &&
+          ( // rating이 변하지 않았거나 질문자가 새로 평가한 것이어야 하고
+            request.resource.data.rating == resource.data.rating ||
+            (resource.data.rating == -1 && request.resource.data.rating != -1 && get(/databases/$(database)/documents/bookQuestions/$(questionId)).data.author == request.auth.uid)
+          ) &&
           request.resource.data.modifyDate == request.time; // modifyDate가 제대로 현재 시간이어야 한다.
         allow delete: if isSignedIn() &&
           resource.data.author == request.auth.uid;

@@ -12,6 +12,7 @@
 
 	import BottomNav from '$lib/components/nav/BaseBottomNav.svelte';
 	import BaseNavBar from '$lib/components/nav/BaseNavBar.svelte';
+	import { isLoggedIn } from '$lib/store';
 
 	const items = [
 		{
@@ -65,5 +66,7 @@
 </script>
 
 <BaseNavBar {items} {extItems} />
-<slot />
+{#key $isLoggedIn}
+	<slot />
+{/key}
 <BottomNav {items} />

@@ -33,7 +33,6 @@
 		if (v < 0) v = 0;
 		calculatedSize =
 			book.content.imageSize + (1 - v) * (book.content.imageSizeMobile - book.content.imageSize);
-		console.log(`v: ${v}, calSize: ${calculatedSize}`);
 	}
 
 	onMount(() => {
