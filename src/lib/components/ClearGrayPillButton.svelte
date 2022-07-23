@@ -14,9 +14,9 @@
 		transition: background-color 0.05s;
 		background-color: transparent;
 		color: white;
-		font-size: 1rem;
+		font-size: 0.9rem;
 		font-weight: 500;
-		padding: 7px 35px;
+		padding: 5px 31px;
 		border-radius: 9999px;
 		border: 2px solid white;
 		white-space: nowrap;

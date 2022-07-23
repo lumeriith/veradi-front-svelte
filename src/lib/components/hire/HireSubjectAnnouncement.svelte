@@ -45,30 +45,28 @@
 </NarrowContainer>
 
 <NarrowContainer
-	class="tw-h-full tw-bg-cover tw-bg-center tw-pb-2 md:tw-h-48 tw-px-8 tw-flex tw-justify-center tw-items-center"
+	class="tw-h-full tw-bg-cover tw-bg-center md:tw-h-56 tw-px-12 lg:tw-px-32 tw-py-8 tw-flex tw-justify-between tw-items-center tw-flex-col md:tw-flex-row"
 	style="background-image:url('{img_hireSubjectPhoto}')"
 >
-	<div
-		class="tw-flex tw-flex-col tw-gap-3 md:tw-flex-row tw-justify-between tw-flex-1 tw-max-w-2xl"
+	<header
+		class="tw-font-heading tw-text-2xl tw-whitespace-nowrap md:tw-w-36 tw-text-white tw-text-center md:tw-text-left tw-mb-4 md:tw-mb-0"
 	>
-		<header class="tw-font-heading tw-text-2xl tw-whitespace-nowrap md:tw-w-36 tw-text-white">
-			<div>베라디 {subjectName}팀</div>
-			<div>모집 요강</div>
-		</header>
-		<main class="tw-text-lg tw-text-white tw-mt-1">
-			<div class="tw-pb-2">
-				{#each subjectIntro.split('\n') as para}
-					<p class="tw-mb-1">{para}</p>
-				{/each}
-			</div>
-			<div
-				class="tw-flex tw-gap-4 tw-flex-wrap tw-justify-center md:tw-justify-start tw-mt-6 md:tw-mt-0"
-			>
-				<ClearGrayPillButton href={subjectIntroUrl}>{subjectName}팀 소개보기</ClearGrayPillButton>
-				<ClearGrayPillButton>지원서류 다운로드</ClearGrayPillButton>
-			</div>
-		</main>
-	</div>
+		<div>베라디 {subjectName}팀</div>
+		<div>모집 요강</div>
+	</header>
+	<main class="tw-text-lg tw-text-white tw-mt-1">
+		<div class="tw-pb-2">
+			{#each subjectIntro.split('\n') as para}
+				<p class="tw-mb-1.5">{para}</p>
+			{/each}
+		</div>
+		<div
+			class="tw-flex tw-gap-4 tw-flex-wrap tw-justify-center md:tw-justify-start tw-mt-6 md:tw-mt-2"
+		>
+			<ClearGrayPillButton href={subjectIntroUrl}>{subjectName}팀 소개보기</ClearGrayPillButton>
+			<ClearGrayPillButton>지원서류 다운로드</ClearGrayPillButton>
+		</div>
+	</main>
 </NarrowContainer>
 
 <NarrowContainer>
