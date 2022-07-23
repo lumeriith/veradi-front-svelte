@@ -46,7 +46,7 @@
 			href: '#'
 		},
 		{
-			text: 'QnA',
+			text: '나의 강의실',
 			href: veradiUrls.qna.index,
 			children: [
 				{ text: '전체', href: veradiUrls.qna.all },
