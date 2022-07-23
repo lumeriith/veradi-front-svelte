@@ -3,67 +3,20 @@
 
 	import { Jumper } from 'svelte-loading-spinners';
 	import { fade } from 'svelte/transition';
-	import BookQnaAnswerMark from './AnswerMark.svelte';
-	import AnswerRating from './AnswerRating.svelte';
-	import BookQnaQuestionMark from './QuestionMark.svelte';
-
-	import test0 from '$lib/static/img/qna/test0.jpg';
-	import test1 from '$lib/static/img/qna/test1.png';
-	import test2 from '$lib/static/img/qna/test2.jpg';
-	import test3 from '$lib/static/img/qna/test3.jpg';
-
+	import AnswerMark from './AnswerMark.svelte';
+	import QuestionMark from './QuestionMark.svelte';
 	import PhotoList from './PhotoList.svelte';
+	import ItemFooter from './ItemFooter.svelte';
+	import { getBookQuestionReplies } from '$lib/firebase/bookQuestions';
+	import { isLoggedIn } from '$lib/store';
 
 	export let id = '';
 
-	let request = testLoadData({
-		title: '',
-		content:
-			id +
-			'번째 게시물입니다. ' +
-			getTestString('question', 30, 30) +
-			'\n\n' +
-			getTestString('question', 5, 30),
-		photos: [
-			{ url: test0, thumb: test0 },
-			{ url: test1, thumb: test1 },
-			{ url: test2, thumb: test2 },
-			{ url: test1, thumb: test1 }
-		],
-		comments: [
-			{
-				id: 912,
-				type: 1,
-				content: getTestString('answer', 10, 60) + '\n\n' + getTestString('answer', 10, 80),
-				photos: [],
-				rating: 4
-			},
-			{
-				id: 911,
-				type: 0,
-				content: getTestString('question', 8, 15),
-				photos: [],
-				rating: -1
-			},
-			{
-				id: 918,
-				type: 1,
-				content: getTestString('answer', 10, 40),
-				photos: [
-					{ url: test2, thumb: test2 },
-					{ url: test3, thumb: test3 }
-				],
-				rating: -1
-			}
-		]
-	});
-
-	function isCommentQuestion(c) {
-		return c.type === 0;
-	}
-
-	function isCommentAnswer(c) {
-		return c.type === 1;
+	let request = new Promise(() => {});
+	$: {
+		if ($isLoggedIn) {
+			request = getBookQuestionReplies(id);
+		}
 	}
 </script>
 
@@ -72,28 +25,32 @@
 		<Jumper size={40} color="var(--book-qna-primary)" />
 	</div>
 {:then response}
-	<div class="tw-flex tw-flex-col tw-gap-8" in:fade={{ duration: 200 }}>
-		<div class="tw-ml-8" style="line-height: 160%;">
-			{response.content}
-			<PhotoList photos={response.photos} />
-		</div>
-		{#each response.comments as comment}
-			<div class="tw-flex">
-				<div class="tw-w-7">
-					{#if isCommentQuestion(comment)}
-						<BookQnaQuestionMark />
-					{:else}
-						<BookQnaAnswerMark />
-					{/if}
+	<div class="tw-flex tw-flex-col tw-gap-9" in:fade={{ duration: 200 }}>
+		{#each response as reply, i}
+			{#if i === 0}
+				<div class="tw-flex">
+					<div class="tw-pt-1 tw-ml-8 tw-flex-1" style="line-height: 160%;">
+						{reply.content}
+						<PhotoList photos={reply.photos} />
+						<ItemFooter {reply} />
+					</div>
 				</div>
-				<div class="tw-pt-1 tw-ml-1 tw-flex-1" style="line-height: 160%;">
-					{comment.content}
-					<PhotoList photos={comment.photos} />
-					{#if isCommentAnswer(comment)}
-						<AnswerRating {comment} />
-					{/if}
+			{:else}
+				<div class="tw-flex">
+					<div class="tw-w-7">
+						{#if reply.isQuestion}
+							<QuestionMark />
+						{:else}
+							<AnswerMark />
+						{/if}
+					</div>
+					<div class="tw-pt-1 tw-ml-1 tw-flex-1" style="line-height: 160%;">
+						{reply.content}
+						<PhotoList photos={reply.photos} />
+						<ItemFooter {reply} showRating={!reply.isQuestion} />
+					</div>
 				</div>
-			</div>
+			{/if}
 		{/each}
 	</div>
 {/await}

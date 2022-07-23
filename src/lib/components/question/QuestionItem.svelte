@@ -6,10 +6,10 @@
 	import BookQnaQuestionItemContent from './item/QuestionItemContent.svelte';
 	import BookQnaQuestionMark from './item/QuestionMark.svelte';
 
-	export let item = { id: 0, title: '', answers: 0, favorite: false };
+	export let item = { title: '', answers: 0, favorite: { seconds: 0 } };
 
 	$: isFavorite = item.favorite.seconds > 0;
-	console.log(item);
+
 	let isExpanded = false;
 
 	let isHover = false;
@@ -78,7 +78,6 @@
 		{/if}
 	</header>
 	{#if isExpanded}
-		<div class="tw-h-4" />
 		<main class="tw-whitespace-pre-line">
 			<BookQnaQuestionItemContent id={item.id} />
 			<div class="tw-h-8" />

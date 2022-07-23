@@ -24,6 +24,24 @@ export function createBookQuestion(bookId, title, content) {
 	return callableCreateBookQuestion({ bookId, title, content });
 }
 
+export async function getBookQuestionReplies(questionId) {
+	if (!auth.currentUser) throw new Error('Unauthorized');
+	if (!questionId) throw new Error('Invalid Argument');
+
+	const q = query(
+		collection(firestore, `bookQuestions/${questionId}/replies`),
+		orderBy('postDate')
+	);
+
+	const docs = await getDocs(q);
+	const result = [];
+	docs.forEach((doc) => {
+		const data = doc.data();
+		result.push(data);
+	});
+	return result;
+}
+
 export async function getMyBookQuestions(bookId = -1) {
 	if (!auth.currentUser) throw new Error('Unauthorized');
 	let q;
@@ -48,6 +66,7 @@ export async function getMyBookQuestions(bookId = -1) {
 	const result = [];
 	docs.forEach((doc) => {
 		const data = doc.data();
+		data.id = doc.id;
 		result.push(data);
 	});
 	return result;

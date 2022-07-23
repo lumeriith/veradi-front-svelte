@@ -1,7 +1,7 @@
 <script>
 	import PhotoItem from './PhotoItem.svelte';
 
-	export let photos = [{ url: '', thumb: '' }];
+	export let photos = [];
 </script>
 
 {#if photos && photos.length > 0}
