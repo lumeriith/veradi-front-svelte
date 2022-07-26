@@ -25,9 +25,11 @@
 	import img_password from '$lib/static/img/login/password.png';
 	import img_google from '$lib/static/img/login/googleIcon.png';
 	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
+  import GeneralRulesPopup from '$lib/components/login/terms/GeneralRulesPopup.svelte';
 
 	let inputName, inputEmail, inputPassword;
 	let registerError = false;
+
 
 	const REGISTER_VALIDATION_CHECKS = [
 		{
@@ -75,9 +77,24 @@
 		let regExp = /[가-힣]/g;
 		return regExp.test(str);
 	}
+
+  let isGeneralTermsShown = false;
+
+  function openGeneralTermsPopup() {
+    isGeneralTermsShown = true;
+  }
+  function closeGeneralTermsPopup() {
+    isGeneralTermsShown = false;
+  }
+
 </script>
 
-<Container class="py-4" style="transition:0.6s;" data-aos="zoom-out">
+
+{#if isGeneralTermsShown}
+	<GeneralRulesPopup onClose={closeGeneralTermsPopup} />
+{/if}
+
+<Container class="py-4 z-1">
 	<Row>
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 		<Col xs="12" sm="10" md="8" lg="6" xl="6">
@@ -136,7 +153,7 @@
 										<Input id="c1" type="checkbox" />
 										<Form style="font-size:14px; letter-spacing:-1px;">
 											<span>베라디 </span>
-											<a href="http://www.naver.com">이용 약관</a>
+											<a on:click={openGeneralTermsPopup}>이용 약관</a>
 											<span> 및 </span>
 											<a href="http://www.naver.com">개인정보 취급방침</a><span
 												>에 대한 내용을 모두 확인하였으며, 이에 동의합니다.</span
@@ -184,3 +201,4 @@
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 	</Row>
 </Container>
+

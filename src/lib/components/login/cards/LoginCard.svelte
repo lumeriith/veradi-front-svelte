@@ -111,9 +111,9 @@
 				</div>
 				<div />
 				<div class="tw-flex tw-mb-5 tw-text-sm tw-gap-2 tw-text-gray-500 tw-justify-center">
-					<a href="/login/register">회원가입</a>
+					<a on:click={onClose} href="/login/register">회원가입</a>
 					<div class="tw-w-[1px] tw-bg-slate-300" />
-					<a href="/login/resetPassword">비밀번호 찾기</a>
+					<a on:click={onClose} href="/login/resetPassword">비밀번호 찾기</a>
 				</div>
 			</div>
 		</main>
