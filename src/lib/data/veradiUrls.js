@@ -8,6 +8,10 @@ export default {
 		study: '/qna/study',
 		mybooks: '/qna/mybooks'
 	},
+	// 입시 멘토링
+	mentor: {
+		index: '/mentor'
+	},
 	// 문제집
 	contents: {
 		list: {

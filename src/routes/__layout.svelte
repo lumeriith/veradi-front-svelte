@@ -43,7 +43,7 @@
 		},
 		{
 			text: '입시 멘토링',
-			href: '#'
+			href: veradiUrls.mentor.index
 		},
 		{
 			text: '나의 강의실',
