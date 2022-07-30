@@ -14,7 +14,7 @@
 		{ name: '전체', href: veradiUrls.qna.all },
 		{ name: '질문하기', href: veradiUrls.qna.submit },
 		{ name: '내가 쓴 질문', href: veradiUrls.qna.myquestions },
-		{ name: '학습/입시', href: veradiUrls.qna.study },
+		{ name: '입시 멘토링', href: veradiUrls.qna.study },
 		{ name: '나의 문제집', href: veradiUrls.qna.mybooks }
 	];
 
