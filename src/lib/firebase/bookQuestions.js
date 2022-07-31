@@ -1,10 +1,8 @@
+import {} from '$lib/firebase/app'; // init app (side effect)
+
 import {
 	getFirestore,
 	doc,
-	setDoc,
-	deleteDoc,
-	Timestamp,
-	onSnapshot,
 	query,
 	collection,
 	where,
