@@ -3,10 +3,11 @@
 	import { onMount } from 'svelte';
 
 	let container;
-	let _class;
+
+	let _class = '';
 
 	export { _class as class };
-	export let style;
+	export let style = '';
 
 	export let ellipsis = '...';
 	export let clamp = 3;

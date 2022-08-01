@@ -16,7 +16,7 @@
 <div class="tw-w-4" />
 <Input
 	type="select"
-	size="sm"
+	bsSize="sm"
 	class="book-select book-select-subject tw-w-auto"
 	disabled={subjectId === -1}
 	bind:value={bookId}
