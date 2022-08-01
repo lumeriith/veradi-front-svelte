@@ -25,11 +25,10 @@
 	import img_password from '$lib/static/img/login/password.png';
 	import img_google from '$lib/static/img/login/googleIcon.png';
 	import img_kakao from '$lib/static/img/login/kakaoIcon.png';
-  import GeneralRulesPopup from '$lib/components/login/terms/GeneralRulesPopup.svelte';
+	import GeneralRulesPopup from '$lib/components/login/terms/GeneralRulesPopup.svelte';
 
 	let inputName, inputEmail, inputPassword;
 	let registerError = false;
-
 
 	const REGISTER_VALIDATION_CHECKS = [
 		{
@@ -78,17 +77,15 @@
 		return regExp.test(str);
 	}
 
-  let isGeneralTermsShown = false;
+	let isGeneralTermsShown = false;
 
-  function openGeneralTermsPopup() {
-    isGeneralTermsShown = true;
-  }
-  function closeGeneralTermsPopup() {
-    isGeneralTermsShown = false;
-  }
-
+	function openGeneralTermsPopup() {
+		isGeneralTermsShown = true;
+	}
+	function closeGeneralTermsPopup() {
+		isGeneralTermsShown = false;
+	}
 </script>
-
 
 {#if isGeneralTermsShown}
 	<GeneralRulesPopup onClose={closeGeneralTermsPopup} />
@@ -201,4 +198,3 @@
 		<Col xs="0" sm="1" md="2" lg="3" xl="3" />
 	</Row>
 </Container>
-
