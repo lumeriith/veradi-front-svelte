@@ -5,6 +5,7 @@ import Icons from 'unplugin-icons/vite';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
+		trailingSlash: 'always',
 		prerender: { default: true },
 		adapter: adapter({
 			pages: 'build',
