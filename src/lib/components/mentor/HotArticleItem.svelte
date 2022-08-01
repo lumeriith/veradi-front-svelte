@@ -31,7 +31,7 @@
 
 	a:hover {
 		transform: scale(1.02);
-		box-shadow: 0 0 16px #0001, 0 0 4px #0004;
+		box-shadow: 0 0 16px #0001, 0 0 2px #0003;
 		filter: brightness(1.03);
 	}
 

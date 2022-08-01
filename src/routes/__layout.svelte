@@ -43,7 +43,12 @@
 		},
 		{
 			text: '입시 멘토링',
-			href: veradiUrls.mentor.index
+			href: veradiUrls.mentor.index,
+			children: [
+				{ text: '합격 스토리', href: veradiUrls.mentor.story },
+				{ text: '입시 노하우', href: veradiUrls.mentor.knowhow },
+				{ text: '기출분석', href: veradiUrls.mentor.analysis }
+			]
 		},
 		{
 			text: '나의 강의실',

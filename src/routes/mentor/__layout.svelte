@@ -3,10 +3,8 @@
 
 	import HotArticleItem from '$lib/components/mentor/HotArticleItem.svelte';
 	import LineTabButtons from '$lib/components/mentor/LineTabButtons.svelte';
-	import AnalysisSection from '$lib/components/mentor/sections/AnalysisSection.svelte';
-	import KnowHowSection from '$lib/components/mentor/sections/KnowHowSection.svelte';
-	import StorySection from '$lib/components/mentor/sections/StorySection.svelte';
 	import NarrowContainer from '$lib/components/NarrowContainer.svelte';
+	import veradiUrls from '$lib/data/veradiUrls';
 	import top_banner from '$lib/static/img/mentor/topbanner.png';
 
 	const testContent =
@@ -15,9 +13,9 @@
 	let currentSection = 'story';
 
 	const buttons = [
-		{ value: 'story', text: '합격 스토리' },
-		{ value: 'knowhow', text: '입시 노하우' },
-		{ value: 'analysis', text: '기출분석' }
+		{ href: veradiUrls.mentor.story, text: '합격 스토리', hash: 'view' },
+		{ href: veradiUrls.mentor.knowhow, text: '입시 노하우', hash: 'view' },
+		{ href: veradiUrls.mentor.analysis, text: '기출분석', hash: 'view' }
 	];
 </script>
 
@@ -39,14 +37,9 @@
 		/>
 	</div>
 </NarrowContainer>
+<div id="view" />
 <div class="tw-h-20" />
 <NarrowContainer>
 	<div class="tw-px-4"><LineTabButtons {buttons} bind:value={currentSection} /></div>
-	{#if currentSection === 'story'}
-		<StorySection />
-	{:else if currentSection === 'knowhow'}
-		<KnowHowSection />
-	{:else if currentSection === 'analysis'}
-		<AnalysisSection />
-	{/if}
+	<slot />
 </NarrowContainer>

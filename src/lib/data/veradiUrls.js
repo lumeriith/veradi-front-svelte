@@ -10,7 +10,10 @@ export default {
 	},
 	// 입시 멘토링
 	mentor: {
-		index: '/mentor'
+		index: '/mentor/story',
+		story: '/mentor/story',
+		knowhow: '/mentor/knowhow',
+		analysis: '/mentor/analysis'
 	},
 	// 문제집
 	contents: {
