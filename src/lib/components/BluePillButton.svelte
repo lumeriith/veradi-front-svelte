@@ -6,7 +6,7 @@
 </script>
 
 <a {href}>
-	<button class={_class} {style}><slot /></button>
+	<button class={_class} {style} on:click><slot /></button>
 </a>
 
 <style>
