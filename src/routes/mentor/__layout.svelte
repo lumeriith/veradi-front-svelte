@@ -10,8 +10,6 @@
 	const testContent =
 		'오답은 단순히 틀린 문제들에 대해서만 하는 것이 아닙니다. 저 같은 경우, 기출이나 N제, 또는 실모를 풀 때 문제를 틀리지 않았더라도 아리송하거나 찝찝한 부분이 있거나 선지의 정합성을 판단하는 근거와 확실치 않을 때는 몰라 그냥 찍어버려~~~~ 거나 찝찝한 부분이 있거나 선지의 정합성을 판단하는 근거와 확실치 않을 때는 몰라 그냥 찍어버려~~~~ ';
 
-	let currentSection = 'story';
-
 	const buttons = [
 		{ href: veradiUrls.mentor.story, text: '합격 스토리', hash: 'view' },
 		{ href: veradiUrls.mentor.knowhow, text: '입시 노하우', hash: 'view' },
@@ -40,6 +38,6 @@
 <div id="view" />
 <div class="tw-h-20" />
 <NarrowContainer>
-	<div class="tw-px-4"><LineTabButtons {buttons} bind:value={currentSection} /></div>
+	<div class="tw-px-4"><LineTabButtons {buttons} /></div>
 	<slot />
 </NarrowContainer>
