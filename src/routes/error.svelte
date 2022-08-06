@@ -8,9 +8,10 @@
 <NarrowContainer
 	class="tw-flex tw-gap-4 tw-flex-col-reverse md:tw-flex-row tw-items-center tw-justify-center md:tw-justify-between tw-h-[500px]"
 >
-	<div>
-		<header class="tw-font-heading tw-text-3xl tw-mb-6">페이지를 찾을 수 없습니다</header>
-		<main class="tw-mb-6">
+	<div class="tw-flex-1 tw-max-w-md">
+		<header class="tw-font-heading tw-text-3xl">페이지를 찾을 수 없습니다.</header>
+		<hr class="tw-m-0 tw-mt-2 tw-mb-4" />
+		<main class="tw-mb-6 tw-text-[#777]">
 			요청하신 페이지는 없는 페이지이거나 이동되었습니다.
 			<br />링크의 주소를 다시 한번 확인해주시기 바랍니다.
 		</main>
