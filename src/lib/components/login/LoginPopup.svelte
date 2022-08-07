@@ -1,9 +1,15 @@
 <script>
+	import { isLoggedIn } from '$lib/store';
+
 	import { fade, fly } from 'svelte/transition';
 	import LoginCard from './cards/LoginCard.svelte';
 	export let onClose = () => {};
 
 	let state = 'login'; // login, register, findpw
+
+	$: {
+		if ($isLoggedIn) onClose();
+	}
 </script>
 
 <div class="tw-fixed tw-inset-0 tw-z-[100] tw-flex tw-justify-center tw-items-center">

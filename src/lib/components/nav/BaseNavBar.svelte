@@ -24,7 +24,7 @@
 	import LoginPopup from '../login/LoginPopup.svelte';
 	import { onMount } from 'svelte';
 	import NarrowContainer from '../NarrowContainer.svelte';
-	import { isLoggedIn } from '$lib/store';
+	import { isLoggedIn, isLoginPopupShown } from '$lib/store';
 	import { logout } from '$lib/firebase/account';
 
 	export let items = [];
@@ -49,12 +49,11 @@
 		isDropdownOpen = false;
 	}
 
-	let isLoginPopupShown = false;
 	function openLoginPopup() {
-		isLoginPopupShown = true;
+		isLoginPopupShown.set(true);
 	}
 	function closeLoginPopup() {
-		isLoginPopupShown = false;
+		isLoginPopupShown.set(false);
 	}
 
 	let navJustifyContent = 'flex-start';
@@ -127,15 +126,14 @@
 				{#if !hideLogin}
 					<!-- <button on:click={openLoginPopup}><img alt=".." src={img_login} /></button> -->
 					{#if $isLoggedIn}
-					<button
-						on:click={logout}
-						class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1">LOGOUT</button
-					>
+						<button on:click={logout} class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1"
+							>LOGOUT</button
+						>
 					{:else}
-					<button
-						on:click={openLoginPopup}
-						class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1">LOGIN</button
-					>
+						<button
+							on:click={openLoginPopup}
+							class="tw-font-normal tw-text-[#648fb1] tw-px-12 tw-py-1">LOGIN</button
+						>
 					{/if}
 				{/if}
 			</main>
@@ -151,7 +149,7 @@
 
 <div class="tw-h-12 md:tw-h-14" />
 
-{#if isLoginPopupShown}
+{#if $isLoginPopupShown}
 	<LoginPopup onClose={closeLoginPopup} />
 {/if}
 

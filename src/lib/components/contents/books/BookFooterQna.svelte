@@ -6,6 +6,7 @@
 	import BookQnaStatistics from '../../question/BookQnaStatistics.svelte';
 
 	import { getContext } from 'svelte';
+	import { isLoggedIn } from '$lib/store';
 
 	const book = getContext(bookContextKey);
 	let version = 0;
