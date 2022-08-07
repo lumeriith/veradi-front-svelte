@@ -10,7 +10,7 @@
 	{href}
 >
 	<div class="tw-text-sm tw-font-semibold tw-text-[#57a2e3]">{category}</div>
-	<header class="tw-font-heading tw-text-lg tw-h-12">{title}</header>
+	<header class="tw-font-bold tw-text-lg tw-h-12">{title}</header>
 	<main class="tw-h-24 tw-my-2">
 		<div
 			class="tw-text-sm tw-text-[#575d5e] tw-overflow-hidden"

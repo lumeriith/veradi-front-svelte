@@ -3,10 +3,14 @@
 	import FlatSelect from '$lib/components/FlatSelect.svelte';
 	import PostListView from '$lib/components/mentor/PostListView.svelte';
 	import SectionTopArea from '$lib/components/mentor/SectionTopArea.svelte';
-	import Icon from '@iconify/svelte';
-	import testImg from '$lib/static/img/mentor/test.jpg';
 	import FlatSearchInput from '$lib/components/FlatSearchInput.svelte';
 	import Pagination from '$lib/components/Pagination.svelte';
+
+	import test0 from '$lib/static/img/mentor/test0.jpg';
+	import test1 from '$lib/static/img/mentor/test1.jpg';
+	import test2 from '$lib/static/img/mentor/test2.png';
+	import test3 from '$lib/static/img/mentor/test3.jpg';
+	import test4 from '$lib/static/img/mentor/test4.jpg';
 
 	const test = [];
 	for (let i = 0; i < 5; i++) {
@@ -14,7 +18,7 @@
 			title: '여러분들에게 꼭 하고싶은 이야기를 담은 정시 합격 수기',
 			content:
 				'오답은 단순히 틀린 문제들에 대해서만 하는 것이 아닙니다. 저 같은 경우, 기출이나 N제, 또는 실모를 풀 때 문제를 틀리지 않았더라도 아리송하거나 찝찝한 부분이 있거나 선지의 정합성을 판단하는 근거와 확실치 않을 때는 무조건 그 선치나 문제에 체크표시를 했습니다.',
-			thumb: testImg,
+			thumb: test0,
 			author: '김영재',
 			authorTitle: '서울대 기계공학과',
 			postDate: new Date(),
@@ -22,6 +26,11 @@
 			favorites: 20
 		});
 	}
+
+	test[1].thumb = test1;
+	test[2].thumb = test2;
+	test[3].thumb = test3;
+	test[4].thumb = test4;
 </script>
 
 <SectionTopArea class="tw-flex tw-gap-3">

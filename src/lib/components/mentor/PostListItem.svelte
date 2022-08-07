@@ -15,18 +15,18 @@
 </script>
 
 <div
-	class="post tw-flex tw-gap-3.5 tw-p-3 md:tw-gap-5 md:tw-p-5 tw-items-center"
+	class="post tw-flex tw-gap-3.5 tw-p-4 md:tw-gap-5 md:tw-p-6 tw-items-center"
 	style="border-bottom: 1px solid #e4e4e4"
 >
 	<img
 		src={thumb}
 		alt="{title} 이미지"
-		class="tw-object-contain tw-h-24 tw-w-24"
+		class="tw-object-contain tw-h-24 tw-w-24 tw-bg-[#0000000a]"
 		style="border: 1px solid #e5e5e5"
 	/>
 	<a href="#!">
-		<header class="tw-mb-2 tw-font-heading tw-text-lg">{title}</header>
-		<main class="tw-mb-2 md:tw-mb-4 tw-text-sm tw-text-[#575d5e]">
+		<header class="tw-mb-2 tw-font-bold tw-text-[1.1rem]">{title}</header>
+		<main class="tw-mb-2 md:tw-mb-4 tw-text-sm tw-text-[#8b9193]">
 			<MultiClamp clamp={2}>{content}</MultiClamp>
 		</main>
 		<div class="tw-flex tw-gap-x-2 tw-items-center tw-flex-wrap tw-whitespace-nowrap">

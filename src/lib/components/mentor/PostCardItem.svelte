@@ -21,9 +21,9 @@
 >
 	<img src={thumb} alt="{title} 이미지" class="tw-object-cover tw-w-full tw-h-48" />
 	<div class="tw-px-8 tw-py-4 tw-flex tw-gap-2.5 tw-flex-col" style="border-top: 1px solid #e5e5e5">
-		<header class="tw-font-heading">
+		<header class="tw-font-bold">
 			<div class="tw-text-sm">{category}</div>
-			<div class="tw-text-lg">{title}</div>
+			<div class="tw-text-[1.1rem]"><MultiClamp clamp={2}>{title}</MultiClamp></div>
 		</header>
 		<div class="tw-flex tw-gap-4">
 			<div class="tw-font-bold">{author}</div>
