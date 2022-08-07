@@ -27,9 +27,14 @@
 		});
 	}
 
+	test[1].title = '생각날때마다 한번씩 보면 좋은 글귀들';
 	test[1].thumb = test1;
+	test[2].title =
+		'포기하지 마세요 여러분!!!! 3수 끝에 도달한 고지에 대해 n수생 분들에게 드리고 싶은 이야기';
 	test[2].thumb = test2;
+	test[3].title = '정시 파이터를 고민하는 여러분들께 (수능 공부법, 논술, 학종 총정리)';
 	test[3].thumb = test3;
+	test[4].title = '서울대학교 의예과 진학 이야기';
 	test[4].thumb = test4;
 </script>
 
