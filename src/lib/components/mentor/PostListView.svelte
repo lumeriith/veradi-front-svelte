@@ -19,7 +19,7 @@
 	export let selectedTag = '';
 </script>
 
-{#each posts as { title, content, thumb, author, authorTitle, tags, postDate, views, favorites }}
+{#each posts as { title, content, thumb, author, authorTitle, tags, postDate, views, favorites, href }}
 	<PostListItem
 		{title}
 		{content}
@@ -31,5 +31,6 @@
 		{postDate}
 		{views}
 		{favorites}
+		{href}
 	/>
 {/each}

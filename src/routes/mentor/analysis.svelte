@@ -13,6 +13,7 @@
 	import test2 from '$lib/static/img/mentor/test2.png';
 	import test3 from '$lib/static/img/mentor/test3.jpg';
 	import test4 from '$lib/static/img/mentor/test4.jpg';
+	import veradiUrls from '$lib/data/veradiUrls';
 
 	const test = [];
 	for (let i = 0; i < 4; i++) {
@@ -26,7 +27,8 @@
 			thumb: test0,
 			postDate: new Date(),
 			views: 12,
-			favorites: 20
+			favorites: 20,
+			href: veradiUrls.article(1234)
 		});
 	}
 

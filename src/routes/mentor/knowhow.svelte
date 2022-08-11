@@ -12,6 +12,7 @@
 	import test4 from '$lib/static/img/mentor/test4.jpg';
 
 	import Pagination from '$lib/components/Pagination.svelte';
+	import veradiUrls from '$lib/data/veradiUrls';
 
 	const test = [];
 	for (let i = 0; i < 5; i++) {
@@ -26,7 +27,8 @@
 			selectedTag: '국어',
 			postDate: new Date(),
 			views: 12,
-			favorites: 20
+			favorites: 20,
+			href: veradiUrls.article(1234)
 		});
 	}
 	test[1].title = '수학 킬러 문제, 어떻게 접근해야할까?';

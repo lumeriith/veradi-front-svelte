@@ -12,6 +12,7 @@
 	export let postDate = new Date();
 	export let views = 12;
 	export let favorites = 20;
+	export let href = '#!';
 </script>
 
 <div
@@ -24,7 +25,7 @@
 		class="tw-object-contain tw-h-24 tw-w-24 tw-bg-[#0000000a]"
 		style="border: 1px solid #e5e5e5"
 	/>
-	<a href="#!">
+	<a {href}>
 		<header class="tw-mb-2 tw-font-bold tw-text-[1.1rem]">{title}</header>
 		<main class="tw-mb-2 md:tw-mb-4 tw-text-sm tw-text-[#8b9193]">
 			<MultiClamp clamp={2}>{content}</MultiClamp>

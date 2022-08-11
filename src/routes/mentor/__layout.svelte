@@ -26,12 +26,19 @@
 			category="합격스토리"
 			title="여러분들에게 꼭 하고싶은 이야기를 담은 정시 합격 수기"
 			content={testContent}
+			href={veradiUrls.article(123)}
 		/>
-		<HotArticleItem category="입시노하우" title="비문학 멘붕상태 탈출하기" content={testContent} />
+		<HotArticleItem
+			category="입시노하우"
+			title="비문학 멘붕상태 탈출하기"
+			content={testContent}
+			href={veradiUrls.article(123)}
+		/>
 		<HotArticleItem
 			category="기출분석"
 			title="2022 9월 모의고사 수학영역 30번"
 			content={testContent}
+			href={veradiUrls.article(123)}
 		/>
 	</div>
 </NarrowContainer>

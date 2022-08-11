@@ -12,10 +12,11 @@
 	export let favorites = 20;
 	export let views = 12;
 	export let postDate = new Date();
+	export let href = '#!';
 </script>
 
 <a
-	href="#!"
+	{href}
 	class="tw-rounded-lg tw-overflow-hidden"
 	style="border: 1px solid #e5e5e5; width: calc(50% - 10px)"
 >

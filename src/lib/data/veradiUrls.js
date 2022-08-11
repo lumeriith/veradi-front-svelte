@@ -8,6 +8,10 @@ export default {
 		study: '/qna/study',
 		mybooks: '/qna/mybooks'
 	},
+	// 게시물
+	article: (id) => {
+		return '/article/?id=' + id;
+	},
 	// 입시 멘토링
 	mentor: {
 		index: '/mentor/story',
