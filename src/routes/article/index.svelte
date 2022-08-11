@@ -7,6 +7,24 @@
 	import test1 from '$lib/static/img/article/test1.png';
 	import test2 from '$lib/static/img/article/test2.png';
 	import test3 from '$lib/static/img/article/test3.png';
+	import { onMount } from 'svelte';
+
+	function getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split('&');
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split('=');
+			if (pair[0] == variable) {
+				return pair[1];
+			}
+		}
+		return false;
+	}
+
+	let id = null;
+	onMount(() => {
+		id = getQueryVariable('id');
+	});
 </script>
 
 <NarrowContainer class="tw-mt-24 tw-mb-24 tw-max-w-3xl">
@@ -38,7 +56,7 @@
 	</header>
 
 	<main class="article-view">
-		현재 게시물 번호는 {$page.url.searchParams.get('id')}입니다.
+		현재 게시물 번호는 {id}입니다.
 		<img src={test0} alt="" />
 		1컷이 47, 2컷이 46인 시험이었습니다. 2컷이 46인데, 1컷이 50이 아니라는 것은 킬러 문제 하나가 위력을
 		발휘했다는 말이 됩니다. 이번 모의고사에서는 19번 문제가 그역할을 했다고 볼 수 있겠네요. 이번 시험의
