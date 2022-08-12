@@ -5,10 +5,7 @@ import Icons from 'unplugin-icons/vite';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build'
-		}),
+		adapter: adapter(),
 		vite: {
 			plugins: [
 				Icons({
