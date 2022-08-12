@@ -17,9 +17,9 @@
 <div class="tw-flex tw-gap-3">
 	{#each buttons as b}
 		<a
-			class="tw-text-xl tw-p-2 tw-font-bold {isUrlEqual(b.href, $page.url.pathname)
-				? 'tw-text-[#3c9fcb]'
-				: 'tw-text-[#9f9f9f]'}"
+			class="tw-text-xl tw-p-2 {isUrlEqual(b.href, $page.url.pathname)
+				? 'tw-text-[#3c9fcb] tw-font-bold'
+				: 'tw-text-[#9f9f9f] tw-font-semibold'}"
 			style="border-bottom: 2px solid {isUrlEqual(b.href, $page.url.pathname)
 				? '#3c9fcb'
 				: '#3c9fcb00'}; transition: border-bottom 0.1s"

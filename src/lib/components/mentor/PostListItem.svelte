@@ -26,12 +26,12 @@
 		style="border: 1px solid #e5e5e5"
 	/>
 	<a {href}>
-		<header class="tw-mb-2 tw-font-bold tw-text-[1.1rem]">{title}</header>
+		<header class="tw-mb-2 tw-font-semibold tw-text-[1.1rem]">{title}</header>
 		<main class="tw-mb-2 md:tw-mb-4 tw-text-sm tw-text-[#8b9193]">
 			<MultiClamp clamp={2}>{content}</MultiClamp>
 		</main>
 		<div class="tw-flex tw-gap-x-2 tw-items-center tw-flex-wrap tw-whitespace-nowrap">
-			{#if author}<div class="tw-font-bold">{author}</div>{/if}
+			{#if author}<div class="tw-font-semibold">{author}</div>{/if}
 			{#if authorTitle}<div class="tw-font-semibold">{authorTitle}</div>{/if}
 			{#if tags}<div style="flex-basis: 100%" class="tw-h-1" />{/if}
 			<div class="tw-text-sm tw-text-[#a1a1a1]">{shortDate(postDate)}</div>
